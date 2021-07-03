@@ -1,0 +1,83 @@
+{
+    "menu": [
+        {
+          "id": 1,
+          "name": "Trang chủ",
+          "location": "Home"
+        },
+        {
+          "id": 2,
+          "name": "Giới Thiệu",
+          "location": "Infor"
+        },
+        {
+          "id": 3,
+          "name": "Sản Phẩm",
+          "location": "Product",
+          "hover": [
+              {
+                  "id": 1,
+                  "name":"Trang Phục",
+                  "location": "skin"
+              },
+              {
+                "id": 2,
+                "name":"Đao Thương",
+                "location": "Blade_Spear"
+            },
+            {
+                "id": 3,
+                "name":"Đồ Nhật Dụng",
+                "location": "Japanese_Consumables"
+            },
+            {
+                "id": 4,
+                "name":"Phụ Kiện",
+                "location": "Accessories"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "GALLERY",
+          "location": "Gallery"
+        },
+        {
+          "id": 5,
+          "name": "TIN TỨC",
+          "location": "News",
+          "hover": [
+            {
+                "id": 1,
+                "name":"Bài Nghiên Cứu",
+                "location": "Research"
+            },
+            {
+              "id": 2,
+              "name":"Quá Trình Phục Dựng",
+              "location": "Restoration_Process"
+          },
+          {
+              "id": 3,
+              "name":"Sách",
+              "location": "Books"
+          },
+          {
+              "id": 4,
+              "name":"Sưu Tầm",
+              "location": "Collect"
+          }
+        ]
+        },
+        {
+            "id": 6,
+            "name": "HƯỚNG DẪN",
+            "location": "Tutorial"
+        },
+        {
+            "id": 7,
+            "name": "LIÊN HỆ",
+            "location": "Contact"
+        }
+      ]
+}

@@ -1,0 +1,36 @@
+@import "base";
+
+.wrapHeader {
+    display: flex;
+    justify-content: space-between;
+    .wrapImg {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        img {
+            width: 50%;
+        }
+    }
+    .wrapNav {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        .wrapUrl {
+            align-items: center;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            li {
+                padding: 0;
+                font-family: "Times New Roman";
+                color: #000573;
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+        }
+    }
+}   
