@@ -79,5 +79,72 @@
             "name": "LIÊN HỆ",
             "location": "Contact"
         }
-      ]
+    ],
+    "banner": [
+      {
+        "id": 1,
+        "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/4-p5l7ae4gmen7dyd19s4ykwd7ewefoljsk6pbk4kkmo.jpg"
+      },
+      {
+        "id": 2,
+        "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/2-p5auaogtm54976v3okua8c2xvvvyf4glr6g159z3hs.jpg"
+      },
+      {
+        "id": 3,
+        "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/3-p5aucz6mbk9hkviy9klgbr7i5sk98hkzejurdmkga8.jpg"
+      },
+      {
+        "id": 3,
+        "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/0828512f_fe3a_4b76_a505_a9f39ad8747e-p5lk4p2tyzi5lmu7qm59x8kpf9rfhev64doitf3wc0.jpg"
+      }
+    ],
+    "category": [
+      {
+        "id": "1",
+        "name":"Trang Phục"
+      },
+      {
+        "id": "2",
+        "name":"Đao-Thương"
+      },
+      {
+        "id": "3",
+        "name":"Đồ nhật dụng"
+      },
+      {
+        "id": "4",
+        "name":"Phụ Kiện"
+      }
+    ],
+    "product_hot": [
+      {
+        "id": "1",
+        "cate_id": "3",
+        "name": "Gối XẾP TAM SƠN THỦY BA",
+        "status":"HOT",
+        "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+      },
+      {
+        "id": "2",
+        "cate_id": "3",
+        "name": "Gối XẾP VÂN MÂY",
+        "status":"HOT",
+        "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Goi-3-nu0idktq59gynh8lb96gh00b4elczoqzer7ohd7vos.jpg"
+      },
+      {
+        "id": "3",
+        "cate_id": "1",
+        "name": "Áo Dài Nam Cổ Đứng",
+        "status":"HOT",
+        "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg"
+      },
+      {
+        "id": "4",
+        "cate_id": "1",
+        "name": "Áo dài nữ năm thân cổ đứng",
+        "status":"HOT",
+        "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0350.2-o9auxk4cthnttexwpcigpci842d8sro5sae02jebl8.jpg"
+      }
+    ]
+    
 }

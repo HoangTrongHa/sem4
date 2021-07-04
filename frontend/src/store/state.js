@@ -1,3 +1,5 @@
 export default {
-    menu: []
+    menu: [],
+    banner:[],
+    product_hot:[]
 }
