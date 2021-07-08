@@ -11,10 +11,22 @@
                             class="wrapLi"
                             v-for="item of menuList" :key="item.id"
                             @click="$router.push({ name: item.location })"
-
                         >
-                        
-                            {{ item.name }}
+                            <div
+                                :class="item.name == 'Sản Phẩm' ? 'wrap-item drop-down' : 'wrap-item'"
+                            >
+                                {{ item.name }}
+                                <span class="caret"></span>
+                                <div class="wrap-item-category">
+                                    <ul>
+                                        <li
+                                        v-for="itemCat of categoriesList" :key="itemCat.id"
+                                        >
+                                            {{ itemCat.name }}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -28,13 +40,16 @@
         computed: {
             menuList() {
                 return this.$store.state.menu
-            }
+            },
+            categoriesList() {
+                return this.$store.state.categories
+            },
         },
 
         mounted() {
             this.$store.dispatch('getMenu');
+            this.$store.dispatch('getCategories');
         }
-
     }
 </script>
 
