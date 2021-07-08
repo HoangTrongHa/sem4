@@ -1,150 +1,172 @@
 {
-    "menu": [
-        {
-          "id": 1,
-          "name": "Trang chủ",
-          "location": "Home"
-        },
-        {
-          "id": 2,
-          "name": "Giới Thiệu",
-          "location": "Infor"
-        },
-        {
-          "id": 3,
-          "name": "Sản Phẩm",
-          "location": "Product",
-          "hover": [
-              {
-                  "id": 1,
-                  "name":"Trang Phục",
-                  "location": "skin"
-              },
-              {
-                "id": 2,
-                "name":"Đao Thương",
-                "location": "Blade_Spear"
-            },
-            {
-                "id": 3,
-                "name":"Đồ Nhật Dụng",
-                "location": "Japanese_Consumables"
-            },
-            {
-                "id": 4,
-                "name":"Phụ Kiện",
-                "location": "Accessories"
-            }
-          ]
-        },
-        {
-          "id": 4,
-          "name": "GALLERY",
-          "location": "Gallery"
-        },
-        {
-          "id": 5,
-          "name": "TIN TỨC",
-          "location": "News",
-          "hover": [
-            {
-                "id": 1,
-                "name":"Bài Nghiên Cứu",
-                "location": "Research"
-            },
-            {
-              "id": 2,
-              "name":"Quá Trình Phục Dựng",
-              "location": "Restoration_Process"
-          },
-          {
-              "id": 3,
-              "name":"Sách",
-              "location": "Books"
-          },
-          {
-              "id": 4,
-              "name":"Sưu Tầm",
-              "location": "Collect"
-          }
-        ]
-        },
-        {
-            "id": 6,
-            "name": "HƯỚNG DẪN",
-            "location": "Tutorial"
-        },
-        {
-            "id": 7,
-            "name": "LIÊN HỆ",
-            "location": "Contact"
-        }
-    ],
-    "banner": [
+  "menu": [
       {
         "id": 1,
-        "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/4-p5l7ae4gmen7dyd19s4ykwd7ewefoljsk6pbk4kkmo.jpg"
+        "name": "Trang chủ",
+        "location": "Home"
       },
       {
         "id": 2,
-        "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/2-p5auaogtm54976v3okua8c2xvvvyf4glr6g159z3hs.jpg"
+        "name": "Giới Thiệu",
+        "location": "Infor"
       },
       {
         "id": 3,
-        "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/3-p5aucz6mbk9hkviy9klgbr7i5sk98hkzejurdmkga8.jpg"
+        "name": "Sản Phẩm",
+        "location": "Product",
+        "hover": [
+            {
+                "id": 1,
+                "name":"Trang Phục",
+                "location": "skin"
+            },
+            {
+              "id": 2,
+              "name":"Đao Thương",
+              "location": "Blade_Spear"
+          },
+          {
+              "id": 3,
+              "name":"Đồ Nhật Dụng",
+              "location": "Japanese_Consumables"
+          },
+          {
+              "id": 4,
+              "name":"Phụ Kiện",
+              "location": "Accessories"
+          }
+        ]
       },
       {
-        "id": 3,
-        "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/0828512f_fe3a_4b76_a505_a9f39ad8747e-p5lk4p2tyzi5lmu7qm59x8kpf9rfhev64doitf3wc0.jpg"
+        "id": 4,
+        "name": "GALLERY",
+        "location": "Gallery"
+      },
+      {
+        "id": 5,
+        "name": "TIN TỨC",
+        "location": "News",
+        "hover": [
+          {
+              "id": 1,
+              "name":"Bài Nghiên Cứu",
+              "location": "Research"
+          },
+          {
+            "id": 2,
+            "name":"Quá Trình Phục Dựng",
+            "location": "Restoration_Process"
+        },
+        {
+            "id": 3,
+            "name":"Sách",
+            "location": "Books"
+        },
+        {
+            "id": 4,
+            "name":"Sưu Tầm",
+            "location": "Collect"
+        }
+      ]
+      },
+      {
+          "id": 6,
+          "name": "HƯỚNG DẪN",
+          "location": "Tutorial"
+      },
+      {
+          "id": 7,
+          "name": "LIÊN HỆ",
+          "location": "Contact"
       }
-    ],
-    "category": [
-      {
-        "id": "1",
-        "name":"Trang Phục"
-      },
-      {
-        "id": "2",
-        "name":"Đao-Thương"
-      },
-      {
-        "id": "3",
-        "name":"Đồ nhật dụng"
-      },
-      {
-        "id": "4",
-        "name":"Phụ Kiện"
-      }
-    ],
-    "product_hot": [
-      {
-        "id": "1",
-        "cate_id": "3",
-        "name": "Gối XẾP TAM SƠN THỦY BA",
-        "status":"HOT",
-        "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
-      },
-      {
-        "id": "2",
-        "cate_id": "3",
-        "name": "Gối XẾP VÂN MÂY",
-        "status":"HOT",
-        "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Goi-3-nu0idktq59gynh8lb96gh00b4elczoqzer7ohd7vos.jpg"
-      },
-      {
-        "id": "3",
-        "cate_id": "1",
-        "name": "Áo Dài Nam Cổ Đứng",
-        "status":"HOT",
-        "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg"
-      },
-      {
-        "id": "4",
-        "cate_id": "1",
-        "name": "Áo dài nữ năm thân cổ đứng",
-        "status":"HOT",
-        "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0350.2-o9auxk4cthnttexwpcigpci842d8sro5sae02jebl8.jpg"
-      }
-    ]
+  ],
+  "banner": [
+    {
+      "id": 1,
+      "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/4-p5l7ae4gmen7dyd19s4ykwd7ewefoljsk6pbk4kkmo.jpg"
+    },
+    {
+      "id": 2,
+      "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/2-p5auaogtm54976v3okua8c2xvvvyf4glr6g159z3hs.jpg"
+    },
+    {
+      "id": 3,
+      "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/3-p5aucz6mbk9hkviy9klgbr7i5sk98hkzejurdmkga8.jpg"
+    },
+    {
+      "id": 3,
+      "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/0828512f_fe3a_4b76_a505_a9f39ad8747e-p5lk4p2tyzi5lmu7qm59x8kpf9rfhev64doitf3wc0.jpg"
+    }
+  ],
+  "category": [
+    {
+      "id": "1",
+      "name":"Trang Phục"
+    },
+    {
+      "id": "2",
+      "name":"Đao-Thương"
+    },
+    {
+      "id": "3",
+      "name":"Đồ nhật dụng"
+    },
+    {
+      "id": "4",
+      "name":"Phụ Kiện"
+    }
+  ],
+  "product_hot": [
+    {
+      "id": "1",
+      "cate_id": "3",
+      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+    },
+    {
+      "id": "2",
+      "cate_id": "3",
+      "name": "Gối XẾP VÂN MÂY",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Goi-3-nu0idktq59gynh8lb96gh00b4elczoqzer7ohd7vos.jpg"
+    },
+    {
+      "id": "3",
+      "cate_id": "1",
+      "name": "Áo Dài Nam Cổ Đứng",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg"
+    },
+    {
+      "id": "4",
+      "cate_id": "1",
+      "name": "Áo dài nữ năm thân cổ đứng",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0350.2-o9auxk4cthnttexwpcigpci842d8sro5sae02jebl8.jpg"
+    }
+  ],
+  "overview": [
+    {
+      "paragraph": "Nguyễn Đức Lộc có đủ nhiệt huyết và sự tỉ mẩn của một người làm nghề. Hơn thế, với tinh thần đương đại cởi mở, cùng niềm đau đáu với nét đẹp vàng son của một thời quá vãng, Nguyễn Đức Lộc đang chứng minh bản thân mình là người có đủ tâm và tầm. Những việc anh Lộc đã và đang làm, chắc chắn có đóng góp không nhỏ tới việc tái định khung hệ giá trị thẩm mĩ, văn hóa truyền thống Việt Nam.",
+      "author": "Học giả, nhà nghiên cứu lịch sử Hoàng Trọng Hà",
+      "img": "http://yvanhien.com/wp-content/uploads/2018/08/15590554_10154145419186526_3029755220963240643_n.jpg"
+    },
+    {
+      "paragraph": "Trong bối cảnh văn hóa Việt Nam đã trải qua nhiều biến động, thay đổi, mới đây, Công ty cổ phần Ỷ Vân Hiên ra đời với mong muốn giữ được những giá trị cốt lõi - những nét đẹp đặc trưng của văn hóa Việt trên con đường hội nhập văn hóa toàn cầu.",
+      "author": "vov.vn",
+      "img": "http://yvanhien.com/wp-content/uploads/2018/08/logo-vov.png"
+    },
+    {
+      "paragraph": "Ỷ Vân Hiên là đơn vị tập hợp một đội ngũ đông đảo các bạn trẻ đam mê văn hóa cổ truyền đất nước, tiếc vốn quý của cha ông bị mai một và mong muốn khôi phục lại những nét văn hóa này và phục vụ rộng rãi trong cộng đồng, phát triển trong đời sống đương đại.",
+      "author": "cand.com.vn",
+      "img": "http://yvanhien.com/wp-content/uploads/2018/08/logo-candonline.png"
+    },
+    {
+      "paragraph": "Một số mẫu áo dài cổ vừa được phục dựng đã được trình diễn giới thiệu tại Trung tâm Giao lưu văn hóa Phố Cổ, sáng 8-8. Đây là những mẫu áo dài do các nhà thiết kế trẻ của Ỷ Vân Hiên thực hiện dưới sự cố vấn của nhiều chuyên gia, nhà nghiên cứu hàng đầu về trang phục xưa",
+      "author": "nhandan.com.vn",
+      "img": "http://yvanhien.com/wp-content/uploads/2018/08/bao-nhan-dan.png"
+    }
+  ]
     
 }

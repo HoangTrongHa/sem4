@@ -86,32 +86,35 @@
         <div class="product-section-title">
           Sản phẩm - những giá trị văn hóa
         </div>
-      <VueSlickCarousel 
-        class="wrap-owl"
-        :arrows="true" 
-        :dots="true"
-        :slidesToShow="4"
-        :autoplaySpeed="3000"
-        :margin="50"
-        :accessibility="true"
-      >
-        <div 
-          class="wrap-item-product"
-          v-for="item of product_hot" :key="item.id"
+        <VueSlickCarousel 
+          class="wrap-owl"
+          :arrows="true" 
+          :dots="true"
+          :slidesToShow="4"
+          :autoplaySpeed="3000"
+          :margin="50"
+          :accessibility="true"
         >
-        <div class="wrap-img">
-          <img 
-            :src="item.img"
-          />
-        </div>
-          <div class="wrap-title">
-            <div>
-              {{ item.name }}
+          <div 
+            class="wrap-item-product"
+            v-for="item of product_hot" :key="item.id"
+          >
+          <div class="wrap-img">
+            <img 
+              :src="item.img"
+            />
+          </div>
+            <div class="wrap-title">
+              <div>
+                {{ item.name }}
+              </div>
             </div>
           </div>
-        </div>
-    </VueSlickCarousel>
+        </VueSlickCarousel>
       </v-container>
+    </div>
+    <div class="overview-slide">
+      <OverviewSlide />
     </div>
   </div>
 </div>
@@ -119,6 +122,7 @@
 
 <script>
   import Banner from "@/components/SliderComponent.vue"
+  import OverviewSlide from "@/components/OverviewSlide.vue"
   import VueSlickCarousel from 'vue-slick-carousel'
   import 'vue-slick-carousel/dist/vue-slick-carousel.css'
   // optional style for arrows & dots
@@ -129,7 +133,8 @@
 
     components: {
       Banner,
-      VueSlickCarousel
+      VueSlickCarousel,
+      OverviewSlide,
       // carousel
     },
     computed: {
