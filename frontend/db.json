@@ -13,29 +13,7 @@
         {
           "id": 3,
           "name": "Sản Phẩm",
-          "location": "Product",
-          "hover": [
-              {
-                  "id": 1,
-                  "name":"Trang Phục",
-                  "location": "skin"
-              },
-              {
-                "id": 2,
-                "name":"Đao Thương",
-                "location": "Blade_Spear"
-            },
-            {
-                "id": 3,
-                "name":"Đồ Nhật Dụng",
-                "location": "Japanese_Consumables"
-            },
-            {
-                "id": 4,
-                "name":"Phụ Kiện",
-                "location": "Accessories"
-            }
-          ]
+          "location": "Product"
         },
         {
           "id": 4,
@@ -144,6 +122,55 @@
         "name": "Áo dài nữ năm thân cổ đứng",
         "status":"HOT",
         "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0350.2-o9auxk4cthnttexwpcigpci842d8sro5sae02jebl8.jpg"
+      }
+    ],
+    "inforcompany": [
+      {
+        "id": 1,
+        "base64": "http://yvanhien.com/wp-content/uploads/2019/03/DSC2103c-180x300.jpg",
+        "content": "Theo dòng chảy lịch sử, văn hóa Việt Nam đã trải qua nhiều biến động, thay đổi. Đặc biệt, sau năm 1945, vua Bảo Đại thoái vị kéo theo sự sụp đổ hoàn toàn của triều đại phong kiến cuối cùng ở Việt Nam. Cùng với sự thay đổi của thời đại, những làn sóng cách tân phần nào tích cực vào việc hiện đại hóa đời sống của con người, tuy nhiên, mặt trái của nó là khiến cho văn hóa truyền thống và văn hóa cung đình bị mai một.\rTrong bối cảnh ấy, với mong muốn giữ được những giá trị cốt lõi – những nét đẹp đặc trưng của văn hóa Việt trên con đường hội nhập văn hóa toàn cầu, Công ty Cổ phần Ỷ Vân Hiên ra đời. Chúng tôi tin rằng hiểu được quá khứ mới hiểu được hiện tại, xa hơn là sẽ tìm thấy hướng đi ở tương lai."
+      },
+      {
+        "id": 2,
+        "base64": "http://yvanhien.com/wp-content/uploads/2019/03/DSC19312-300x258.jpg",
+        "content": "Chúng tôi có một đội ngũ nhân viên trẻ chuyên nghiệp, có kiến thức chuyên môn cùng với lòng nhiệt thành, sức sáng tạo mạnh mẽ. Đó là nền tảng, là sức bật để Công ty Cổ phần Ỷ Vân Hiên tiến hành nghiên cứu chuyên sâu vào các lĩnh vực nghệ thuật (Văn học, âm nhạc, kiến trúc, hội họa, điêu khắc), trang phục, ẩm thực và các nghi lễ truyền thống trong cung đình cũng như trong dân gian, sau đó phục dựng lại chúng, nhằm thương mại hóa, phục vụ phổ quát cho du lịch và cộng đồng, giúp cho những nét đẹp đó đến được với công chúng trong và ngoài nước."
+      }
+    ],
+    "material": [
+      {
+        "id": 1,
+        "name": "Lụa Vân",
+        "cate_id": 1,
+        "describe": "Công ty Cổ phần Ỷ Vân Hiên ưu tiên sử dụng các chất liệu truyền thống từ cao cấp tới bình dân, do các làng nghề trên khắp cả nước cung cấp như: Lụa, là, gấm, sa, đoạn, lĩnh, the, đũi,... Ngoài ra, chúng tôi còn sử dụng các chất liệu cao cấp làm từ tơ tằm khác nhập từ các nước Nhật Bản, Hàn Quốc, Trung Quốc,... Mỗi chất liệu phối hợp với các loại sản phẩm khác nhau và đường kim mũi chỉ tỉ mỉ của nghệ nhân để đưa ra được sản phẩm có chất lượng cao nhất, gửi đến khách hàng.Công ty chúng tôi sử dụng những loại chất liệu: đoạn - gấm - the - đũi – lãnh.",
+        "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3667-e1533521787999-nu7at6kzzz3hvjktg3ejv0mrq17x3ijmhveps70izk.jpg"
+      },
+      {
+        "id":2,
+        "name": "Đũi",
+        "cate_id": 1,
+        "describe": "Công ty Cổ phần Ỷ Vân Hiên ưu tiên sử dụng các chất liệu truyền thống từ cao cấp tới bình dân, do các làng nghề trên khắp cả nước cung cấp như: Lụa, là, gấm, sa, đoạn, lĩnh, the, đũi,... Ngoài ra, chúng tôi còn sử dụng các chất liệu cao cấp làm từ tơ tằm khác nhập từ các nước Nhật Bản, Hàn Quốc, Trung Quốc,... Mỗi chất liệu phối hợp với các loại sản phẩm khác nhau và đường kim mũi chỉ tỉ mỉ của nghệ nhân để đưa ra được sản phẩm có chất lượng cao nhất, gửi đến khách hàng.Công ty chúng tôi sử dụng những loại chất liệu: đoạn - gấm - the - đũi – lãnh.",
+        "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3730-1-nu7ifoe9t8uyc2uxl8vei8zotu9pxh9qkhuc260nxc.jpg"
+      },
+      {
+        "id": 3,
+        "name": "THE (SA)",
+        "cate_id": 1,
+        "describe": "Công ty Cổ phần Ỷ Vân Hiên ưu tiên sử dụng các chất liệu truyền thống từ cao cấp tới bình dân, do các làng nghề trên khắp cả nước cung cấp như: Lụa, là, gấm, sa, đoạn, lĩnh, the, đũi,... Ngoài ra, chúng tôi còn sử dụng các chất liệu cao cấp làm từ tơ tằm khác nhập từ các nước Nhật Bản, Hàn Quốc, Trung Quốc,... Mỗi chất liệu phối hợp với các loại sản phẩm khác nhau và đường kim mũi chỉ tỉ mỉ của nghệ nhân để đưa ra được sản phẩm có chất lượng cao nhất, gửi đến khách hàng.Công ty chúng tôi sử dụng những loại chất liệu: đoạn - gấm - the - đũi – lãnh.",
+        "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3750-nu7ilqgtut5h5m267v4ukpymn8evj9bgqh6zed1bts.jpg"
+      },
+      {
+        "id": 4,
+        "name": "ĐOẠN",
+        "cate_id": 1,
+        "describe": "Công ty Cổ phần Ỷ Vân Hiên ưu tiên sử dụng các chất liệu truyền thống từ cao cấp tới bình dân, do các làng nghề trên khắp cả nước cung cấp như: Lụa, là, gấm, sa, đoạn, lĩnh, the, đũi,... Ngoài ra, chúng tôi còn sử dụng các chất liệu cao cấp làm từ tơ tằm khác nhập từ các nước Nhật Bản, Hàn Quốc, Trung Quốc,... Mỗi chất liệu phối hợp với các loại sản phẩm khác nhau và đường kim mũi chỉ tỉ mỉ của nghệ nhân để đưa ra được sản phẩm có chất lượng cao nhất, gửi đến khách hàng.Công ty chúng tôi sử dụng những loại chất liệu: đoạn - gấm - the - đũi – lãnh.",
+        "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3747-nu7idn2v062l6htfhd6i3rhqhsb3936oaeygml1deo.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Gấm",
+        "cate_id": 1,
+        "describe": "Công ty Cổ phần Ỷ Vân Hiên ưu tiên sử dụng các chất liệu truyền thống từ cao cấp tới bình dân, do các làng nghề trên khắp cả nước cung cấp như: Lụa, là, gấm, sa, đoạn, lĩnh, the, đũi,... Ngoài ra, chúng tôi còn sử dụng các chất liệu cao cấp làm từ tơ tằm khác nhập từ các nước Nhật Bản, Hàn Quốc, Trung Quốc,... Mỗi chất liệu phối hợp với các loại sản phẩm khác nhau và đường kim mũi chỉ tỉ mỉ của nghệ nhân để đưa ra được sản phẩm có chất lượng cao nhất, gửi đến khách hàng.Công ty chúng tôi sử dụng những loại chất liệu: đoạn - gấm - the - đũi – lãnh.",
+        "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/38631879_2080558202261729_732130338708389888_n-nu7ixie1h39slqyeggdlb8zik0deyr2eoreyu5krvk.jpg"
       }
     ]
     

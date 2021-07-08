@@ -30,6 +30,50 @@
                 font-weight: 700;
                 text-transform: uppercase;
                 cursor: pointer;
+                &:hover {
+                    color:#c2a267 ;
+                }
+                .drop-down {
+                    .caret {
+                        display: inline-block;
+                        width: 0;
+                        height: 0;
+                        margin-left: 2px;
+                        vertical-align: middle;
+                        border-top: 4px solid;
+                        border-right: 4px solid transparent;
+                        border-left: 4px solid transparent;
+                    }
+                    &:hover {
+                        .wrap-item-category {
+                            display: block;
+                        }
+                    }
+                }
+                .wrap-item {
+                    position: relative;
+                    .wrap-item-category {
+                        display: none;
+                        position: absolute;
+                        width: 220px;
+                        z-index: 3;
+                        border: 1px solid #bbbb;
+                        background-color: #ffff;
+                        padding: 5px 10px;
+                        ul {
+                            width: 100%;
+                            list-style: none;
+                            cursor: pointer;
+                            padding: 0;
+                            li {
+                                margin: 10px 0;
+                                &:hover {
+                                    border-bottom: 1px solid #bbbb;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
