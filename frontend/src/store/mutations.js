@@ -17,3 +17,11 @@ export const SET_CATEGORY = (state,item) => {
 export const SET_INFOR_COMPANY = (state,item) => {
     state.infor_company = item
 }
+
+export const SET_MATERIAL = (state,item) => {
+    state.materials = item
+}
+
+export const SET_PRODUCT = (state,item) => {
+    state.products = item
+}

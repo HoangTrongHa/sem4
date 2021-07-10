@@ -38,6 +38,13 @@ export const getInforCompany = ({ commit }) => {
 export const getMaterial = ({ commit }) => {
     axios.get('http://localhost:15000/material')
     .then(res => {
-        commit('SET_MATERIAL')
+        commit('SET_MATERIAL',res.data)
+    })
+}
+
+export const getAllProduct = ({ commit }) => {
+    axios.get('http://localhost:15000/product')
+    .then(res => {
+        commit('SET_PRODUCT',res.data)
     })
 }

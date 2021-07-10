@@ -3,5 +3,7 @@ export default {
     banner:[],
     product_hot:[],
     categories:[],
-    infor_company:[]
+    infor_company:[],
+    materials:[],
+    products:[]
 }

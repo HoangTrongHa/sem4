@@ -85,6 +85,7 @@
         </div>
         <div class="product-section-title">
           Sản phẩm - những giá trị văn hóa
+          {{  product_hot.lenght }}
         </div>
         <VueSlickCarousel 
           class="wrap-owl"
@@ -94,10 +95,14 @@
           :autoplaySpeed="3000"
           :margin="50"
           :accessibility="true"
+          :swipeToSlide	="true"
+          :slidesToScroll="2"
+          v-if="product_hot.length > 0"
         >
           <div 
             class="wrap-item-product"
             v-for="item of product_hot" :key="item.id"
+
           >
           <div class="wrap-img">
             <img 
@@ -130,7 +135,6 @@
 
   export default {
     name: 'Home',
-
     components: {
       Banner,
       VueSlickCarousel,
@@ -145,6 +149,7 @@
     mounted() {
       this.$store.dispatch('getBanner');
       this.$store.dispatch('getHotProduct')
+      this.$store.dispatch('getAllProduct')
     }
   }
 </script>

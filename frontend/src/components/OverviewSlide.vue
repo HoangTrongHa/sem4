@@ -8,7 +8,6 @@
       <v-system-bar lights-out></v-system-bar>
       <v-carousel
         :continuous="false"
-        
         :show-arrows="false"
         hide-delimiter-background
         delimiter-icon="mdi-minus"

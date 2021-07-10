@@ -157,13 +157,29 @@
             </div>
             <div class="chatlieu-wrap">
                 <h2 class="about-section-title">Chất liệu</h2>
-                <div class="chatlieu mCustomScrollbar _mCS_1">
-                    <div class="mCustomScrollBox mCS-light-3 mCSB_horizontal mCSB_inside">
-                        <div id="mCSB_1_container" class="mCSB_container" >
-                            <div class="cl-item">
-
-                            </div>
+                <div class="wrapSlider">
+                    <div class="slider">
+                        <VueSlickCarousel 
+                        class="wrap-owl"
+                        v-bind="setting"
+                        v-if="getMaterials.length > 0"
+                        >
+                        <div 
+                            class="wrap-item-product"
+                            v-for="item of getMaterials" :key="item.id"
+                        >
+                            <v-parallax
+                            height="500"
+                            :src="item.base64"
+                            >
+                                <div class="wrap-title">
+                                    <div>
+                                        {{ item.name }}
+                                    </div>
+                                </div>
+                            </v-parallax>
                         </div>
+                        </VueSlickCarousel>
                     </div>
                 </div>
             </div>
@@ -173,10 +189,35 @@
 </template>
 
 <script>
+    import VueSlickCarousel from 'vue-slick-carousel'
+    import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+    import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 export default {
+    components: {
+        VueSlickCarousel    
+    },
     computed: {
         getInforCompany() {
             return this.$store.state.infor_company
+        },
+        getMaterials() {
+            return this.$store.state.materials
+        },
+        setting() {
+            return {
+                arrows:true,
+                dots:false,
+                slidesToShow:4,
+                margin:50,
+                accessibility:true,
+                swipeToSlide:true,
+                slidesToScroll:2,
+                draggable: true,
+                infinite:true,
+                autoplay:true,
+                autoplaySpeed:2000,
+                adaptiveHeight:true
+            }
         }
     },
     created() {
@@ -248,6 +289,7 @@ export default {
             -ms-flex-pack: center;
             justify-content: center;
         }
+
     }
 }
 .topright-bg {
@@ -424,7 +466,7 @@ export default {
         &::after {
             content: "";
             top: -167px;
-            left: -150px;
+            left: 200px;
             width: 622px;
             height: 809px;
             background: url(../../assets/cl-bg.png) no-repeat left top;
@@ -439,6 +481,14 @@ export default {
         width: 80%;
         height: 450px;
         float: right;
+    }
+}
+.wrapSlider {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    .slider {
+        width: 75%;
     }
 }
 </style>
