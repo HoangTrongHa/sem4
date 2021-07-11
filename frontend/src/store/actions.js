@@ -21,13 +21,6 @@ export const getCategories = ({ commit }) => {
     })
 }
 
-export const getHotProduct = ({ commit }) => {
-    axios.get('http://localhost:15000/product_hot')
-    .then(res => {
-        commit('SET_HOT_PRODUCT',res.data)
-    })
-}
-
 export const getInforCompany = ({ commit }) => {
     axios.get('http://localhost:15000/inforcompany')
     .then(res => {
@@ -47,4 +40,15 @@ export const getAllProduct = ({ commit }) => {
     .then(res => {
         commit('SET_PRODUCT',res.data)
     })
+}
+
+export const getBannerProduct = ({ commit }) => {
+    axios.get('http://localhost:15000/shop-banner')
+    .then(res => {
+        commit('SET_BANNER_PRODUCT',res.data)
+    })
+}
+
+export const addProductToCart = ({ commit }, { item }) => {
+    commit('ADD_TO_CART',{item})
 }

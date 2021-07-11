@@ -130,7 +130,6 @@
   import OverviewSlide from "@/components/OverviewSlide.vue"
   import VueSlickCarousel from 'vue-slick-carousel'
   import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-  // optional style for arrows & dots
   import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
   export default {
@@ -143,7 +142,7 @@
     },
     computed: {
       product_hot() {
-          return this.$store.state.product_hot
+        return this.$store.state.products.filter(items => items.status === `HOT`)
       }
     },
     mounted() {
