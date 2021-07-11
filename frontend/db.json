@@ -1,0 +1,288 @@
+{
+    "menu": [
+        {
+          "id": 1,
+          "name": "Trang chủ",
+          "location": "Home"
+        },
+        {
+          "id": 2,
+          "name": "Giới Thiệu",
+          "location": "Infor"
+        },
+        {
+          "id": 3,
+          "name": "Sản Phẩm",
+          "location": "#"
+        },
+        {
+          "id": 4,
+          "name": "GALLERY",
+          "location": "Gallery"
+        },
+        {
+          "id": 5,
+          "name": "TIN TỨC",
+          "location": "News"
+      },
+      {
+          "id": 6,
+          "name": "HƯỚNG DẪN",
+          "location": "Tutorial"
+      },
+      {
+          "id": 7,
+          "name": "LIÊN HỆ",
+          "location": "Contact"
+      }
+  ],
+  "banner": [
+    {
+      "id": 1,
+      "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/4-p5l7ae4gmen7dyd19s4ykwd7ewefoljsk6pbk4kkmo.jpg"
+    },
+    {
+      "id": 2,
+      "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/2-p5auaogtm54976v3okua8c2xvvvyf4glr6g159z3hs.jpg"
+    },
+    {
+      "id": 3,
+      "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/3-p5aucz6mbk9hkviy9klgbr7i5sk98hkzejurdmkga8.jpg"
+    },
+    {
+      "id": 3,
+      "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/0828512f_fe3a_4b76_a505_a9f39ad8747e-p5lk4p2tyzi5lmu7qm59x8kpf9rfhev64doitf3wc0.jpg"
+    }
+  ],
+  "category": [
+    {
+      "id": "1",
+      "name":"Trang Phục"
+    },
+    {
+      "id": "2",
+      "name":"Đao-Thương"
+    },
+    {
+      "id": "3",
+      "name":"Đồ nhật dụng"
+    },
+    {
+      "id": "4",
+      "name":"Phụ Kiện"
+    }
+  ],
+  "product_hot": [
+    {
+      "id": "1",
+      "cate_id": "3",
+      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+    },
+    {
+      "id": "2",
+      "cate_id": "3",
+      "name": "Gối XẾP VÂN MÂY",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Goi-3-nu0idktq59gynh8lb96gh00b4elczoqzer7ohd7vos.jpg"
+    },
+    {
+      "id": "3",
+      "cate_id": "1",
+      "name": "Áo Dài Nam Cổ Đứng",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg"
+    },
+    {
+      "id": "4",
+      "cate_id": "1",
+      "name": "Áo dài nữ năm thân cổ đứng",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0350.2-o9auxk4cthnttexwpcigpci842d8sro5sae02jebl8.jpg"
+    },
+    {
+      "id": "5",
+      "cate_id": "3",
+      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+    },
+    {
+      "id": "6",
+      "cate_id": "3",
+      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+    }
+  ],
+  "overview": [
+    {
+      "paragraph": "Nguyễn Đức Lộc có đủ nhiệt huyết và sự tỉ mẩn của một người làm nghề. Hơn thế, với tinh thần đương đại cởi mở, cùng niềm đau đáu với nét đẹp vàng son của một thời quá vãng, Nguyễn Đức Lộc đang chứng minh bản thân mình là người có đủ tâm và tầm. Những việc anh Lộc đã và đang làm, chắc chắn có đóng góp không nhỏ tới việc tái định khung hệ giá trị thẩm mĩ, văn hóa truyền thống Việt Nam.",
+      "author": "Học giả, nhà nghiên cứu lịch sử Hoàng Trọng Hà",
+      "img": "http://yvanhien.com/wp-content/uploads/2018/08/15590554_10154145419186526_3029755220963240643_n.jpg"
+    },
+    {
+      "paragraph": "Trong bối cảnh văn hóa Việt Nam đã trải qua nhiều biến động, thay đổi, mới đây, Công ty cổ phần Ỷ Vân Hiên ra đời với mong muốn giữ được những giá trị cốt lõi - những nét đẹp đặc trưng của văn hóa Việt trên con đường hội nhập văn hóa toàn cầu.",
+      "author": "vov.vn",
+      "img": "http://yvanhien.com/wp-content/uploads/2018/08/logo-vov.png"
+    },
+    {
+      "paragraph": "Ỷ Vân Hiên là đơn vị tập hợp một đội ngũ đông đảo các bạn trẻ đam mê văn hóa cổ truyền đất nước, tiếc vốn quý của cha ông bị mai một và mong muốn khôi phục lại những nét văn hóa này và phục vụ rộng rãi trong cộng đồng, phát triển trong đời sống đương đại.",
+      "author": "cand.com.vn",
+      "img": "http://yvanhien.com/wp-content/uploads/2018/08/logo-candonline.png"
+    },
+    {
+      "paragraph": "Một số mẫu áo dài cổ vừa được phục dựng đã được trình diễn giới thiệu tại Trung tâm Giao lưu văn hóa Phố Cổ, sáng 8-8. Đây là những mẫu áo dài do các nhà thiết kế trẻ của Ỷ Vân Hiên thực hiện dưới sự cố vấn của nhiều chuyên gia, nhà nghiên cứu hàng đầu về trang phục xưa",
+      "author": "nhandan.com.vn",
+      "img": "http://yvanhien.com/wp-content/uploads/2018/08/bao-nhan-dan.png"
+    }
+  ],
+  "inforcompany": [
+    {
+      "id": 1,
+      "base64": "http://yvanhien.com/wp-content/uploads/2019/03/DSC2103c-180x300.jpg",
+      "content": "Theo dòng chảy lịch sử, văn hóa Việt Nam đã trải qua nhiều biến động, thay đổi. Đặc biệt, sau năm 1945, vua Bảo Đại thoái vị kéo theo sự sụp đổ hoàn toàn của triều đại phong kiến cuối cùng ở Việt Nam. Cùng với sự thay đổi của thời đại, những làn sóng cách tân phần nào tích cực vào việc hiện đại hóa đời sống của con người, tuy nhiên, mặt trái của nó là khiến cho văn hóa truyền thống và văn hóa cung đình bị mai một.\rTrong bối cảnh ấy, với mong muốn giữ được những giá trị cốt lõi – những nét đẹp đặc trưng của văn hóa Việt trên con đường hội nhập văn hóa toàn cầu, Công ty Cổ phần Ỷ Vân Hiên ra đời. Chúng tôi tin rằng hiểu được quá khứ mới hiểu được hiện tại, xa hơn là sẽ tìm thấy hướng đi ở tương lai."
+    },
+    {
+      "id": 2,
+      "base64": "http://yvanhien.com/wp-content/uploads/2019/03/DSC19312-300x258.jpg",
+      "content": "Chúng tôi có một đội ngũ nhân viên trẻ chuyên nghiệp, có kiến thức chuyên môn cùng với lòng nhiệt thành, sức sáng tạo mạnh mẽ. Đó là nền tảng, là sức bật để Công ty Cổ phần Ỷ Vân Hiên tiến hành nghiên cứu chuyên sâu vào các lĩnh vực nghệ thuật (Văn học, âm nhạc, kiến trúc, hội họa, điêu khắc), trang phục, ẩm thực và các nghi lễ truyền thống trong cung đình cũng như trong dân gian, sau đó phục dựng lại chúng, nhằm thương mại hóa, phục vụ phổ quát cho du lịch và cộng đồng, giúp cho những nét đẹp đó đến được với công chúng trong và ngoài nước."
+    }
+  ],
+  "material": [
+    {
+      "id": 1,
+      "name": "Lụa Vân",
+      "cate_id": 1,
+      "describe": "Công ty Cổ phần Ỷ Vân Hiên ưu tiên sử dụng các chất liệu truyền thống từ cao cấp tới bình dân, do các làng nghề trên khắp cả nước cung cấp như: Lụa, là, gấm, sa, đoạn, lĩnh, the, đũi,... Ngoài ra, chúng tôi còn sử dụng các chất liệu cao cấp làm từ tơ tằm khác nhập từ các nước Nhật Bản, Hàn Quốc, Trung Quốc,... Mỗi chất liệu phối hợp với các loại sản phẩm khác nhau và đường kim mũi chỉ tỉ mỉ của nghệ nhân để đưa ra được sản phẩm có chất lượng cao nhất, gửi đến khách hàng.Công ty chúng tôi sử dụng những loại chất liệu: đoạn - gấm - the - đũi – lãnh.",
+      "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3667-e1533521787999-nu7at6kzzz3hvjktg3ejv0mrq17x3ijmhveps70izk.jpg"
+    },
+    {
+      "id":2,
+      "name": "Đũi",
+      "cate_id": 1,
+      "describe": "Công ty Cổ phần Ỷ Vân Hiên ưu tiên sử dụng các chất liệu truyền thống từ cao cấp tới bình dân, do các làng nghề trên khắp cả nước cung cấp như: Lụa, là, gấm, sa, đoạn, lĩnh, the, đũi,... Ngoài ra, chúng tôi còn sử dụng các chất liệu cao cấp làm từ tơ tằm khác nhập từ các nước Nhật Bản, Hàn Quốc, Trung Quốc,... Mỗi chất liệu phối hợp với các loại sản phẩm khác nhau và đường kim mũi chỉ tỉ mỉ của nghệ nhân để đưa ra được sản phẩm có chất lượng cao nhất, gửi đến khách hàng.Công ty chúng tôi sử dụng những loại chất liệu: đoạn - gấm - the - đũi – lãnh.",
+      "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3730-1-nu7ifoe9t8uyc2uxl8vei8zotu9pxh9qkhuc260nxc.jpg"
+    },
+    {
+      "id": 3,
+      "name": "THE (SA)",
+      "cate_id": 1,
+      "describe": "Công ty Cổ phần Ỷ Vân Hiên ưu tiên sử dụng các chất liệu truyền thống từ cao cấp tới bình dân, do các làng nghề trên khắp cả nước cung cấp như: Lụa, là, gấm, sa, đoạn, lĩnh, the, đũi,... Ngoài ra, chúng tôi còn sử dụng các chất liệu cao cấp làm từ tơ tằm khác nhập từ các nước Nhật Bản, Hàn Quốc, Trung Quốc,... Mỗi chất liệu phối hợp với các loại sản phẩm khác nhau và đường kim mũi chỉ tỉ mỉ của nghệ nhân để đưa ra được sản phẩm có chất lượng cao nhất, gửi đến khách hàng.Công ty chúng tôi sử dụng những loại chất liệu: đoạn - gấm - the - đũi – lãnh.",
+      "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3750-nu7ilqgtut5h5m267v4ukpymn8evj9bgqh6zed1bts.jpg"
+    },
+    {
+      "id": 4,
+      "name": "ĐOẠN",
+      "cate_id": 1,
+      "describe": "Công ty Cổ phần Ỷ Vân Hiên ưu tiên sử dụng các chất liệu truyền thống từ cao cấp tới bình dân, do các làng nghề trên khắp cả nước cung cấp như: Lụa, là, gấm, sa, đoạn, lĩnh, the, đũi,... Ngoài ra, chúng tôi còn sử dụng các chất liệu cao cấp làm từ tơ tằm khác nhập từ các nước Nhật Bản, Hàn Quốc, Trung Quốc,... Mỗi chất liệu phối hợp với các loại sản phẩm khác nhau và đường kim mũi chỉ tỉ mỉ của nghệ nhân để đưa ra được sản phẩm có chất lượng cao nhất, gửi đến khách hàng.Công ty chúng tôi sử dụng những loại chất liệu: đoạn - gấm - the - đũi – lãnh.",
+      "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3747-nu7idn2v062l6htfhd6i3rhqhsb3936oaeygml1deo.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Gấm",
+      "cate_id": 1,
+      "describe": "Công ty Cổ phần Ỷ Vân Hiên ưu tiên sử dụng các chất liệu truyền thống từ cao cấp tới bình dân, do các làng nghề trên khắp cả nước cung cấp như: Lụa, là, gấm, sa, đoạn, lĩnh, the, đũi,... Ngoài ra, chúng tôi còn sử dụng các chất liệu cao cấp làm từ tơ tằm khác nhập từ các nước Nhật Bản, Hàn Quốc, Trung Quốc,... Mỗi chất liệu phối hợp với các loại sản phẩm khác nhau và đường kim mũi chỉ tỉ mỉ của nghệ nhân để đưa ra được sản phẩm có chất lượng cao nhất, gửi đến khách hàng.Công ty chúng tôi sử dụng những loại chất liệu: đoạn - gấm - the - đũi – lãnh.",
+      "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/38631879_2080558202261729_732130338708389888_n-nu7ixie1h39slqyeggdlb8zik0deyr2eoreyu5krvk.jpg"
+    }
+  ],
+  "product": [
+    {
+      "id": "1",
+      "cate_id": "3",
+      "cate_name":"Trang Phục",
+      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+    },
+    {
+      "id": "2",
+      "cate_id": "3",
+      "cate_name":"Đồ nhật dụng",
+      "name": "Gối XẾP VÂN MÂY",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Goi-3-nu0idktq59gynh8lb96gh00b4elczoqzer7ohd7vos.jpg"
+    },
+    {
+      "id": "3",
+      "cate_id": "1",
+      "cate_name":"Trang Phục",
+      "name": "Áo Dài Nam Cổ Đứng",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg"
+    },
+    {
+      "id": "4",
+      "cate_id": "1",
+      "cate_name":"Đồ nhật dụng",
+      "name": "Áo dài nữ năm thân cổ đứng",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0350.2-o9auxk4cthnttexwpcigpci842d8sro5sae02jebl8.jpg"
+    },
+    {
+      "id": "5",
+      "cate_id": "3",
+      "cate_name":"Đồ nhật dụng",
+      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+    },
+    {
+      "id": "6",
+      "cate_id": "3",
+      "cate_name":"Đồ nhật dụng",
+      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+    },
+    {
+      "id": "7",
+      "cate_id": "3",
+      "cate_name":"Trang Phục",
+      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+    },
+    {
+      "id": "8",
+      "cate_id": "3",
+      "cate_name":"Đồ nhật dụng",
+      "name": "Gối XẾP VÂN MÂY",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Goi-3-nu0idktq59gynh8lb96gh00b4elczoqzer7ohd7vos.jpg"
+    },
+    {
+      "id": "9",
+      "cate_id": "1",
+      "cate_name":"Trang Phục",
+      "name": "Áo Dài Nam Cổ Đứng",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg"
+    },
+    {
+      "id": "10",
+      "cate_id": "1",
+      "cate_name":"Đồ nhật dụng",
+      "name": "Áo dài nữ năm thân cổ đứng",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0350.2-o9auxk4cthnttexwpcigpci842d8sro5sae02jebl8.jpg"
+    },
+    {
+      "id": "11",
+      "cate_id": "3",
+      "cate_name":"Đồ nhật dụng",
+      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+    },
+    {
+      "id": "12",
+      "cate_id": "3",
+      "cate_name":"Đồ nhật dụng",
+      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+    }
+  ]
+}
