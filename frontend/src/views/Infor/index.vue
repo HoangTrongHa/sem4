@@ -1,17 +1,11 @@
 <template>
-    <div class="wrapBanner">
-        <div class="topright-bg"> 
-            <img src="http://yvanhien.com/wp-content/themes/hc-theme/images/topbg.png" alt="">
-        </div>
-        <div class="site-inner">
-            <div class="header-banner">
-                <img src="@/assets/banner-infor.jpg" alt="">
-                <h1 class="header-page-title"> 
-                    Giới thiệu
-                </h1>
-            </div>
-        </div>
-        <div class="wrap-infor-company">
+    <div>
+    <BaseBanner>
+        <template v-slot:title>
+            Giới Thiệu
+        </template>
+    </BaseBanner>
+    <div class="wrap-infor-company">
             <h1 class="title">
                 GIỚI THIỆU VỀ CÔNG TY CỔ PHẦN ỐI ZỜI ƠI
             </h1>
@@ -185,16 +179,17 @@
             </div>
         </div>
     </div>
-
 </template>
 
 <script>
     import VueSlickCarousel from 'vue-slick-carousel'
     import 'vue-slick-carousel/dist/vue-slick-carousel.css'
     import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+    import BaseBanner from '@/components/base/Banner.vue'
 export default {
     components: {
-        VueSlickCarousel    
+        VueSlickCarousel,
+        BaseBanner 
     },
     computed: {
         getInforCompany() {
