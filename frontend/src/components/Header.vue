@@ -25,6 +25,7 @@
                                             params: { name: itemCat.name, items:itemCat}
                                         })"
                                         v-for="itemCat of categoriesList" :key="itemCat.id"
+                                        :getCategories="categoriesList.categoriesList"
                                         >
                                             {{ itemCat.name }}
                                         </li>

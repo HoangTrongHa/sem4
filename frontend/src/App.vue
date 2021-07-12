@@ -17,7 +17,8 @@ export default {
   name: 'App',
 
   mounted() {
-      this.$store.dispatch('getAllProduct')
+      this.$store.dispatch('getAllProduct'),
+      this.$store.dispatch('getBannerProduct')
   }
 };
 </script>
