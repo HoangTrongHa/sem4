@@ -14,14 +14,13 @@ export const SET_INFOR_COMPANY = (state,item) => {
     state.infor_company = item
 }
 
-<<<<<<< HEAD
 export const SET_OVERVIEW_INFOR = (state,item) => {
     state.overview_infor = item
 }
 
 export const SET_NEWS = (state,item) => {
     state.news = item
-=======
+}
 export const SET_MATERIAL = (state,item) => {
     state.materials = item
 }
@@ -36,5 +35,4 @@ export const SET_BANNER_PRODUCT = (state,item) => {
 
 export const ADD_TO_CART = (state,item) => {
     state.cart.push({ item })
->>>>>>> test_2021
 }

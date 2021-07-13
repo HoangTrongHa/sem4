@@ -42,7 +42,6 @@ export const getAllProduct = ({ commit }) => {
     })
 }
 
-<<<<<<< HEAD
 export const getOverview = ({ commit }) => {
     axios.get('http://localhost:15000/overview')
     .then(res => {
@@ -56,7 +55,7 @@ export const getNews = ({ commit }) => {
         // console.log(res.data);
         commit('SET_NEWS',res.data)
     })
-=======
+}
 export const getBannerProduct = ({ commit }) => {
     axios.get('http://localhost:15000/shop-banner')
     .then(res => {
@@ -66,5 +65,4 @@ export const getBannerProduct = ({ commit }) => {
 
 export const addProductToCart = ({ commit }, { item }) => {
     commit('ADD_TO_CART',{item})
->>>>>>> test_2021
 }
