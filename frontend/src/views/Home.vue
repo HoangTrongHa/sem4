@@ -88,22 +88,17 @@
         </div>
         <VueSlickCarousel 
           class="wrap-owl"
-          :arrows="true" 
-          :dots="true"
-          :slidesToShow="4"
-          :autoplaySpeed="3000"
-          :margin="50"
-          :accessibility="true"
+          v-bind="settings"
         >
           <div 
             class="wrap-item-product"
             v-for="item of product_hot" :key="item.id"
           >
-          <div class="wrap-img">
-            <img 
-              :src="item.img"
-            />
-          </div>
+            <div class="wrap-img">
+              <img 
+                :src="item.img"
+              />
+            </div>
             <div class="wrap-title">
               <div>
                 {{ item.name }}
@@ -116,6 +111,12 @@
     <div class="overview-slide">
       <OverviewSlide />
     </div>
+    <div class="news-wrapper">
+      <News />
+    </div>
+    <div class="black-logo">
+      <img src="http://yvanhien.com/wp-content/uploads/bfi_thumb/YVH-logo-nền-đen-p5b3r9blwnimtnmhzdlx6s3aws3yzqol4in19gb77e.png" alt="">
+    </div>
   </div>
 </div>
 </template>
@@ -123,6 +124,7 @@
 <script>
   import Banner from "@/components/SliderComponent.vue"
   import OverviewSlide from "@/components/OverviewSlide.vue"
+  import News from '@/components/News.vue'
   import VueSlickCarousel from 'vue-slick-carousel'
   import 'vue-slick-carousel/dist/vue-slick-carousel.css'
   // optional style for arrows & dots
@@ -135,8 +137,20 @@
       Banner,
       VueSlickCarousel,
       OverviewSlide,
+      News
       // carousel
     },
+    data: () => ({
+      settings: {
+        dots: true,
+        focusOnSelect: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 3,
+        touchThreshold: 5,
+      }
+    }),
     computed: {
       product_hot() {
           return this.$store.state.product_hot
@@ -151,44 +165,44 @@
 
 <style lang="scss" scoped>
   .site-inner {
-     .wrap-content {
-        @media (min-width: 1904px) {
-            max-width: 1300px;
-        }
-        .wrap-video {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        .row {
-          .item-home-about {
-            .ab-image {
-              background: url(../assets/ab-img-bg.png);
-              padding: 0 30px 30px 0;
-              position: relative;
-            }
-            .about-exept {
-              color: #333;
-              font-size: 25px;
-              line-height: 1.2;
-              margin: 0 0 20px;
-              font-style: italic;
-              font-weight: 500;
-            }
-            .about-content {
-              color: #777;
-              font-size: 14px;
-              line-height: 1.8;
-              font-weight: 500;
-              text-align: justify;
-              margin-bottom: 60px;
-            }
+    .wrap-content {
+      @media (min-width: 1904px) {
+          max-width: 1300px;
+      }
+      .wrap-video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .row {
+        .item-home-about {
+          .ab-image {
+            background: url(../assets/ab-img-bg.png);
+            padding: 0 30px 30px 0;
+            position: relative;
           }
-          .video-description {
+          .about-exept {
+            color: #333;
+            font-size: 25px;
+            line-height: 1.2;
+            margin: 0 0 20px;
+            font-style: italic;
+            font-weight: 500;
+          }
+          .about-content {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.8;
+            font-weight: 500;
             text-align: justify;
+            margin-bottom: 60px;
           }
+        }
+        .video-description {
+          text-align: justify;
         }
       }
+    }
     .home-about {
       background: url(../assets/backgroud.jpg) repeat center;
       background-image: url(../assets/backgroud.jpg);
@@ -286,6 +300,17 @@
           border: 1px solid #000572;
         }
     }
+    }
+    .news-wrapper {
+      text-align: center;
+      margin-top: 3%;
+    }
+    .black-logo {
+      margin: 3% 0;
+
+      img {
+        width: 100%;
+      }
     }
   }
   

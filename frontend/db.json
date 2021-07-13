@@ -27,58 +27,26 @@
           "hover": [
             {
                 "id": 1,
-                "name":"Trang Phục",
-                "location": "skin"
+                "name":"Bài Nghiên Cứu",
+                "location": "Research"
             },
             {
               "id": 2,
-              "name":"Đao Thương",
-              "location": "Blade_Spear"
+              "name":"Quá Trình Phục Dựng",
+              "location": "Restoration_Process"
           },
           {
               "id": 3,
-              "name":"Đồ Nhật Dụng",
-              "location": "Japanese_Consumables"
+              "name":"Sách",
+              "location": "Books"
           },
           {
               "id": 4,
-              "name":"Phụ Kiện",
-              "location": "Accessories"
+              "name":"Sưu Tầm",
+              "location": "Collect"
           }
         ]
-      },
-      {
-        "id": 4,
-        "name": "GALLERY",
-        "location": "Gallery"
-      },
-      {
-        "id": 5,
-        "name": "TIN TỨC",
-        "location": "News",
-        "hover": [
-          {
-              "id": 1,
-              "name":"Bài Nghiên Cứu",
-              "location": "Research"
-          },
-          {
-            "id": 2,
-            "name":"Quá Trình Phục Dựng",
-            "location": "Restoration_Process"
         },
-        {
-            "id": 3,
-            "name":"Sách",
-            "location": "Books"
-        },
-        {
-            "id": 4,
-            "name":"Sưu Tầm",
-            "location": "Collect"
-        }
-      ]
-      },
       {
           "id": 6,
           "name": "HƯỚNG DẪN",
@@ -225,6 +193,40 @@
       "cate_id": 1,
       "describe": "Công ty Cổ phần Ỷ Vân Hiên ưu tiên sử dụng các chất liệu truyền thống từ cao cấp tới bình dân, do các làng nghề trên khắp cả nước cung cấp như: Lụa, là, gấm, sa, đoạn, lĩnh, the, đũi,... Ngoài ra, chúng tôi còn sử dụng các chất liệu cao cấp làm từ tơ tằm khác nhập từ các nước Nhật Bản, Hàn Quốc, Trung Quốc,... Mỗi chất liệu phối hợp với các loại sản phẩm khác nhau và đường kim mũi chỉ tỉ mỉ của nghệ nhân để đưa ra được sản phẩm có chất lượng cao nhất, gửi đến khách hàng.Công ty chúng tôi sử dụng những loại chất liệu: đoạn - gấm - the - đũi – lãnh.",
       "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/38631879_2080558202261729_732130338708389888_n-nu7ixie1h39slqyeggdlb8zik0deyr2eoreyu5krvk.jpg"
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "title": "MỘT SỐ CÁC SỰ KIỆN NỔI BẬT TRONG NĂM 2020 CỦA Ỷ VÂN HIÊN",
+      "date": "08/07/2021 | ",
+      "author": "by nguyendan",
+      "summary": "Trải qua những giai đoạn khó khăn trên bước đường nghiên cứu và phục dựng cổ phục, Ỷ Vân...",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/67801588_2297632757166729_917953267000934400_n-oc1seksopoi1oai9w7uimx1vgxar2nsve5gseacx0o.jpg"
+    },
+    {
+      "id": 2,
+      "title": "TÁI HIỆN NGHI LỄ VUA BAN XUÂN NGƯU CHO QUAN, QUẦN THẦN VÀ DÂN CHÚNG TẠI SÂN HIÊN ĐIỆN KÍNH THIÊN SÁNG 30/1, TRUNG TÂM BẢO TỒN DI SẢN VĂN HÓA HOÀNG THÀNH THĂNG LONG SỬ DỤNG TRANG PHỤC CỦA Ỷ VÂN HIÊN",
+      "date": "08/07/2021 | ",
+      "author": "by nguyendan",
+      "summary": "Ỷ Vân Hiên vô cùng vinh hạnh được góp một phần công sức nhỏ với Trung tâm Bảo tồn...",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/2-p5ax9qamfd9hbomkpbovlyeiqajmdmwqzjkii45nvs.png"
+    },
+    {
+      "id": 3,
+      "title": "BỘ SƯU TẬP CỦA Ỷ VÂN HIÊN XUẤT HIỆN TRÊN TRANG BÌA CỦA TẠP CHÍ BÁO ẢNH VIỆT NAM",
+      "date": "08/07/2021 | ",
+      "author": "by nguyendan",
+      "summary": "Ỷ Vân Hiên gửi lời cảm ơn đến Nhiếp ảnh gia Thanh Giang và Tạp chí Báo ảnh Việt...",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/102416225_2555104781419524_3121003269849197578_n-oqunwqz8wgac3uiewj9lwutnj7dqtifkxc6avdpcfc.jpg"
+    },
+    {
+      "id": 4,
+      "title": "MỘT SỐ CÁC SỰ KIỆN NỔI BẬT TRONG NĂM 2020 CỦA Ỷ VÂN HIÊN",
+      "date": "08/07/2021 | ",
+      "author": "by nguyendan",
+      "summary": "Trải qua những giai đoạn khó khăn trên bước đường nghiên cứu và phục dựng cổ phục, Ỷ Vân...",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/67801588_2297632757166729_917953267000934400_n-oc1seksopoi1oai9w7uimx1vgxar2nsve5gseacx0o.jpg"
     }
   ]
 }

@@ -41,3 +41,18 @@ export const getMaterial = ({ commit }) => {
         commit('SET_MATERIAL')
     })
 }
+
+export const getOverview = ({ commit }) => {
+    axios.get('http://localhost:15000/overview')
+    .then(res => {
+        commit('SET_OVERVIEW_INFOR',res.data)
+    })
+}
+
+export const getNews = ({ commit }) => {
+    axios.get('http://localhost:15000/news')
+    .then(res => {
+        // console.log(res.data);
+        commit('SET_NEWS',res.data)
+    })
+}
