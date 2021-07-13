@@ -1,40 +1,40 @@
 {
-    "menu": [
-        {
-          "id": 1,
-          "name": "Trang chủ",
-          "location": "Home"
-        },
-        {
-          "id": 2,
-          "name": "Giới Thiệu",
-          "location": "Infor"
-        },
-        {
-          "id": 3,
-          "name": "Sản Phẩm",
-          "location": "#"
-        },
-        {
-          "id": 4,
-          "name": "GALLERY",
-          "location": "Gallery"
-        },
-        {
-          "id": 5,
-          "name": "TIN TỨC",
-          "location": "News"
-      },
-      {
-          "id": 6,
-          "name": "HƯỚNG DẪN",
-          "location": "Tutorial"
-      },
-      {
-          "id": 7,
-          "name": "LIÊN HỆ",
-          "location": "Contact"
-      }
+  "menu": [
+    {
+      "id": 1,
+      "name": "Trang chủ",
+      "location": "Home"
+    },
+    {
+      "id": 2,
+      "name": "Giới Thiệu",
+      "location": "Infor"
+    },
+    {
+      "id": 3,
+      "name": "Sản Phẩm",
+      "location": "#"
+    },
+    {
+      "id": 4,
+      "name": "GALLERY",
+      "location": "Gallery"
+    },
+    {
+      "id": 5,
+      "name": "TIN TỨC",
+      "location": "News"
+    },
+    {
+      "id": 6,
+      "name": "HƯỚNG DẪN",
+      "location": "Tutorial"
+    },
+    {
+      "id": 7,
+      "name": "LIÊN HỆ",
+      "location": "Contact"
+    }
   ],
   "banner": [
     {
@@ -57,19 +57,19 @@
   "category": [
     {
       "id": "1",
-      "name":"Trang Phục"
+      "name": "Trang Phục"
     },
     {
       "id": "2",
-      "name":"Đao-Thương"
+      "name": "Đao-Thương"
     },
     {
       "id": "3",
-      "name":"Đồ nhật dụng"
+      "name": "Đồ nhật dụng"
     },
     {
       "id": "4",
-      "name":"Phụ Kiện"
+      "name": "Phụ Kiện"
     }
   ],
   "overview": [
@@ -98,17 +98,17 @@
     {
       "id": 1,
       "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3717-nu7ajlmegszqoo5d8bkjj7c37i9jm0y7b69ktpvgoc.jpg",
-      "content":"Tại Ỷ Vân Hiên, chúng tôi không chỉ cung cấp sản phẩm mà còn cung cấp những câu chuyện, những văn vật cùng với các giá trị văn hóa cũng như trải nghiệm kết nối quá khứ tới hiện tại."
+      "content": "Tại Ỷ Vân Hiên, chúng tôi không chỉ cung cấp sản phẩm mà còn cung cấp những câu chuyện, những văn vật cùng với các giá trị văn hóa cũng như trải nghiệm kết nối quá khứ tới hiện tại."
     },
     {
       "id": 2,
       "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/31171480_1311037519040031_7783599815029750274_n-nu26bxsil4qwtr0ah8yre6i0gyvs2gpmjhtgdcpe0c.jpg",
-      "content":"Ỷ Vân Hiên với đội ngũ nghiên cứu trẻ, có đam mê với văn hóa đã dày công nghiên cứu để duy trì tinh hoa đó và giới thiệu tới cộng đồng trong nước cũng như bạn bè quốc tế. Mỗi sản phẩm của chúng tôi đều mang hàm lượng tri thức cao cũng như những câu chuyện thú vị và đặc sắc"
+      "content": "Ỷ Vân Hiên với đội ngũ nghiên cứu trẻ, có đam mê với văn hóa đã dày công nghiên cứu để duy trì tinh hoa đó và giới thiệu tới cộng đồng trong nước cũng như bạn bè quốc tế. Mỗi sản phẩm của chúng tôi đều mang hàm lượng tri thức cao cũng như những câu chuyện thú vị và đặc sắc"
     },
     {
       "id": 3,
       "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/a231a8ca6f24071c27c75147363c6697-e1533357552593-nu3zoz3r6lvko53aed158eef1h2d1a3q1xzhpru1po.jpg",
-      "content":"Văn minh vật chất là sự kết tinh trí tuệ của vô vàn thế hệ của cả một dân tộc. Trong đó bao gồm những thứ như trang phục, đồ dùng, kiến trúc, sách vở,… Tuy nhiên thứ văn minh vật chất đó của người Việt trong hiện tại đang dần bị mai một"
+      "content": "Văn minh vật chất là sự kết tinh trí tuệ của vô vàn thế hệ của cả một dân tộc. Trong đó bao gồm những thứ như trang phục, đồ dùng, kiến trúc, sách vở,… Tuy nhiên thứ văn minh vật chất đó của người Việt trong hiện tại đang dần bị mai một"
     }
   ],
   "inforcompany": [
@@ -132,7 +132,7 @@
       "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3667-e1533521787999-nu7at6kzzz3hvjktg3ejv0mrq17x3ijmhveps70izk.jpg"
     },
     {
-      "id":2,
+      "id": 2,
       "name": "Đũi",
       "cate_id": 1,
       "describe": "Công ty Cổ phần Ỷ Vân Hiên ưu tiên sử dụng các chất liệu truyền thống từ cao cấp tới bình dân, do các làng nghề trên khắp cả nước cung cấp như: Lụa, là, gấm, sa, đoạn, lĩnh, the, đũi,... Ngoài ra, chúng tôi còn sử dụng các chất liệu cao cấp làm từ tơ tằm khác nhập từ các nước Nhật Bản, Hàn Quốc, Trung Quốc,... Mỗi chất liệu phối hợp với các loại sản phẩm khác nhau và đường kim mũi chỉ tỉ mỉ của nghệ nhân để đưa ra được sản phẩm có chất lượng cao nhất, gửi đến khách hàng.Công ty chúng tôi sử dụng những loại chất liệu: đoạn - gấm - the - đũi – lãnh.",
@@ -198,97 +198,234 @@
     {
       "id": "1",
       "cate_id": "3",
-      "cate_name":"Trang Phục",
+      "cate_name": "Trang Phục",
       "name": "Gối XẾP TAM SƠN THỦY BA",
-      "status":"HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+      "status": "HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg",
+      "size": [
+        {}
+      ]
+,"price": "499.00"
     },
     {
       "id": "2",
       "cate_id": "3",
-      "cate_name":"Đồ nhật dụng",
+      "cate_name": "Đồ nhật dụng",
       "name": "Gối XẾP VÂN MÂY",
-      "status":"HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Goi-3-nu0idktq59gynh8lb96gh00b4elczoqzer7ohd7vos.jpg"
+      "status": "HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Goi-3-nu0idktq59gynh8lb96gh00b4elczoqzer7ohd7vos.jpg",
+      "size": [
+        {}
+      ]
+,"price": "499.00"
     },
     {
       "id": "3",
       "cate_id": "1",
-      "cate_name":"Trang Phục",
+      "cate_name": "Trang Phục",
       "name": "Áo Dài Nam Cổ Đứng",
-      "status":"HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg"
+      "status": "HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg",
+      "size": [
+        {}
+      ]
+,"price": "499.00"
     },
     {
       "id": "4",
       "cate_id": "1",
-      "cate_name":"Đồ nhật dụng",
+      "cate_name": "Đồ nhật dụng",
       "name": "Áo dài nữ năm thân cổ đứng",
-      "status":"HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0350.2-o9auxk4cthnttexwpcigpci842d8sro5sae02jebl8.jpg"
+      "status": "HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0350.2-o9auxk4cthnttexwpcigpci842d8sro5sae02jebl8.jpg",
+      "size": [
+        {}
+      ]
+,"price": "499.00"
     },
     {
       "id": "5",
       "cate_id": "3",
-      "cate_name":"Đồ nhật dụng",
+      "cate_name": "Đồ nhật dụng",
       "name": "Gối XẾP TAM SƠN THỦY BA",
-      "status":"HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+      "status": "HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg",
+      "size": [
+        {
+          "id": 1,
+          "size": "xs",
+          "qty": 10
+        },
+        {
+          "id": 2,
+          "size": "l",
+          "qty": 10
+        },
+      ]
+,"price": "499.00"
     },
     {
       "id": "6",
       "cate_id": "3",
-      "cate_name":"Đồ nhật dụng",
+      "cate_name": "Đồ nhật dụng",
       "name": "Gối XẾP TAM SƠN THỦY BA",
-      "status":"HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+      "status": "HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg",
+      "size": [
+        {
+          "id": 1,
+          "size": "XS",
+          "qty": 10
+        },
+        {
+          "id": 2,
+          "size": "L",
+          "qty": 10
+        },
+        {
+          "id": 3,
+          "size": "XL",
+          "qty": 10
+        }
+      ]
+      ,"price": "499.00"
     },
     {
       "id": "7",
       "cate_id": "3",
-      "cate_name":"Trang Phục",
+      "cate_name": "Trang Phục",
       "name": "Gối XẾP TAM SƠN THỦY BA",
-      "status":"HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+      "status": "HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg",
+      "size": [
+        {
+          "id": 1,
+          "size": "XS",
+          "qty": 10
+        },
+        {
+          "id": 2,
+          "size": "L",
+          "qty": 10
+        },
+        {
+          "id": 3,
+          "size": "XL",
+          "qty": 10
+        }
+      ]
+,"price": "499.00"
     },
     {
       "id": "8",
       "cate_id": "3",
-      "cate_name":"Đồ nhật dụng",
+      "cate_name": "Đồ nhật dụng",
       "name": "Gối XẾP VÂN MÂY",
-      "status":"HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Goi-3-nu0idktq59gynh8lb96gh00b4elczoqzer7ohd7vos.jpg"
+      "status": "HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Goi-3-nu0idktq59gynh8lb96gh00b4elczoqzer7ohd7vos.jpg",
+      "size": [
+        {
+          "id": 1,
+          "size": "XS",
+          "qty": 10
+        },
+        {
+          "id": 2,
+          "size": "L",
+          "qty": 10
+        },
+        {
+          "id": 3,
+          "size": "XL",
+          "qty": 10
+        }
+      ]
+,"price": "499.00"
     },
     {
       "id": "9",
       "cate_id": "1",
-      "cate_name":"Trang Phục",
+      "cate_name": "Trang Phục",
       "name": "Áo Dài Nam Cổ Đứng",
-      "status":"HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg"
+      "status": "HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg",
+      "size": [
+        {
+          "id": 1,
+          "size": "XS",
+          "qty": 10
+        },
+        {
+          "id": 2,
+          "size": "L",
+          "qty": 10
+        },
+        {
+          "id": 3,
+          "size": "XL",
+          "qty": 10
+        }
+      ]
+,"price": "499.00"
     },
     {
       "id": "10",
       "cate_id": "1",
-      "cate_name":"Đồ nhật dụng",
+      "cate_name": "Đồ nhật dụng",
       "name": "Áo dài nữ năm thân cổ đứng",
-      "status":"HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0350.2-o9auxk4cthnttexwpcigpci842d8sro5sae02jebl8.jpg"
+      "status": "HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0350.2-o9auxk4cthnttexwpcigpci842d8sro5sae02jebl8.jpg",
+      "size": [
+        {
+          "id": 1,
+          "size": "XS",
+          "qty": 10
+        },
+        {
+          "id": 2,
+          "size": "L",
+          "qty": 10
+        },
+        {
+          "id": 3,
+          "size": "XL",
+          "qty": 10
+        }
+      ]
+      ,"price": "499.00"
     },
     {
       "id": "11",
       "cate_id": "3",
-      "cate_name":"Đồ nhật dụng",
+      "cate_name": "Đồ nhật dụng",
       "name": "Gối XẾP TAM SƠN THỦY BA",
-      "status":"HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+      "status": "HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg",
+      "size": [
+        {
+          "id": 1,
+          "size": "XS",
+          "qty": 10
+        },
+        {
+          "id": 2,
+          "size": "L",
+          "qty": 10
+        },
+        {
+          "id": 3,
+          "size": "XL",
+          "qty": 10
+        }
+      ]
+      ,"price": "499.00"
     },
     {
       "id": "12",
       "cate_id": "3",
-      "cate_name":"Đồ nhật dụng",
+      "cate_name": "Đồ nhật dụng",
       "name": "Gối XẾP TAM SƠN THỦY BA",
-      "status":"HOT",
+      "status": "HOT",
       "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
     }
   ]

@@ -1,5 +1,11 @@
+/* eslint-disable vue/no-side-effects-in-computed-properties */
 <template>
     <div>
+      <BaseBanner>
+        <template v-slot:title>
+            {{ $route.params.name }}
+        </template>
+      </BaseBanner>
         <v-container>
           <nav class="woocommerce-breadcrumb">
             <a
@@ -79,11 +85,17 @@
                       class="add-to-card"
                       >
                       <p
-                       @click="addToCard(products.id)"
+                       @click="addToCard(products)"
                       >
                         Thêm vào giỏ hàng
-
                       </p>
+                      <AddCartDialog
+                        :dialog="dialog"
+                        :getDataProduct="products"
+                        @update-dialog="updateCart"
+                        @productItem="productItem"
+                      >
+                      </AddCartDialog>
                       </div>
                     </li>
                   </ul>
@@ -98,9 +110,22 @@
   import VueSlickCarousel from 'vue-slick-carousel'
   import 'vue-slick-carousel/dist/vue-slick-carousel.css'
   import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+  import BaseBanner from '@/components/base/Banner.vue'
+  import AddCartDialog from '@/components/base/AddCartDialog.vue'
   export default {
       components: {
-        VueSlickCarousel
+        VueSlickCarousel,
+        BaseBanner,
+        AddCartDialog
+      },
+      data () {
+        return {
+          dialog: false,
+          productItem: {}
+        }
+      },
+      props: {
+        // productItem: Array
       },
       computed: {
         getDataByCateName() {
@@ -128,12 +153,14 @@
         }
       },
       methods: {
-        addToCard(id) {
-          console.log(id)
-          this.$store.dispatch('addProductToCart', {
-            item: id
-          })
-
+        addToCard(products) {
+          this.dialog = true
+          this.productItem = products
+          console.log(this.productItem)
+        },
+        updateCart(e) {
+          this.dialog = e
+          console.log(this.dialog)
         }
       },
       created() {

@@ -6,6 +6,10 @@ export const SET_BANNER = (state,item) => {
     state.banner = item;
 }
 
+export const SET_HOT_PRODUCT = (state,item) => {
+    state.product_hot = item
+}
+
 export const SET_CATEGORY = (state,item) => {
     state.categories = item
 }
@@ -31,8 +35,4 @@ export const SET_PRODUCT = (state,item) => {
 
 export const SET_BANNER_PRODUCT = (state,item) => {
     state.banner_product = item
-}
-
-export const ADD_TO_CART = (state,item) => {
-    state.cart.push({ item })
 }

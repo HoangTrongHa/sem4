@@ -170,7 +170,6 @@
     },
     mounted() {
       this.$store.dispatch('getBanner');
-      this.$store.dispatch('getHotProduct')
       this.$store.dispatch('getAllProduct')
     }
   }

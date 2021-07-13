@@ -63,6 +63,8 @@ export const getBannerProduct = ({ commit }) => {
     })
 }
 
-export const addProductToCart = ({ commit }, { item }) => {
-    commit('ADD_TO_CART',{item})
-}
+// export const addProductToCart = ({ commit }, { item }) => {
+//     commit('ADD_TO_CART',{ item })
+//     // const parsed = JSON.stringify(item);
+//     // localStorage.setItem('add-to-cart', parsed);
+// }
