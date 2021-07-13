@@ -21,13 +21,6 @@ export const getCategories = ({ commit }) => {
     })
 }
 
-export const getHotProduct = ({ commit }) => {
-    axios.get('http://localhost:15000/product_hot')
-    .then(res => {
-        commit('SET_HOT_PRODUCT',res.data)
-    })
-}
-
 export const getInforCompany = ({ commit }) => {
     axios.get('http://localhost:15000/inforcompany')
     .then(res => {
@@ -38,10 +31,18 @@ export const getInforCompany = ({ commit }) => {
 export const getMaterial = ({ commit }) => {
     axios.get('http://localhost:15000/material')
     .then(res => {
-        commit('SET_MATERIAL')
+        commit('SET_MATERIAL',res.data)
     })
 }
 
+export const getAllProduct = ({ commit }) => {
+    axios.get('http://localhost:15000/product')
+    .then(res => {
+        commit('SET_PRODUCT',res.data)
+    })
+}
+
+<<<<<<< HEAD
 export const getOverview = ({ commit }) => {
     axios.get('http://localhost:15000/overview')
     .then(res => {
@@ -55,4 +56,15 @@ export const getNews = ({ commit }) => {
         // console.log(res.data);
         commit('SET_NEWS',res.data)
     })
+=======
+export const getBannerProduct = ({ commit }) => {
+    axios.get('http://localhost:15000/shop-banner')
+    .then(res => {
+        commit('SET_BANNER_PRODUCT',res.data)
+    })
+}
+
+export const addProductToCart = ({ commit }, { item }) => {
+    commit('ADD_TO_CART',{item})
+>>>>>>> test_2021
 }

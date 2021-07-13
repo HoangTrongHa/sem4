@@ -5,7 +5,11 @@
       class="mx-auto bg"
     >
       <v-carousel
+<<<<<<< HEAD
         :cycle="true"
+=======
+        :continuous="false"
+>>>>>>> test_2021
         :show-arrows="false"
         hide-delimiter-background
         delimiter-icon="mdi-minus"

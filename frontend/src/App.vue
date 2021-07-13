@@ -16,8 +16,9 @@ export default {
   },
   name: 'App',
 
-  data: () => ({
-    
-  }),
+  mounted() {
+      this.$store.dispatch('getAllProduct'),
+      this.$store.dispatch('getBannerProduct')
+  }
 };
 </script>

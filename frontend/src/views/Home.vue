@@ -85,14 +85,28 @@
         </div>
         <div class="product-section-title">
           Sản phẩm - những giá trị văn hóa
+          {{  product_hot.lenght }}
         </div>
         <VueSlickCarousel 
           class="wrap-owl"
+<<<<<<< HEAD
           v-bind="settings"
+=======
+          :arrows="true" 
+          :dots="true"
+          :slidesToShow="4"
+          :autoplaySpeed="3000"
+          :margin="50"
+          :accessibility="true"
+          :swipeToSlide	="true"
+          :slidesToScroll="2"
+          v-if="product_hot.length > 0"
+>>>>>>> test_2021
         >
           <div 
             class="wrap-item-product"
             v-for="item of product_hot" :key="item.id"
+
           >
             <div class="wrap-img">
               <img 
@@ -127,12 +141,10 @@
   import News from '@/components/News.vue'
   import VueSlickCarousel from 'vue-slick-carousel'
   import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-  // optional style for arrows & dots
   import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
   export default {
     name: 'Home',
-
     components: {
       Banner,
       VueSlickCarousel,
@@ -153,12 +165,13 @@
     }),
     computed: {
       product_hot() {
-          return this.$store.state.product_hot
+        return this.$store.state.products.filter(items => items.status === `HOT`)
       }
     },
     mounted() {
       this.$store.dispatch('getBanner');
       this.$store.dispatch('getHotProduct')
+      this.$store.dispatch('getAllProduct')
     }
   }
 </script>

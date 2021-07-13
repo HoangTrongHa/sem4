@@ -1,9 +1,15 @@
 export default {
     menu: [],
     banner:[],
-    product_hot:[],
     categories:[],
     infor_company:[],
+<<<<<<< HEAD
     overview_infor:[],
     news: [],
+=======
+    materials:[],
+    products:[],
+    banner_product:[],
+    cart:[]
+>>>>>>> test_2021
 }

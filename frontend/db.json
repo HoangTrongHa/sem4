@@ -13,7 +13,7 @@
         {
           "id": 3,
           "name": "Sản Phẩm",
-          "location": "Product"
+          "location": "#"
         },
         {
           "id": 4,
@@ -23,30 +23,8 @@
         {
           "id": 5,
           "name": "TIN TỨC",
-          "location": "News",
-          "hover": [
-            {
-                "id": 1,
-                "name":"Bài Nghiên Cứu",
-                "location": "Research"
-            },
-            {
-              "id": 2,
-              "name":"Quá Trình Phục Dựng",
-              "location": "Restoration_Process"
-          },
-          {
-              "id": 3,
-              "name":"Sách",
-              "location": "Books"
-          },
-          {
-              "id": 4,
-              "name":"Sưu Tầm",
-              "location": "Collect"
-          }
-        ]
-        },
+          "location": "News"
+      },
       {
           "id": 6,
           "name": "HƯỚNG DẪN",
@@ -94,36 +72,6 @@
       "name":"Phụ Kiện"
     }
   ],
-  "product_hot": [
-    {
-      "id": "1",
-      "cate_id": "3",
-      "name": "Gối XẾP TAM SƠN THỦY BA",
-      "status":"HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
-    },
-    {
-      "id": "2",
-      "cate_id": "3",
-      "name": "Gối XẾP VÂN MÂY",
-      "status":"HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Goi-3-nu0idktq59gynh8lb96gh00b4elczoqzer7ohd7vos.jpg"
-    },
-    {
-      "id": "3",
-      "cate_id": "1",
-      "name": "Áo Dài Nam Cổ Đứng",
-      "status":"HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg"
-    },
-    {
-      "id": "4",
-      "cate_id": "1",
-      "name": "Áo dài nữ năm thân cổ đứng",
-      "status":"HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0350.2-o9auxk4cthnttexwpcigpci842d8sro5sae02jebl8.jpg"
-    }
-  ],
   "overview": [
     {
       "paragraph": "Nguyễn Đức Lộc có đủ nhiệt huyết và sự tỉ mẩn của một người làm nghề. Hơn thế, với tinh thần đương đại cởi mở, cùng niềm đau đáu với nét đẹp vàng son của một thời quá vãng, Nguyễn Đức Lộc đang chứng minh bản thân mình là người có đủ tâm và tầm. Những việc anh Lộc đã và đang làm, chắc chắn có đóng góp không nhỏ tới việc tái định khung hệ giá trị thẩm mĩ, văn hóa truyền thống Việt Nam.",
@@ -144,6 +92,23 @@
       "paragraph": "Một số mẫu áo dài cổ vừa được phục dựng đã được trình diễn giới thiệu tại Trung tâm Giao lưu văn hóa Phố Cổ, sáng 8-8. Đây là những mẫu áo dài do các nhà thiết kế trẻ của Ỷ Vân Hiên thực hiện dưới sự cố vấn của nhiều chuyên gia, nhà nghiên cứu hàng đầu về trang phục xưa",
       "author": "nhandan.com.vn",
       "img": "http://yvanhien.com/wp-content/uploads/2018/08/bao-nhan-dan.png"
+    }
+  ],
+  "shop-banner": [
+    {
+      "id": 1,
+      "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3717-nu7ajlmegszqoo5d8bkjj7c37i9jm0y7b69ktpvgoc.jpg",
+      "content":"Tại Ỷ Vân Hiên, chúng tôi không chỉ cung cấp sản phẩm mà còn cung cấp những câu chuyện, những văn vật cùng với các giá trị văn hóa cũng như trải nghiệm kết nối quá khứ tới hiện tại."
+    },
+    {
+      "id": 2,
+      "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/31171480_1311037519040031_7783599815029750274_n-nu26bxsil4qwtr0ah8yre6i0gyvs2gpmjhtgdcpe0c.jpg",
+      "content":"Ỷ Vân Hiên với đội ngũ nghiên cứu trẻ, có đam mê với văn hóa đã dày công nghiên cứu để duy trì tinh hoa đó và giới thiệu tới cộng đồng trong nước cũng như bạn bè quốc tế. Mỗi sản phẩm của chúng tôi đều mang hàm lượng tri thức cao cũng như những câu chuyện thú vị và đặc sắc"
+    },
+    {
+      "id": 3,
+      "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/a231a8ca6f24071c27c75147363c6697-e1533357552593-nu3zoz3r6lvko53aed158eef1h2d1a3q1xzhpru1po.jpg",
+      "content":"Văn minh vật chất là sự kết tinh trí tuệ của vô vàn thế hệ của cả một dân tộc. Trong đó bao gồm những thứ như trang phục, đồ dùng, kiến trúc, sách vở,… Tuy nhiên thứ văn minh vật chất đó của người Việt trong hiện tại đang dần bị mai một"
     }
   ],
   "inforcompany": [
@@ -227,6 +192,104 @@
       "author": "by nguyendan",
       "summary": "Trải qua những giai đoạn khó khăn trên bước đường nghiên cứu và phục dựng cổ phục, Ỷ Vân...",
       "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/67801588_2297632757166729_917953267000934400_n-oc1seksopoi1oai9w7uimx1vgxar2nsve5gseacx0o.jpg"
+    }
+  ],
+  "product": [
+    {
+      "id": "1",
+      "cate_id": "3",
+      "cate_name":"Trang Phục",
+      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+    },
+    {
+      "id": "2",
+      "cate_id": "3",
+      "cate_name":"Đồ nhật dụng",
+      "name": "Gối XẾP VÂN MÂY",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Goi-3-nu0idktq59gynh8lb96gh00b4elczoqzer7ohd7vos.jpg"
+    },
+    {
+      "id": "3",
+      "cate_id": "1",
+      "cate_name":"Trang Phục",
+      "name": "Áo Dài Nam Cổ Đứng",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg"
+    },
+    {
+      "id": "4",
+      "cate_id": "1",
+      "cate_name":"Đồ nhật dụng",
+      "name": "Áo dài nữ năm thân cổ đứng",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0350.2-o9auxk4cthnttexwpcigpci842d8sro5sae02jebl8.jpg"
+    },
+    {
+      "id": "5",
+      "cate_id": "3",
+      "cate_name":"Đồ nhật dụng",
+      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+    },
+    {
+      "id": "6",
+      "cate_id": "3",
+      "cate_name":"Đồ nhật dụng",
+      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+    },
+    {
+      "id": "7",
+      "cate_id": "3",
+      "cate_name":"Trang Phục",
+      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+    },
+    {
+      "id": "8",
+      "cate_id": "3",
+      "cate_name":"Đồ nhật dụng",
+      "name": "Gối XẾP VÂN MÂY",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Goi-3-nu0idktq59gynh8lb96gh00b4elczoqzer7ohd7vos.jpg"
+    },
+    {
+      "id": "9",
+      "cate_id": "1",
+      "cate_name":"Trang Phục",
+      "name": "Áo Dài Nam Cổ Đứng",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg"
+    },
+    {
+      "id": "10",
+      "cate_id": "1",
+      "cate_name":"Đồ nhật dụng",
+      "name": "Áo dài nữ năm thân cổ đứng",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0350.2-o9auxk4cthnttexwpcigpci842d8sro5sae02jebl8.jpg"
+    },
+    {
+      "id": "11",
+      "cate_id": "3",
+      "cate_name":"Đồ nhật dụng",
+      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+    },
+    {
+      "id": "12",
+      "cate_id": "3",
+      "cate_name":"Đồ nhật dụng",
+      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "status":"HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
     }
   ]
 }
