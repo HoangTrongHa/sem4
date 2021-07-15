@@ -1,5 +1,5 @@
 {
-    "menu": [
+  "menu": [
         {
           "id": 1,
           "name": "Trang chủ",
@@ -291,5 +291,23 @@
       "status":"HOT",
       "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
     }
-  ]
+  ],
+  "store_system": [
+    {
+      "id": 1,
+      "address": "TUIBLUE Nam Hoi An resort Binh Phu Village, TamTien Commune, Tam Tien Beach, Nui Thanh District, Quang Nam, Viet Nam."
+    },
+    {
+      "id": 2,
+      "address": "195 - Đội Cấn - Ba đình- Hà Nội."
+    }
+  ],
+  "store_contact": [
+    {
+      "id": 1,
+      "address": "Office: số nhà 05 ngách 293/4 Tam Trinh, Hoàng Mai, Hà Nội",
+      "email": "yvanhien512@gmail.com",
+      "phone_number": "082.9093.933"
+    }
+]
 }
