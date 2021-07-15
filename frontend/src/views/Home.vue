@@ -89,9 +89,7 @@
         </div>
         <VueSlickCarousel 
           class="wrap-owl"
-<<<<<<< HEAD
           v-bind="settings"
-=======
           :arrows="true" 
           :dots="true"
           :slidesToShow="4"
@@ -101,12 +99,10 @@
           :swipeToSlide	="true"
           :slidesToScroll="2"
           v-if="product_hot.length > 0"
->>>>>>> test_2021
         >
           <div 
             class="wrap-item-product"
             v-for="item of product_hot" :key="item.id"
-
           >
             <div class="wrap-img">
               <img 
