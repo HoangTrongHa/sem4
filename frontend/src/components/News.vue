@@ -2,7 +2,9 @@
   <div class="wrapper">
     <p>TIN TỨC - NEWS</p>
     <p>Ỷ VÂN HIÊN</p>
-    <VueSlickCarousel v-bind="settings" :key="news.length">
+    <VueSlickCarousel v-bind="settings" :key="news.length"
+      v-if="news.length > 0"
+    >
       <div 
         class="new"
         v-for="item of news" :key="item.id"

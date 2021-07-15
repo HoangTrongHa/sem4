@@ -203,9 +203,18 @@
       "status": "HOT",
       "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg",
       "size": [
-        {}
-      ]
-,"price": "499.00"
+        {
+          "id": 1,
+          "size": "xs",
+          "qty": 10
+        },
+        {
+          "id": 2,
+          "size": "l",
+          "qty": 10
+        }
+      ],
+      "price": "499.00"
     },
     {
       "id": "2",
@@ -215,9 +224,18 @@
       "status": "HOT",
       "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Goi-3-nu0idktq59gynh8lb96gh00b4elczoqzer7ohd7vos.jpg",
       "size": [
-        {}
-      ]
-,"price": "499.00"
+        {
+          "id": 1,
+          "size": "xs",
+          "qty": 10
+        },
+        {
+          "id": 2,
+          "size": "l",
+          "qty": 10
+        }
+      ],
+      "price": "499.00"
     },
     {
       "id": "3",
@@ -227,9 +245,18 @@
       "status": "HOT",
       "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg",
       "size": [
-        {}
-      ]
-,"price": "499.00"
+        {
+          "id": 1,
+          "size": "xs",
+          "qty": 10
+        },
+        {
+          "id": 2,
+          "size": "l",
+          "qty": 10
+        }
+      ],
+      "price": "499.00"
     },
     {
       "id": "4",
@@ -239,9 +266,18 @@
       "status": "HOT",
       "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0350.2-o9auxk4cthnttexwpcigpci842d8sro5sae02jebl8.jpg",
       "size": [
-        {}
-      ]
-,"price": "499.00"
+        {
+          "id": 1,
+          "size": "xs",
+          "qty": 10
+        },
+        {
+          "id": 2,
+          "size": "l",
+          "qty": 10
+        }
+      ],
+      "price": "499.00"
     },
     {
       "id": "5",
@@ -260,9 +296,9 @@
           "id": 2,
           "size": "l",
           "qty": 10
-        },
-      ]
-,"price": "499.00"
+        }
+      ],
+      "price": "499.00"
     },
     {
       "id": "6",
@@ -287,8 +323,8 @@
           "size": "XL",
           "qty": 10
         }
-      ]
-      ,"price": "499.00"
+      ],
+      "price": "499.00"
     },
     {
       "id": "7",
@@ -313,8 +349,8 @@
           "size": "XL",
           "qty": 10
         }
-      ]
-,"price": "499.00"
+      ],
+      "price": "499.00"
     },
     {
       "id": "8",
@@ -339,8 +375,8 @@
           "size": "XL",
           "qty": 10
         }
-      ]
-,"price": "499.00"
+      ],
+      "price": "499.00"
     },
     {
       "id": "9",
@@ -365,8 +401,8 @@
           "size": "XL",
           "qty": 10
         }
-      ]
-,"price": "499.00"
+      ],
+      "price": "499.00"
     },
     {
       "id": "10",
@@ -391,8 +427,8 @@
           "size": "XL",
           "qty": 10
         }
-      ]
-      ,"price": "499.00"
+      ],
+      "price": "499.00"
     },
     {
       "id": "11",
@@ -417,8 +453,8 @@
           "size": "XL",
           "qty": 10
         }
-      ]
-      ,"price": "499.00"
+      ],
+      "price": "499.00"
     },
     {
       "id": "12",

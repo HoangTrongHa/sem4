@@ -1,4 +1,3 @@
-/* eslint-disable vue/no-side-effects-in-computed-properties */
 <template>
     <div>
       <BaseBanner>
@@ -89,15 +88,15 @@
                       >
                         Thêm vào giỏ hàng
                       </p>
+                      </div>
+                    </li>
                       <AddCartDialog
                         :dialog="dialog"
-                        :getDataProduct="products"
+                        :getDataProduct="productItem"
                         @update-dialog="updateCart"
                         @productItem="productItem"
                       >
                       </AddCartDialog>
-                      </div>
-                    </li>
                   </ul>
                 </div>
               </v-col>
