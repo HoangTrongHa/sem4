@@ -1,40 +1,40 @@
 {
   "menu": [
-        {
-          "id": 1,
-          "name": "Trang chủ",
-          "location": "Home"
-        },
-        {
-          "id": 2,
-          "name": "Giới Thiệu",
-          "location": "Infor"
-        },
-        {
-          "id": 3,
-          "name": "Sản Phẩm",
-          "location": "#"
-        },
-        {
-          "id": 4,
-          "name": "GALLERY",
-          "location": "Gallery"
-        },
-        {
-          "id": 5,
-          "name": "TIN TỨC",
-          "location": "News"
-      },
-      {
-          "id": 6,
-          "name": "HƯỚNG DẪN",
-          "location": "Tutorial"
-      },
-      {
-          "id": 7,
-          "name": "LIÊN HỆ",
-          "location": "Contact"
-      }
+    {
+      "id": 1,
+      "name": "Trang chủ",
+      "location": "Home"
+    },
+    {
+      "id": 2,
+      "name": "Giới Thiệu",
+      "location": "Infor"
+    },
+    {
+      "id": 3,
+      "name": "Sản Phẩm",
+      "location": "#"
+    },
+    {
+      "id": 4,
+      "name": "GALLERY",
+      "location": "Gallery"
+    },
+    {
+      "id": 5,
+      "name": "TIN TỨC",
+      "location": "News"
+    },
+    {
+      "id": 6,
+      "name": "HƯỚNG DẪN",
+      "location": "Tutorial"
+    },
+    {
+      "id": 7,
+      "name": "LIÊN HỆ",
+      "location": "Contact"
+    }
   ],
   "banner": [
     {
@@ -482,5 +482,5 @@
       "email": "yvanhien512@gmail.com",
       "phone_number": "082.9093.933"
     }
-]
+  ]
 }
