@@ -56,6 +56,8 @@ export const getNews = ({ commit }) => {
         commit('SET_NEWS',res.data)
     })
 }
+
+
 export const getBannerProduct = ({ commit }) => {
     axios.get('http://localhost:15000/shop-banner')
     .then(res => {
@@ -68,3 +70,20 @@ export const getBannerProduct = ({ commit }) => {
 //     // const parsed = JSON.stringify(item);
 //     // localStorage.setItem('add-to-cart', parsed);
 // }
+// export const addProductToCart = ({ commit }, { item }) => {
+//     commit('ADD_TO_CART',{item})
+// }
+
+export const getStoreSystem = ({ commit }) => {
+    axios.get('http://localhost:15000/store_system')
+    .then(res => {
+        commit('SET_STORE_SYSTEM',res.data)
+    })
+}
+
+export const getStoreContact = ({ commit }) => {
+    axios.get('http://localhost:15000/store_contact')
+    .then(res => {
+        commit('SET_STORE_CONTACT',res.data)
+    })
+}

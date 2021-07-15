@@ -10,4 +10,7 @@ export default {
     banner_product:[],
     // cart:[],
     // dialog: false
+    cart:[],
+    store_system: [],
+    contact: [],
 }

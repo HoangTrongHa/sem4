@@ -13,6 +13,7 @@
     "jquery": "^3.6.0",
     "register-service-worker": "^1.7.1",
     "toastr": "^2.1.4",
+    "v-svg-icons": "^1.1.4",
     "vue": "^2.6.11",
     "vue-custom-scrollbar": "^1.4.1",
     "vue-material-design-icons": "^4.12.1",

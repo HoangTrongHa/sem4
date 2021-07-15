@@ -127,6 +127,10 @@
     <div class="black-logo">
       <img src="http://yvanhien.com/wp-content/uploads/bfi_thumb/YVH-logo-nền-đen-p5b3r9blwnimtnmhzdlx6s3aws3yzqol4in19gb77e.png" alt="">
     </div>
+    <div class="store-sys-contact">
+      <StoreSystem />
+      <Contact />
+    </div>
   </div>
 </div>
 </template>
@@ -136,6 +140,8 @@
   import OverviewSlide from "@/components/OverviewSlide.vue"
   import News from '@/components/News.vue'
   import VueSlickCarousel from 'vue-slick-carousel'
+  import StoreSystem from '@/components/store_system_and_contact/StoreSystem.vue'
+  import Contact from '@/components/store_system_and_contact/Contact.vue'
   import 'vue-slick-carousel/dist/vue-slick-carousel.css'
   import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
@@ -145,7 +151,9 @@
       Banner,
       VueSlickCarousel,
       OverviewSlide,
-      News
+      News,
+      StoreSystem,
+      Contact
       // carousel
     },
     data: () => ({
@@ -319,6 +327,12 @@
       img {
         width: 100%;
       }
+    }
+    .store-sys-contact{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
     }
   }
   
