@@ -1,6 +1,6 @@
 <template>
 <v-row justify="center">
-    <v-dialog :value="dialog" max-width="1000" input="updateDialog">
+    <v-dialog :value="dialog" max-width="1000" @input="updateDialog">
       <v-card>
         <v-card-title class="text-h5">Thêm Vào Giỏ Hàng</v-card-title>
             <v-spacer></v-spacer>
@@ -36,25 +36,33 @@
                   disabled
                   >
                   </v-text-field>
-                   <v-slider
-                      v-model="form.age"
-                      :rules="rules.age"
+                </div>
+                <div class="wrapChooseQty">
+                    <v-slider
+                      v-model="qtyCustomer"
+                      :class="isActive == true ? 'notNone' : 'disnone'"
                       color="orange"
-                      label="Age"
-                      hint="Be honest"
-                      min="1"
-                      max="100"
+                      label="Số Lượng"
+                      hint="Số Lượng Quá Ít"
+                      min="0"
+                      :max="getSize.qty"
                       thumb-label
                     ></v-slider>
+                </div>
+                <div class="wrapTotalPriceCart">
+                <div :class="isActive == true ? 'notNone' : 'disnone'"
+>
+                    {{ this.TotalQty | currency }} đ
+                  </div>
                 </div>
               </div>
             </div>
         <v-card-actions>
           <v-spacer></v-spacer>
           <v-btn color="green darken-1" text @click="updateDialog(false)">
-            Disagree
+            Đóng
           </v-btn>
-          <v-btn color="green darken-1" text > Thêm sản phẩm vào giỏ hàng </v-btn>
+          <v-btn color="green darken-1" text @click="updataCart()"> Thêm sản phẩm vào giỏ hàng </v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -63,40 +71,31 @@
 
 <script>
 import Vue from 'vue'
-import VueToastr2 from 'vue-toastr-2'
-import 'vue-toastr-2/dist/vue-toastr-2.min.css'
-Vue.use(VueToastr2)
-window.toastr = require('toastr')
+import Vue2Filters from 'vue2-filters'
 
+Vue.use(Vue2Filters)
 export default {
     data() {
-      const defaultForm = Object.freeze({
-        first: '',
-        last: '',
-        bio: '',
-        favoriteAnimal: '',
-        age: null,
-        terms: false,
-      })
       return {
          getSize: {},
          selected: Number,
          isActive: false,
          CustomerQty: String,
-         totalMoney: Number,
-         form: Object.assign({}, defaultForm),
-          rules: {
-          age: [
-            val => val < 10 || `I don't believe you!`,
-          ],
-          animal: [val => (val || '').length > 0 || 'This field is required'],
-          name: [val => (val || '').length > 0 || 'This field is required'],
-        },
+         totalMoney: Number, 
+         qtyCustomer: '',
+         TotalQty:'',
+         cart:[],
       }
     },
     props: {
         dialog: Boolean,
         getDataProduct: {}
+    },
+    watch: {
+      qtyCustomer: function ( newValue ) {
+        this.qtyCustomer = newValue
+        this.TotalQty = this.qtyCustomer * this.getDataProduct.price
+      }
     },
     methods: {
       updateDialog(item) {
@@ -107,9 +106,19 @@ export default {
         this.selected = size.id
         this.isActive = true;
       },
-      totalMoney() {
-        
-      }
+      updataCart() {
+        var value = {
+              id:this.getDataProduct.id,
+              name:this.getDataProduct.name,
+              price:this.getDataProduct.price,
+              TotalPrice: this.TotalQty,
+              qtyCus: this.qtyCustomer
+        }
+        this.cart.push(value)
+        localStorage.setItem("Cart",JSON.stringify(this.cart))
+        this.updateDialog(false)        
+      },
+      
     },
     created() {
     }
@@ -117,59 +126,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .disnone {
-    display: none;
-  }
-  .wrap-cart {
-    width: 80%;
-    display: flex;
-    margin: 0 auto;
-    .wrap-infor-product {
-      width: 70%;
-      margin: 0 0 0 30px;
-      .name-product {
-        font-size: 22px;
-        font-weight: bolder;
-      }
-      .price {
-        font-size: 25px;
-        font-weight: bolder;
-      }
-      .title-size {
-        font-size: 18px;
-        font-weight: bolder;
-      }
-      .item-size {
-        .wrap-item-size {
-          width: 100%;
-          margin: 0 auto;
-          display: flex;
-          li {
-            width: 15%;
-            list-style: none;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid;
-            margin: 2.5px;
-            font-size: 18px;
-            font-weight: bold;
-            &:hover {
-              background: black;
-              color: white;
-            }
-          }
-          .active {
-            background: black;
-            color: white;
-          }
-        }
-      }
-      .wrapQuantity {
-        margin: 50px 0 0 0;
-        width: 35%;
-      }
-    }
-  }
+    @import "@/scss/addtocart.scss";
 </style>

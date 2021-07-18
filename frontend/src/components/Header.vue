@@ -33,6 +33,14 @@
                                 </div>
                             </div>
                         </li>
+                        <li class="shoppingCat">
+                            <v-badge
+                                content="1"
+                                color="error"
+                            >
+                            <icon class="map-shopping-cart" name="shopping-cart" size="20px"/>
+                            </v-badge>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -48,12 +56,17 @@
             },
             categoriesList() {
                 return this.$store.state.categories
+            },
+            cart() {
+                return this.$store.state.cart
             }
             
         },
         mounted() {
             this.$store.dispatch('getMenu');
             this.$store.dispatch('getCategories');
+            this.$store.dispatch('addProductToCart');
+
         }
     }
 </script>

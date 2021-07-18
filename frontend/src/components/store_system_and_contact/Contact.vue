@@ -5,7 +5,7 @@
         <div class="under-line"></div>
       </div>
       
-      <div class="contact" v-for="store in store_contact" :key="store.id">
+      <div class="contact" v-for="store in store_contact" :key="store.id" >
         <div class="store-contact" >
           <icon class="map-icon" name="map-marker-alt" size="20px"/>
           <p>

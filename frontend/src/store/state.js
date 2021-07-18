@@ -8,9 +8,8 @@ export default {
     materials:[],
     products:[],
     banner_product:[],
-    // cart:[],
-    // dialog: false
     cart:[],
     store_system: [],
+    store_contact: [],
     contact: [],
 }

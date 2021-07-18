@@ -45,9 +45,9 @@ export const ADD_TO_CART = (state, item) => {
     state.cart.push({ item })
 }
 
-// export const SET_STORE_SYSTEM = (state,  item) => {
-//     state.store_system = item
-// }
+export const SET_STORE_SYSTEM = (state,  item) => {
+    state.store_system = item
+}
 
 
 export const SET_STORE_CONTACT = (state,  item) => {
