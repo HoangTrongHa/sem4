@@ -114,8 +114,21 @@ export default {
               TotalPrice: this.TotalQty,
               qtyCus: this.qtyCustomer
         }
-        this.cart.push(value)
-        localStorage.setItem("Cart",JSON.stringify(this.cart))
+        var checkCart = localStorage.getItem('Cart');
+        if (checkCart == null || checkCart == []) {
+          checkCart.push(value)
+          localStorage.setItem("Cart",JSON.stringify(checkCart))
+        } else {
+          var newValue = {
+              id:this.getDataProduct.id,
+              name:this.getDataProduct.name,
+              price:this.getDataProduct.price,
+              TotalPrice: this.TotalQty,
+              qtyCus: this.qtyCustomer
+          }
+          checkCart.push(newValue)
+          localStorage.setItem("Cart",JSON.stringify(checkCart))
+        }
         this.updateDialog(false)        
       },
       
