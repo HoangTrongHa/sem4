@@ -128,7 +128,6 @@
       },
       computed: {
         getDataByCateName() {
-          console.log(this.$store.state.products.filter(items => items.cate_name === this.$route.params.name));
             return this.$store.state.products.filter(items => items.cate_name === this.$route.params.name)
         },
         getDataCategories() {

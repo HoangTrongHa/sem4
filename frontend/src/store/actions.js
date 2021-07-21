@@ -65,12 +65,12 @@ export const getBannerProduct = ({ commit }) => {
     })
 }
 
-export const addProductToCart = ({ commit }, { state }) => {
-        state.cart = userData
-        console.log(userData)
-        localStorage.setItem('user', JSON.stringify(userData))
-        axios.defaults.headers.common.Authorization = `Bearer ${userData.access_token}`
-}
+// export const addProductToCart = ({ commit }, { state }) => {
+//         state.cart = userData
+//         console.log(userData)
+//         localStorage.setItem('user', JSON.stringify(userData))
+//         axios.defaults.headers.common.Authorization = `Bearer ${userData.access_token}`
+// }
 // export const addProductToCart = ({ commit }, { item =  }) => {
 //     commit('ADD_TO_CART',{item})
 // }

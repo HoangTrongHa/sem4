@@ -33,14 +33,20 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="shoppingCat">
+                        <li class="shoppingCat" @click="ShowCart()">
                             <v-badge
-                                content="1"
+                                :content="cart.length"
                                 color="error"
                             >
-                            <icon class="map-shopping-cart" name="shopping-cart" size="20px"/>
+                            <icon class="map-shopping-cart" name="shopping-cart" size="20px" 
+                                
+                            />
                             </v-badge>
                         </li>
+                        <ShowCart
+                            :isShow="isShow"
+                        >
+                        </ShowCart>
                     </ul>
                 </div>
             </div>
@@ -49,7 +55,17 @@
 </template>
 
 <script>
+  import ShowCart from '@/components/ShowCart.vue'
+
     export default {
+        components: {
+            ShowCart
+      },
+        data () {
+        return {
+          isShow: false,
+        }
+      },
         computed: {
             menuList() {
                 return this.$store.state.menu
@@ -58,16 +74,21 @@
                 return this.$store.state.categories
             },
             cart() {
-                return this.$store.state.cart
+                return JSON.parse(localStorage.getItem('Cart')) || [];
             }
             
         },
         mounted() {
             this.$store.dispatch('getMenu');
             this.$store.dispatch('getCategories');
-            this.$store.dispatch('addProductToCart');
 
-        }
+        },
+        methods: {
+        ShowCart() {
+          this.isShow = true
+          console.log(this.dialog);
+        },
+      },
     }
 </script>
 

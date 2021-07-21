@@ -106,27 +106,27 @@ export default {
         this.selected = size.id
         this.isActive = true;
       },
+
       updataCart() {
+        var checkCart = JSON.parse(localStorage.getItem('Cart')) || [];
         var value = {
-              id:this.getDataProduct.id,
-              name:this.getDataProduct.name,
-              price:this.getDataProduct.price,
-              TotalPrice: this.TotalQty,
-              qtyCus: this.qtyCustomer
-        }
-        var checkCart = localStorage.getItem('Cart');
-        if (checkCart == null || checkCart == []) {
-          checkCart.push(value)
+            id:this.getDataProduct.id,
+            name:this.getDataProduct.name,
+            price:this.getDataProduct.price,
+            TotalPrice: this.TotalQty,
+            qtyCus: this.qtyCustomer
+        } 
+        let found = checkCart.find(items => items.id == this.getDataProduct.id)
+        let key = Object.keys(checkCart).fill(key => checkCart[key] === this.getDataProduct.id);
+        console.log(key);
+        if (found) {
+          localStorage.removeItem("Cart",found.id);
+          checkCart.splice(key, 1);
+          found.qtyCus += this.qtyCustomer
+          checkCart.push(found)
           localStorage.setItem("Cart",JSON.stringify(checkCart))
         } else {
-          var newValue = {
-              id:this.getDataProduct.id,
-              name:this.getDataProduct.name,
-              price:this.getDataProduct.price,
-              TotalPrice: this.TotalQty,
-              qtyCus: this.qtyCustomer
-          }
-          checkCart.push(newValue)
+          checkCart.push(value)
           localStorage.setItem("Cart",JSON.stringify(checkCart))
         }
         this.updateDialog(false)        
