@@ -50,8 +50,7 @@
                     ></v-slider>
                 </div>
                 <div class="wrapTotalPriceCart">
-                <div :class="isActive == true ? 'notNone' : 'disnone'"
->
+                <div :class="isActive == true ? 'notNone' : 'disnone'">
                     {{ this.TotalQty | currency }} đ
                   </div>
                 </div>
@@ -97,6 +96,8 @@ export default {
         this.TotalQty = this.qtyCustomer * this.getDataProduct.price
       }
     },
+
+    
     methods: {
       updateDialog(item) {
           this.$emit('update-dialog', item)
@@ -114,21 +115,35 @@ export default {
             name:this.getDataProduct.name,
             price:this.getDataProduct.price,
             TotalPrice: this.TotalQty,
-            qtyCus: this.qtyCustomer
+            qtyCus: this.qtyCustomer,
+            img: this.getDataProduct.img,
+            size: this.getSize
         } 
         let found = checkCart.find(items => items.id == this.getDataProduct.id)
-        let key = Object.keys(checkCart).fill(key => checkCart[key] === this.getDataProduct.id);
-        console.log(key);
-        if (found) {
-          localStorage.removeItem("Cart",found.id);
-          checkCart.splice(key, 1);
-          found.qtyCus += this.qtyCustomer
-          checkCart.push(found)
-          localStorage.setItem("Cart",JSON.stringify(checkCart))
-        } else {
+        if (found == undefined || null) {
           checkCart.push(value)
           localStorage.setItem("Cart",JSON.stringify(checkCart))
+        } else {
+          for(const i in checkCart) {
+            if (i.id == found.id) {
+              console.log(found.id)
+                checkCart.splice(i.id, 1);
+            }
+          }
+          console.log(checkCart)
         }
+        // let key = Object.keys(checkCart).fill(key => checkCart[key] === this.getDataProduct.id);
+        // console.log(key)
+        // if (found) {
+        //   localStorage.removeItem("Cart",found.id);
+        //   checkCart.splice(key, 1);
+        //   found.qtyCus += this.qtyCustomer
+        //   checkCart.push(found)
+        //   localStorage.setItem("Cart",JSON.stringify(checkCart))
+        // } else {
+        //   checkCart.push(value)
+        //   localStorage.setItem("Cart",JSON.stringify(checkCart))
+        // }
         this.updateDialog(false)        
       },
       

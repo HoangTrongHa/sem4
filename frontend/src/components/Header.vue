@@ -35,18 +35,50 @@
                         </li>
                         <li class="shoppingCat" @click="ShowCart()">
                             <v-badge
-                                :content="cart.length"
+                                :content="countCart"
                                 color="error"
                             >
                             <icon class="map-shopping-cart" name="shopping-cart" size="20px" 
                                 
                             />
                             </v-badge>
+                             <div class="wrap-hover-cart">
+                             
+                             <v-card
+                                class="mx-auto"
+                                max-width="400"
+                            >
+                            <div class="title-cart">
+                                        <div class="title">
+                                            {{ countCart }} Sản Phẩm
+                                        </div>
+                                        <div class="checkOut">
+                                            Xem Tất Cả
+                                        </div>
+                                    </div>
+                                <div class="wrapItem" v-for="items of cart" :key="items.id">
+                                    <div class="wrapImg">
+                                        <img :src="items.img" >
+                                    </div>
+                                    <div class="wrapContent">
+                                        <div class="name">
+                                            {{ items.name }}
+                                        </div>
+                                         <div class="price">
+                                            {{ items.price }}đ
+                                        </div>
+                                        <div class="size">
+                                           Kích Thước: {{ items.size.size }}
+                                        </div>
+                                        <div class="size">
+                                           Số Lượng: {{ items.qtyCus }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </v-card>
+                        </div>
                         </li>
-                        <ShowCart
-                            :isShow="isShow"
-                        >
-                        </ShowCart>
+                        
                     </ul>
                 </div>
             </div>
@@ -55,12 +87,7 @@
 </template>
 
 <script>
-  import ShowCart from '@/components/ShowCart.vue'
-
     export default {
-        components: {
-            ShowCart
-      },
         data () {
         return {
           isShow: false,
@@ -75,7 +102,11 @@
             },
             cart() {
                 return JSON.parse(localStorage.getItem('Cart')) || [];
+            },
+            countCart() {
+                return this.cart.length
             }
+            
             
         },
         mounted() {
@@ -83,12 +114,8 @@
             this.$store.dispatch('getCategories');
 
         },
-        methods: {
-        ShowCart() {
-          this.isShow = true
-          console.log(this.dialog);
-        },
-      },
+        
+        
     }
 </script>
 

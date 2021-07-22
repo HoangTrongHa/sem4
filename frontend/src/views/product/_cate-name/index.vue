@@ -154,11 +154,9 @@
         addToCard(products) {
           this.dialog = true
           this.productItem = products
-          console.log(this.productItem)
         },
         updateCart(e) {
           this.dialog = e
-          console.log(this.dialog)
         }
       },
       created() {
