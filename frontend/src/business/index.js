@@ -5,7 +5,7 @@ class index {
     return http.post("/order", order,{
       headers: {
         'Content-type': 'application/x-www-form-urlencoded',
-          data: JSON.stringify(order)
+        body: JSON.stringify(order)
       }
     });
   }

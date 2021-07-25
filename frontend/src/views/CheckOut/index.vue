@@ -304,11 +304,10 @@ export default {
                 note: this.Vnote,
                 option: this.option
             }
-            console.log(getForm)
             await new Promise(resolve => setTimeout(resolve, 2000))
             this.loading = false
             if (getForm.option == "COD") {  
-                Service.addNewOrder(this.getForm)
+                Service.addNewOrder(getForm)
                 .then((response) => {
                     console.log(response.data);
                     alert("Cập nhật thành công");
