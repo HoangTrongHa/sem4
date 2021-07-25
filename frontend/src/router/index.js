@@ -4,6 +4,8 @@ import Home from '../views/Home.vue'
 import Infor from '../views/Infor/index.vue'
 import ProductByCateId from '../views/product/_cate-name'
 import CheckOut from '../views/CheckOut/index'
+import Login from '../views/login/index'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -26,6 +28,11 @@ const routes = [
     path: '/check-out/',
     name: 'CheckOut',
     component: CheckOut
+  },
+  {
+    path: '/account/login',
+    name: 'Login',
+    component: Login
   },
 ]
 

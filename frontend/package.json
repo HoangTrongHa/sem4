@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "json": "json-server --watch db.json --port 15000"
+    "json": "json-server db.json --watch ./node_modules/json-server-auth --port 15000"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -23,6 +23,7 @@
     "vue-split-carousel": "^2.1.0",
     "vue-stripe-checkout": "^3.5.15",
     "vue-toast-notification": "^0.6.2",
+    "vue-toastification": "^1.7.11",
     "vue-toastr-2": "0.0.10",
     "vue2-filters": "^0.13.0",
     "vuetify": "^2.4.0",
@@ -38,6 +39,8 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "json-server": "^0.16.3",
+    "json-server-auth": "^2.1.0",
     "node-sass": "^6.0.1",
     "sass": "~1.32.0",
     "sass-loader": "^10.2.0",
