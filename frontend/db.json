@@ -482,5 +482,42 @@
       "email": "yvanhien512@gmail.com",
       "phone_number": "082.9093.933"
     }
+  ],
+  "order":[
+    
+  ],
+  "city": [
+      {
+        "id": 1,
+        "name": "Nam Định"
+      },
+      {
+        "id": 2,
+        "name": "Hà Nội"
+      }    
+  ],
+  "district": [
+    {
+      "id": 1,
+      "name": "Thành Phố Nam Định",
+      "city_id": 1
+    }  ,
+    {
+      "id": 2,
+      "name": "Cầu giấy",
+      "city_id": 2
+    }  
+  ],
+  "ward": [
+    {
+      "id": 1,
+      "name": "Văn Miếu",
+      "district_id": 1
+    },
+    {
+      "id": 2,
+      "name": "Dịch Vọng",
+      "district_id": 2
+    }   
   ]
 }

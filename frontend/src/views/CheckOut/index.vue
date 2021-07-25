@@ -13,12 +13,14 @@
                     <v-text-field
                         label="Họ Tên"
                         outlined
+                        v-model="userName"
                     ></v-text-field>
                 </div>
                 <div class="wrap-input">
                     <v-text-field
                         label="Số Điện Thoại"
                         outlined
+                        v-model="phoneNumber"
                     ></v-text-field>
                 </div>
             </div>
@@ -26,12 +28,14 @@
                 <v-text-field
                     label="Địa Chỉ EMail"
                     outlined
+                    v-model="email"
                 ></v-text-field>
             </div>
             <div class="full-width">
                 <v-text-field
                     label="Địa Chỉ Nhà"
                     outlined
+                    v-model="address"
                 ></v-text-field>
             </div>
             <div class="form-field">
@@ -40,6 +44,7 @@
                     :items="items"
                     label="Chọn Tỉnh/Thành"
                     outlined
+                    v-model="city"
                     ></v-select>
                 </div>
                 <div class="wrap-item">
@@ -47,6 +52,7 @@
                     :items="items"
                     label="Chọn Quận/Huyện"
                     outlined
+                    v-model="district"
                     >
                     </v-select>
                 </div>
@@ -55,6 +61,7 @@
                         :items="items"
                         label="Chọn Phường/Xã"
                         outlined
+                        v-model="ward"
                     ></v-select>
                 </div>
             </div>
@@ -64,6 +71,7 @@
                 clearable
                 clear-icon="mdi-close-circle"
                 label="Ghi Chú Thêm"
+                v-model="note"
                 ></v-textarea>
             </div>
             <div class="title">Chọn hình thức thanh toán</div>
@@ -214,6 +222,8 @@ import Vue from 'vue'
 import BaseBanner from '@/components/base/Banner.vue'
 import Vue2Filters from 'vue2-filters'
 Vue.use(Vue2Filters)
+// import { StripeCheckout } from '@vue-stripe/vue-stripe';
+
 
 export default {
     components: {
@@ -223,7 +233,14 @@ export default {
       return {
         loader: null,
         loading: false,
-        
+        userName: '',
+        phoneNumber: '',
+        email:'',
+        address:'',
+        city:'',
+        district:'',
+        ward: '',
+        note: ''
       }
     },
     computed: {

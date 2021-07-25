@@ -1,5 +1,4 @@
 import axios from "axios"
-import { data } from "jquery";
 
 export const getMenu = ({ commit }) => {
     axios.get('http://localhost:15000/menu')
