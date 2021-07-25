@@ -4,9 +4,9 @@ class index {
   addNewOrder(order) {
     return http.post("/order", order,{
       headers: {
-        'Content-type': 'application/x-www-form-urlencoded',
-        body: JSON.stringify(order)
-      }
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(order)
     });
   }
 }
