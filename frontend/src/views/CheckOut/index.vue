@@ -225,11 +225,22 @@
 
 <script>
 import Vue from 'vue'
+import Toast from "vue-toastification";
+// Import the CSS or use your own!
+import "vue-toastification/dist/index.css";
+
+const options = {
+    transition: "Vue-Toastification__fade",
+    maxToasts: 20,
+    newestOnTop: true,
+    timeout: 4000,
+    closeOnClick: true
+};
 
 import BaseBanner from '@/components/base/Banner.vue'
 import Vue2Filters from 'vue2-filters'
 import Service from '../../business/index'
-Vue.use(Vue2Filters)
+Vue.use( Vue2Filters, Toast,options )
 // import { StripeCheckout } from '@vue-stripe/vue-stripe';
 
 
@@ -259,6 +270,7 @@ export default {
             console.log(this.Vdistrict)
             return JSON.parse(localStorage.getItem('Cart')) || [];
         },
+
         cities() {
             return this.$store.state.city
         },
@@ -292,30 +304,35 @@ export default {
     methods: {
         async submitForm(){
             this.loading = true
-            var getForm = {
-                code_order : this.getCode,
-                userName: this.userName,
-                phoneNumber: this.phoneNumber,
-                email: this.email,
-                address: this.address,
-                city: this.Vcity,
-                district: this.Vdistrict,
-                ward: this.Vward,
-                note: this.Vnote,
-                option: this.option
-            }
             await new Promise(resolve => setTimeout(resolve, 2000))
             this.loading = false
-            if (getForm.option == "COD") {  
-                Service.addNewOrder(getForm)
-                .then((response) => {
-                    console.log(response.data);
-                    alert("Cập nhật thành công");
-                })
-                .catch((errors) => {
-                     alert("k Cập nhật thành công");
-                    console.log(errors);
-                });
+            if (localStorage.getItem("token") === null) {
+                this.$router.push({name: "Login"})
+
+            } else {
+                var getForm = {
+                    code_order : this.getCode,
+                    userName: this.userName,
+                    phoneNumber: this.phoneNumber,
+                    email: this.email,
+                    address: this.address,
+                    city: this.Vcity,
+                    district: this.Vdistrict,
+                    ward: this.Vward,
+                    note: this.Vnote,
+                    option: this.option
+                }
+                if (getForm.option == "COD") {  
+                    Service.addNewOrder(getForm)
+                    .then((response) => {
+                        console.log(response.data);
+                        alert("Cập nhật thành công");
+                    })
+                    .catch((errors) => {
+                        alert("k Cập nhật thành công");
+                        console.log(errors);
+                    });
+                }
             }
         }
     },
