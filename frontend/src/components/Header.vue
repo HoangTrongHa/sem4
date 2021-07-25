@@ -33,8 +33,9 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="shoppingCat" @click="ShowCart()">
+                        <li class="shoppingCat">
                             <v-badge
+                                
                                 :content="countCart"
                                 color="error"
                             >
@@ -52,7 +53,9 @@
                                         <div class="title">
                                             {{ countCart }} Sản Phẩm
                                         </div>
-                                        <div class="checkOut">
+                                        <div class="checkOut" 
+                                        @click="$router.push({name: `CheckOut`})"
+                                        >
                                             Xem Tất Cả
                                         </div>
                                     </div>
@@ -67,7 +70,9 @@
                                          <div class="price">
                                             {{ items.price }}đ
                                         </div>
-                                        <div class="size">
+                                        <div class="size"
+                                        
+                                        >
                                            Kích Thước: {{ items.size.size }}
                                         </div>
                                         <div class="size">
@@ -78,7 +83,6 @@
                             </v-card>
                         </div>
                         </li>
-                        
                     </ul>
                 </div>
             </div>
@@ -106,7 +110,6 @@
             countCart() {
                 return this.cart.length
             }
-            
             
         },
         mounted() {

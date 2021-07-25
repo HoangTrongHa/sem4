@@ -1,4 +1,5 @@
 import axios from "axios"
+import { data } from "jquery";
 
 export const getMenu = ({ commit }) => {
     axios.get('http://localhost:15000/menu')
@@ -63,6 +64,33 @@ export const getBannerProduct = ({ commit }) => {
     .then(res => {
         commit('SET_BANNER_PRODUCT',res.data)
     })
+}
+
+export const getProvince = ({ commit }) => {
+    
+    // axios.get('https://thongtindoanhnghiep.co/api/city',{ "body":data }, {
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     }
+    // } )
+    // .then(res => {
+    //     commit('SET_PROVINCE', res.data)
+    // })
+    var options = {
+        method: 'GET',
+        url: 'https://wft-geo-db.p.rapidapi.com/v1/geo/adminDivisions',
+        params: {location: 'vietnamese'},
+        headers: {
+          'x-rapidapi-key': '7a2dec306dmsh1d2b6935b15b08ep14820ajsn10cc97694aa0',
+          'x-rapidapi-host': 'wft-geo-db.p.rapidapi.com'
+        }
+      };
+      
+      axios.request(options).then(function (response) {
+            commit('SET_PROVINCE', response.data)
+      }).catch(function (error) {
+          console.error(error);
+      });
 }
 
 // export const addProductToCart = ({ commit }, { state }) => {

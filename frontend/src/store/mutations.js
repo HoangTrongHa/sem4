@@ -53,3 +53,7 @@ export const SET_STORE_SYSTEM = (state,  item) => {
 export const SET_STORE_CONTACT = (state,  item) => {
     state.store_contact = item
 }
+
+export const SET_PROVINCE = (state, item) => {
+    state.province = item
+}

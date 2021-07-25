@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Infor from '../views/Infor/index.vue'
 import ProductByCateId from '../views/product/_cate-name'
+import CheckOut from '../views/CheckOut/index'
 Vue.use(VueRouter)
 
 const routes = [
@@ -20,6 +21,11 @@ const routes = [
     path: '/danh-muc/:name',
     name: 'ProductByCateId',
     component: ProductByCateId
+  },
+  {
+    path: '/check-out/',
+    name: 'CheckOut',
+    component: CheckOut
   },
 ]
 

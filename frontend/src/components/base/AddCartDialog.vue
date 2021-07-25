@@ -119,31 +119,20 @@ export default {
             img: this.getDataProduct.img,
             size: this.getSize
         } 
-        let found = checkCart.find(items => items.id == this.getDataProduct.id)
-        if (found == undefined || null) {
-          checkCart.push(value)
+        let duplicate = checkCart.find(items => items.id == value.id)
+        if ( duplicate !== undefined) {
+          let found = checkCart.filter(items => items.id !== value.id)
+          console.log(found),
+          duplicate.qtyCus += this.qtyCustomer
+          console.log(duplicate)
+          localStorage.removeItem("Cart")
+          found.push(duplicate)
+          console.log(found)
           localStorage.setItem("Cart",JSON.stringify(checkCart))
         } else {
-          for(const i in checkCart) {
-            if (i.id == found.id) {
-              console.log(found.id)
-                checkCart.splice(i.id, 1);
-            }
-          }
-          console.log(checkCart)
+          checkCart.push(value)
+          localStorage.setItem("Cart",JSON.stringify(checkCart))
         }
-        // let key = Object.keys(checkCart).fill(key => checkCart[key] === this.getDataProduct.id);
-        // console.log(key)
-        // if (found) {
-        //   localStorage.removeItem("Cart",found.id);
-        //   checkCart.splice(key, 1);
-        //   found.qtyCus += this.qtyCustomer
-        //   checkCart.push(found)
-        //   localStorage.setItem("Cart",JSON.stringify(checkCart))
-        // } else {
-        //   checkCart.push(value)
-        //   localStorage.setItem("Cart",JSON.stringify(checkCart))
-        // }
         this.updateDialog(false)        
       },
       
