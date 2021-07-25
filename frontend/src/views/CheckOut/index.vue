@@ -228,6 +228,7 @@ import Vue from 'vue'
 
 import BaseBanner from '@/components/base/Banner.vue'
 import Vue2Filters from 'vue2-filters'
+import Service from '../../business/index'
 Vue.use(Vue2Filters)
 // import { StripeCheckout } from '@vue-stripe/vue-stripe';
 
@@ -278,7 +279,7 @@ export default {
         },
         
         getCode() {
-            return  Math.random().toString(6).substring(2, 15) + Math.random().toString(6).substring(2, 15)
+            return  Math.random().toString(6).substring(2, 5) + Math.random().toString(6).substring(2, 5)
         }
         
     },
@@ -289,7 +290,7 @@ export default {
         this.$store.dispatch('getWard');
     },
     methods: {
-        submitForm(){
+        async submitForm(){
             this.loading = true
             var getForm = {
                 code_order : this.getCode,
@@ -304,7 +305,19 @@ export default {
                 option: this.option
             }
             console.log(getForm)
-            // setTimeout(() => (), 3000)
+            await new Promise(resolve => setTimeout(resolve, 2000))
+            this.loading = false
+            if (getForm.option == "COD") {  
+                Service.addNewOrder(this.getForm)
+                .then((response) => {
+                    console.log(response.data);
+                    alert("Cập nhật thành công");
+                })
+                .catch((errors) => {
+                     alert("k Cập nhật thành công");
+                    console.log(errors);
+                });
+            }
         }
     },
    
