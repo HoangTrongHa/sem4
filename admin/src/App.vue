@@ -1,41 +1,26 @@
 <template>
-  <div>
-    <template v-if="!$route.meta.allowAnonymous">
-      <v-app id="inspire">
-        <div class="app-container">
-          <toolbar @toggleNavigationBar="drawer = !drawer"/>
-          <navigation :toggle="drawer"/>
-          <v-content>
-            <breadcrumbs />
-            <router-view/>
-            <page-footer />
-          </v-content>
-        </div>
-      </v-app>
-    </template>
-    <template v-else>
-      <transition>
-        <keep-alive>
-          <router-view></router-view>
-        </keep-alive>
-      </transition>
-    </template>
+  <div id="app">
+    <Header/>
+    <div id="layoutSidenav">
+      <Sidebar/>
+      <div id="layoutSidenav_content">
+        <main>
+          <router-view/>
+        </main>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import Header from "@/layouts/Header";
+import Sidebar from "@/layouts/Sidebar";
 export default {
   name: 'App',
-  data() {
-    return {
-      drawer: true
-    }
+  components: {
+    Header,
+    Sidebar,
   }
 }
 </script>
 
-<style>
-  .v-btn:hover:before{
-    color: transparent !important;
-  }
-</style>
