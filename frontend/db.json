@@ -489,20 +489,36 @@
   "city": [
       {
         "id": 1,
-        "name": "Nam Định",
-        "district": [
-          {
-            "id": 1,
-            "name": "Thành Phố Nam Định"
-          },
-          
-        ],
-        "ward": [
-          {
-            "id": 1,
-            "name": "Văn Miếu"
-          }
-        ]
-      }  
+        "name": "Nam Định"
+      },
+      
+      {
+        "id": 2,
+        "name": "Hà Nội"
+      }    
+  ],
+  "district": [
+    {
+      "id": 1,
+      "name": "Thành Phố Nam Định",
+      "city_id": 1
+    }  ,
+    {
+      "id": 2,
+      "name": "Cầu Giấy",
+      "city_id": 2
+    }  
+  ],
+  "ward": [
+    {
+      "id": 1,
+      "name": "Văn Miếu",
+      "district_id": 1
+    },
+    {
+      "id": 2,
+      "name": "Dịch Vọng Hậu",
+      "district_id": 2
+    } 
   ]
 }

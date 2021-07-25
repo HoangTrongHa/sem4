@@ -12,5 +12,8 @@ export default {
     store_system: [],
     store_contact: [],
     contact: [],
-    province: []
+    province: [],
+    city:[],
+    district:[],
+    ward:[]
 }

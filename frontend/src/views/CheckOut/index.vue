@@ -15,6 +15,7 @@
                         outlined
                         v-model="userName"
                     ></v-text-field>
+                  
                 </div>
                 <div class="wrap-input">
                     <v-text-field
@@ -41,27 +42,33 @@
             <div class="form-field">
                 <div class="wrap-item">
                     <v-select
-                    :items="items"
+                    :items="cities"
                     label="Chọn Tỉnh/Thành"
                     outlined
-                    v-model="city"
+                    item-text="name"
+                    item-value="id"
+                    v-model="Vcity"
                     ></v-select>
                 </div>
                 <div class="wrap-item">
                     <v-select
-                    :items="items"
+                    :items="getDistrict"
                     label="Chọn Quận/Huyện"
                     outlined
-                    v-model="district"
+                    item-text="name"
+                    item-value="id"
+                    v-model="Vdistrict"
                     >
                     </v-select>
                 </div>
                 <div class="wrap-item">
                     <v-select
-                        :items="items"
+                        :items="getWard"
                         label="Chọn Phường/Xã"
                         outlined
-                        v-model="ward"
+                        item-value="id"
+                        item-text="name"
+                        v-model="Vward"
                     ></v-select>
                 </div>
             </div>
@@ -71,7 +78,7 @@
                 clearable
                 clear-icon="mdi-close-circle"
                 label="Ghi Chú Thêm"
-                v-model="note"
+                v-model="Vnote"
                 ></v-textarea>
             </div>
             <div class="title">Chọn hình thức thanh toán</div>
@@ -83,7 +90,7 @@
             <div class="wrap-item-select">
                 <v-radio
                     color="red"
-                    value="reasdd"
+                    value="COD"
                 >
                 </v-radio>
                 <div class="payment-method__icon">
@@ -128,7 +135,7 @@
                     :loading="loading"
                     :disabled="loading"
                     height="100"
-                    @click="loader = 'loading'"
+                    @click="submitForm"
                 >
                     <div class="title-button">Đặt Hàng </div>
                 </v-btn>
@@ -231,21 +238,28 @@ export default {
     },
     data () {
       return {
-        loader: null,
+        
         loading: false,
         userName: '',
         phoneNumber: '',
         email:'',
         address:'',
-        city:'',
-        district:'',
-        ward: '',
-        note: ''
-      }
-    },
+        Vcity:'',
+        Vdistrict:'',
+        Vward: '',
+        Vnote: '',
+        option:'',
+        items:'',
+
+    }
+},
     computed: {
         cart() {
+            console.log(this.Vdistrict)
             return JSON.parse(localStorage.getItem('Cart')) || [];
+        },
+        cities() {
+            return this.$store.state.city
         },
         calcSum(){
             let total = 0;
@@ -253,19 +267,50 @@ export default {
                 total += item.price * item.qtyCus;
             });
             return total;
+        },
+
+        getDistrict () {
+            return this.$store.state.district.filter(items => items.city_id === this.Vcity)
+        },
+
+        getWard() {
+            return this.$store.state.ward.filter(items => items.district_id === this.Vdistrict)
+        },
+        
+        getCode() {
+            return  Math.random().toString(6).substring(2, 15) + Math.random().toString(6).substring(2, 15)
         }
+        
     },
      mounted() {
-            this.$store.dispatch('getProvince');
+        // this.$store.dispatch('getProvince');
+        this.$store.dispatch('getCity');
+        this.$store.dispatch('getDistrict');
+        this.$store.dispatch('getWard');
     },
-    watch: {
-      loader () {
-        const l = this.loader
-        this[l] = !this[l]
-        setTimeout(() => (this[l] = false), 3000)
-        this.loader = null
-      },
+    methods: {
+        submitForm(){
+            this.loading = true
+            var getForm = {
+                code_order : this.getCode,
+                userName: this.userName,
+                phoneNumber: this.phoneNumber,
+                email: this.email,
+                address: this.address,
+                city: this.Vcity,
+                district: this.Vdistrict,
+                ward: this.Vward,
+                note: this.Vnote,
+                option: this.option
+            }
+            console.log(getForm)
+            // setTimeout(() => (), 3000)
+        }
     },
+   
+    created() {
+        console.log(this.userName)
+  }
 }
 </script>
 

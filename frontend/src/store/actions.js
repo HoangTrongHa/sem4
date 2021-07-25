@@ -65,32 +65,32 @@ export const getBannerProduct = ({ commit }) => {
     })
 }
 
-export const getProvince = ({ commit }) => {
+// export const getProvince = ({ commit }) => {
     
-    // axios.get('https://thongtindoanhnghiep.co/api/city',{ "body":data }, {
-    //     headers: {
-    //         'Content-Type': 'application/json'
-    //     }
-    // } )
-    // .then(res => {
-    //     commit('SET_PROVINCE', res.data)
-    // })
-    var options = {
-        method: 'GET',
-        url: 'https://wft-geo-db.p.rapidapi.com/v1/geo/adminDivisions',
-        params: {location: 'vietnamese'},
-        headers: {
-          'x-rapidapi-key': '7a2dec306dmsh1d2b6935b15b08ep14820ajsn10cc97694aa0',
-          'x-rapidapi-host': 'wft-geo-db.p.rapidapi.com'
-        }
-      };
+//     // axios.get('https://thongtindoanhnghiep.co/api/city',{ "body":data }, {
+//     //     headers: {
+//     //         'Content-Type': 'application/json'
+//     //     }
+//     // } )
+//     // .then(res => {
+//     //     commit('SET_PROVINCE', res.data)
+//     // })
+//     var options = {
+//         method: 'GET',
+//         url: 'https://wft-geo-db.p.rapidapi.com/v1/geo/adminDivisions',
+//         params: {location: 'vietnamese'},
+//         headers: {
+//           'x-rapidapi-key': '7a2dec306dmsh1d2b6935b15b08ep14820ajsn10cc97694aa0',
+//           'x-rapidapi-host': 'wft-geo-db.p.rapidapi.com'
+//         }
+//       };
       
-      axios.request(options).then(function (response) {
-            commit('SET_PROVINCE', response.data)
-      }).catch(function (error) {
-          console.error(error);
-      });
-}
+//       axios.request(options).then(function (response) {
+//             commit('SET_PROVINCE', response.data)
+//       }).catch(function (error) {
+//           console.error(error);
+//       });
+// }
 
 // export const addProductToCart = ({ commit }, { state }) => {
 //         state.cart = userData
@@ -113,5 +113,26 @@ export const getStoreContact = ({ commit }) => {
     axios.get('http://localhost:15000/store_contact')
     .then(res => {
         commit('SET_STORE_CONTACT',res.data)
+    })
+}
+
+export const getCity = ({ commit }) => {
+    axios.get('http://localhost:15000/city')
+    .then(res => {
+        commit('SET_CITY', res.data)
+    })
+}
+
+export const getDistrict = ({ commit }) => {
+    axios.get('http://localhost:15000/district')
+    .then(res => {
+        commit('SET_DISTRICT', res.data)
+    })
+}
+
+export const getWard = ({ commit }) => {
+    axios.get('http://localhost:15000/ward')
+    .then(res => {
+        commit('SET_WARD', res.data)
     })
 }

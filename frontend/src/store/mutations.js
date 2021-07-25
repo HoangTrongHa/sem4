@@ -57,3 +57,15 @@ export const SET_STORE_CONTACT = (state,  item) => {
 export const SET_PROVINCE = (state, item) => {
     state.province = item
 }
+
+export const SET_CITY = (state, item) => {
+    state.city = item
+}
+
+export const SET_DISTRICT = (state, item) => {
+    state.district = item
+}
+
+export const SET_WARD = (state, item) => {
+    state.ward = item
+}
