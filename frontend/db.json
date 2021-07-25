@@ -483,31 +483,42 @@
       "phone_number": "082.9093.933"
     }
   ],
-  "order":[
-    
+  "order": [
+    {
+      "id": 1,
+      "code_order": "this.getCode",
+      "userName": "this.userName",
+      "phoneNumber": "this.phoneNumber",
+      "email": "this.email",
+      "address": "this.address",
+      "city": "this.Vcity",
+      "district": "this.Vdistrict",
+      "ward": "this.Vward",
+      "note": "this.Vnote",
+      "option": "this.option"
+    }
   ],
   "city": [
-      {
-        "id": 1,
-        "name": "Nam Định"
-      },
-      
-      {
-        "id": 2,
-        "name": "Hà Nội"
-      }    
+    {
+      "id": 1,
+      "name": "Nam Định"
+    },
+    {
+      "id": 2,
+      "name": "Hà Nội"
+    }
   ],
   "district": [
     {
       "id": 1,
       "name": "Thành Phố Nam Định",
       "city_id": 1
-    }  ,
+    },
     {
       "id": 2,
       "name": "Cầu Giấy",
       "city_id": 2
-    }  
+    }
   ],
   "ward": [
     {
@@ -519,6 +530,6 @@
       "id": 2,
       "name": "Dịch Vọng Hậu",
       "district_id": 2
-    } 
+    }
   ]
 }
