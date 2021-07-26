@@ -12,6 +12,8 @@ import NeckPillow from '../views/Gallery/Page/NeckPillow'
 import Japan from '../views/Gallery/Page/Japan'
 import Accessory from '../views/Gallery/Page/Accessory'
 import Event from '../views/Gallery/Page/Event'
+import AntiqueCostume from '../views/Gallery/Page/AntiqueCostume'
+import Exhibition from '../views/Gallery/Page/Exhibition'
 
 Vue.use(VueRouter)
 
@@ -82,7 +84,16 @@ const routes = [
         name: "Event",
         component: Event
       },
-      
+      {
+        path: "/gallery-lookbook/trang-phuc-co",
+        name: "AntiqueCostume",
+        component: AntiqueCostume
+      },
+      {
+        path: "/gallery-lookbook/trien-lam",
+        name: "Exhibition",
+        component: Exhibition
+      }
     ]
   },
 ]

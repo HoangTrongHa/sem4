@@ -13,7 +13,7 @@ export default {
     },
     computed: {
         getGalary() {
-            return this.$store.state.gallery.filter(item => item.cate_id === "5")
+            return this.$store.state.gallery.filter(item => item.cate_id === "7")
         }
     }
 }
