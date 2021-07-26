@@ -1673,5 +1673,35 @@
       "name": "Dịch Vọng",
       "district_id": 2
     }   
+  ],
+  "gallery-lookbook": [
+    {
+      "id": 1,
+      "name" : "Áo Tấc",
+      "cate_id" : "1",
+      "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_0905-o4t6poteewkh7e9xrytayomj819c02lq3u5v38hrys.jpg",
+      "create_at" : "13/03/2019"
+    },
+    {
+      "id": 2,
+      "name" : "Áo Nhật Bình",
+      "cate_id" : "1",
+      "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/14-copy-o4t46xieisbs6u3vqqi47l4acolgs6aqymi2xf28r8.jpg",
+      "create_at" : "13/03/2020"
+    },
+    {
+      "id": 3,
+      "name" : "Áo dài tay chẽn nam",
+      "cate_id" : "1",
+      "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/26167902_10155171379956526_7354995996521134547_n-nu2qxp5bq8a4qv2d4ji0idg8ykynmv2q78f5977tg4.jpg",
+      "create_at" : "13/03/2020"
+    },
+    {
+      "id": 4,
+      "name" : "Áo dài truyền thống nữ",
+      "cate_id" : "1",
+      "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC27d02-Recovered-nu0htw3g81aacy8xqxszpod3n2bie8n73j47jefzkk.jpg",
+      "create_at" : "13/03/2021"
+    }
   ]
 }

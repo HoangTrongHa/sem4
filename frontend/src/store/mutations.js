@@ -69,3 +69,7 @@ export const SET_DISTRICT = (state, item) => {
 export const SET_WARD = (state, item) => {
     state.ward = item
 }
+
+export const SET_GALLARY = (state, item) => {
+    state.gallery = item
+}
