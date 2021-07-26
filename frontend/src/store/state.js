@@ -15,5 +15,6 @@ export default {
     province: [],
     city:[],
     district:[],
-    ward:[]
+    ward:[],
+    gallery:[]
 }

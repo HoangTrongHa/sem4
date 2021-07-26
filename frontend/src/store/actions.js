@@ -136,3 +136,10 @@ export const getWard = ({ commit }) => {
         commit('SET_WARD', res.data)
     })
 }
+
+export const getGallery = ({ commit }) => {
+    axios.get('http://localhost:15000/gallery-lookbook')
+    .then(res => {
+        commit('SET_GALLARY', res.data)
+    })
+}
