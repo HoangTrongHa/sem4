@@ -1715,6 +1715,118 @@
       "cate_id" : "1",
       "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC27d02-Recovered-nu0htw3g81aacy8xqxszpod3n2bie8n73j47jefzkk.jpg",
       "create_at" : "13/03/2021"
+    },
+    {
+      "id": 5,
+      "name" : "Gối Xếp",
+      "cate_id" : "2",
+      "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/f06f549ae45b05055c4a-nu0x0l0755nywc5bg8ziwpydkrqt8sz1lekpuzuwno.jpg",
+      "create_at" : "03/08/2018"
+    },
+    {
+      "id": 6,
+      "name" : "Áo giao lĩnh",
+      "cate_id" : "3",
+      "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_3382-o4t6rsybshgpbt7cfdq32nevc8u2bjzzeb06yncvys.jpg",
+      "create_at" : "14/03/2019"
+    },
+    {
+      "id": 7,
+      "name" : "Phụ kiện",
+      "cate_id" : "3",
+      "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_5372-o4wbimvkzbp4iviwpc01bx2awpdf08a0fnkw7badw4.jpg",
+      "create_at" : "03/08/2018"
+    },
+    {
+      "id": 8,
+      "name" : "Gối xếp",
+      "cate_id" : "3",
+      "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/f06f549ae45b05055c4a-nu0x0l0755nywc5bg8ziwpydkrqt8sz1lekpuzuwno.jpg",
+      "create_at" : "03/08/2018"
+    },
+    {
+      "id": 9,
+      "name" : "Phụ kiện",
+      "cate_id" : "4",
+      "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_5372-o4wbimvkzbp4iviwpc01bx2awpdf08a0fnkw7badw4.jpg",
+      "create_at" : "03/08/2018"
+    },
+    {
+      "id": 10,
+      "name" : "Áo dài truyền thống nữ",
+      "cate_id" : "5",
+      "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC27d02-Recovered-nu0htw3g81aacy8xqxszpod3n2bie8n73j47jefzkk.jpg",
+      "create_at" : "25/07/2018"
+    },
+    {
+      "id": 11,
+      "name" : "Áo giao lĩnh",
+      "cate_id" : "6",
+      "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_3382-o4t6rsybshgpbt7cfdq32nevc8u2bjzzeb06yncvys.jpg",
+      "create_at" : "14/03/2019"
+    },
+    {
+      "id": 12,
+      "name" : "Áo tấc",
+      "cate_id" : "6",
+      "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_0905-o4t6poteewkh7e9xrytayomj819c02lq3u5v38hrys.jpg",
+      "create_at" : "13/03/2019"
+    },
+    {
+      "id": 13,
+      "name" : "Áo Nhật Bình",
+      "cate_id" : "6",
+      "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/14-copy-o4t46xieisbs6u3vqqi47l4acolgs6aqymi2xf28r8.jpg",
+      "create_at" : "13/03/2019"
+    },
+    {
+      "id": 14,
+      "name" : "Áo dài tay chẽn nam",
+      "cate_id" : "6",
+      "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/26167902_10155171379956526_7354995996521134547_n-nu2qxp5bq8a4qv2d4ji0idg8ykynmv2q78f5977tg4.jpg",
+      "create_at" : "11/09/2018"
+    },
+    {
+      "id": 15,
+      "name" : "Áo dài truyền thống nữ",
+      "cate_id" : "6",
+      "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC27d02-Recovered-nu0htw3g81aacy8xqxszpod3n2bie8n73j47jefzkk.jpg",
+      "create_at" : "25/07/2018"
+    },
+    {
+      "id": 16,
+      "name" : "Áo tấc",
+      "cate_id" : "7",
+      "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_0905-o4t6poteewkh7e9xrytayomj819c02lq3u5v38hrys.jpg",
+      "create_at" : "13/03/2019"
+    },
+    {
+      "id": 17,
+      "name" : "Video",
+      "cate_id" : "7",
+      "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_9785-nugkb2nb6re1dmicb8l4n0iyzvncds68mm0w4aqlzo.jpg",
+      "create_at" : "30/08/2018"
+    },
+    {
+      "id": 18,
+      "name" : "Phụ kiện",
+      "cate_id" : "7",
+      "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_5372-o4wbimvkzbp4iviwpc01bx2awpdf08a0fnkw7badw4.jpg",
+      "create_at" : "03/08/2018"
+    },
+    {
+      "id": 19,
+      "name" : "Gối xếp",
+      "cate_id" : "7",
+      "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/f06f549ae45b05055c4a-nu0x0l0755nywc5bg8ziwpydkrqt8sz1lekpuzuwno.jpg",
+      "create_at" : "03/08/2018"
+    },
+    {
+      "id": 20,
+      "name" : "Áo dài truyền thống nữ",
+      "cate_id" : "7",
+      "img" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC27d02-Recovered-nu0htw3g81aacy8xqxszpod3n2bie8n73j47jefzkk.jpg",
+      "create_at" : "25/07/2018"
     }
   ]
 }
