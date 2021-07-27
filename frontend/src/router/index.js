@@ -14,6 +14,7 @@ import Accessory from '../views/Gallery/Page/Accessory'
 import Event from '../views/Gallery/Page/Event'
 import AntiqueCostume from '../views/Gallery/Page/AntiqueCostume'
 import Exhibition from '../views/Gallery/Page/Exhibition'
+import Contact from '../views/contact/index'
 
 Vue.use(VueRouter)
 
@@ -96,6 +97,11 @@ const routes = [
       }
     ]
   },
+  {
+    path: '/lien-he',
+    name: 'Contact',
+    component: Contact
+  }
 ]
 
 const router = new VueRouter({
