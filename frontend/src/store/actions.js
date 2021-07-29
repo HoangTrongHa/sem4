@@ -143,3 +143,14 @@ export const getGallery = ({ commit }) => {
         commit('SET_GALLARY', res.data)
     })
 }
+
+export const getDataUser = ({ commit }) => {
+    commit('SET_USER', localStorage.getItem('user'))
+}
+
+export const getAllOrder = ({ commit }) => {
+    axios.get('http://localhost:15000/order')
+    .then(res => {
+        commit('SET_ORDER', res.data)
+    })
+}

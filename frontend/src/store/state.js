@@ -16,5 +16,7 @@ export default {
     city:[],
     district:[],
     ward:[],
-    gallery:[]
+    gallery:[],
+    user:[],
+    order:[]
 }

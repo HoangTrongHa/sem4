@@ -15,6 +15,9 @@ import Event from '../views/Gallery/Page/Event'
 import AntiqueCostume from '../views/Gallery/Page/AntiqueCostume'
 import Exhibition from '../views/Gallery/Page/Exhibition'
 import Contact from '../views/contact/index'
+import Register from '../views/Register/index.vue'
+import Tutorial from '../views/Tutorial/index.vue'
+import Success_COD from '../views/CheckOut/success/index.vue'
 
 Vue.use(VueRouter)
 
@@ -43,6 +46,11 @@ const routes = [
     path: '/account/login',
     name: 'Login',
     component: Login
+  },
+  {
+    path: '/account/register',
+    name: 'Register',
+    component: Register
   },
   {
     path: '/gallery-lookbook/',
@@ -101,6 +109,16 @@ const routes = [
     path: '/lien-he',
     name: 'Contact',
     component: Contact
+  },
+  {
+    path: '/huong-dan',
+    name: 'Tutorial',
+    component: Tutorial
+  },
+  {
+    path: '/checkout/success/:code_order',
+    name: 'Success_COD',
+    component: Success_COD
   }
 ]
 

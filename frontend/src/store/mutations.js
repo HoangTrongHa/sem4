@@ -73,3 +73,11 @@ export const SET_WARD = (state, item) => {
 export const SET_GALLARY = (state, item) => {
     state.gallery = item
 }
+
+export const SET_USER = (state, item) => {
+    state.user = item
+}
+
+export const SET_ORDER = (state, item) => {
+    state.order = item
+}

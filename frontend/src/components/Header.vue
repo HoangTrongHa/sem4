@@ -33,6 +33,18 @@
                                 </div>
                             </div>
                         </li>
+                        <li v-if="getUser == null"
+                            class="login"
+                            @click="$router.push({
+                                name: `Login`
+                            })"
+                        >
+                            <icon class="map-user-tie" name="user-tie" size="20px"/>
+                        </li>
+                        <li v-else
+                        >
+                            <icon class="map-user-tie" name="user-tie" size="20px"/>
+                        </li>
                         <li class="shoppingCat">
                             <v-badge
                                 
@@ -109,16 +121,22 @@
             },
             countCart() {
                 return this.cart.length
+            },
+            getUser () {
+                console.log(this.$store.state.user)
+                return this.$store.state.user
             }
             
         },
         mounted() {
             this.$store.dispatch('getMenu');
             this.$store.dispatch('getCategories');
-
         },
-        
-        
+        watch: {
+            getUser(newValue,oldValue) {
+                console.log(`Updating from ${oldValue} to ${newValue}`);
+            }
+        }  
     }
 </script>
 

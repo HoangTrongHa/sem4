@@ -84,14 +84,14 @@
                         id: 6,
                         name: "Trang Phụ Cổ",
                         route: {
-                            name: "Event"
+                            name: "AntiqueCostume"
                         }
                     }, 
                     {
                         id: 7,
                         name: "Triển Lãm",
                         route: {
-                            name: "Event"
+                            name: "Exhibition"
                         }
                     }
                 ]

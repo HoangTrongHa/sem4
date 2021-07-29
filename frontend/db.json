@@ -483,7 +483,248 @@
       "phone_number": "082.9093.933"
     }
   ],
-  "order": [],
+  "order": [
+    {
+      "code_order": "340525",
+      "userName": "nhanguyen123",
+      "phoneNumber": "12345678",
+      "email": "test@gmail.com",
+      "address": "asdasd",
+      "city": 1,
+      "district": 2,
+      "ward": 2,
+      "note": "ádđsd",
+      "option": "COD",
+      "id": 1
+    },
+    {
+      "code_order": "234543",
+      "userName": "nhanguyen123",
+      "phoneNumber": "123123123",
+      "email": "test@gmail.com",
+      "address": "123123123",
+      "city": 2,
+      "district": 13,
+      "ward": "",
+      "note": "213",
+      "option": "COD",
+      "id": 2
+    },
+    {
+      "code_order": "204204",
+      "userName": "nhanguyen123",
+      "phoneNumber": "213123",
+      "email": "test@gmail.com",
+      "address": "123123",
+      "city": 1,
+      "district": 1,
+      "ward": 1,
+      "note": "12321",
+      "option": "COD",
+      "user_register": "nhanguyen123",
+      "email_register": "test@gmail.com",
+      "id": 3
+    },
+    {
+      "code_order": "134100",
+      "userName": "nhanguyen123",
+      "phoneNumber": "123123",
+      "email": "test@gmail.com",
+      "address": "12313",
+      "city": 1,
+      "district": 1,
+      "ward": "",
+      "note": "1233213",
+      "option": "COD",
+      "user_register": "nhanguyen123",
+      "email_register": "test@gmail.com",
+      "id": 4
+    },
+    {
+      "code_order": "350102",
+      "userName": "nhanguyen123",
+      "phoneNumber": "123123",
+      "email": "test@gmail.com",
+      "address": "123",
+      "city": 1,
+      "district": 1,
+      "ward": 1,
+      "note": "123",
+      "option": "COD",
+      "user_register": "nhanguyen123",
+      "email_register": "test@gmail.com",
+      "id": 5
+    },
+    {
+      "code_order": "542505",
+      "userName": "nhanguyen123",
+      "phoneNumber": "2312132",
+      "email": "test@gmail.com",
+      "address": "123213",
+      "city": 1,
+      "district": 2,
+      "ward": 2,
+      "note": "123213",
+      "option": "COD",
+      "user_register": "nhanguyen123",
+      "email_register": "test@gmail.com",
+      "id": 6
+    },
+    {
+      "code_order": "440422",
+      "userName": "nhanguyen123",
+      "phoneNumber": "12323",
+      "email": "test@gmail.com",
+      "address": "123123",
+      "city": 3,
+      "district": 25,
+      "ward": "",
+      "note": "123",
+      "option": "COD",
+      "user_register": "nhanguyen123",
+      "email_register": "test@gmail.com",
+      "id": 7
+    },
+    {
+      "code_order": "122440",
+      "userName": "nhanguyen123",
+      "phoneNumber": "23123",
+      "email": "test@gmail.com",
+      "address": "12323",
+      "city": 5,
+      "district": 38,
+      "ward": "",
+      "note": "123",
+      "option": "COD",
+      "user_register": "nhanguyen123",
+      "email_register": "test@gmail.com",
+      "id": 8
+    },
+    {
+      "code_order": "533204",
+      "userName": "nhanguyen123",
+      "phoneNumber": "123123",
+      "email": "test@gmail.com",
+      "address": "3123213",
+      "city": 2,
+      "district": 12,
+      "ward": "",
+      "note": "",
+      "option": "COD",
+      "user_register": "nhanguyen123",
+      "email_register": "test@gmail.com",
+      "create_at": "21:46:26, 29/7/2021",
+      "id": 9
+    },
+    {
+      "code_order": "204104",
+      "userName": "nhanguyen123",
+      "phoneNumber": "123123",
+      "email": "test@gmail.com",
+      "address": "123123",
+      "city": 3,
+      "district": 25,
+      "ward": "",
+      "note": "213213",
+      "option": "COD",
+      "user_register": "nhanguyen123",
+      "email_register": "test@gmail.com",
+      "create_at": "22:01:02, 29/7/2021",
+      "id": 10
+    },
+    {
+      "code_order": "022222",
+      "userName": "nhanguyen123",
+      "phoneNumber": "23123123123123",
+      "email": "test@gmail.com",
+      "address": "114",
+      "city": 8,
+      "district": 49,
+      "ward": "",
+      "note": "1231233",
+      "option": "COD",
+      "user_register": "nhanguyen123",
+      "email_register": "test@gmail.com",
+      "create_at": "22:11:49, 29/7/2021",
+      "id": 11
+    },
+    {
+      "code_order": "030042",
+      "userName": "nhannguyen1234",
+      "phoneNumber": "21313",
+      "email": "nhannguyen1234@gmail.com",
+      "address": "test3@gmail.com",
+      "city": 4,
+      "district": 31,
+      "ward": "",
+      "note": "123123213",
+      "option": "COD",
+      "user_register": "nhannguyen1234",
+      "email_register": "nhannguyen1234@gmail.com",
+      "create_at": "22:29:32, 29/7/2021",
+      "id": 12
+    },
+    {
+      "code_order": "341424",
+      "userName": "nhannguyen1234",
+      "phoneNumber": "234324234",
+      "email": "nhannguyen1234@gmail.com",
+      "address": "asdasdsad",
+      "city": 2,
+      "district": 11,
+      "ward": "",
+      "note": "123",
+      "option": "COD",
+      "user_register": "nhannguyen1234",
+      "email_register": "nhannguyen1234@gmail.com",
+      "create_at": "22:39:04, 29/7/2021",
+      "id": 13
+    },
+    {
+      "code_order": "245233",
+      "userName": "nhannguyen1234",
+      "phoneNumber": "123123",
+      "email": "nhannguyen1234@gmail.com",
+      "address": "213213",
+      "city": 1,
+      "district": 1,
+      "ward": 1,
+      "note": "1233",
+      "option": "COD",
+      "user_register": "nhannguyen1234",
+      "email_register": "nhannguyen1234@gmail.com",
+      "create_at": "22:44:38, 29/7/2021",
+      "item_cart": [
+        {
+          "id": "1",
+          "name": "Gối XẾP TAM SƠN THỦY BA",
+          "price": "499.00",
+          "TotalPrice": 499,
+          "qtyCus": 1,
+          "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg",
+          "size": {
+            "id": 1,
+            "size": "xs",
+            "qty": 10
+          }
+        },
+        {
+          "id": "3",
+          "name": "Áo Dài Nam Cổ Đứng",
+          "price": "499.00",
+          "TotalPrice": 499,
+          "qtyCus": 1,
+          "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg",
+          "size": {
+            "id": 1,
+            "size": "xs",
+            "qty": 10
+          }
+        }
+      ],
+      "id": 14
+    }
+  ],
   "city": [
     {
       "id": 1,
@@ -1820,6 +2061,18 @@
       "phoneNumber": "asdsad",
       "email": "asdasd",
       "id": 1
+    },
+    {
+      "userName": "ádasdsad",
+      "phoneNumber": "ádasd",
+      "email": "ádasdasd",
+      "id": 2
+    },
+    {
+      "userName": "Chi Nhan ",
+      "phoneNumber": "ấmdmasldml",
+      "email": "đasadsdasd",
+      "id": 3
     }
   ]
 }

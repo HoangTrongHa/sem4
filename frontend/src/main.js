@@ -6,6 +6,8 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
 import icons from "v-svg-icons";
+import "./plugins/vee-validate";
+import "./plugins/vue-toastification";
 
 Vue.config.productionTip = false
 Vue.component("icon", icons);
