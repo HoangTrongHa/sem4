@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Infor from '../views/Infor/index.vue'
 import ProductByCateId from '../views/product/_cate-name'
+import ProductDetail from '../views/product/_id'
 import CheckOut from '../views/CheckOut/index'
 import Login from '../views/login/index'
 import Gallery from '../views/Gallery/index'
@@ -18,7 +19,7 @@ import Contact from '../views/contact/index'
 import Register from '../views/Register/index.vue'
 import Tutorial from '../views/Tutorial/index.vue'
 import Success_COD from '../views/CheckOut/success/index.vue'
-
+import Cart from '../views/Cart/index.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -38,9 +39,19 @@ const routes = [
     component: ProductByCateId
   },
   {
+    path: '/san-pham/:params',
+    name: 'ProductDetail',
+    component: ProductDetail
+  },
+  {
     path: '/check-out/',
     name: 'CheckOut',
     component: CheckOut
+  },
+  {
+    path: '/gio-hang/',
+    name: 'Cart',
+    component: Cart
   },
   {
     path: '/account/login',
@@ -67,11 +78,6 @@ const routes = [
         path: "/gallery-lookbook/ao-dai",
         name: "Dress",
         component: Dress
-      },
-      {
-        path: "/gallery-lookbook/goi-xep-co",
-        name: "NeckPillow",
-        component: NeckPillow
       },
       {
         path: "/gallery-lookbook/goi-xep-co",

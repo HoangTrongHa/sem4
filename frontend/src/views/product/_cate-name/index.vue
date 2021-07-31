@@ -25,7 +25,8 @@
                   <div class="sidebar-padder">
                     <ul class="wrap-category">
                       <li 
-                      v-for="item of getDataCategories" :key="item.id">
+                      v-for="item of getDataCategories" :key="item.id"
+                      >
                           <div
                             :class="($route.params.name == item.name) ? `active itemClass` : `itemClass`"
                             @click="$router.push({ 
@@ -75,6 +76,10 @@
                   <ul>
                     <li class="itemProduct"
                       v-for="products of getDataByCateName" :key="products.id"
+                      @click="$router.push({
+                        name: `ProductDetail`,
+                        params: { params:products.id, items:products }
+                      })"
                     >
                       <img :src="products.img" alt="">
                       <h2 class="name">

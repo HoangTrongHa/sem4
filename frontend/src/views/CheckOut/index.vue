@@ -2,9 +2,9 @@
     <div class="check-out"> 
         <BaseBanner>
             <template v-slot:title>
-                {{ $route.params.name }}
+                Thanh Toán
             </template>
-      </BaseBanner>
+        </BaseBanner>
       <div class="wrap-check-out">
         <div class="checkout__main">
             <div class="title">Thông tin đơn hàng</div>
@@ -82,7 +82,7 @@
                         label="Chọn Tỉnh/Thành"
                         outlined
                         item-text="name"
-                        item-value="id"
+                        item-value="name"
                         v-model="Vcity"
                         :error-messages="errors"
                     ></v-select>
@@ -99,7 +99,7 @@
                         label="Chọn Quận/Huyện"
                         outlined
                         item-text="name"
-                        item-value="id"
+                        item-value="name"
                         v-model="Vdistrict"
                         :error-messages="errors"
                     ></v-select>
@@ -115,7 +115,7 @@
                         label="Chọn Phường/Xã"
                         outlined
                         item-text="name"
-                        item-value="id"
+                        item-value="name"
                         v-model="Vward"
                         :error-messages="errors"
                     ></v-select>
@@ -313,12 +313,12 @@ export default {
         Vnote: '',
         option:'',
         items:'',
-
+        cityId: null,
+        districtId: null
     }
 },
     computed: {
         cart() {
-            console.log(this.Vdistrict)
             return JSON.parse(localStorage.getItem('Cart')) || [];
         },
 
@@ -334,11 +334,11 @@ export default {
         },
 
         getDistrict () {
-            return this.$store.state.district.filter(items => items.city_id === this.Vcity)
+            return this.$store.state.district.filter(items => items.city_id === this.cityId)
         },
 
         getWard() {
-            return this.$store.state.ward.filter(items => items.district_id === this.Vdistrict)
+            return this.$store.state.ward.filter(items => items.district_id === this.districtId)
         },
         
         getCode() {
@@ -349,7 +349,7 @@ export default {
         }
         
     },
-     mounted() {
+    mounted() {
         // this.$store.dispatch('getProvince');
         this.$store.dispatch('getCity');
         this.$store.dispatch('getDistrict');
@@ -378,9 +378,11 @@ export default {
                     email_register: this.getUser.email,
                     create_at: new Date().toLocaleString(),
                     item_cart : this.cart,
-
+                    status: '',
+                    total: this.calcSum
                 }
                 if (getForm.option == "COD") {  
+                    getForm.status = "Chờ Xác Nhận"
                     Service.addNewOrder(getForm)
                     .then((response) => {
                         console.log(response.data);
@@ -398,8 +400,20 @@ export default {
             }
         }
     },
+    watch: {
+        Vcity(newValue) {
+            console.log(newValue)
+            var find  =  this.$store.state.city.find(items => items.name == newValue)
+            this.cityId = find.id
+
+        },
+        Vdistrict (newValue) {
+            console.log(newValue)
+            var findDdistrict  =  this.$store.state.district.find(items => items.name == newValue)
+            this.districtId = findDdistrict.id
+        }
+    },
     created() {
-        console.log(this.getUser.username)
         if (this.getUser !== [] || this.getUser !== null || this.getUser !== undefined) {
             this.userName = this.getUser.username
             this.email =   this.getUser.email

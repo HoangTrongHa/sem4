@@ -45,7 +45,11 @@
                         >
                             <icon class="map-user-tie" name="user-tie" size="20px"/>
                         </li>
-                        <li class="shoppingCat">
+                        <li 
+                            class="shoppingCat" 
+                            @click="$router.push({name: `Cart`})"
+                            v-if="countCart > 0"
+                        >
                             <v-badge
                                 
                                 :content="countCart"
@@ -55,23 +59,26 @@
                                 
                             />
                             </v-badge>
-                             <div class="wrap-hover-cart">
+                            <div class="wrap-hover-cart">
                              
-                             <v-card
+                            <v-card
                                 class="mx-auto"
                                 max-width="400"
                             >
-                            <div class="title-cart">
-                                        <div class="title">
-                                            {{ countCart }} Sản Phẩm
-                                        </div>
-                                        <div class="checkOut" 
-                                        @click="$router.push({name: `CheckOut`})"
-                                        >
-                                            Xem Tất Cả
-                                        </div>
+                                <div class="title-cart"
+                                >
+                                    <div class="title">
+                                        {{ countCart }} Sản Phẩm
                                     </div>
-                                <div class="wrapItem" v-for="items of cart" :key="items.id">
+                                    <div class="checkOut" 
+                                    @click="$router.push({name: `Cart`})"
+                                    >
+                                        Xem Tất Cả
+                                    </div>
+                                </div>
+                                <div 
+                                class="wrapItem" 
+                                v-for="items of cart" :key="items.id">
                                     <div class="wrapImg">
                                         <img :src="items.img" >
                                     </div>

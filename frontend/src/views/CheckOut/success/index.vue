@@ -21,7 +21,9 @@
                 </div>
             </div>
             <div class="wrap-product-item">
-                <ProductItemSuccess />
+                <ProductItemSuccess 
+                    :getDataOrder="getDataOrder"
+                />
             </div>
         </v-container>
     </div>

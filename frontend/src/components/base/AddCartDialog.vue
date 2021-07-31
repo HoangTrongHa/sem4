@@ -134,6 +134,7 @@ export default {
           localStorage.setItem("Cart",JSON.stringify(checkCart))
         }
         this.updateDialog(false)        
+        this.$router.go()
       },
       
     },
