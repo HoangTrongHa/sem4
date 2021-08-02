@@ -204,7 +204,25 @@
           "qty": 10
         }
       ],
-      "price": "499.00"
+      "price": "499.00",
+      "list_img": [
+        {
+          "id" : "1",
+          "base64" : "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8e137rr8datketqn32clm6wov7iet63kj8k8.jpg"
+        },
+        {
+          "id" : "2",
+          "base64" : "http://yvanhien.com/wp-content/uploads/2018/08/Anh-ghep-3-100x100.jpg"
+        },
+        {
+          "id" : "3",
+          "base64" : "http://yvanhien.com/wp-content/uploads/2018/09/IMG_5298-copy-100x100.jpg"
+        },
+        {
+          "id" : "4",
+          "base64" : "http://yvanhien.com/wp-content/uploads/2018/09/IMG_5298-copy-100x100.jpg"
+        }
+      ]
     },
     {
       "id": "2",

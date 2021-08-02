@@ -154,3 +154,8 @@ export const getAllOrder = ({ commit }) => {
         commit('SET_ORDER', res.data)
     })
 }
+
+export const countCart = ({ commit }) => {
+    let countCart = localStorage.getItem('Cart');
+    commit('SET_COUTN_CART', countCart)
+}

@@ -18,5 +18,6 @@ export default {
     ward:[],
     gallery:[],
     user:[],
-    order:[]
+    order:[],
+    countCart:[]
 }

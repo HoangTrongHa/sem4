@@ -127,7 +127,7 @@
                 return JSON.parse(localStorage.getItem('Cart')) || [];
             },
             countCart() {
-                return this.cart.length
+                return (JSON.parse(localStorage.getItem('Cart'))).length
             },
             getUser () {
                 console.log(this.$store.state.user)
@@ -138,6 +138,7 @@
         mounted() {
             this.$store.dispatch('getMenu');
             this.$store.dispatch('getCategories');
+            this.$$store.dispatch('countCart')
         },
         watch: {
             getUser(newValue,oldValue) {

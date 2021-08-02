@@ -57,7 +57,7 @@
                                         <div class="content">
                                             {{ item.qtyCus }}
                                         </div>
-                                        <div class="button-option">
+                                        <div class="button-option" @click="Demo(index)">
                                             +
                                         </div>
                                     </div>
@@ -162,7 +162,6 @@ export default {
             let found = this.cart.filter(items => items.id !== cartId)
             localStorage.removeItem("Cart")
             localStorage.setItem("Cart",JSON.stringify(found))
-            this.$router.go()
         },
     },
     created(){

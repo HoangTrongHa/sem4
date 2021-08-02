@@ -81,3 +81,7 @@ export const SET_USER = (state, item) => {
 export const SET_ORDER = (state, item) => {
     state.order = item
 }
+
+export const SET_COUTN_CART = (state, item) => {
+    state.countCart = item
+}

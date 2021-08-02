@@ -76,12 +76,13 @@
                   <ul>
                     <li class="itemProduct"
                       v-for="products of getDataByCateName" :key="products.id"
-                      @click="$router.push({
-                        name: `ProductDetail`,
-                        params: { params:products.id, items:products }
-                      })"
                     >
-                      <img :src="products.img" alt="">
+                      <img :src="products.img" alt=""
+                         @click="$router.push({
+                          name: `ProductDetail`,
+                          params: { params:products.id }
+                        })"
+                      >
                       <h2 class="name">
                         {{ products.name }}
                       </h2>
@@ -165,6 +166,7 @@
         }
       },
       created() {
+        
       }
   }
 </script>

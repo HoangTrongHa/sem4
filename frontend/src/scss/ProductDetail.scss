@@ -1,2 +1,17 @@
 @import "base";
 
+.container {
+    @media (min-width: 1904px){
+            max-width: 1200px;
+    }
+    .wrap-product {
+        margin: 50px 0;
+        display: flex;
+        .wrap-vue-slick {
+            width: 30%;
+        }
+        .wrap-infor-product {
+            width: 70%;
+        }
+    }
+}
