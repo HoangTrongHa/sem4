@@ -162,6 +162,7 @@ export default {
             let found = this.cart.filter(items => items.id !== cartId)
             localStorage.removeItem("Cart")
             localStorage.setItem("Cart",JSON.stringify(found))
+            this.$router.go()
         },
     },
     created(){
