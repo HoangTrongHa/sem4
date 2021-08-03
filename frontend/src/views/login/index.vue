@@ -129,6 +129,8 @@
           var getToken = JSON.parse(localStorage.getItem('user')) || []; 
           localStorage.setItem("token",JSON.stringify(getToken.accessToken))
           router.push({ name: "Home"})
+          this.$store.dispatch('getToken');
+          this.$store.dispatch('getUser');
           this.$toast.success(`Xin Chào ${this.userName}`);
         })
         .catch(error => {

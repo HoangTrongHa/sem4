@@ -81,6 +81,13 @@
         .login {
             margin: 0 10px;
         }
+        .hover-user {
+            margin: 0 10px;
+            position: relative;
+            .wrap-infor-user {
+                position: absolute;
+            }
+        }
         .wrapUrlActive{
             color:#c2a267 !important;
         }

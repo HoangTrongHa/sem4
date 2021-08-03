@@ -33,7 +33,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li v-if="getUser == null"
+                        <li v-if="getToken == false"
                             class="login"
                             @click="$router.push({
                                 name: `Login`
@@ -41,9 +41,31 @@
                         >
                             <icon class="map-user-tie" name="user-tie" size="20px"/>
                         </li>
-                        <li v-else
+                        <li v-else class="hover-user"
                         >
                             <icon class="map-user-tie" name="user-tie" size="20px"/>
+                            <div class="wrap-infor-user">
+                                <ul>
+                                    <li>
+                                        <div class="wrap-title">
+                                            Thông Tin Cá Nhân
+                                        </div>
+                                       
+                                    </li>
+                                    <li>
+                                        <div class="wrap-title">
+                                            Danh Sách Đơn Hàng
+                                        </div>
+                                        
+                                    </li>
+                                    <li>
+                                        <div class="wrap-title">
+                                           Thoát
+                                        </div>
+                                        Thoát
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li 
                             class="shoppingCat" 
@@ -114,6 +136,7 @@
         data () {
         return {
           isShow: false,
+          token: ''
         }
       },
         computed: {
@@ -127,24 +150,24 @@
                 return JSON.parse(localStorage.getItem('Cart')) || [];
             },
             countCart() {
-                return (JSON.parse(localStorage.getItem('Cart'))).length
+                return this.$store.state.cart.length
             },
-            getUser () {
-                console.log(this.$store.state.user)
-                return this.$store.state.user
+            getToken() {
+                if (this.token == "") {
+                    return false
+                } else {
+                    return true
+                }
             }
-            
         },
         mounted() {
             this.$store.dispatch('getMenu');
             this.$store.dispatch('getCategories');
-            this.$$store.dispatch('countCart')
+            this.$store.dispatch('getCart');
         },
-        watch: {
-            getUser(newValue,oldValue) {
-                console.log(`Updating from ${oldValue} to ${newValue}`);
-            }
-        }  
+        created() {
+            this.token = JSON.parse(localStorage.getItem('token')) || [];
+        }
     }
 </script>
 

@@ -25,7 +25,7 @@
                         <tbody>
                             <tr
                             class="woocommerce-cart-form__cart-item cart_item"
-                            v-for="(item, index) of this.cart" :key="index"
+                            v-for="(item, index) of getAllCart" :key="index"
                             >
                                 <td class="product-remove">
                                     <div>
@@ -51,16 +51,18 @@
                                 </td>
                                 <td class="product-quantity"> 
                                     <div class="wrap-product-quantity">
-                                        <div class="button-option">
+                                        <div class="button-option" @click="removeQty(item.id)">
                                             -
                                         </div>
                                         <div class="content">
                                             {{ item.qtyCus }}
                                         </div>
-                                        <div class="button-option" @click="Demo(index)">
+                                        <div class="button-option" @click="addQty(item.id)">
                                             +
                                         </div>
+        
                                     </div>
+                                   
                                 </td>
                                 <td class="product-subtotal" data-title="Tạm tính">
                                 <span class="woocommerce-Price-amount amount"><bdi>250.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span>						</td>
@@ -93,7 +95,8 @@
                         <div class="wrap-discount">
                             <v-btn 
                                 class="button"
-                                :disabled="disabled" 
+                                :disabled="updateCart" 
+                                @click="cartUpdateNew"
                             >
                                 Cập Nhật Giỏ Hàng
                             </v-btn>
@@ -132,8 +135,14 @@ import Vue from "vue";
 import Vue2Filters from 'vue2-filters'
 
 import BaseBanner from '@/components/base/Banner.vue'
+import "vue-toastification/dist/index.css";
 
-Vue.use(Vue2Filters);
+import Toast from "vue-toastification";
+ Vue.use(Vue2Filters, Toast, {
+    transition: "Vue-Toastification__bounce",
+    maxToasts: 20,
+    newestOnTop: true
+  });
 export default {
     components: {
         BaseBanner
@@ -141,8 +150,8 @@ export default {
     data() {
         return {
             cart: [],
-            disabled: true,
-            discount: ''
+            discount: '',
+            updateCart: true,
         }
     },
     computed: {
@@ -151,23 +160,52 @@ export default {
         },
         calcSum(){
             let total = 0;
-            this.cart.forEach((item) => {
+            this.getAllCart.forEach((item) => {
                 total += item.price * item.qtyCus;
             });
             return total;
+        },
+        getAllCart() {
+            return this.$store.state.cart
         }
     },
     methods: {
         removeItemInCart(cartId) {
-            let found = this.cart.filter(items => items.id !== cartId)
-            localStorage.removeItem("Cart")
-            localStorage.setItem("Cart",JSON.stringify(found))
-            this.$router.go()
+            this.updateCart = false
+            console.log(this.getAllCart)
+            let found = this.getAllCart.filter(items => items.id === cartId)
+            this.getAllCart.splice(found, 1)
         },
+        addQty(id) {
+            this.updateCart = false
+            let found = this.getAllCart.find(items => items.id === id)
+            var plusQty = found.qtyCus ++
+            if (found.size.qty <= plusQty) {
+                this.updateCart = true
+                this.$toast.error(`Không Đủ Số Lượng`);
+            }
+        },
+        removeQty(id) {
+            this.updateCart = false
+            let found = this.getAllCart.find(items => items.id === id)
+            var minusQty = found.qtyCus --
+            console.log(minusQty)
+            if ( minusQty < 1 || minusQty == 1 ) {
+                this.updateCart = true
+                this.$toast.error(`Không Đủ Số Lượng`);
+            }
+        },
+        cartUpdateNew() {
+            var newCart = this.$store.state.cart
+            localStorage.removeItem("Cart")
+            localStorage.setItem("Cart",JSON.stringify(newCart))
+            this.$toast.success(`Cập Nhật Giỏ Hàng Thành Công`);
+            this.updateCart = true
+        }
     },
     created(){
         this.cart = JSON.parse(localStorage.getItem('Cart')) || [];
-        console.log(this.cart);
+        this.$store.dispatch('getCart');
     }
 }
 </script>

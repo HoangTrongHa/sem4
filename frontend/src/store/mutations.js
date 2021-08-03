@@ -74,14 +74,22 @@ export const SET_GALLARY = (state, item) => {
     state.gallery = item
 }
 
-export const SET_USER = (state, item) => {
-    state.user = item
-}
-
 export const SET_ORDER = (state, item) => {
     state.order = item
 }
 
 export const SET_COUTN_CART = (state, item) => {
     state.countCart = item
+}
+
+export const SET_CART = (state, item) => {
+    state.cart = item
+}
+
+export const SET_USER = (state, item) => {
+    state.user = item
+}
+
+export const SET_TOKEN = (state, item) => {
+    state.token = item
 }
