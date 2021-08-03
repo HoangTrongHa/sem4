@@ -1934,5 +1934,17 @@
       "email": "đasadsdasd",
       "id": 3
     }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "email" : "123",
+      "phoneNumber": "123",
+      "male": "123",
+      "hight": "!23",
+      "weight": "!23",
+      "img" : "img" 
+    }
+ 
   ]
 }
