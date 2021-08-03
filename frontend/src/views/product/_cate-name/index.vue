@@ -164,9 +164,6 @@
         updateCart(e) {
           this.dialog = e
         }
-      },
-      created() {
-        
       }
   }
 </script>

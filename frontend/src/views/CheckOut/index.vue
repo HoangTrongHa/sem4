@@ -271,7 +271,6 @@
             </div>
         </div>
       </div>
-      
     </div>
 </template>
 
@@ -345,7 +344,7 @@ export default {
             return  Math.random().toString(6).substring(2, 5) + Math.random().toString(6).substring(2, 5)
         },
         getUser() {
-             return JSON.parse(localStorage.getItem('user')) || [];
+            return JSON.parse(localStorage.getItem('user')) || [];
         }
         
     },
@@ -393,7 +392,7 @@ export default {
                         })
                     })
                     .catch((errors) => {
-                        alert("k Cập nhật thành công");
+                        alert("Không thành công");
                         console.log(errors);
                     });
                 }

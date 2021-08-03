@@ -3,7 +3,6 @@
     <div class="wrap-login">
     <validation-observer
         ref="observer"
-        
     >
         <form @submit.prevent="submit">
         <validation-provider
@@ -126,11 +125,10 @@
         Service.login(value)
         .then((response) => {
           localStorage.setItem("user",JSON.stringify(response.data))
-          var getToken = JSON.parse(localStorage.getItem('user')) || []; 
-          localStorage.setItem("token",JSON.stringify(getToken.accessToken))
+          localStorage.setItem("token",JSON.stringify(response.data.accessToken))
+          this.$store.dispatch('updateUser', response.data);
+          this.$store.dispatch('getToken', response.data.accessToken);
           router.push({ name: "Home"})
-          this.$store.dispatch('getToken');
-          this.$store.dispatch('getUser');
           this.$toast.success(`Xin Chào ${this.userName}`);
         })
         .catch(error => {

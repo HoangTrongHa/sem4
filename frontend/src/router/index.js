@@ -20,6 +20,10 @@ import Register from '../views/Register/index.vue'
 import Tutorial from '../views/Tutorial/index.vue'
 import Success_COD from '../views/CheckOut/success/index.vue'
 import Cart from '../views/Cart/index.vue'
+import UserInfor from '../views/user/index'
+import OrderInfor from '../views/user/order'
+
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -125,6 +129,16 @@ const routes = [
     path: '/checkout/success/:code_order',
     name: 'Success_COD',
     component: Success_COD
+  },
+  {
+    path: '/account/infor',
+    name: 'UserInfor',
+    component: UserInfor
+  },
+  {
+    path: '/account/order',
+    name: 'OrderInfor',
+    component: OrderInfor
   }
 ]
 

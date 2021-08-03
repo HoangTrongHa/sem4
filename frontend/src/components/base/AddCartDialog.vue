@@ -122,22 +122,19 @@ export default {
         let duplicate = checkCart.find(items => items.id == value.id)
         if ( duplicate !== undefined) {
           let found = checkCart.filter(items => items.id !== value.id)
-          console.log(found),
           duplicate.qtyCus += this.qtyCustomer
-          console.log(duplicate)
           localStorage.removeItem("Cart")
           found.push(duplicate)
-          console.log(found)
           localStorage.setItem("Cart",JSON.stringify(checkCart))
+          this.$store.dispatch('updateCart',checkCart);
         } else {
           checkCart.push(value)
+          this.$store.dispatch('updateCart',checkCart);
           localStorage.setItem("Cart",JSON.stringify(checkCart))
         }
         this.updateDialog(false)        
       },
       
-    },
-    created() {
     }
 }
 </script>

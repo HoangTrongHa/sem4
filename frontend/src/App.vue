@@ -19,7 +19,6 @@ export default {
   mounted() {
       this.$store.dispatch('getAllProduct'),
       this.$store.dispatch('getBannerProduct')
-      this.$store.dispatch('getDataUser')
       this.$store.dispatch('getAllOrder')
   }
 };
