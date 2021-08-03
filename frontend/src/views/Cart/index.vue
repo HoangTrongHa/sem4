@@ -133,7 +133,6 @@ import Vue2Filters from "vue2-filters";
 
 import BaseBanner from "@/components/base/Banner.vue";
 import "vue-toastification/dist/index.css";
-
 import Toast from "vue-toastification";
 Vue.use(Vue2Filters, Toast, {
   transition: "Vue-Toastification__bounce",

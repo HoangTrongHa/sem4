@@ -84,8 +84,32 @@
         .hover-user {
             margin: 0 10px;
             position: relative;
+            &:hover{
+                .wrap-infor-user {
+                    display: block;
+                }
+            }
             .wrap-infor-user {
+                display: none;
                 position: absolute;
+                width: 220px;
+                z-index: 3;
+                border: 1px solid #bbbb;
+                background-color: #ffff;
+                padding: 5px 10px;
+                ul {
+                    padding: 0;
+                    li {
+                        padding: 10px 0;
+                        .wrap-title {
+                            display: flex;
+                            align-items: center;
+                            div  {
+                                margin: 0 0 0 10px;
+                            }
+                        }
+                    }
+                }
             }
         }
         .wrapUrlActive{

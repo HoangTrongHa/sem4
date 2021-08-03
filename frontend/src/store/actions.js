@@ -107,10 +107,6 @@ export const getGallery = ({ commit }) => {
     })
 }
 
-export const getDataUser = ({ commit }) => {
-    commit('SET_USER', localStorage.getItem('user'))
-}
-
 export const getAllOrder = ({ commit }) => {
     axios.get('http://localhost:15000/order')
     .then(res => {
@@ -118,22 +114,24 @@ export const getAllOrder = ({ commit }) => {
     })
 }
 
-export const countCart = ({ commit }) => {
-    let countCart = localStorage.getItem('Cart');
-    commit('SET_COUTN_CART', countCart)
-}
-
 export const getCart = ({ commit }) => {
     let getCart = JSON.parse(localStorage.getItem('Cart')) || [];
     commit('SET_CART', getCart)
 }
 
-export const getUser = ({ commit }) => {
-    let getUser = JSON.parse(localStorage.getItem('user')) || [];
-    commit('SET_USER', getUser)
+export const updateCart = ({ commit }, payload) => {
+    commit('SET_CART', payload)
 }
 
 export const getToken = ({ commit }) => {
     let getToken = JSON.parse(localStorage.getItem('token')) || [];
     commit('SET_TOKEN', getToken)
+}
+
+export const updateUser = ({ commit },payload) => {
+    commit('SET_USER', payload)
+}
+
+export const updateToken = ({ commit },payload) => {
+    commit('SET_TOKEN', payload)
 }

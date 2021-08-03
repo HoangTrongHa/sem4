@@ -48,21 +48,36 @@
                                 <ul>
                                     <li>
                                         <div class="wrap-title">
-                                            Thông Tin Cá Nhân
+                                            <icon class="map-user-tie" name="user-tie" size="20px"/>
+                                             <div @click="$router.push({
+                                                 name:`UserInfor`
+                                             })">
+                                                Thông Tin Cá Nhân
+
+                                             </div>
                                         </div>
                                        
                                     </li>
                                     <li>
                                         <div class="wrap-title">
-                                            Danh Sách Đơn Hàng
+                                            <icon class="map-list-alt" name="list-alt" size="20px"/>
+                                            <div @click="$router.push({
+                                                 name:`OrderInfor`
+                                             })">                                           
+                                                Danh Sách Đơn Hàng
+                                            </div>
                                         </div>
                                         
                                     </li>
-                                    <li>
+                                    <li @click="logout">
                                         <div class="wrap-title">
-                                           Thoát
+
+                                            <icon class="map-sign-out-alt" name="sign-out-alt" size="20px"/>
+                                            <div>
+                                                Thoát
+                                            </div>
+                                           
                                         </div>
-                                        Thoát
                                     </li>
                                 </ul>
                             </div>
@@ -153,11 +168,23 @@
                 return this.$store.state.cart.length
             },
             getToken() {
-                if (this.token == "") {
+                if (this.$store.state.token == "" || this.$store.state.token == null || this.$store.state.token == undefined) {
                     return false
                 } else {
                     return true
                 }
+            }
+        },
+        methods: {
+            logout() {
+                var value = []
+                var token = ''
+                localStorage.removeItem("user")
+                localStorage.removeItem("token")
+                this.$store.dispatch('updateUser', value);
+                this.$store.dispatch('updateToken', token);
+                this.$toast.success(`Chào tạm biệt. Hãy quay lại với chúng tôi nhé😍`);
+                this.$router.push({name: 'Login'})
             }
         },
         mounted() {
@@ -166,7 +193,8 @@
             this.$store.dispatch('getCart');
         },
         created() {
-            this.token = JSON.parse(localStorage.getItem('token')) || [];
+            this.$store.dispatch('getToken');
+            this.token = this.$store.state.token
         }
     }
 </script>
