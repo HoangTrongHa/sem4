@@ -5,15 +5,14 @@
                ĐẶT HÀNG THÀNH CÔNG!
             </div>
             <div class="dicription">
-                Trên thị trường có quá nhiều sự lựa chọn, cảm ơn bạn đã lựa chọn mua sắm tại Ối zời ơi <br>
+                Trên thị trường có quá nhiều sự lựa chọn, cảm ơn bạn đã lựa chọn mua sắm tại CTY CPVN <br>
 
-                Đơn hàng của bạn CHẮC CHẮN đã được chuyển tới hệ thống xử lý đơn hàng của Ối zời Ơi.<br>
-                Trong quá trình xử lý Ối zời Ơi sẽ liên hệ lại nếu như cần thêm thông tin từ bạn.<br>
-                Ngoài ra Ối zời Ơi cũng sẽ có gửi xác nhận đơn hàng bằng Email và tin nhắn<br>
+                Đơn hàng của bạn CHẮC CHẮN đã được chuyển tới hệ thống xử lý đơn hàng của chúng tôi<br>
+                Trong quá trình xử lý chũng tôi sẽ liên hệ lại nếu như cần thêm thông tin từ bạn.<br>
+                Ngoài ra chúng tôi cũng sẽ có gửi xác nhận đơn hàng bằng Email và tin nhắn<br>
 
-                Do ảnh hưởng dịch bệnh, đơn hàng của bạn có thể được giao chậm hơn bình thường. Ối zời Ơi sẽ cố gắng hết sức, bạn chờ Ối zời Ơi nha.<br>
+                Do ảnh hưởng dịch bệnh, đơn hàng của bạn có thể được giao chậm hơn bình thường. Chúng tôi sẽ cố gắng hết sức, bạn chờ CPVN nha.<br>
 
-                Tham gia cộng đồng Mặc Đẹp Sống Chất cùng Ối zời ơi
             </div>
             <div class="wrap-infor-order">
                 <div class="title">
@@ -64,7 +63,7 @@ export default {
     }
     .dicription {
         margin: 50px 0 0 0;
-        text-align: center;
+        text-align: start;
         font-size: 18px;
         line-height: 50px;
     }

@@ -8,7 +8,7 @@
           Định hướng và mục tiêu - Our path and objective
         </div>
         <div class="product-section-title">
-          CÔNG TY CỔ PHẦN Ối Zồi Ôi
+          CÔNG TY CỔ PHỤC VIỆT NAM
         </div>
         <v-row>
           <v-col class="item-home-about"
