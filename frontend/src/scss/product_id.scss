@@ -121,15 +121,14 @@
 .product {
     width: 100%;
     ul {
-        padding: 0;
+        width: 100%;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 30px;
         li {
-            
             .name {
                 color: #878787;
-                font-size: 14px;
+                font-size: 20px;
             }
             .add-to-card {
                 color: #c12312;
@@ -139,11 +138,7 @@
                 margin: 10px 0 0 0;        
                 p {
                     display: none;
-
                 }
-            }
-            .img {
-                width: 100%;
             }
             &:hover {
                 .add-to-card {
