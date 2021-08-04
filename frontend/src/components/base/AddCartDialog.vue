@@ -64,7 +64,7 @@
                 </div>
                 <div class="wrapTotalPriceCart">
                 <div :class="isActive == true ? 'notNone' : 'disnone'">
-                    {{ this.TotalQty | currency }} đ
+                    {{ this.TotalQty }} đ
                   </div>
                 </div>
               </div>
@@ -85,9 +85,15 @@
 import Vue from 'vue'
 import Vue2Filters from 'vue2-filters'
 
-Vue.use(Vue2Filters)
-
 import DataPicker from '../base/Datepicker.vue'
+import "vue-toastification/dist/index.css";
+import Toast from "vue-toastification";
+
+Vue.use(Vue2Filters, Toast, {
+  transition: "Vue-Toastification__bounce",
+  maxToasts: 20,
+  newestOnTop: true,
+});
 export default {
   components: {
     DataPicker
@@ -104,8 +110,8 @@ export default {
         cart:[],
         labelStart:'Thuê Từ Ngày',
         labelEnd: 'Ngày Trả',
-        startDay: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
-        endDay:(new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
+        startDay: '',
+        endDay:'',
     }
   },
   props: {
@@ -115,11 +121,17 @@ export default {
   },
   watch: {
     qtyCustomer: function ( newValue ) {
+      if ((this.startDay == undefined || this.startDay == '') && (this.endDay == undefined || this.endDay == '')) {
+        this.$toast.warning(`Hãy Chọn Ngày Trước Khi Chọn Số Lượng. Như Vậy Chúng Tôi Sẽ Tính Toán Chuẩn Xác Nhất. Xin Cảm Ơn`);
+      }
+      this.qtyCustomer = newValue
+      console.log(this.startDay);
       if (this.getDataProduct.to_rent == 1) {
-          var currentDate = Math.floor((this.endDay - this.startDay));
-          console.log(currentDate);
+          var date = new Date(this.startDay);
+          var dateEnd = new Date(this.endDay);
+          var currentDay = Math.round((dateEnd-date)/(1000*60*60*24));
+          this.TotalQty = this.getDataProduct.price_to_rent * this.qtyCustomer * currentDay
       } else {
-        this.qtyCustomer = newValue
         this.TotalQty = this.qtyCustomer * this.getDataProduct.price
       }
     },
@@ -172,6 +184,9 @@ export default {
       this.updateDialog(false)        
     },
     
+  },
+  create () {
+    console.log(123);
   }
 }
 </script>

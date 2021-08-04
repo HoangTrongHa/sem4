@@ -141,7 +141,7 @@ Vue.use(Vue2Filters, Toast, {
 });
 export default {
   components: {
-    BaseBanner,
+    BaseBanner
   },
   data() {
     return {
