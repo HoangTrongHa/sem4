@@ -51,6 +51,7 @@
               <v-col
                 cols="9"
                 sm="9"
+                md="9" lg="9"
               >
                 <div class="wrapBanner">
                   <VueSlickCarousel 
@@ -74,10 +75,10 @@
                 </div>
                 <div class="product">
                   <ul>
-                    <li class="itemProduct"
+                    <li class="itemProduct" 
                       v-for="products of getDataToRent" :key="products.id"
                     >
-                      <img :src="products.img" alt=""
+                      <img style="width:264px" :src="products.img" alt=""
                          @click="$router.push({
                           name: `ProductDetail`,
                           params: { params:products.id }
