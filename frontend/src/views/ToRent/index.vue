@@ -100,7 +100,7 @@
                       <AddCartDialog
                         :dialog="dialog"
                         :getDataProduct="productItem"
-                        :toRent="status"
+                        :status="typeRent"
                         @update-dialog="updateCart"
                         @productItem="productItem"
                       >
@@ -129,7 +129,7 @@
         return {
           dialog: false,
           productItem: {},
-          status:false
+          typeRent: 1
         }
       },
       props: {

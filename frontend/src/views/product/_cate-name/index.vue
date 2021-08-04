@@ -89,6 +89,7 @@
               <AddCartDialog
                 :dialog="dialog"
                 :getDataProduct="productItem"
+                :status="status"
                 @update-dialog="updateCart"
                 @productItem="productItem"
               >
@@ -117,6 +118,7 @@ export default {
     return {
       dialog: false,
       productItem: {},
+      status: 0
     };
   },
   props: {

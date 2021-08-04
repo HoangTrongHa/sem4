@@ -10,7 +10,7 @@
               </div>
               <div class="wrap-infor-product">
                 <p class="name-product">{{ getDataProduct.name }}</p>
-                <div class="price" v-if="getDataProduct.to_rent == 0">{{ getDataProduct.price }}</div>
+                <div class="price" v-if="status == 0">{{ getDataProduct.price }}</div>
                 <div class="price" v-else>{{ getDataProduct.price_to_rent }}</div>
                 <div class="title-size">
                   Chọn size
@@ -50,13 +50,13 @@
                       thumb-label
                     ></v-slider>
                 </div>
-                <div class="wrapDatePicker">
+                <div class="wrapDatePicker" v-if="status == 1">
                   <DataPicker 
                   @date-start="dataStart"
                   :label="labelStart"
                   />
                 </div>
-                <div class="wrapDatePicker">
+                <div class="wrapDatePicker"  v-if="status == 1">
                   <DataPicker 
                   @date-start="dateEnd"
                   :label="labelEnd"
@@ -74,7 +74,8 @@
           <v-btn color="green darken-1" text @click="updateDialog(false)">
             Đóng
           </v-btn>
-          <v-btn color="green darken-1" text @click="updataCart()"> Thêm sản phẩm vào giỏ hàng </v-btn>
+          <v-btn color="green darken-1" v-if="status == 0" text @click="updataCart()"> Thêm sản phẩm vào giỏ hàng </v-btn>
+          <v-btn color="green darken-1" v-else text @click="thue()"> Đăng Ký Thuê </v-btn>
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -117,16 +118,16 @@ export default {
   props: {
       dialog: Boolean,
       getDataProduct: {},
-      toRent: Boolean
+      toRent: Boolean,
+      status: Number
   },
   watch: {
     qtyCustomer: function ( newValue ) {
-      if ((this.startDay == undefined || this.startDay == '') && (this.endDay == undefined || this.endDay == '')) {
-        this.$toast.warning(`Hãy Chọn Ngày Trước Khi Chọn Số Lượng. Như Vậy Chúng Tôi Sẽ Tính Toán Chuẩn Xác Nhất. Xin Cảm Ơn`);
-      }
       this.qtyCustomer = newValue
-      console.log(this.startDay);
-      if (this.getDataProduct.to_rent == 1) {
+      if (this.status == 1) {
+          if ((this.startDay == undefined || this.startDay == '') && (this.endDay == undefined || this.endDay == '')) {
+            this.$toast.warning(`Hãy Chọn Ngày Trước Khi Chọn Số Lượng. Như Vậy Chúng Tôi Sẽ Tính Toán Chuẩn Xác Nhất. Xin Cảm Ơn`);
+          }   
           var date = new Date(this.startDay);
           var dateEnd = new Date(this.endDay);
           var currentDay = Math.round((dateEnd-date)/(1000*60*60*24));
@@ -166,8 +167,16 @@ export default {
           TotalPrice: this.TotalQty,
           qtyCus: this.qtyCustomer,
           img: this.getDataProduct.img,
-          size: this.getSize
+          size: this.getSize,
+          startDay: this.startDay,
+          endDay: this.endDay,
+          service: ''
       } 
+      if (this.status == 1) {
+        value.service = 'Thuê'
+      } else {
+        value.service = 'Mua'
+      }
       let duplicate = checkCart.find(items => items.id == value.id)
       if ( duplicate !== undefined) {
         let found = checkCart.filter(items => items.id !== value.id)
@@ -181,7 +190,8 @@ export default {
         this.$store.dispatch('updateCart',checkCart);
         localStorage.setItem("Cart",JSON.stringify(checkCart))
       }
-      this.updateDialog(false)        
+      this.updateDialog(false)    
+      this.$toast.warning(`Kiểm Tra Lại Trong Giỏ Hàng`);    
     },
     
   },
