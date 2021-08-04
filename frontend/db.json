@@ -17,11 +17,16 @@
     },
     {
       "id": 4,
+      "name": "Sản Phẩm Cho Thuê",
+      "location": "ToRent"
+    },
+    {
+      "id": 5,
       "name": "GALLERY",
       "location": "GALLERY&LOOKBOOK"
     },
     {
-      "id": 5,
+      "id": 6,
       "name": "LIÊN HỆ",
       "location": "Contact"
     }
