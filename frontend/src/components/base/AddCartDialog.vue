@@ -10,7 +10,8 @@
               </div>
               <div class="wrap-infor-product">
                 <p class="name-product">{{ getDataProduct.name }}</p>
-                <div class="price">{{ getDataProduct.price }}</div>
+                <div class="price" v-if="getDataProduct.to_rent == 0">{{ getDataProduct.price }}</div>
+                <div class="price" v-else>{{ getDataProduct.price_to_rent }}</div>
                 <div class="title-size">
                   Chọn size
                 </div>
@@ -20,7 +21,7 @@
                       v-for="size of getDataProduct.size" 
                       :key="size.id"
                       @click="findSizeQty(size)"
-                      :class="{active :selected == size.id}"
+                      :class="{ active :selected == size.id }"
                       >
                       <span>{{ size.size }}</span>
                     </li>
@@ -49,6 +50,18 @@
                       thumb-label
                     ></v-slider>
                 </div>
+                <div class="wrapDatePicker">
+                  <DataPicker 
+                  @date-start="dataStart"
+                  :label="labelStart"
+                  />
+                </div>
+                <div class="wrapDatePicker">
+                  <DataPicker 
+                  @date-start="dateEnd"
+                  :label="labelEnd"
+                  />
+                </div>
                 <div class="wrapTotalPriceCart">
                 <div :class="isActive == true ? 'notNone' : 'disnone'">
                     {{ this.TotalQty | currency }} đ
@@ -73,69 +86,93 @@ import Vue from 'vue'
 import Vue2Filters from 'vue2-filters'
 
 Vue.use(Vue2Filters)
+
+import DataPicker from '../base/Datepicker.vue'
 export default {
-    data() {
-      return {
-         getSize: {},
-         selected: Number,
-         isActive: false,
-         CustomerQty: String,
-         totalMoney: Number, 
-         qtyCustomer: '',
-         TotalQty:'',
-         cart:[],
-      }
-    },
-    props: {
-        dialog: Boolean,
-        getDataProduct: {}
-    },
-    watch: {
-      qtyCustomer: function ( newValue ) {
+  components: {
+    DataPicker
+  },
+  data() {
+    return {
+        getSize: {},
+        selected: Number,
+        isActive: false,
+        CustomerQty: String,
+        totalMoney: Number, 
+        qtyCustomer: '',
+        TotalQty:'',
+        cart:[],
+        labelStart:'Thuê Từ Ngày',
+        labelEnd: 'Ngày Trả',
+        startDay: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
+        endDay:(new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
+    }
+  },
+  props: {
+      dialog: Boolean,
+      getDataProduct: {},
+      toRent: Boolean
+  },
+  watch: {
+    qtyCustomer: function ( newValue ) {
+      if (this.getDataProduct.to_rent == 1) {
+          var currentDate = Math.floor((this.endDay - this.startDay));
+          console.log(currentDate);
+      } else {
         this.qtyCustomer = newValue
         this.TotalQty = this.qtyCustomer * this.getDataProduct.price
       }
     },
+    // startDay: function (newValue, ol)
+  },
 
+  methods: {
+    updateDialog(item) {
+        this.$emit('update-dialog', item)
+    },
+    findSizeQty(size) {
+      this.getSize = size
+      this.selected = size.id
+      this.isActive = true;
+      console.log();
+    },
+    dataStart(e) {
+      this.startDay = e
+      console.log( this.startDay);
+    },
+    dateEnd(e) {
+      this.endDay = e
+      console.log( this.endDay);
+
+    },
+    updataCart() {
+      var checkCart = JSON.parse(localStorage.getItem('Cart')) || [];
+      var value = {
+          id:this.getDataProduct.id,
+          name:this.getDataProduct.name,
+          price:this.getDataProduct.price,
+          TotalPrice: this.TotalQty,
+          qtyCus: this.qtyCustomer,
+          img: this.getDataProduct.img,
+          size: this.getSize
+      } 
+      let duplicate = checkCart.find(items => items.id == value.id)
+      if ( duplicate !== undefined) {
+        let found = checkCart.filter(items => items.id !== value.id)
+        duplicate.qtyCus += this.qtyCustomer
+        localStorage.removeItem("Cart")
+        found.push(duplicate)
+        localStorage.setItem("Cart",JSON.stringify(checkCart))
+        this.$store.dispatch('updateCart',checkCart);
+      } else {
+        checkCart.push(value)
+        this.$store.dispatch('updateCart',checkCart);
+        localStorage.setItem("Cart",JSON.stringify(checkCart))
+      }
+      this.updateDialog(false)        
+    },
     
-    methods: {
-      updateDialog(item) {
-          this.$emit('update-dialog', item)
-      },
-      findSizeQty(size) {
-        this.getSize = size
-        this.selected = size.id
-        this.isActive = true;
-      },
-
-      updataCart() {
-        var checkCart = JSON.parse(localStorage.getItem('Cart')) || [];
-        var value = {
-            id:this.getDataProduct.id,
-            name:this.getDataProduct.name,
-            price:this.getDataProduct.price,
-            TotalPrice: this.TotalQty,
-            qtyCus: this.qtyCustomer,
-            img: this.getDataProduct.img,
-            size: this.getSize
-        } 
-        let duplicate = checkCart.find(items => items.id == value.id)
-        if ( duplicate !== undefined) {
-          let found = checkCart.filter(items => items.id !== value.id)
-          duplicate.qtyCus += this.qtyCustomer
-          localStorage.removeItem("Cart")
-          found.push(duplicate)
-          localStorage.setItem("Cart",JSON.stringify(checkCart))
-          this.$store.dispatch('updateCart',checkCart);
-        } else {
-          checkCart.push(value)
-          this.$store.dispatch('updateCart',checkCart);
-          localStorage.setItem("Cart",JSON.stringify(checkCart))
-        }
-        this.updateDialog(false)        
-      },
-      
-    }
+  }
 }
 </script>
 

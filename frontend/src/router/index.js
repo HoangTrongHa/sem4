@@ -22,7 +22,7 @@ import Success_COD from '../views/CheckOut/success/index.vue'
 import Cart from '../views/Cart/index.vue'
 import UserInfor from '../views/user/index'
 import OrderInfor from '../views/user/order'
-
+import ToRent from '../views/ToRent/index.vue'
 
 Vue.use(VueRouter)
 
@@ -139,6 +139,11 @@ const routes = [
     path: '/account/order',
     name: 'OrderInfor',
     component: OrderInfor
+  },
+  {
+    path: '/product/to-rent/:name',
+    name: 'ToRent',
+    component: ToRent
   }
 ]
 

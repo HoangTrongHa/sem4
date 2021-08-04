@@ -13,7 +13,7 @@
                             @click="item.name == `Sản Phẩm` ? `#` : $router.push({ name: item.location })"
                         >
                             <div
-                                :class="item.name == 'Sản Phẩm' ? 'wrap-item drop-down' : 'wrap-item'"
+                                :class="(item.location == '#') || (item.location == 'ToRent')  ? 'wrap-item drop-down' : 'wrap-item'"
                             >
                                 {{ item.name }}
                                 <span class="caret"></span>
