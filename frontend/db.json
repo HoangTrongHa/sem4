@@ -192,11 +192,11 @@
   "product": [
     {
       "id": "1",
-      "cate_id": "3",
+      "cate_id": "1",
       "cate_name": "Trang Phục",
-      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "name": "Áo dài nam năm thân cổ đứng",
       "status": "HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8e137rr8datketqn32clm6wov7iet63kj8k8.jpg",
       "size": [
         {
           "id": 1,
@@ -205,7 +205,22 @@
         },
         {
           "id": 2,
+          "size": "s",
+          "qty": 10
+        },
+        {
+          "id": 3,
+          "size": "m",
+          "qty": 10
+        },
+        {
+          "id": 4,
           "size": "l",
+          "qty": 10
+        },
+        {
+          "id": 5,
+          "size": "xl",
           "qty": 10
         }
       ],
@@ -213,30 +228,31 @@
       "list_img": [
         {
           "id": "1",
-          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8e137rr8datketqn32clm6wov7iet63kj8k8.jpg"
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1959-o4uu0mmtnndagjrrt87l6csxz4ztpwoeapc7zxsdug.jpg"
         },
         {
           "id": "2",
-          "base64": "http://yvanhien.com/wp-content/uploads/2018/08/Anh-ghep-3-100x100.jpg"
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1952-o4uu0kr59zaptbui47ec1da0sd93aigxmg191dv66w.jpg"
         },
         {
           "id": "3",
-          "base64": "http://yvanhien.com/wp-content/uploads/2018/09/IMG_5298-copy-100x100.jpg"
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0064-1.2-o9auxi8s22l1b81m2fv1fzgxilwaqh0zu56t98aty0.jpg"
         },
         {
           "id": "4",
-          "base64": "http://yvanhien.com/wp-content/uploads/2018/09/IMG_5298-copy-100x100.jpg"
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Anh-ghep-3-nvw9g1c45kvy00hhbp17sgye8h09n0v82hlmawj6zc.jpg"
         }
       ],
-      "to_rent": 1
+      "to_rent": 1,
+      "price_to_rent": 100000
     },
     {
       "id": "2",
-      "cate_id": "3",
-      "cate_name": "Đồ nhật dụng",
-      "name": "Gối XẾP VÂN MÂY",
+      "cate_id": "1",
+      "cate_name": "Trang Phục",
+      "name": "Áo dài nữ năm thân cổ đứng",
       "status": "HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Goi-3-nu0idktq59gynh8lb96gh00b4elczoqzer7ohd7vos.jpg",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0350.2-o9auxk4gfqnlyfyvrgoakyzupdn15v8giehs7s81lk.jpg",
       "size": [
         {
           "id": 1,
@@ -245,20 +261,54 @@
         },
         {
           "id": 2,
+          "size": "s",
+          "qty": 10
+        },
+        {
+          "id": 3,
+          "size": "m",
+          "qty": 10
+        },
+        {
+          "id": 4,
           "size": "l",
+          "qty": 10
+        },
+        {
+          "id": 5,
+          "size": "xl",
           "qty": 10
         }
       ],
       "price": "499.00",
-      "to_rent": 0
+      "list_img": [
+        {
+          "id": "1",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0364.2.-o9auxm04teq6lnw5ghhjpyirw5drl9fx6nsr6c5994.jpg"
+        },
+        {
+          "id": "2",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Daqq2SC1932-o4t5ahjyj6pg1n9hc98i20qwhk7fgdukeb5u8779co.jpg"
+        },
+        {
+          "id": "3",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Anh-ghep-ATUANA-4-nvw9g45mq2zsyuddv893hy8s0mmda46f2vk2qqf0go.jpg"
+        },
+        {
+          "id": "4",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC2103-o4t5arw6md3llcugnvpebg4z0ssgt1zm3qc6i8rxg8.jpg"
+        }
+      ],
+      "to_rent": 1,
+      "price_to_rent": 100000
     },
     {
       "id": "3",
       "cate_id": "1",
       "cate_name": "Trang Phục",
-      "name": "Áo Dài Nam Cổ Đứng",
+      "name": "Áo giao lĩnh",
       "status": "HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/101870864_2548510402078962_3443778028600033280_o-oquqeswo6toaxmlnxzm2mkrkps7l4p632u37c1bok8.jpg",
       "size": [
         {
           "id": 1,
@@ -267,20 +317,54 @@
         },
         {
           "id": 2,
+          "size": "s",
+          "qty": 10
+        },
+        {
+          "id": 3,
+          "size": "m",
+          "qty": 10
+        },
+        {
+          "id": 4,
           "size": "l",
+          "qty": 10
+        },
+        {
+          "id": 5,
+          "size": "xl",
           "qty": 10
         }
       ],
       "price": "499.00",
-      "to_rent": 1
+      "list_img": [
+        {
+          "id": "1",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/100055397_2548510365412299_7589152030292180992_o-oquqeq35mbkfysprege6x3h6xmlhhluw2g4qw7fv2w.jpg"
+        },
+        {
+          "id": "2",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/100766536_2548510528745616_7082793201618124800_o-oquqer0zt5lqaeoe8ysthl8nj0gupaymeks8dhegwo.jpg"
+        },
+        {
+          "id": "3",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/79147144_2548510425412293_8547759735435165696_o-oquqevq6rbs5wghkhityc21yhxtorsha381nrv7i1k.jpg"
+        },
+        {
+          "id": "4",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/100982425_2548510392078963_2236918271695650816_o-oquqbze3optc3qp4erqd5adsk63y1dz2ovmri5i788.jpg"
+        }
+      ],
+      "to_rent": 1,
+      "price_to_rent": 100000
     },
     {
       "id": "4",
       "cate_id": "1",
-      "cate_name": "Đồ nhật dụng",
-      "name": "Áo dài nữ năm thân cổ đứng",
+      "cate_name": "Trang Phục",
+      "name": "Áo ngũ thân nữ lụa loan thọ Vạn Phúc",
       "status": "HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0350.2-o9auxk4cthnttexwpcigpci842d8sro5sae02jebl8.jpg",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_0860-o4wa4vb9jhsv3ofcvqrpqe50uf8p7w8398gkqhv7rs.jpg",
       "size": [
         {
           "id": 1,
@@ -289,20 +373,54 @@
         },
         {
           "id": 2,
+          "size": "s",
+          "qty": 10
+        },
+        {
+          "id": 3,
+          "size": "m",
+          "qty": 10
+        },
+        {
+          "id": 4,
           "size": "l",
+          "qty": 10
+        },
+        {
+          "id": 5,
+          "size": "xl",
           "qty": 10
         }
       ],
       "price": "499.00",
-      "to_rent": 1
+      "list_img": [
+        {
+          "id": "1",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1959-o4uu0mmtnndagjrrt87l6csxz4ztpwoeapc7zxsdug.jpg"
+        },
+        {
+          "id": "2",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_0875-o4wa54pnfu5qbs1pcutzfbrms9ydcv9emizfj9ha1k.jpg"
+        },
+        {
+          "id": "3",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_0860-o4wa4vb9jhsv3ofcvqrpqe50uf8p7w8398gkqhv7rs.jpg"
+        },
+        {
+          "id": "4",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_0879a-o4wa56lbti8ayzyz1vn8kbajz1p3s9gvasaehtehp4.jpg"
+        }
+      ],
+      "to_rent": 1,
+      "price_to_rent": 100000
     },
     {
       "id": "5",
-      "cate_id": "3",
-      "cate_name": "Đồ nhật dụng",
-      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "cate_id": "1",
+      "cate_name": "Trang Phục",
+      "name": "Áo Nhật Bình",
       "status": "HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/V6A0110.2-o9auwwmhovrfw6x0koimcmxbuquutfn6366n7v6vx4.jpg",
       "size": [
         {
           "id": 1,
@@ -311,183 +429,514 @@
         },
         {
           "id": 2,
+          "size": "s",
+          "qty": 10
+        },
+        {
+          "id": 3,
+          "size": "m",
+          "qty": 10
+        },
+        {
+          "id": 4,
           "size": "l",
+          "qty": 10
+        },
+        {
+          "id": 5,
+          "size": "xl",
           "qty": 10
         }
       ],
-      "price": "499.00",
-      "to_rent": 0
+      "price": "599.00",
+      "list_img": [
+        {
+          "id": "1",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/49589625_1204527996364718_7736944290193997824_n-o4t46ze5aumm3mn90ohyrhmhpkx2yc0oms474jrwuw.jpg"
+        },
+        {
+          "id": "2",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/V6A0370.2-o9aux29itvz5tuotnqydrli3f2323m9k3y3k3iyivs.jpg"
+        },
+        {
+          "id": "3",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/anh_ghep_atuana-p5l7osyye833snl34iffjuagyucow4gkht2agj94ig.jpg"
+        },
+        {
+          "id": "4",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/anh_ghep_3-p5l7q15dbfrkybswyjiwb154vyaxxwbybvq40jfme0.jpg"
+        }
+      ],
+      "to_rent": 1,
+      "price_to_rent": 120000
     },
     {
       "id": "6",
-      "cate_id": "3",
-      "cate_name": "Đồ nhật dụng",
-      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "cate_id": "1",
+      "cate_name": "Trang Phục",
+      "name": "Áo Tấc",
       "status": "HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_5316-copy-o4t6sl5jvwrk9oohfn3hkd9zbxjyh8mei2vwlizj88.jpg",
       "size": [
         {
           "id": 1,
-          "size": "XS",
+          "size": "xs",
           "qty": 10
         },
         {
           "id": 2,
-          "size": "L",
+          "size": "s",
           "qty": 10
         },
         {
           "id": 3,
-          "size": "XL",
+          "size": "m",
+          "qty": 10
+        },
+        {
+          "id": 4,
+          "size": "l",
+          "qty": 10
+        },
+        {
+          "id": 5,
+          "size": "xl",
           "qty": 10
         }
       ],
       "price": "499.00",
-      "to_rent": 1
+      "list_img": [
+        {
+          "id": "1",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_0840-o4t6oq1fsfh4jeajzyypbcdrewlmu1a4myc1kkpst4.jpg"
+        },
+        {
+          "id": "2",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_4945-copy-1-o4t6s8xnf2au2r68eztc5yczlx86p69w4eelcxhnh4.jpg"
+        },
+        {
+          "id": "3",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0014.2-o9auxgd3oeigo04cdf1sazy0bu5kb2tj5vvuaodmag.jpg"
+        },
+        {
+          "id": "4",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/61768803_2252198885043450_5478402344221671424_n-o8th9pkipf7dmn467wlqnabsistmtu47fp9zr6k3rs.jpg"
+        }
+      ],
+      "to_rent": 0,
+      "price_to_rent": null
     },
     {
       "id": "7",
-      "cate_id": "3",
-      "cate_name": "Trang Phục",
-      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "cate_id": "2",
+      "cate_name": "Đao-Thương",
+      "name": "Đao",
       "status": "HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg",
-      "size": [
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/NDC_6825-copy-nucvyqyyutm9gdkj796acow2qcz666ncxajozpn2mw.jpg",
+      "size": {
+        "id": 1,
+        "size": "1",
+        "qty": 10
+      },
+      "price": "199.00",
+      "list_img":
         {
-          "id": 1,
-          "size": "XS",
-          "qty": 10
+          "id": "1",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/NDC_6825-copy-nucvyqyyutm9gdkj796acow2qcz666ncxajozpn2mw.jpg"
         },
-        {
-          "id": 2,
-          "size": "L",
-          "qty": 10
-        },
-        {
-          "id": 3,
-          "size": "XL",
-          "qty": 10
-        }
-      ],
-      "price": "499.00",
-      "to_rent": 1
+      "to_rent": 0,
+      "price_to_rent": null
     },
     {
       "id": "8",
-      "cate_id": "3",
-      "cate_name": "Đồ nhật dụng",
-      "name": "Gối XẾP VÂN MÂY",
+      "cate_id": "2",
+      "cate_name": "Đao-Thương",
+      "name": "Thương",
       "status": "HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Goi-3-nu0idktq59gynh8lb96gh00b4elczoqzer7ohd7vos.jpg",
-      "size": [
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/NDC_6842-copy-nucq8ufprbr27gnnj92d5nf25rum1383y5wmfmxpnc.jpg",
+      "size":
         {
           "id": 1,
-          "size": "XS",
+          "size": "1",
           "qty": 10
         },
+      "price": "199.00",
+      "list_img":
         {
-          "id": 2,
-          "size": "L",
-          "qty": 10
+          "id": "1",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/NDC_6842-copy-nucq8ufprbr27gnnj92d5nf25rum1383y5wmfmxpnc.jpg"
         },
-        {
-          "id": 3,
-          "size": "XL",
-          "qty": 10
-        }
-      ],
-      "price": "499.00",
-      "to_rent": 0
+      "to_rent": 0,
+      "price_to_rent": null
     },
     {
       "id": "9",
-      "cate_id": "1",
-      "cate_name": "Trang Phục",
-      "name": "Áo Dài Nam Cổ Đứng",
+      "cate_id": "3",
+      "cate_name": "Đồ nhật dụng",
+      "name": "Gối xếp hạc đỏ vân mây",
       "status": "HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg",
-      "size": [
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Goi-2-nu0id6q8wzxfycu1np8vt820sxsn5brb2xj6fgmiag.jpg",
+      "size": 
         {
           "id": 1,
-          "size": "XS",
+          "size": "1",
           "qty": 10
         },
+      "price": "159.00",
+      "list_img":
         {
-          "id": 2,
-          "size": "L",
-          "qty": 10
+          "id": "1",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Goi-2-nu0id6q8wzxfycu1np8vt820sxsn5brb2xj6fgmiag.jpg"
         },
-        {
-          "id": 3,
-          "size": "XL",
-          "qty": 10
-        }
-      ],
-      "price": "499.00",
-      "to_rent": 1
+      "to_rent":0,
+      "price_to_rent": null
     },
     {
       "id": "10",
-      "cate_id": "1",
+      "cate_id": "3",
       "cate_name": "Đồ nhật dụng",
-      "name": "Áo dài nữ năm thân cổ đứng",
+      "name": "Đồ nhật dụng",
       "status": "HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Capture-One-Session0350.2-o9auxk4cthnttexwpcigpci842d8sro5sae02jebl8.jpg",
-      "size": [
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3577-copy-nu0ic70dpakjp69xg9t26h2i8aop0ttia0qq6y3guw.jpg",
+      "size":
         {
           "id": 1,
-          "size": "XS",
+          "size": "1",
           "qty": 10
         },
+      
+      "price": "159.00",
+      "list_img": 
         {
-          "id": 2,
-          "size": "L",
-          "qty": 10
+          "id": "1",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3577-copy-nu0ic70dpakjp69xg9t26h2i8aop0ttia0qq6y3guw.jpg"
         },
-        {
-          "id": 3,
-          "size": "XL",
-          "qty": 10
-        }
-      ],
-      "price": "499.00",
-      "to_rent": 0
+      "to_rent": 0,
+      "price_to_rent": null
     },
     {
       "id": "11",
       "cate_id": "3",
       "cate_name": "Đồ nhật dụng",
-      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "name": "Gối xếp họa tiết phượng",
       "status": "HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg",
-      "size": [
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/9-1-nvrdbonkchf8ai78j1k0wfq35vsomi3wcnpt6pfpy0.jpg",
+      "size":
         {
           "id": 1,
-          "size": "XS",
+          "size": "1",
           "qty": 10
         },
+      
+      "price": "159.00",
+      "list_img": 
         {
-          "id": 2,
-          "size": "L",
-          "qty": 10
+          "id": "1",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/9-1-nvrdbonkchf8ai78j1k0wfq35vsomi3wcnpt6pfpy0.jpg"
         },
-        {
-          "id": 3,
-          "size": "XL",
-          "qty": 10
-        }
-      ],
-      "price": "499.00",
-      "to_rent": 0
+      "to_rent": 0,
+      "price_to_rent": null
     },
     {
       "id": "12",
       "cate_id": "3",
       "cate_name": "Đồ nhật dụng",
-      "name": "Gối XẾP TAM SƠN THỦY BA",
+      "name": "Gối xếp họa tiết sơn thủy",
       "status": "HOT",
-      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibusdm741d7qpdid2wfnvwz34vnwp685mt3rv3g.jpg"
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3582-copy-nu0icj8a6519w3s6gx37kvzhyb0gsw60np81fjlcm0.jpg",
+      "size":
+        {
+          "id": 1,
+          "size": "1",
+          "qty": 10
+        },
+      
+      "price": "159.00",
+      "list_img": 
+        {
+          "id": "1",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3582-copy-nu0icj8a6519w3s6gx37kvzhyb0gsw60np81fjlcm0.jpg"
+        },
+      "to_rent": 0,
+      "price_to_rent": null
+    },
+    {
+      "id": "13",
+      "cate_id": "3",
+      "cate_name": "Đồ nhật dụng",
+      "name": "Gối xếp họa văn mật tông",
+      "status": "HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/1-2-nvrd8xyievo4fg6ljcw74mmosfb56a82z37tsni23c.jpg",
+      "size":
+        {
+          "id": 1,
+          "size": "1",
+          "qty": 10
+        },
+      
+      "price": "159.00",
+      "list_img": [
+        {
+          "id": "1",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3577-copy-nu0ic70dpakjp69xg9t26h2i8aop0ttia0qq6y3guw.jpg"
+        },
+        {
+          "id": "2",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/1-2-o4pl62kkaynn651zm0iibg4i5o7vh1vjwywfyw2ryw.jpg"
+        },
+        {
+          "id": "3",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/1-3-o4pl8e8777u5vfoh1ioazd0j0yrji43nwgynoimql4.jpg"
+        }
+      ],
+      "to_rent": 0,
+      "price_to_rent": null
+    },
+    {
+      "id": "14",
+      "cate_id": "3",
+      "cate_name": "Đồ nhật dụng",
+      "name": "Gối xếp tam sơn thủy ba",
+      "status": "HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC_3563-copy-nu0ibush8g3ti8rofmiws25iiacx8rgzwc9eycll3s.jpg",
+      "size":
+        {
+          "id": 1,
+          "size": "1",
+          "qty": 10
+        },
+      
+      "price": "159.00",
+      "list_img": [
+        {
+          "id": "1",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/10-1-nvrdbzxmmhuo5tqup6fjqcvmai936vcoe7jmy0yzvc.jpg"
+        },
+        {
+          "id": "2",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/10-2-1-o4t7xplcvz267iy2ax0w5hoyxsv28ivn5mdngc0h08.jpg"
+        },
+        {
+          "id": "3",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/10-2-o4t7xlu04mx0x33iwvedvin4k9dldqgpt3rpj861p4.jpg"
+        }
+      ],
+      "to_rent": 0,
+      "price_to_rent": null
+    },
+    {
+      "id": "15",
+      "cate_id": "3",
+      "cate_name": "Đồ nhật dụng",
+      "name": "Gối xếp vân mây",
+      "status": "HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Goi-3-nu0idkttrigqsi9kddcacmhxppv5csba4vbgmm1lp4.jpg",
+      "size":
+        {
+          "id": 1,
+          "size": "1",
+          "qty": 10
+        },
+      
+      "price": "159.00",
+      "list_img": [
+        {
+          "id": "1",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Goi-1-nu0icwe0ttjaen92c2rzjsny9p7lsnm9dicu5f1u6w.jpg"
+        },
+        {
+          "id": "2",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/3-3-o4t7xg6yzmpazfbptsymgk2czy5e3jubsbusnkeeqg.jpg"
+        },
+        {
+          "id": "3",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/5-1-nvrdacpsnxllue4vayu1v9tkv8cypxtl62g1plesrc.jpg"
+        },
+        {
+          "id": "4",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/4-1-nvrd9zk2093lbunzft59wd54ju5tq6dcg9b8zpyb6g.jpg"
+        }
+      ],
+      "to_rent": 0,
+      "price_to_rent": null
+    },
+    {
+      "id": "16",
+      "cate_id": "4",
+      "cate_name": "Phụ Kiện",
+      "name": "Guốc mộc",
+      "status": "HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/36064794_2025116977751643_2545582770801868800_n-e1533371832534-nu4a1tqyfwmr8bmfsm36o3o8k412cyfsbngy7o4dnc.jpg",
+      "size":[
+        {
+          "id": 1,
+          "size": "s",
+          "qty": 10
+        },
+        {
+          "id": 2,
+          "size": "m",
+          "qty": 10
+        },
+        {
+          "id": 3,
+          "size": "l",
+          "qty": 10
+        }
+      ],
+      "price": "299.00",
+      "list_img": 
+        {
+          "id": "1",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/36064794_2025116977751643_2545582770801868800_n-e1533371832534-nu4a1tqyfwmr8bmfsm36o3o8k412cyfsbngy7o4dnc.jpg"
+        },
+      "to_rent": 1,
+      "price_to_rent": 69000
+    },
+    {
+      "id": "17",
+      "cate_id": "4",
+      "cate_name": "Phụ Kiện",
+      "name": "Hài",
+      "status": "HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Hai-2-nvrdc9c0iu7jdxd76ahtfai88cyrbudzri2hqsl254.jpg",
+      "size":[
+        {
+          "id": 1,
+          "size": "s",
+          "qty": 10
+        },
+        {
+          "id": 2,
+          "size": "m",
+          "qty": 10
+        },
+        {
+          "id": 3,
+          "size": "l",
+          "qty": 10
+        }
+      ],
+      "price": "159.00",
+      "list_img": 
+        {
+          "id": "1",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/Hai-1-1-nvrdciqef6kem0zjnek3484u67ofgtfb4slcjk74ew.jpg"
+        },
+      "to_rent": 1,
+      "price_to_rent": 69000
+    },
+    {
+      "id": "18",
+      "cate_id": "4",
+      "cate_name": "Phụ Kiện",
+      "name": "Khăn lươn",
+      "status": "HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/image-nu7cwpw5ntv3a0mms75vpiiafzfcp708oqk8qcs9aw.jpg",
+      "size":
+        {
+          "id": 1,
+          "size": "1",
+          "qty": 10
+        },
+      
+      "price": "159.00",
+      "list_img": 
+        {
+          "id": "1",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/image-nu7cwpw5ntv3a0mms75vpiiafzfcp708oqk8qcs9aw.jpg"
+        },
+      "to_rent": 1,
+      "price_to_rent": 69000
+    },
+    {
+      "id": "19",
+      "cate_id": "4",
+      "cate_name": "Phụ Kiện",
+      "name": "Khăn lượt",
+      "status": "HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/image-1-nu7cwk94itndccutp4q4ajxivo75f0dunynbup0mc8.jpg",
+      "size":
+        {
+          "id": 1,
+          "size": "1",
+          "qty": 10
+        },
+      
+      "price": "159.00",
+      "list_img": [
+        {
+          "id": "1",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_5472-copy-1-o4t6taj70fqaz5nmbg2exovfdc2v92f5lki0jzxwk8.jpg"
+        },
+        {
+          "id": "2",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_5358-copy-1-o4t6t30hhrg0e9yjjctedqrqm93xjhlawja4ps91y0.jpg"
+        },
+        {
+          "id": "3",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_0905-o4t6potgtasqgyw1cvzwdllte5u7qu473qh0bta8ew.jpg"
+        }
+      ],
+      "to_rent": 1,
+      "price_to_rent": 69000
+    },
+    {
+      "id": "20",
+      "cate_id": "4",
+      "cate_name": "Phụ Kiện",
+      "name": "Quạt sừng giấy dó chân kim",
+      "status": "HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/quat-sung-giay-do-cham-kim-1-nxctvmew8ceyz7d72pvul7mvdut61bnqeq9btd2zo8.jpg",
+      "size":
+        {
+          "id": 1,
+          "size": "1",
+          "qty": 10
+        },
+      
+      "price": "159.00",
+      "list_img":
+        {
+          "id": "1",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/quat-sung-giay-do-cham-kim-1-nxctvmew8ceyz7d72pvul7mvdut61bnqeq9btd2zo8.jpg"
+        },
+      "to_rent": 1,
+      "price_to_rent": 69000
+    },
+    {
+      "id": "22",
+      "cate_id": "4",
+      "cate_name": "Phụ Kiện",
+      "name": "Kim bài - Kim khánh",
+      "status": "HOT",
+      "img": "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_5370-o4wbik24t7titm93qpyr1cr7aoc73whaf5xl0270uw.jpg",
+      "size":
+        {
+          "id": 1,
+          "size": "1",
+          "qty": 10
+        },
+      
+      "price": "199.00",
+      "list_img":[
+        {
+          "id": "1",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_5372-o4wbimvndpxdsg50a96mqu1l2tyaqzshfjw1fw2uc8.jpg"
+        },
+        {
+          "id": "2",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/V6A0453.2-o9aux4577k1qh2m3crrmwl10lttsj0h0s7ej22vqjc.jpg"
+        },
+        {
+          "id": "3",
+          "base64": "http://yvanhien.com/wp-content/uploads/bfi_thumb/V6A0456.2-o9aux8ue5q8634f9lbsrr1ubkr6mlhzogunyggoro8.jpg"
+        }
+      ],
+      "to_rent": 1,
+      "price_to_rent": 79000
     }
+
   ],
   "store_system": [
     {
