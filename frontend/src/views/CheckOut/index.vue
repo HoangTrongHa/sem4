@@ -362,6 +362,10 @@ export default {
             if (localStorage.getItem("token") === null) {
                 this.$router.push({name: "Login"})
             } else {
+                var getCart = {
+                    thue: this.$store.state.thue,
+                    buy: this.$store.state.cart
+                }
                 var getForm = {
                     code_order : this.getCode,
                     userName: this.userName,
@@ -376,7 +380,7 @@ export default {
                     user_register: this.getUser.username,
                     email_register: this.getUser.email,
                     create_at: new Date().toLocaleString(),
-                    item_cart : this.cart,
+                    item_cart : JSON.stringify(getCart),
                     status: '',
                     total: this.calcSum
                 }

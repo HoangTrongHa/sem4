@@ -191,8 +191,44 @@ export default {
         localStorage.setItem("Cart",JSON.stringify(checkCart))
       }
       this.updateDialog(false)    
-      this.$toast.warning(`Kiểm Tra Lại Trong Giỏ Hàng`);    
+      this.$toast.success(`Kiểm Tra Lại Trong Giỏ Hàng`);    
     },
+    thue() {
+      var checkCart = JSON.parse(localStorage.getItem('thue')) || [];
+      var value = {
+          id:this.getDataProduct.id,
+          name:this.getDataProduct.name,
+          price:this.getDataProduct.price_to_rent,
+          TotalPrice: this.TotalQty,
+          qtyCus: this.qtyCustomer,
+          img: this.getDataProduct.img,
+          size: this.getSize,
+          startDay: this.startDay,
+          endDay: this.endDay,
+          service: '',
+          deposit_price: this.getDataProduct.price
+      } 
+      if (this.status == 1) {
+        value.service = 'Thuê'
+      } else {
+        value.service = 'Mua'
+      }
+      let duplicate = checkCart.find(items => items.id == value.id)
+      if ( duplicate !== undefined) {
+        let found = checkCart.filter(items => items.id !== value.id)
+        duplicate.qtyCus += this.qtyCustomer
+        localStorage.removeItem("thue")
+        found.push(duplicate)
+        localStorage.setItem("thue",JSON.stringify(checkCart))
+        this.$store.dispatch('getThue',checkCart);
+      } else {
+        checkCart.push(value)
+        this.$store.dispatch('getThue',checkCart);
+        localStorage.setItem("thue",JSON.stringify(checkCart))
+      }
+      this.updateDialog(false)    
+      this.$toast.success(`Kiểm Tra Lại Trong Giỏ Hàng`);    
+    }
     
   },
   create () {

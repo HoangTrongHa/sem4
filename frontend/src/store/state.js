@@ -21,4 +21,5 @@ export default {
     token: '',
     order:[],
     countCart:[],
+    thue:[]
 }

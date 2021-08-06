@@ -3,7 +3,7 @@ import https from "@/https";
 
 class index {
   addNewOrder(order) {
-    return http.post("/order", order,{
+    return https.post("/order/add", order,{
       headers: {
         'Content-type': 'application/json'
       },
@@ -26,6 +26,13 @@ class index {
       body: JSON.stringify(data)
     });
   }
+  editUser (id, data) {
+    return https.post(`/user/update/${id}`, data,{
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+  }
 }
-
 export default new index();

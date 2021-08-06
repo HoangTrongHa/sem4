@@ -135,3 +135,7 @@ export const updateUser = ({ commit },payload) => {
 export const updateToken = ({ commit },payload) => {
     commit('SET_TOKEN', payload)
 }
+
+export const getThue = ({ commit }, payload) => {
+    commit('SET_THUE', payload)
+}

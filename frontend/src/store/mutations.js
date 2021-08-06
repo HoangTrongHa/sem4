@@ -93,3 +93,7 @@ export const SET_USER = (state, item) => {
 export const SET_TOKEN = (state, item) => {
     state.token = item
 }
+
+export const SET_THUE = (state, item) => {
+    state.thue = item
+}

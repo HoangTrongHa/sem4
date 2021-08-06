@@ -88,7 +88,6 @@
                             v-if="countCart > 0"
                         >
                             <v-badge
-                                
                                 :content="countCart"
                                 color="error"
                             >
@@ -164,8 +163,14 @@
             cart() {
                 return JSON.parse(localStorage.getItem('Cart')) || [];
             },
+            countBuy() {
+                return this.$store.state.cart.length 
+            },
+            countThue() {
+                return this.$store.state.thue.length 
+            },
             countCart() {
-                return this.$store.state.cart.length
+                return this.countBuy + this.countThue
             },
             getToken() {
                 if (this.$store.state.token == "" || this.$store.state.token == null || this.$store.state.token == undefined) {

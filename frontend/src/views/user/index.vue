@@ -25,7 +25,7 @@
                             <div @click="$router.push({
                                 name:`OrderInfor`
                             })">                                           
-                                Danh Sách Đơn Hàng
+                                Danh Sách Đơn Hàng 
                             </div>
                         </div>
                     </li>
@@ -175,6 +175,7 @@
 
 <script>
 import Vue from "vue";
+import Service from '../../business/index'
 
 import "vue-toastification/dist/index.css";
 import Toast from "vue-toastification";
@@ -184,6 +185,9 @@ import Toast from "vue-toastification";
     newestOnTop: true
   });
 export default {
+    components: {
+        Service
+    },
     data() {
         return {
             disabled: true,
@@ -218,14 +222,20 @@ export default {
                 weight: this.weight,
                 img: this.img,
             }
-            this.$store.dispatch('updateUser', value);
-            localStorage.removeItem("user")
-            localStorage.setItem("user",JSON.stringify(value))
-            var test = this
-            setTimeout(function() {
-                test.$toast.success(`Cập Nhật Thông Tin Thành Công`);
-                test.clickedButton = false
-            }, 2000);
+            let getCart = JSON.parse(localStorage.getItem('user')) || [];
+            let idUser = getCart.id
+            Service.editUser(idUser,value).then(( response ) => {
+                console.log(response);
+            })
+
+            // this.$store.dispatch('updateUser', value);
+            // localStorage.removeItem("user")
+            // localStorage.setItem("user",JSON.stringify(value))
+            // var test = this
+            // setTimeout(function() {
+            //     test.$toast.success(`Cập Nhật Thông Tin Thành Công`);
+            //     test.clickedButton = false
+            // }, 2000);
         },
         onFileChange(e) {
             var files = e.target.files || e.dataTransfer.files;
