@@ -1,28 +1,44 @@
-<template>
+d<template>
     <div>
         <v-container id="success_code">
-            <div class="title_success_code">
-               ĐẶT HÀNG THÀNH CÔNG!
-            </div>
-            <div class="dicription">
-                Trên thị trường có quá nhiều sự lựa chọn, cảm ơn bạn đã lựa chọn mua sắm tại CTY CPVN <br>
-
-                Đơn hàng của bạn CHẮC CHẮN đã được chuyển tới hệ thống xử lý đơn hàng của chúng tôi<br>
-                Trong quá trình xử lý chũng tôi sẽ liên hệ lại nếu như cần thêm thông tin từ bạn.<br>
-                Ngoài ra chúng tôi cũng sẽ có gửi xác nhận đơn hàng bằng Email và tin nhắn<br>
-
-                Do ảnh hưởng dịch bệnh, đơn hàng của bạn có thể được giao chậm hơn bình thường. Chúng tôi sẽ cố gắng hết sức, bạn chờ CPVN nha.<br>
-
-            </div>
-            <div class="wrap-infor-order">
+            <div class="box">
                 <div class="title">
-                    Dưới đây là thông tin đơn hàng <span>#{{ getCode  }}</span> của bạn - 21:38 29-07-2021:
+                    <h3>Đặt Hàng Thành Công!</h3>
+                    <span class="detail">Đơn hàng của bạn đã được gửi tới hệ thống, nhân viên chúng tôi đang xử lí đơn hàng này</span>
                 </div>
-            </div>
-            <div class="wrap-product-item">
-                <ProductItemSuccess 
-                    :getDataOrder="getDataOrder"
-                />
+                <hr>
+                <div class="info-user">
+                    <div class="name">Tên người nhận:<span class="info-content">Nghia</span></div>
+                    <div class="name">Email:<span class="info-content">nghia@gmail.com</span></div>
+                    <div class="name">Địa chỉ nhận hàng:<span class="info-content">Ha noi</span></div>
+                    <div class="name">Phương thức thanh toán:<span class="info-content">Cod</span></div>
+                </div>
+                <hr>
+                <div class="product">
+                        <img src="http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg" alt="">
+                        <div class="name">Áo dài nam năm thân cổ đứng </div>
+                        <div class="qty">Số lượng: <div class="qty-number">1</div></div>
+                        <div class="subtotal">Tạm tính: <div class="subtotal-price">$199.00</div></div>    
+                </div>
+                <hr>
+                <div class="price">
+                    <div class="price-content">
+                        <div class="subtotal">Tạm tính: $199.00</div>
+                        <div class="ship">Phí giao hàng: 0</div>
+                        <div class="discount">Giảm giá: 0</div>
+                    </div>
+                </div>
+                <hr>
+                <div class="total">
+                    <div class="total-content">Total: <div class="total-price">$199.00</div></div>
+                </div>
+                <hr>
+                <div class="thank">
+                    <div class="thank-title"> <i>Chúng tôi sẽ gửi cho bạn email xác nhận của đơn hàng. Hy vọng nhận được sự phản hồi của bạn sau khi nhận hàng.</i></div>
+                    <div class="thank-content"><i>Thank you!</i></div>                  
+                </div>
+                <hr >
+                <div class="right">Cổ Phục Việt Nam</div>
             </div>
         </v-container>
     </div>
@@ -51,25 +67,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-#success_code {
-    @media (min-width: 1904px){
-        max-width: 1200px;
-    }
-    .title_success_code {
-        text-align: center;
-        font-size: 40px;
-        font-weight: bolder;
-    }
-    .dicription {
-        margin: 50px 0 0 0;
-        text-align: start;
-        font-size: 18px;
-        line-height: 50px;
-    }
-    .wrap-infor-order {
-        width: 100%;
-        text-align: center;
-    }
-}
+<style lang="scss" scoped>
+    @import "@/scss/checkout-success.scss";
 </style>
+

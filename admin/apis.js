@@ -6,6 +6,8 @@ const apis = axios.create({
         "Content-type" : "application/json"
     }
 });
+
+
 export const api = {
     categoryList : () => apis.get("/category"),
     addCategory : (data) => apis.post("/category/add",data),

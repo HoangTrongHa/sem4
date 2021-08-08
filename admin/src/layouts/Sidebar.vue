@@ -5,9 +5,13 @@
         <div class="nav">
           <div class="sb-sidenav-menu-heading">Admin Dashboard</div>
           <router-link v-for="(item, index ) in page" :key="index" :to="item.path" class="nav-link">
-            <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+            <div class="sb-nav-link-icon"><i :class="item.icon"></i></div>
             {{ item.name }}
           </router-link>
+          <div class="nav-link" @click="$router.push({ name: `Order`})">
+              <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+              Đanh Sách Đơn Hàng
+          </div>
         </div>
       </div>
     </nav>
@@ -23,17 +27,17 @@ export default {
         {
           name : 'Dashboard',
           path : "/",
-          icon : '',
+          icon : 'fas fa-book-open',
         },
         {
           name : "Category",
           path : "/category",
-          icon : ""
+          icon : "fas fa-book-open"
         },
         {
           name : "Product",
           path : "/product",
-          icon : ""
+          icon : "fas fa-book-open"
         }
       ]
     }
@@ -42,5 +46,7 @@ export default {
 </script>
 
 <style scoped>
-
+  .nav-link {
+    cursor: pointer;
+  }  
 </style>

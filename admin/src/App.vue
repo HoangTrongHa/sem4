@@ -20,6 +20,10 @@ export default {
   components: {
     Header,
     Sidebar,
+  },
+  mounted() {
+     
+      this.$store.dispatch('getOrder')
   }
 }
 </script>
