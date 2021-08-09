@@ -26,10 +26,38 @@
             float: right;
             width: 48%;
             line-height: 5ch;
+            
             .name{
                 font-weight: bold;
                 font-size: 20px;
             }
+            .size{
+                display: flex;
+                justify-content: center;                
+                .size-item{
+                    border:1px solid grey;
+                    padding: 0 10px;
+                }
+            }
+            .button{
+                display: flex;
+                justify-content: space-evenly;
+                padding-top: 20px;
+                color: white;
+                .add-to-cart{
+                    background-color: #c12312;
+                    border-radius: 5px;
+                    padding: 2px;
+                }
+                .buy-now{
+                    background-color: #fa6400;
+                    font-size: 20px;
+                    font-weight: bolder;
+                    padding: 10px;
+                    border-radius: 5px;
+                }
+            }
+
         }
     }
     .description{

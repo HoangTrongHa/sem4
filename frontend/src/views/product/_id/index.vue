@@ -37,6 +37,22 @@
             + Chất liệu: Tùy chọn (Đũi cao cấp, lụa, sa, gấm, đoạn,…)<br />
             + Sản phẩm may đo, tùy chọn màu sắc
           </div>
+          <div class="size">
+            
+              <div class="size-item">S</div>
+              <div class="size-item">M</div>
+              <div class="size-item">L</div>
+              <div class="size-item">XL</div>
+            
+          </div>
+          <div class="button">
+            <div class="add-to-cart">
+              Thêm vào giỏ hàng
+            </div>
+            <div class="buy-now">
+              Mua ngay
+            </div>
+        </div>
         </div>
       </div>
       <div class="description">
