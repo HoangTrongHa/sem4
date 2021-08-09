@@ -230,13 +230,13 @@ export default {
   components: {
     BaseBanner
   },
-  data() {
-    return {
-      cart: [],
-      discount: "",
-      updateCart: true,
-    };
-  },
+    data() {
+      return {
+        cart: [],
+        discount: "",
+        updateCart: true,
+      };
+    },
   computed: {
     countCart() {
       return this.$store.state.cart.length;

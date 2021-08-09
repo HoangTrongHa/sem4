@@ -104,6 +104,25 @@
                             margin: 0 15px 0 0;
                             font-size: 15px;
                         }
+                        .error {
+                            color: #fff;
+                            padding: 5px 15px;
+                            border-radius: 50px;
+                            margin: 0 15px 0 0;
+                            font-size: 15px;
+                            background-color: red;
+                        }
+                        .success {
+                            color: #fff;
+                            padding: 5px 15px;
+                            border-radius: 50px;
+                            margin: 0 15px 0 0;
+                            font-size: 15px;
+                            background-color: red;
+                        }
+                        .button {
+                            display: flex;
+                        }
                     }
                 }
 

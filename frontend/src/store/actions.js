@@ -108,7 +108,7 @@ export const getGallery = ({ commit }) => {
 }
 
 export const getAllOrder = ({ commit }) => {
-    axios.get('http://localhost:15000/order')
+    axios.get('https://bigboss-api-sem4.herokuapp.com/api/v1/order/')
     .then(res => {
         commit('SET_ORDER', res.data)
     })

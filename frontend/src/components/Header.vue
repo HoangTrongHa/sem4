@@ -190,7 +190,7 @@
                 this.$store.dispatch('updateToken', token);
                 this.$toast.success(`Chào tạm biệt. Hãy quay lại với chúng tôi nhé😍`);
                 this.$router.push({name: 'Login'})
-            }
+            },
         },
         mounted() {
             this.$store.dispatch('getMenu');

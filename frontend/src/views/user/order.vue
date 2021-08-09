@@ -56,31 +56,54 @@
                             <div v-if="items.status == `Chờ Xác Nhận`" class="status warning">
                                 {{ items.status }}
                             </div>
+                            <div v-if="items.status == `Đơn Hàng Bị Hủy`" class="status error">
+                                {{ items.status }}
+                            </div>
+                            <div v-if="items.status == `Chờ Vận Chuyển`" class="status success">
+                                {{ items.status }}
+                            </div>
+                            <div v-if="items.status == `Đang Vận Chuyển`" class="status success">
+                                {{ items.status }}
+                            </div>
+                            <div v-if="items.status == `Không Nhận Hàng`" class="status error">
+                                {{ items.status }}
+                            </div>
+                            <div v-if="items.status == `Đang Trong Quá Trình Thuê`" class="status success">
+                                {{ items.status }}
+                            </div>
+                            <div v-if="items.status == `Đã Tới Điểm Giao`" class="status button">
+                                <div class="wrap-button-user-option">
+                                    <v-btn 
+                                        :loading="loading"
+                                        color="success"
+                                        @click="updateStatusOrder(items.id)">
+                                        Xác Nhận Đơn Hàng
+                                    </v-btn>
+                                </div>
+                                <div class="wrap-button-user-option">
+                                    <v-btn 
+                                        :loading="loading"
+                                        color="error"
+                                        @click="updateStatusOrderNot(items)">
+                                            Không Nhận Hàng
+                                    </v-btn>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="wrap-content" v-for="(product,i) of items.item_cart" :key="i">
-                        <div class="wrap-img">
-                            <img :src="product.img">
-                        </div>
-                        <div class="wrap-infor-product">
-                            <div class="name-product">
-                                {{ product.name }}
-                            </div>
-                             <div class="qty-product">
-                               X {{ product.qtyCus }}
-                            </div>
-                            <div class="size-product">
-                                {{ product.size.size }}
-                            </div>
-                        </div>
-                    </div>
+                    <NotDeliveryComponents 
+                        :dialog="dialog"
+                        @update-dialog="updateCart"
+                        :dataNotDeli="dataNotDeli"
+
+                    />
                     <div class="wrap-footer">
                         <div class="wrap-title">
                             <div class="title">
                                 Tổng Giá Trị Đơn Hàng:
                             </div>
                             <div class="total-price">
-                                  {{ items.total }}đ
+                                <!-- {{ items.total }}đ -->
                             </div>
                         </div>
                     </div>
@@ -92,7 +115,8 @@
 
 <script>
 import Vue from "vue";
-
+import Service from '../../business/index'
+import NotDeliveryComponents from '../../components/NotDeliveryComponents.vue'
 import "vue-toastification/dist/index.css";
 import Toast from "vue-toastification";
  Vue.use( Toast, {
@@ -103,8 +127,14 @@ import Toast from "vue-toastification";
 export default {
     data() {
         return {
-            email:''
+            email:'',
+            loading: false,
+            dialog: false,
+            dataNotDeli: {}
         }
+    },
+    components: {
+        NotDeliveryComponents
     },
     computed: {
         getOrder() {
@@ -121,11 +151,44 @@ export default {
             this.$store.dispatch('updateToken', token);
             this.$toast.success(`Chào tạm biệt. Hãy quay lại với chúng tôi nhé😍`);
             this.$router.push({name: 'Login'})
-        }
+        },
+        updateStatusOrder(id) {
+            this.loading = true
+            var dataOrder = this.$store.state.order.find(item => item.id === id)
+            console.log(dataOrder);
+            var dataProduct = JSON.parse(dataOrder.item_cart) 
+            console.log(dataProduct);
+            if (dataProduct.thue.length === 0 ) {
+                dataOrder.status = 'Đã Nhận Hàng'
+                Service.editOrder(id,dataOrder).then((response) => {
+                    console.log(response.data);
+                })
+            } else {
+                dataOrder.status = 'Đang Trong Quá Trình Thuê'
+                Service.editOrder(id,dataOrder).then((response) => {
+                    console.log(response.data);
+                })
+            }
+            this.$toast.success(`Cập Nhật Thành Công`);
+
+            this.loading = false
+        },
+        updateStatusOrderNot(data) {
+            this.dialog = true
+            this.dataNotDeli = data
+            console.log(this.dataNotDeli);
+        },
+        updateCart(e) {
+            this.dataNotDeli = null
+            this.dialog = e;
+            console.log(this.dataNotDeli);
+
+        },
     },
     created() {
-            this.email = (JSON.parse(localStorage.getItem('user')) || []).email;
-        }
+        this.email = (JSON.parse(localStorage.getItem('user')) || []).email;
+        console.log(this.email);
+    }
 
 }
 </script>

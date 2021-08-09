@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <v-app>
     <Header/>
     <div id="layoutSidenav">
       <Sidebar/>
@@ -9,7 +9,7 @@
         </main>
       </div>
     </div>
-  </div>
+  </v-app>
 </template>
 
 <script>
@@ -22,7 +22,7 @@ export default {
     Sidebar,
   },
   mounted() {
-     
+
       this.$store.dispatch('getOrder')
   }
 }

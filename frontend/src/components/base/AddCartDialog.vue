@@ -141,7 +141,8 @@ export default {
 
   methods: {
     updateDialog(item) {
-        this.$emit('update-dialog', item)
+      console.log(item);
+      this.$emit('update-dialog', item)
     },
     findSizeQty(size) {
       this.getSize = size

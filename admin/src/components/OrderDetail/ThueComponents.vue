@@ -5,7 +5,10 @@
             <tr class="text-muted">
             <th scope="col">Tên Sản Phẩm</th>
             <th scope="col" class="text-right">Số Lượng</th>
-            <th scope="col" class="text-right">Giá Tiền</th>
+            <th scope="col" class="text-right">Giá Thuê</th>
+            <th scope="col" class="text-right">Giá Cọc</th>
+            <th scope="col" class="text-right">Ngày Thuê</th>
+            <th scope="col" class="text-right">Ngày Trả</th>
             </tr>
         </thead>
         <tbody>
@@ -28,12 +31,25 @@
                 <td class="text-right">
                     {{ item.price }}
                 </td>
+                <td class="text-right">
+                    {{ item.deposit_price }}
+                </td>
+                <td class="text-right">
+                    {{ item.startDay }}
+                </td>
+                <td class="text-right">
+                    {{ item.endDay }}
+                </td>
             </tr>    
         </tbody>
         </table>
         <div class="wrapTotalBy">
-            <div class="title">Tổng Tiền: </div>
-            <div class="value">{{ calcBuy }} Đồng</div>
+            <div class="title">Tổng Tiền Cọc: </div>
+            <div class="value">{{ calcCoc }} Đồng</div>
+        </div>
+        <div class="wrapTotalBy">
+            <div class="title">Tổng Tiền Thuê: </div>
+            <div class="value">{{ calcThue }} Đồng</div>
         </div>
     </div>
 </template>
@@ -45,19 +61,15 @@ export default {
             type : Array,
             default : () => []
         },
+        calcThue: Number,
+        calcCoc: Number
     },
     data() {
         return {
         };
     },
     computed: {
-        calcBuy() {
-        let total = 0;
-        this.dataBy.forEach((item) => {
-            total += item.price * item.qtyCus;
-        });
-        return total;
-        }
+        
   },
 }
 </script>

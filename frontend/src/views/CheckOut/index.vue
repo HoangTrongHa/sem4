@@ -53,6 +53,7 @@
                         outlined
                         v-model="email"
                         :error-messages="errors"
+                        disabled="true"
                     ></v-text-field>
                 </validation-provider>
             </div>
