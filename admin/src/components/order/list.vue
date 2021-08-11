@@ -1,61 +1,64 @@
 <template>
-  <table class="table table-bordered table-striped">
+  <table id="datatablesSimple" class="table table-bordered table-striped">
     <thead class="text-center">
-      <tr class="table-top">
-        <th>CODE</th>
-        <th>CUSTOMER</th>
-        <th>PHONE</th>
-        <th>START TIME</th>
-        <th>END TIME</th>
-        <th>DISTRIBUTION</th>
-        <th>STATUS</th>
-        <th>PRICE</th>
-        <th>DETAIL</th>
-      </tr>
+    <tr>
+        <th>Mã Đơn Hàng</th>
+        <th>Ngày Đặt Hàng</th>
+        <th>Người Đặt</th>
+        <th>Người Nhận</th>
+        <th>Trạng Thái Đơn Hàng</th>
+        <th>Hình Thức</th>
+        <th>Chức năng</th>
+    </tr>
     </thead>
-    <tbody>
-      <orderItem
-        v-for="order in orders"
-        @refreshData="refreshData"
-        :order="order"
-        :key="order.id"
-      />
+    <tbody class="text-center">
+      <tr v-for="(item, index) in getOrder" :key="index">
+        <td>#{{ item.code_order }}</td>
+        <td>{{ item.create_at }}</td>
+        <td>{{ item.user_register }}</td>
+        <td>{{ item.userName }}</td>
+        <td>{{ item.status }}</td>
+        <td>{{ item.option }}</td>
+        <td>
+          <v-btn
+            tile
+            color="success"
+            class="button"
+            @click="$router.push({ 
+              name: `OrderDetail`,                       
+              params: { params: item.id },
+            })"
+          >
+            <v-icon left>
+              mdi-pencil
+            </v-icon>
+            Chi Tiết Đơn Hàng
+          </v-btn>
+        </td>
+      </tr>
     </tbody>
   </table>
 </template>
 
 <script>
-import orderItem from "@/components/order/orderItem";
 export default {
-  name: "list",
-  components: {
-    orderItem
-  },
-  props: {
-    loading: {
-      type: Boolean,
-      default: () => false
-    },
-    orders: {
-      type: Array,
-      default: () => []
+  props : {
+    getOrder : {
+      type : Array,
+      default : () => []
     }
   },
   methods: {
-    refreshData() {
-      this.$emit("refreshEdit");
-    }
-  }
-};
-</script>
-
-<style lang="scss" scoped>
-.list-order {
-  &-top {
-    margin-top: 20px;
-    display: flex;
-    &__item {
+    orderDetail(id) {
+      console.log(id);
     }
   }
 }
+</script>
+
+<style scoped>
+  .button {
+    background: #4caf50 !important;
+    color: #fff;
+  }
 </style>
