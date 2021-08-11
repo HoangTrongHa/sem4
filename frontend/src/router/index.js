@@ -53,7 +53,7 @@ const routes = [
     component: CheckOut
   },
   {
-    path: '/gio-hang/',
+    path: '/order-list/',
     name: 'Cart',
     component: Cart
   },

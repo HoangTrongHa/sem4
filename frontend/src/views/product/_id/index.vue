@@ -10,25 +10,18 @@
       <h2>Chi tiết sản phẩm</h2>
       <div class="product">
         <div class="wrapImg">
-          <img
-            class="mainImg"
-            src="http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_5298-copy-o4t3twh06upyiznaeixvkagk3je6tz35u19xox65g8.jpg"
-            alt=""
-          />
-          <div class="supImg">
-            <img
-              src="http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_5298-copy-o4t3twh06upyiznaeixvkagk3je6tz35u19xox65g8.jpg"
-              alt=""
-            />
-            <img
-              src="http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_5298-copy-o4t3twh06upyiznaeixvkagk3je6tz35u19xox65g8.jpg"
-              alt=""
-            />
-            <img
-              src="http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_5298-copy-o4t3twh06upyiznaeixvkagk3je6tz35u19xox65g8.jpg"
-              alt=""
-            />
-          </div>
+          <VueSlickCarousel
+            v-bind="setting"
+            v-if="getProductDetail.list_img.length > 0"
+          >
+            <div> 
+              <img :src="getProductDetail.img">
+            </div>
+            <div v-for="(items,index) of getProductDetail.list_img" :key="index">
+                <img :src="items.base64">
+            </div>
+          </VueSlickCarousel>
+         
         </div>
         <div class="detail">
           <div class="name">
@@ -60,7 +53,7 @@
                 thumb-label
               ></v-slider>
           </div>
-          <div class="wrap-date-time">
+          <div class="wrap-date-time" v-if="statusToRent != 0">
             <div class="wrapDatePicker">
                   <DataPicker 
                   @date-start="dataStart"
@@ -103,8 +96,18 @@
                 color="error"
                 :disabled="disableAddToCart"
                 @click="addToCart()"
+                v-if="statusToRent == 0"
               >
-                Thêm vào giỏ hàng
+                Thêm vào giỏ hàng Mua
+              </v-btn>
+               <v-btn
+                depressed
+                color="error"
+                :disabled="disableAddToCart"
+                @click="thue()"
+                v-else
+              >
+                Thêm vào giỏ hàng Thuê
               </v-btn>
             </div>
           </div>
@@ -148,8 +151,10 @@
 
 <script>
 import BaseBanner from "@/components/base/Banner.vue";
+import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import DataPicker from '../../../components/base/Datepicker.vue'
 
 import Vue from 'vue'
 import "vue-toastification/dist/index.css";
@@ -163,12 +168,14 @@ Vue.use(Toast, {
 export default {
   components: {
     BaseBanner,
+    DataPicker,
+    VueSlickCarousel,
   },
   data() {
     return {
       detail: {},
       qtyCus: '',
-      selected: Number,
+      selected: 0,
       getSize: {},
       startDay:'',
       endDay: '',
@@ -176,7 +183,11 @@ export default {
       disableStatusRent: 0 ,
       disableStatusBy:false,
       disableAddToCart: true,
-      disableButtonToRent: false
+      disableButtonToRent: false,
+      labelStart:'Thuê Từ Ngày',
+      labelEnd: 'Ngày Trả',
+      focusOnSelect: true,
+      TotalQty: 0
     };
   },
   computed: {
@@ -185,8 +196,27 @@ export default {
         (item) => item.id === this.$route.params.params
       );
     },
+    setting() {
+      return {
+        arrows: true,
+        dots: true,
+        slidesToShow: 1,
+        swipeToSlide: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+      };
+    },
   },
   methods: {
+    dataStart(e) {
+      this.startDay = e
+      console.log( this.startDay);
+    },
+    dateEnd(e) {
+      this.endDay = e
+      console.log( this.endDay);
+
+    },
     findSizeQty(size) {
       this.selected = size.id
       this.getSize = size
@@ -202,7 +232,7 @@ export default {
           size: this.getSize,
           startDay: this.startDay,
           endDay: this.endDay,
-          service: ''
+          service: '',
       }
       if (value.size.id === undefined ) {
         this.$toast.error(`Hãy Chọn Kích Thước Mà Quý Khách Muốn`);    
@@ -210,20 +240,71 @@ export default {
       if (value.qtyCus === 0 ||  value.qtyCus <= 0) {
         this.$toast.error(`Hãy Chọn Số Lượng Mà Quý Khách Muốn`);    
       }
-      console.log(value.qtyCus);
-     
+    },
+    thue() {
+      var checkCart = JSON.parse(localStorage.getItem('thue')) || [];
+      var value = {
+          id:this.getProductDetail.id,
+          name:this.getProductDetail.name,
+          price:this.getProductDetail.price_to_rent,
+          // TotalPrice: this.TotalQty,
+          qtyCus: this.qtyCus,
+          img: this.getProductDetail.img,
+          size: this.getSize,
+          startDay: this.startDay,
+          endDay: this.endDay,
+          service: '',
+          deposit_price: this.getProductDetail.price
+      } 
+      if (value.size.id === undefined ) {
+        this.$toast.error(`Hãy Chọn Kích Thước Mà Quý Khách Muốn`);    
+      }
+      if (value.qtyCus === 0 ||  value.qtyCus <= 0) {
+        this.$toast.error(`Hãy Chọn Số Lượng Mà Quý Khách Muốn`);    
+      }
+      if (this.statusToRent == 1) {
+        value.service = 'Thuê'
+      } else {
+        value.service = 'Mua'
+      }
+      let duplicate = checkCart.find(items => items.id == value.id)
+      if ( duplicate !== undefined) {
+        let found = checkCart.filter(items => items.id !== value.id)
+        duplicate.qtyCus += this.qtyCustomer
+        localStorage.removeItem("thue")
+        found.push(duplicate)
+        localStorage.setItem("thue",JSON.stringify(checkCart))
+        this.$store.dispatch('getThue',checkCart);
+      } else {
+        checkCart.push(value)
+        this.$store.dispatch('getThue',checkCart);
+        localStorage.setItem("thue",JSON.stringify(checkCart))
+      }
+      this.$toast.success(`Kiểm Tra Lại Trong Giỏ Hàng`);    
     },
     doWantBuy () {
-      this.disableStatusBy = true
-      this.disableButtonToRent = false
-      this.disableAddToCart = false
+      if (this.selected === 0 ) {
+        this.$toast.error(`Hãy Chọn Kích Thước Mà Quý Khách Muốn`);    
+      } else if(this.qtyCus === 0) {
+        this.$toast.error(`Hãy Chọn Số Lượng Mà Quý Khách Muốn`);    
+      } else {
+        this.disableStatusBy = true
+        this.disableButtonToRent = false
+        this.disableAddToCart = false
+      }
     },
     doWantRent() {
-      this.statusToRen = 1
-      this.disableStatusBy = false
-      this.disableButtonToRent = true
-      this.disableAddToCart = false
-    }
+     if (this.selected === 0 ) {
+        this.$toast.error(`Hãy Chọn Kích Thước Mà Quý Khách Muốn`);    
+      } else if(this.qtyCus === 0) {
+        this.$toast.error(`Hãy Chọn Số Lượng Mà Quý Khách Muốn`);    
+      } else {
+        this.statusToRent = 1
+        this.disableStatusBy = false
+        this.disableButtonToRent = true
+        this.disableAddToCart = false
+      }
+    },
   },
   created() {
       if (this.getProductDetail.to_rent == 1) {

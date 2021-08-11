@@ -26,6 +26,14 @@ class index {
       body: JSON.stringify(data)
     });
   }
+  register(data) {
+    return https.post("/auth/register",data, {
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+  }
   editUser (id, data) {
     return https.post(`/user/update/${id}`, data,{
       headers: {

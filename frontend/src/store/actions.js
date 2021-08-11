@@ -15,7 +15,7 @@ export const getBanner = ({ commit }) => {
 }
 
 export const getCategories = ({ commit }) => {
-    axios.get('http://localhost:15000/category')
+    axios.get('https://bigboss-api-sem4.herokuapp.com/api/v1/category')
     .then(response => {
         commit('SET_CATEGORY', response.data)
     })
@@ -36,7 +36,7 @@ export const getMaterial = ({ commit }) => {
 }
 
 export const getAllProduct = ({ commit }) => {
-    axios.get('http://localhost:15000/product')
+    axios.get('https://bigboss-api-sem4.herokuapp.com/api/v1/product')
     .then(res => {
         commit('SET_PRODUCT',res.data)
     })

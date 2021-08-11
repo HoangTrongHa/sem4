@@ -71,7 +71,7 @@
                             <v-text-field
                                 v-model="confirmPassword"
                                 :error-messages="errors"
-                                label="Mật Khẩu"
+                                label="Nhập Lại Mật Khẩu"
                                 outlined
                                 required
                                 :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
@@ -86,17 +86,28 @@
                 </div>
                 
             </div>
+            <div class="wrapButton">
+                <v-btn
+                    class="mr-4 button"
+                    :loading="loading"
+                    :disabled="loading"
+                    @click="submit()"
+                >
+                    Đăng Ký
+                </v-btn>
+            </div>
         </v-container>
     </div>
 </template>
 
 <script>
   import {  ValidationObserver, ValidationProvider } from 'vee-validate'
-
+import Service from '../../business/index'
 export default {
    components: {
       ValidationProvider,
-      ValidationObserver
+      ValidationObserver,
+      Service
     },
 
     data: () => ({
@@ -106,8 +117,27 @@ export default {
         password:'',
         showPassword:false,
         disabledButton:true,
-        loading: false
+        loading: false,
+
     }),
+    methods: {
+        submit() {
+            this.loading = true
+            var value = {
+                username : this.username,
+                phoneNumber : this.phoneNumber,
+                email : this.email,
+                password : this.password,
+            }
+            Service.register(value)
+            .then((response) => {
+                console.log(response);
+                this.$router.push({name: 'Login'})
+                this.$toast.success(`Đăng Ký Thành Công`);
+            })
+            this.loading = false
+        }
+    }
 }
 </script>
 

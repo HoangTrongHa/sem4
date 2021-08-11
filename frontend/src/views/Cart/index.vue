@@ -291,8 +291,9 @@ export default {
       }
     },
     addQtyThue(id) {
+      console.log(id);
       this.updateCart = false;
-      let found = this.getAllCart.find((items) => items.id === id);
+      let found = this.getAllThue.find((items) => items.id === id);
       var plusQty = found.qtyCus++;
       if (found.size.qty <= plusQty) {
         this.updateCart = true;
@@ -311,7 +312,7 @@ export default {
     },
     removeQtyThue(id) {
       this.updateCart = false;
-      let found = this.getAllCart.find((items) => items.id === id);
+      let found = this.getAllThue.find((items) => items.id === id);
       var minusQty = found.qtyCus--;
       console.log(minusQty);
       if (minusQty < 1 || minusQty == 1) {

@@ -229,7 +229,8 @@ export default {
       }
       this.updateDialog(false)    
       this.$toast.success(`Kiểm Tra Lại Trong Giỏ Hàng`);    
-    }
+    },
+    
     
   },
   create () {
