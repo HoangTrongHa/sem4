@@ -6,6 +6,7 @@
       </template>
     </BaseBanner>
     <v-container>
+      {{ getProductDetail }}
       <h2>Chi tiết sản phẩm</h2>
       <div class="product">
         <div class="wrapImg">
@@ -30,7 +31,9 @@
           </div>
         </div>
         <div class="detail">
-          <div class="name">Áo dài nam năm thân cổ đứng</div>
+          <div class="name">
+            {{ getProductDetail.name }}
+          </div>
           <div class="desc">
             Áo dài nam:<br />
             + Kiểu dáng: Áo dài năm thân cổ đứng cài khuy (áo ngũ thân)<br />
@@ -38,21 +41,73 @@
             + Sản phẩm may đo, tùy chọn màu sắc
           </div>
           <div class="size">
-            
-              <div class="size-item">S</div>
-              <div class="size-item">M</div>
-              <div class="size-item">L</div>
-              <div class="size-item">XL</div>
-            
+            <div 
+              v-for="(items,index) of getProductDetail.size" :key="index"
+              :class="(selected === items.id) ? `size-item active` : `size-item`"
+              @click="findSizeQty(items)"
+            >
+              {{ items.size }}
+            </div> 
           </div>
-          <div class="button">
-            <div class="add-to-cart">
-              Thêm vào giỏ hàng
+          <div class="wrapChooseQty">
+              <v-slider
+                v-model="qtyCus"
+                color="orange"
+                label="Số Lượng"
+                hint="Số Lượng Quá Ít"
+                min="0"
+                :max="getSize.qty"
+                thumb-label
+              ></v-slider>
+          </div>
+          <div class="wrap-date-time">
+            <div class="wrapDatePicker">
+                  <DataPicker 
+                  @date-start="dataStart"
+                  :label="labelStart"
+                  />
+                </div>
+                <div class="wrapDatePicker">
+                  <DataPicker 
+                  @date-start="dateEnd"
+                  :label="labelEnd"
+                  />
+                </div>
+          </div>
+          <div class="wrap-Button">
+            <div class="button">
+              <v-btn
+                depressed
+                color="cyan"
+                outlined
+                :disabled="disableStatusBy"
+                @click="doWantBuy"
+              >
+                Tôi Muốn Mua
+              </v-btn>
             </div>
-            <div class="buy-now">
-              Mua ngay
+            <div class="button">
+              <v-btn
+                depressed
+                color="purple"
+                :disabled="disableButtonToRent"
+                outlined
+                @click="doWantRent"
+              >
+                Tôi Muốn Thuê
+              </v-btn>
             </div>
-        </div>
+            <div class="button">
+              <v-btn
+                depressed
+                color="error"
+                :disabled="disableAddToCart"
+                @click="addToCart()"
+              >
+                Thêm vào giỏ hàng
+              </v-btn>
+            </div>
+          </div>
         </div>
       </div>
       <div class="description">
@@ -93,17 +148,35 @@
 
 <script>
 import BaseBanner from "@/components/base/Banner.vue";
-import VueSlickCarousel from "vue-slick-carousel";
 import "vue-slick-carousel/dist/vue-slick-carousel.css";
 import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+
+import Vue from 'vue'
+import "vue-toastification/dist/index.css";
+import Toast from "vue-toastification";
+
+Vue.use(Toast, {
+  transition: "Vue-Toastification__bounce",
+  maxToasts: 20,
+  newestOnTop: true,
+});
 export default {
   components: {
-    VueSlickCarousel,
     BaseBanner,
   },
   data() {
     return {
       detail: {},
+      qtyCus: '',
+      selected: Number,
+      getSize: {},
+      startDay:'',
+      endDay: '',
+      statusToRent: 0,
+      disableStatusRent: 0 ,
+      disableStatusBy:false,
+      disableAddToCart: true,
+      disableButtonToRent: false
     };
   },
   computed: {
@@ -113,9 +186,52 @@ export default {
       );
     },
   },
-  created() {
-    console.log(this.$route.params.params);
+  methods: {
+    findSizeQty(size) {
+      this.selected = size.id
+      this.getSize = size
+    },
+    addToCart() {
+      var value = {
+          id:this.getProductDetail.id,
+          name:this.getProductDetail.name,
+          price:this.getProductDetail.price,
+          // TotalPrice: this.TotalQty,
+          qtyCus: this.qtyCus,
+          img: this.getProductDetail.img,
+          size: this.getSize,
+          startDay: this.startDay,
+          endDay: this.endDay,
+          service: ''
+      }
+      if (value.size.id === undefined ) {
+        this.$toast.error(`Hãy Chọn Kích Thước Mà Quý Khách Muốn`);    
+      }
+      if (value.qtyCus === 0 ||  value.qtyCus <= 0) {
+        this.$toast.error(`Hãy Chọn Số Lượng Mà Quý Khách Muốn`);    
+      }
+      console.log(value.qtyCus);
+     
+    },
+    doWantBuy () {
+      this.disableStatusBy = true
+      this.disableButtonToRent = false
+      this.disableAddToCart = false
+    },
+    doWantRent() {
+      this.statusToRen = 1
+      this.disableStatusBy = false
+      this.disableButtonToRent = true
+      this.disableAddToCart = false
+    }
   },
+  created() {
+      if (this.getProductDetail.to_rent == 1) {
+        this.disableButtonToRent = false
+      } else {
+        this.disableButtonToRent = true
+      }
+    }
 };
 </script>
 

@@ -22,6 +22,9 @@ export default {
       this.$store.dispatch('getAllProduct'),
       this.$store.dispatch('getBannerProduct')
       this.$store.dispatch('getAllOrder')
+  },
+  created() {
+    console.log(process.env.NODE_ENV);
   }
 };
 </script>
