@@ -23,6 +23,7 @@ import Cart from '../views/Cart/index.vue'
 import UserInfor from '../views/user/index'
 import OrderInfor from '../views/user/order'
 import ToRent from '../views/ToRent/index.vue'
+import OrderDeitalCustomer from '../views/OrderDetailCus/index.vue'
 
 Vue.use(VueRouter)
 
@@ -144,6 +145,11 @@ const routes = [
     path: '/product/to-rent/:name',
     name: 'ToRent',
     component: ToRent
+  },
+  {
+    path: '/order-detail-customer',
+    name: 'order-detail-customer',
+    component: OrderDeitalCustomer
   }
 ]
 
