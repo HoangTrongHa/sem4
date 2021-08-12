@@ -72,7 +72,11 @@
               Khong co don hang
             </div>
             <div v-else class="wrapItemGroup">
-              <BuyComponents :dataBy="this.getProductItem.buy" />
+              <BuyComponents 
+              :dataBy="this.getProductItem.buy"
+              :dataStatus="getOrderDetail.statusBuy" 
+              @update-status="updateStatusBy"
+              />
             </div>
           </div>
           <hr>
@@ -86,6 +90,9 @@
                 :dataBy="this.getProductItem.thue"
                 :calcThue="calcThue"
                 :calcCoc="calcCoc"
+                :dataStatus="getOrderDetail.statusRent" 
+                @update-status="updateStatusThue"
+                @update-date-time="updateDateTime"
               />
             </div>
           </div>
@@ -152,6 +159,8 @@ export default {
       disable: Boolean,
       getStatus: "",
       loading: false,
+      statusBuy:'',
+      statusRent:''
     };
   },
   props: {
@@ -198,6 +207,8 @@ export default {
     updateCart() {
       var data = this.getOrderDetail;
       data.status = this.status;
+      data.statusBuy = this.statusBuy;
+      data.statusRent = this.statusRent;
       console.log(data);
       this.loading = true;
       Service.editOrder(data.id, data).then((response) => {
@@ -205,6 +216,18 @@ export default {
         this.loading = false;
       });
     },
+    updateStatusBy(e) {
+      this.statusBuy = e;
+      this.disable = false
+    },
+    updateStatusThue(e) {
+      this.statusRent = e;
+      this.disable = false
+    },
+    updateDateTime(e) {
+      console.log(`asdsad${e}`);
+      this.disable = false;
+    }
   },
   created() {
     this.status = this.$store.state.order.find(

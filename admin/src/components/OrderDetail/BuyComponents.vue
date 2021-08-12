@@ -1,12 +1,11 @@
 <template>
   <div>
-    <div class="status">
-      <v-select
-        :items="items"
+    <div class="status">      
+      <v-text-field
         label="Chuyển Trạng Thái"
         outlined
         v-model="status"
-      ></v-select>
+      ></v-text-field>
     </div>
     <table class="table mb-0">
       <thead>
@@ -48,14 +47,17 @@
 
 <script>
 export default {
+
   props: {
     dataBy: {
       type: Array,
       default: () => [],
     },
+    dataStatus:String
   },
   data() {
     return {
+      status: ''
     }
   },
   computed: {
@@ -67,6 +69,14 @@ export default {
       return total;
     },
   },
+  watch: {
+    status(newValue) {
+      this.$emit('update-status', newValue)
+    }
+  },
+  created() {
+    this.status =  this.dataStatus
+  }
 };
 </script>
 

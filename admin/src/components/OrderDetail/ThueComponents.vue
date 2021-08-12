@@ -1,12 +1,11 @@
 <template>
   <div>
     <div class="status">
-      <v-select
-        :items="items"
+      <v-text-field
         label="Chuyển Trạng Thái"
         outlined
         v-model="status"
-      ></v-select>
+      ></v-text-field>
     </div>
     <table class="table mb-0">
       <thead>
@@ -47,7 +46,12 @@
             {{ item.startDay }}
           </td>
           <td class="text-right">
-            {{ item.endDay }}
+            <DataPicker 
+              @date-end="dataEnd"
+              :label="labelStart"
+              :value="item.endDay"
+              outlined
+            />
           </td>         
         </tr>
       </tbody>
@@ -64,19 +68,43 @@
 </template>
 
 <script>
+import DataPicker from "../DatePicker/index.vue"
 export default {
+  components: {
+    DataPicker
+  },
   props: {
     dataBy: {
       type: Array,
       default: () => [],
     },
+    dataStatus: String,
     calcThue: Number,
     calcCoc: Number,
   },
   data() {
-    return {};
+    return {
+      status: '',
+      changeDate:''
+    };
+  },
+  methods: {
+    dataEnd(e) {
+      this.changeDate = e
+    }
   },
   computed: {},
+  watch: {
+    status(newValue) {
+      this.$emit('update-status', newValue)
+    },
+    changeDate(newValue) {
+      this.$emit('update-date-time', newValue)
+    }
+  },
+  created() {
+    this.status =  this.dataStatus
+  }
 };
 </script>
 
