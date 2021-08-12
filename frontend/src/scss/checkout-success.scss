@@ -39,10 +39,14 @@
                 }
             }
         }
+        .nameOrder{
+            font-weight: bold;
+            font-size: 20px;
+        }
         .product{
             display: flex;
             flex-flow: row wrap;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             img{
                 left: 20px;
@@ -50,6 +54,7 @@
             }
             .name{
                 font-weight: bold;
+
             }
             .qty-number{
                 font-weight: bold;
@@ -68,22 +73,12 @@
                 position: absolute;
                 right: 10px;
                 top:0px;
-            }
-        }
-        .total{
-            position: relative;
-            padding: 20px 0;
-            .total-content{
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: space-between;
-                position: absolute;
-                right: 30px;
-                top:0px;               
-            }
-            .total-price{
-                font-weight: bold;
-                font-size: 18px;
+                .subtotal{
+                    .total-price{
+                        font-weight: bold;
+                        font-size: 18px;
+                    }
+                }
             }
         }
         .right{
