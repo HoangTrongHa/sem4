@@ -1,8 +1,6 @@
 d<template>
     <div>
-        <ProductItemSuccess 
-                    :getDataOrder="getDataOrder"
-                />
+        <ProductItemSuccess/>
     </div>
 </template>
 
@@ -18,14 +16,6 @@ export default {
             dataOrder:[]
         }
     },
-    computed: {
-        getCode() {
-            return this.$route.params.code_order;
-        },
-        getDataOrder() {
-            return this.$store.state.order.filter(items => items.code_order === this.$route.params.code_order)
-        }
-    }
 }
 </script>
 

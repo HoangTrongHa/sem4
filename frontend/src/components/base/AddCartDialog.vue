@@ -18,7 +18,7 @@
                 <div class="item-size">
                   <ul class="wrap-item-size">
                     <li 
-                      v-for="size of getDataProduct.size" 
+                      v-for="size of JSON.parse(getDataProduct.size)" 
                       :key="size.id"
                       @click="findSizeQty(size)"
                       :class="{ active :selected == size.id }"

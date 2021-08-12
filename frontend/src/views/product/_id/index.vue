@@ -17,7 +17,7 @@
             <div> 
               <img :src="getProductDetail.img">
             </div>
-            <div v-for="(items,index) of getProductDetail.list_img" :key="index">
+            <div v-for="(items,index) of JSON.parse(getProductDetail.list_img)" :key="index">
                 <img :src="items.base64">
             </div>
           </VueSlickCarousel>
@@ -35,7 +35,7 @@
           </div>
           <div class="size">
             <div 
-              v-for="(items,index) of getProductDetail.size" :key="index"
+              v-for="(items,index) of JSON.parse(getProductDetail.size)" :key="index"
               :class="(selected === items.id) ? `size-item active` : `size-item`"
               @click="findSizeQty(items)"
             >
@@ -226,7 +226,6 @@ export default {
           id:this.getProductDetail.id,
           name:this.getProductDetail.name,
           price:this.getProductDetail.price,
-          // TotalPrice: this.TotalQty,
           qtyCus: this.qtyCus,
           img: this.getProductDetail.img,
           size: this.getSize,
@@ -234,12 +233,27 @@ export default {
           endDay: this.endDay,
           service: '',
       }
+      var checkCart = JSON.parse(localStorage.getItem('Cart')) || [];
       if (value.size.id === undefined ) {
         this.$toast.error(`Hãy Chọn Kích Thước Mà Quý Khách Muốn`);    
       }
       if (value.qtyCus === 0 ||  value.qtyCus <= 0) {
         this.$toast.error(`Hãy Chọn Số Lượng Mà Quý Khách Muốn`);    
       }
+      let duplicate = checkCart.find(items => items.id == value.id)
+      if ( duplicate !== undefined) {
+        let found = checkCart.filter(items => items.id !== value.id)
+        duplicate.qtyCus += this.qtyCustomer
+        localStorage.removeItem("Cart")
+        found.push(duplicate)
+        localStorage.setItem("Cart",JSON.stringify(checkCart))
+        this.$store.dispatch('updateCart',checkCart);
+      } else {
+        checkCart.push(value)
+        this.$store.dispatch('updateCart',checkCart);
+        localStorage.setItem("Cart",JSON.stringify(checkCart))
+      }
+      this.$toast.success(`Kiểm Tra Lại Trong Giỏ Hàng`);    
     },
     thue() {
       var checkCart = JSON.parse(localStorage.getItem('thue')) || [];
@@ -247,7 +261,6 @@ export default {
           id:this.getProductDetail.id,
           name:this.getProductDetail.name,
           price:this.getProductDetail.price_to_rent,
-          // TotalPrice: this.TotalQty,
           qtyCus: this.qtyCus,
           img: this.getProductDetail.img,
           size: this.getSize,
@@ -307,6 +320,9 @@ export default {
     },
   },
   created() {
+    console.log( JSON.stringify(this.getProductDetail.size));
+    console.log(JSON.stringify(this.getProductDetail.list_img));
+
       if (this.getProductDetail.to_rent == 1) {
         this.disableButtonToRent = false
       } else {

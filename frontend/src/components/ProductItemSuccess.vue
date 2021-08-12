@@ -7,29 +7,40 @@
                 </div>
                 <hr>
                 <div class="info-user">
-                    <div class="name">Tên người nhận:<span class="info-content">Nghia</span></div>
-                    <div class="name">Email:<span class="info-content">nghia@gmail.com</span></div>
-                    <div class="name">Địa chỉ nhận hàng:<span class="info-content">Ha noi</span></div>
-                    <div class="name">Phương thức thanh toán:<span class="info-content">Cod</span></div>
+                    <div class="name">Tên người nhận:<span class="info-content">{{ getDataOrder.userName }}</span></div>
+                    <div class="name">Email:<span class="info-content">{{ getDataOrder.email }}</span></div>
+                    <div class="name">Địa chỉ nhận hàng:<span class="info-content">{{ getDataOrder.city }}</span></div>
+                    <div class="name">Phương thức thanh toán:<span class="info-content">{{ getDataOrder.option }}</span></div>
                 </div>
                 <hr>
-                <div class="product">
+                Đơn Thuê
+                <div v-for="(items,index) of getDataCart.thue" :key="(index)">
+                    <div class="product">
                         <img src="http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg" alt="">
-                        <div class="name">Áo dài nam năm thân cổ đứng </div>
-                        <div class="qty">Số lượng: <div class="qty-number">1</div></div>
-                        <div class="subtotal">Tạm tính: <div class="subtotal-price">$199.00</div></div>    
+                    <div class="name">{{ items.name }} </div>
+                    <div class="qty">Số lượng: <div class="qty-number">{{ items.qtyCus }}</div></div>
+                </div>
+                <hr>
+                <div class="total">
+                    <div class="total-content">Total: <div class="total-price">$199.00</div></div>
+                </div>
+                </div>
+                Đơn Mua
+                  <div v-for="(items,index) of getDataCart.buy" :key="(index)">
+                    <div class="product">
+                        <img src="http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg" alt="">
+                    <div class="name">{{ items.name }} </div>
+                    <div class="qty">Số lượng: <div class="qty-number">{{ items.qtyCus }}</div></div>
                 </div>
                 <hr>
                 <div class="price">
                     <div class="price-content">
-                        <div class="subtotal">Tạm tính: $199.00</div>
+                        <div class="subtotal">Tạm tính: {{ calcSum }}</div>
                         <div class="ship">Phí giao hàng: 0</div>
                         <div class="discount">Giảm giá: 0</div>
                     </div>
                 </div>
                 <hr>
-                <div class="total">
-                    <div class="total-content">Total: <div class="total-price">$199.00</div></div>
                 </div>
                 <hr>
                 <div class="thank">
@@ -44,13 +55,38 @@
 
 <script>
 export default {
-    props: {
-        getDataOrder: []
+    computed: {
+        getCode() {
+            return this.$route.params.code_order;
+        },
+        getDataOrder() {
+            return this.$store.state.order.find(items => items.code_order === this.$route.params.code_order)
+        },
+        getDataCart() {
+            return JSON.parse(this.getDataOrder.item_cart)
+        },
+        calcBuy() {
+            let total = 0;
+            this.getDataCart.buy.forEach((item) => {
+                total += item.price * item.qtyCus;
+            });
+            return total;
+        },
+        calcThue() {
+        let total = 0
+        this.getDataCart.thue.forEach((item) => {
+            total += item.price * item.qtyCus
+        })
+        return total;
+        },
+        calcSum() {
+            return this.calcBuy + this.calcThue
+        },
     },
     methods: {
-        test() {
-            console.log(this.getDataOrder);
-        }
+    },
+    created() {
+        console.log(this.getDataCart);
     }
     
 }

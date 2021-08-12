@@ -33,7 +33,8 @@ export default {
   data() {
     return {
       categories: [],
-      loading: false
+      loading: false,
+      dialog: false,
     };
   },
   async created() {
