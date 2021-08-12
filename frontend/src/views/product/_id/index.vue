@@ -6,7 +6,6 @@
       </template>
     </BaseBanner>
     <v-container>
-      {{ getProductDetail }}
       <h2>Chi tiết sản phẩm</h2>
       <div class="product">
         <div class="wrapImg">
