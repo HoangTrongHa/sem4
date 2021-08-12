@@ -15,8 +15,7 @@
           <th scope="col" class="text-right">Giá Thuê</th>
           <th scope="col" class="text-right">Giá Cọc</th>
           <th scope="col" class="text-right">Ngày Thuê</th>
-          <th scope="col" class="text-right">Ngày Trả</th>
-          <th scope="col" class="text-right">Trạng thái</th>
+          <th scope="col" class="text-right endDay">Ngày Trả</th>
         </tr>
       </thead>
       <tbody>
@@ -46,13 +45,14 @@
             {{ item.startDay }}
           </td>
           <td class="text-right">
-            <DataPicker 
+            <DataPicker
+              
               @date-end="dataEnd"
               :label="labelStart"
               :value="item.endDay"
               outlined
             />
-          </td>         
+          </td>
         </tr>
       </tbody>
     </table>
@@ -68,10 +68,10 @@
 </template>
 
 <script>
-import DataPicker from "../DatePicker/index.vue"
+import DataPicker from "../DatePicker/index.vue";
 export default {
   components: {
-    DataPicker
+    DataPicker,
   },
   props: {
     dataBy: {
@@ -84,38 +84,45 @@ export default {
   },
   data() {
     return {
-      status: '',
-      changeDate:''
+      status: "",
+      changeDate: "",
     };
   },
   methods: {
     dataEnd(e) {
-      this.changeDate = e
-    }
+      this.changeDate = e;
+    },
   },
   computed: {},
   watch: {
     status(newValue) {
-      this.$emit('update-status', newValue)
+      this.$emit("update-status", newValue);
     },
     changeDate(newValue) {
-      this.$emit('update-date-time', newValue)
-    }
+      this.$emit("update-date-time", newValue);
+    },
   },
   created() {
-    this.status =  this.dataStatus
-  }
+    this.status = this.dataStatus;
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.status{
-    float: right;
-    width: 30%;
-    height: min-content;
+.status {
+  float: right;
+  width: 30%;
+  height: min-content;
 }
 .table {
   width: 100%;
+  thead{
+    tr{
+      .endDay{
+        text-align: center !important;
+      }
+    }
+  }
   tbody {
     tr {
       td {
