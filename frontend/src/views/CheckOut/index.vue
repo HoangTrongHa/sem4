@@ -395,6 +395,9 @@ export default {
                             name: "Success_COD",
                             params: { code_order: getForm.code_order}
                         })
+                        localStorage.removeItem('Cart');
+                        localStorage.removeItem('thue');
+
                     })
                     .catch((errors) => {
                         alert("Không thành công");

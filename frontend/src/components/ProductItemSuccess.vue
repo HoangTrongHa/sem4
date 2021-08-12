@@ -34,7 +34,7 @@
       <div v-for="(items, index) of getDataCart.buy" :key="index">
         <div class="product">
           <img
-            src="http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg"
+            :src="items.img"
             alt=""
           />
           <div class="name">{{ items.name }}</div>
@@ -47,9 +47,9 @@
         <span class="nameOrder">Đơn Thuê</span>
         <div v-for="(items, index) of getDataCart.thue" :key="index">
           <div class="product">
-            <img
-              src="http://yvanhien.com/wp-content/uploads/bfi_thumb/DSC1561-o6vcje8aeu7zm7cbrg8zv0lfracejlawsapdybpijw.jpg"
-              alt=""
+             <img
+                :src="items.img"
+                alt=""
             />
             <div class="name">{{ items.name }}</div>
             <div class="qty">
