@@ -84,7 +84,7 @@
               </div>
             </div>
           </div>
-            <div class="title">Danh Sách THuê</div>
+            <div class="title">Danh Sách Thuê</div>
 
             <div class="woocommerce">
             <table class="woocommerce-cart-form__contents" v-if="countThue > 0">
@@ -96,7 +96,7 @@
                   <th class="product-price">Giá Thuê</th>
                   <th class="product-price">Giá Cọc</th>
                   <th class="product-quantity">Số lượng</th>
-                  <th class="product-subtotal">Tạm tính Tiền Cọc</th>
+                  <th class="product-subtotal">Tạm tính</th>
                 </tr>
               </thead>
               <tbody>

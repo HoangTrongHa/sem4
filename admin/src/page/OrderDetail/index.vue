@@ -265,7 +265,6 @@ export default {
   .product {
     width: 65%;
     .button {
-      background: #4caf50 !important;
       color: #fff;
     }
   }

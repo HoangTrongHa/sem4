@@ -150,6 +150,35 @@
                             height: auto;
                         }
                     }
+                    .table {
+                        width: 100%;
+                        tbody {
+                          tr {
+                            td {
+                              .active-project {
+                                .h-avatar {
+                                  margin: 0 10px 0 0;
+                                  .avatar {
+                                    height: 70px;
+                                    width: 70px;
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                      .wrapTotalBy {
+                        display: flex;
+                        width: 100%;
+                        justify-content: flex-end;
+                        align-items: center;
+                        .value {
+                          font-size: 32px;
+                          font-weight: bolder;
+                          margin: 0 0 0 20px;
+                        }
+                      }
                 }
                 .wrap-footer {
                     background-color: #f5f5f5;
