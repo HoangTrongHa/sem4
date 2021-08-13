@@ -79,6 +79,6 @@
 <style lang="scss" scoped>
   .wrap-row {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
   }
 </style>

@@ -96,6 +96,7 @@
               />
             </div>
           </div>
+          <div class="total-price">Tổng giá trị đơn hàng: 00000 VNĐ</div>
           <div class="updateButton">
             <v-btn
               tile
@@ -287,6 +288,10 @@ export default {
   }
   .product {
     width: 65%;
+    .total-price{
+      font-weight: bold;
+      font-size: 30px;
+    }
     .button {
       color: #fff;
     }

@@ -103,7 +103,7 @@
                     <div class="wrap-footer">
                         <div class="wrap-title">
                             <div class="title">
-                                Tổng Giá Trị Đơn Hàng:
+                                Xem chi tiết đơn hàng
                             </div>
                             <div class="total-price">
                                 <!-- {{ items.total }}đ -->

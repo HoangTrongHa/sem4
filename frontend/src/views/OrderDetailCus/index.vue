@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid px-4">
-    <h1 class="mt-4">Chi Tiết Đơn Hàng</h1>
+    <h1 class="mt-4"  style="display:flex;justify-content:center;margin-bottom:30px ">Chi Tiết Đơn Hàng</h1>
     <v-row style="justify-content:center">
       <div class="order-detail">
         <div class="info-detail">
@@ -129,6 +129,7 @@
               <div class="status">
                 Đã hoàn thành
               </div>
+              <button type="submit" value="submit" class="status"> Yêu cầu trả hàng</button>
               <table class="table mb-0">
                 <thead>
                   <tr class="text-muted">
@@ -203,6 +204,11 @@ export default {
   padding-left: var(--bs-gutter-x, 0.75rem);
   margin-right: auto;
   margin-left: auto;
+  h1 .mt-4{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
 }
 
 .order-detail {
@@ -242,9 +248,14 @@ export default {
   .product {
     width: 65%;
     .status {
-  float: right;
-  width: 30%;
-  height: min-content;
+    float: right;
+    width: 20%;
+    height: min-content;
+    padding: 10px;
+    border: 1px solid gray;
+    background: rgb(199, 199, 199);
+    margin-left: 10px;
+    border-radius: 10px;
 }
 .table {
   width: 100%;
