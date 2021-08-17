@@ -101,6 +101,16 @@
                                     </v-btn>
                                 </div>
                             </div>
+                            <div v-if="items.status == `Đang Trong Quá Trình Thuê`" class="status button">
+                                <div class="wrap-button-user-option">
+                                    <v-btn 
+                                        :loading="loading"
+                                        color="success"
+                                        @click="returnRequest(items.id)">
+                                        Yêu Cầu Trả Hàng
+                                    </v-btn>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <NotDeliveryComponents 
