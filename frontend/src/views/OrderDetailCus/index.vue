@@ -5,22 +5,22 @@
       <div class="order-detail">
         <div class="info-detail">
           <div class="order-info">
-            <h3>Thông tin đơn hàng</h3>
+            <h3>Thông Tin Đơn Hàng</h3>
             <div class="order-detail-item">
               <div class="order-detail-item-title">ID</div>
-              <div class="data">#05504</div>
+              <div class="data">#{{ dataOrder.code_order }}</div>
             </div>
             <div class="order-detail-item">
               <div class="order-detail-item-title">Thời gian đặt hàng</div>
-              <div class="data">09:15:06, 13/8/2021</div>
+              <div class="data">{{ dataOrder.create_at }}</div>
             </div>
             <div class="order-detail-item">
               <div class="order-detail-item-title">Hình thức thanh toán</div>
-              <div class="data">COD</div>
+              <div class="data">{{ dataOrder.option }}</div>
             </div>
             <div class="order-detail-item">
               <div class="order-detail-item-title">Ghi chú của khách hàng</div>
-              <div class="data"></div>
+              <div class="data">{{ dataOrder.note }}</div>
             </div>
           </div>
           <hr />
@@ -28,24 +28,24 @@
             <h3>Thông tin khách hàng</h3>
             <div class="order-detail-item">
               <div class="order-detail-item-title">Tên người đặt hàng</div>
-              <div class="data">nghia</div>
+              <div class="data">{{ dataOrder.user_register }}</div>
             </div>
             <div class="order-detail-item">
               <div class="order-detail-item-title">Tên người nhận hàng</div>
-              <div class="data">nghia</div>
+              <div class="data">{{ dataOrder.userName }}</div>
             </div>
             <div class="order-detail-item">
               <div class="order-detail-item-title">Số điện thoại</div>
-              <div class="data">000111</div>
+              <div class="data">{{ dataOrder.phoneNumber }}</div>
             </div>
             <div class="order-detail-item">
               <div class="order-detail-item-title">Email</div>
-              <div class="data">nghia@gmail.com</div>
+              <div class="data">{{ dataOrder.email }}</div>
             </div>
             <div class="order-detail-item">
               <div class="order-detail-item-title">Địa chỉ nhận hàng</div>
               <div class="data">
-                mai dich/Văn Miếu/Cầu Giấy/Hà Nội
+                {{ dataOrder.address }}/{{ dataOrder.ward }}/{{ dataOrder.city }}/ {{ dataOrder.district }}
               </div>
             </div>
           </div>
@@ -53,20 +53,16 @@
         <div class="product">
           <div class="wrapByItem">
             <div class="title">Danh sách Đơn Hàng Mua</div>
-            <div class="wrapItemGroup" v-if="countLenghtBuy === 0">
+            <div class="wrapItemGroup" v-if="dataItemCart.buy.length == 0">
               Khong co don hang
             </div>
-            <div v-else class="wrapItemGroup">
-              <!-- <BuyComponents 
-              :dataBy="this.getProductItem.buy"
-              :dataStatus="getOrderDetail.statusBuy" 
-              @update-status="updateStatusBy"
-              /> -->
+            <div class="wrapItemGroup" v-else>
               <div>
+                {{ dataItemCart.buy }}
                 <div class="status">
                   Đang vận chuyển
                 </div>
-                <table class="table mb-0">
+                <table class="table mb-0" v-for="(items,index) of dataItemCart.buy" :key="index">
                   <thead>
                     <tr class="text-muted">
                       <th scope="col">Tên Sản Phẩm</th>
@@ -83,28 +79,28 @@
                           <div class="h-avatar is-medium">
                             <img
                               class="avatar rounded"
-                              src="http://yvanhien.com/wp-content/uploads/bfi_thumb/NDC_6825-copy-nucvyqyyutm9gdkj796acow2qcz666ncxajozpn2mw.jpg"
+                              :src="items.img"
                             />
                           </div>
                           <div class="data-content">
                             <div>
-                              <span class="font-weight-bold">Đao</span>
+                              <span class="font-weight-bold">{{ items.name }}</span>
                             </div>
                           </div>
                         </div>
                       </td>
                       <td class="text-right">
-                        3
+                        {{ items.qtyCus }}
                       </td>
                       <td class="text-right">
-                        199.00
+                        {{ items.price }}
                       </td>
                     </tr>
                   </tbody>
                 </table>
                 <div class="wrapTotalBy">
                   <div class="title">Tổng Tiền:</div>
-                  <div class="value">568000 VNĐ</div>
+                  <div class="value">{{ calcBuy }} VNĐ</div>
                 </div>
               </div>
             </div>
@@ -112,20 +108,11 @@
           <hr />
           <div class="wrapThueItem">
             <div class="title">Danh sách Đơn Hàng Thuê</div>
-            <div class="wrapItemGroup" v-if="countLenghtThue === 0">
+            <div class="wrapItemGroup" >
               Khong co don hang
             </div>
-            <!-- <div v-else class="wrapItemGroup">
-              <ThueComponents
-                :dataBy="this.getProductItem.thue"
-                :calcThue="calcThue"
-                :calcCoc="calcCoc"
-                :dataStatus="getOrderDetail.statusRent" 
-                @update-status="updateStatusThue"
-                @update-date-time="updateDateTime"
-              />
-            </div> -->
-            <div>
+            
+            <div >
               <div class="status">
                 Đã hoàn thành
               </div>
@@ -193,7 +180,44 @@
 
 <script>
 export default {
-  setup() {},
+  data() {
+    return {
+      getOrder:[]
+    }
+  },
+  computed: {
+    dataOrder() {
+      return this.$store.state.order.find(items => items.code_order === this.$route.params.code_order)
+    },
+    dataItemCart() {
+       return JSON.parse(this.getOrder.item_cart)
+    },
+    dataBuy() {
+      return this.getOrder.buy
+    },
+    dataThue() {
+      return this.getOrder.thue
+    },
+    calcBuy() {
+      let total = 0;
+      this.dataItemCart.buy.forEach((item) => {
+        total += item.price * item.qtyCus;
+      });
+      return total;
+    },
+  },
+  mounted() {
+    this.$store.dispatch('getAllOrder');
+    this.getOrder = this.$store.state.order.find(items => items.code_order === this.$route.params.code_order)
+    if (this.getOrder === undefined ) {
+      this.$router.push({name: 'OrderInfor'})
+    }
+  },
+  // created() {
+  //     window.addEventListener('beforeunload', function(event) {
+  //       console.log(event);
+  //     })
+  //   },
 };
 </script>
 

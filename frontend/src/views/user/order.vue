@@ -44,7 +44,7 @@
             <div class="wrap-infor-order">
                 <div class="wrap-order" 
                   v-for="(items,index) of getOrder" :key="index"
-                  @click="$router.push({ name: `order-detail-customer`,})"
+                  @click="$router.push({ name: `order-detail-customer`, params:{code_order: items.code_order}})"
                 >
                     <div class="wrap-title">
                         <div class="wrap-left">
@@ -59,6 +59,9 @@
                             <div v-if="items.status == `Chờ Xác Nhận`" class="status warning">
                                 {{ items.status }}
                             </div>
+                              <div v-if="items.status == `Hoàn Thành`" class="status success">
+                                {{ items.status }}
+                            </div>
                             <div v-if="items.status == `Đơn Hàng Bị Hủy`" class="status error">
                                 {{ items.status }}
                             </div>
@@ -71,8 +74,14 @@
                             <div v-if="items.status == `Không Nhận Hàng`" class="status error">
                                 {{ items.status }}
                             </div>
-                            <div v-if="items.status == `Đang Trong Quá Trình Thuê`" class="status success">
+                            <div v-if="items.status == `Không Nhận Hàng`" class="status error">
                                 {{ items.status }}
+                            </div>
+                            <div v-if="items.status == `YÊU CẦU TRẢ HÀNG`" class="status return">
+                               Yêu Cầu Trả Hàng Thành Công
+                            </div>
+                            <div v-if="items.status == `Xác Nhận Trả Hàng`" class="status return">
+                               Chúng Tôi Đang Đến Lấy
                             </div>
                             <div v-if="items.status == `Đã Tới Điểm Giao`" class="status button">
                                 <div class="wrap-button-user-option">
@@ -174,6 +183,19 @@ export default {
             }
             this.$toast.success(`Cập Nhật Thành Công`);
 
+            this.loading = false
+        },
+        returnRequest(id) {
+            this.loading = true
+            var dataOrder = this.$store.state.order.find(item => item.id === id)
+            console.log(dataOrder);
+            var dataProduct = JSON.parse(dataOrder.item_cart) 
+            console.log(dataProduct);
+                dataOrder.status = 'YÊU CẦU TRẢ HÀNG'
+                Service.editOrder(id,dataOrder).then((response) => {
+                    console.log(response.data);
+                })
+            this.$toast.success(`Cập Nhật Thành Công`);
             this.loading = false
         },
         updateStatusOrderNot(data) {

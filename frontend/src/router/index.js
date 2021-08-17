@@ -147,7 +147,7 @@ const routes = [
     component: ToRent
   },
   {
-    path: '/order-detail-customer',
+    path: '/order-detail-customer/:code_order',
     name: 'order-detail-customer',
     component: OrderDeitalCustomer
   }

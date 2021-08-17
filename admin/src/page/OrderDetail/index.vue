@@ -76,6 +76,7 @@
               :dataBy="this.getProductItem.buy"
               :dataStatus="getOrderDetail.statusBuy" 
               @update-status="updateStatusBy"
+              :calcBuy="calcBuy"
               />
             </div>
           </div>
@@ -96,7 +97,8 @@
               />
             </div>
           </div>
-          <div class="total-price">Tổng giá trị đơn hàng: 00000 VNĐ</div>
+          <div class="total-price">Tổng giá trị đơn hàng: {{ calcTotal }} VNĐ</div>
+
           <div class="updateButton">
             <v-btn
               tile
@@ -156,6 +158,18 @@ export default {
           id: 7,
           text: "Hoàn Thành",
         },
+        {
+          id: 8,
+          text: "Đang Trong Quá Trình Thuê",
+        },
+        {
+          id: 9,
+          text: "Quá Hạn Thuê",
+        },
+        {
+          id: 10,
+          text: "Xác Nhận Trả Hàng",
+        },
       ],
       disable: Boolean,
       getStatus: "",
@@ -196,13 +210,25 @@ export default {
       });
       return total;
     },
-    calcCoc() {
+    calcBuy() {
       let total = 0;
       this.getProductItem.buy.forEach((item) => {
         total += item.price * item.qtyCus;
       });
       return total;
     },
+    calcCoc() {
+      let total = 0;
+      this.getProductItem.thue.forEach((item) => {
+        total += item.deposit_price * item.qtyCus;
+      });
+      return total;
+    },
+    calcTotal() {
+      let total = 0;
+      total = this.calcCoc + this.calcBuy
+      return total
+    }
   },
   methods: {
     updateCart() {

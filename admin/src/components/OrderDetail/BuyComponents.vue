@@ -53,7 +53,9 @@ export default {
       type: Array,
       default: () => [],
     },
-    dataStatus:String
+    dataStatus:String,
+    calcBuy: Number,
+
   },
   data() {
     return {
@@ -61,13 +63,6 @@ export default {
     }
   },
   computed: {
-    calcBuy() {
-      let total = 0;
-      this.dataBy.forEach((item) => {
-        total += item.price * item.qtyCus;
-      });
-      return total;
-    },
   },
   watch: {
     status(newValue) {

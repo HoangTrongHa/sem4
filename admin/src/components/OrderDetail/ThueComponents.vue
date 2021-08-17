@@ -81,6 +81,7 @@ export default {
     dataStatus: String,
     calcThue: Number,
     calcCoc: Number,
+    
   },
   data() {
     return {
