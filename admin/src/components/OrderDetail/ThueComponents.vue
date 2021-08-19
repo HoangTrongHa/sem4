@@ -1,11 +1,13 @@
 <template>
   <div>
     <div class="status">
-      <v-text-field
+      <v-select
+        :items="items"
         label="Chuyển Trạng Thái"
         outlined
         v-model="status"
-      ></v-text-field>
+      >
+      </v-select>
     </div>
     <table class="table mb-0">
       <thead>
@@ -87,6 +89,24 @@ export default {
     return {
       status: "",
       changeDate: "",
+      items: [
+        {
+          id: 1,
+          text: "Xác Nhận Đơn Thuê",
+        },
+        {
+          id: 2,
+          text: "Giao Thành Công",
+        },
+        {
+          id: 3,
+          text: "Khách Từ CHối Nhận Hàng",
+        },
+        {
+          id: 4,
+          text: "Đơn Hàng Lỗi",
+        }
+      ],
     };
   },
   methods: {

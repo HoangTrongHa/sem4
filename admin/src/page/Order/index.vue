@@ -5,27 +5,82 @@
     </ol>
     <div class="card mb-4">
       <div class="card-header">
-        <i class="fas fa-table me-1"></i>
-        Danh Sách Đơn Hàng
-      </div>
-      <div class="card-body">
-        <ListOrder :getOrder="getOrder" />
+        <CustomProgressPagerContainer :tabs="stepsConfig">
+          <router-view />
+        </CustomProgressPagerContainer>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import CustomProgressPagerContainer from '@/components/CustomProgressPagerContainer/index.vue'
 
-import ListOrder from "@/components/Order/list"
 export default {
     components: {
-        ListOrder
+        CustomProgressPagerContainer
     },
     computed: {
-        getOrder() {
-            return this.$store.state.order
-        }
+        stepsConfig() {
+                return [
+                    {
+                        id: 1,
+                        name: "All",
+                        route: {
+                            name: "AllOrder"
+                        }
+                    },
+                    {
+                        id: 2,
+                        name: "Đơn Hàng Mới",
+                        route: {
+                            name: "WaitForConfirmation"
+                        }
+                    },
+                    {
+                        id: 3,
+                        name: "Đã Hoàn Thành",
+                        route: {
+                            name: "complete"
+                        }
+                    },
+                    {
+                        id: 4,
+                        name: "Đang Trong Quá Trình Thuê",
+                        route: {
+                            name: "InTheImplementationProcess"
+                        }
+                    },
+                    {
+                        id: 5,
+                        name: "Quá Hạn Thuê",
+                        route: {
+                            name: "OutOfDate"
+                        }
+                    },
+                    {
+                        id: 6,
+                        name: "Đơn Mua",
+                        route: {
+                            name: "OrderBuy"
+                        }
+                    },
+                    {
+                        id: 7,
+                        name: "Đơn Thuê",
+                        route: {
+                            name: "OrderThue"
+                        }
+                    },
+                    {
+                        id: 8,
+                        name: "Yêu Cầu Trả",
+                        route: {
+                            name: "getOrderRequestReturn"
+                        }
+                    },
+                ]
+            }
     }
 }
 </script>

@@ -2,7 +2,7 @@
 <v-container class="login">
     <div class="wrap-login">
     <validation-observer
-        ref="observer"
+      ref="observer"
     >
         <form @submit.prevent="submit">
         <validation-provider
