@@ -9,8 +9,8 @@
             {{ item.name }}
           </router-link>
           <div class="nav-link" @click="$router.push({ name: `Order`})">
-              <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-              Đanh Sách Đơn Hàng
+              <div class="sb-nav-link-icon"><i class="fas fa-shopping-cart"></i></div>
+              Danh Sách Đơn Hàng
           </div>
         </div>
       </div>
@@ -27,7 +27,7 @@ export default {
         {
           name : 'Dashboard',
           path : "/",
-          icon : 'fas fa-book-open',
+          icon : 'fas fa-home',
         },
         {
           name : "Category",
@@ -37,7 +37,7 @@ export default {
         {
           name : "Product",
           path : "/product",
-          icon : "fas fa-book-open"
+          icon : "fas fa-box"
         }
       ]
     }

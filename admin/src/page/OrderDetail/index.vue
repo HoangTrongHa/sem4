@@ -21,20 +21,7 @@
             <div class="order-detail-item">
               <div class="order-detail-item-title">Ghi chú của khách hàng</div>
               <div class="data">{{ getOrderDetail.note }}</div>
-            </div>
-            <div class="order-detail-item">
-                <div class="order-detail-item-title">Trạng thái đơn hàng</div>
-              <div class="status">
-                <v-select
-                  id="status"
-                  :items="items"
-                  label="Chuyển Trạng Thái"
-                  outlined
-                  v-model="status"
-                >
-                </v-select>
-              </div>
-            </div>
+            </div>          
           </div>
           <hr/>
           <div class="user-info">
@@ -61,6 +48,19 @@
                 {{ getOrderDetail.address }}/{{ getOrderDetail.ward }}/{{
                   getOrderDetail.district
                 }}/{{ getOrderDetail.city }}
+              </div>
+            </div>
+            <div class="order-detail-item">
+                <div class="order-detail-item-title">Trạng thái đơn hàng</div>
+              <div class="status">
+                <v-select
+                  id="status"
+                  :items="items"
+                  label="Chuyển Trạng Thái"
+                  outlined
+                  v-model="status"
+                >
+                </v-select>
               </div>
             </div>          
           </div>
