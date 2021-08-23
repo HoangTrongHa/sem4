@@ -10,9 +10,11 @@
           <v-card-text class="text-h5 font-weight-bold">
             <div>
               Số Lượng Đơn Hàng Hiện Có
+              
             </div>
             <div class="data">
               {{ getDataAll }}
+              <i class="far fa-chart-bar"></i>
             </div>
           </v-card-text>
         </v-card>
@@ -25,9 +27,11 @@
           <v-card-text class="text-h5 font-weight-bold">
             <div>
               Số Lượng Đơn Hàng Đã Hoàn Thành
+              
             </div>
             <div class="data">
               {{ getOrderComplete }}
+              <i class="fas fa-check"></i>
             </div>
           </v-card-text>
         </v-card>
@@ -43,6 +47,7 @@
             </div>
             <div class="data">
               {{ getOrderNew }}
+              <i class="fas fa-bell"></i>
             </div>
           </v-card-text>
         </v-card>
@@ -58,6 +63,7 @@
             </div>
             <div class="data">
               {{ getOrderInThue }}
+              <i class="fas fa-clock"></i>
             </div>
           </v-card-text>
         </v-card>
@@ -73,6 +79,7 @@
             </div>
             <div class="data">
               {{ getOrderBuy }}
+              <i class="fas fa-cart-arrow-down "></i>
             </div>
           </v-card-text>
         </v-card>
@@ -88,7 +95,9 @@
             </div>
             <div class="data">
               {{ getOrderThue }}
+              <i class="fas fa-cart-arrow-down "></i>
             </div>
+            
           </v-card-text>
         </v-card>
       </div>
@@ -103,6 +112,7 @@
             </div>
             <div class="data">
               {{ getOrderEndThue }}
+              <i class="fas fa-exclamation-triangle "></i>
             </div>
           </v-card-text>
         </v-card>
@@ -118,6 +128,7 @@
             </div>
             <div class="data">
               {{ getOrderReturn }}
+              <i class="fas fa-envelope"></i>
             </div>
           </v-card-text>
         </v-card>
@@ -215,5 +226,13 @@ export default {
 .mx-auto:hover:before{
   width: 100%;
   height: 5px;
+}
+.data{
+  display: flex;
+justify-content: space-between;
+}
+.dat__icon{
+  font-size: 100px;
+  opacity: 0.8;
 }
 </style>
