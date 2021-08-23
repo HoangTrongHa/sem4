@@ -23,7 +23,6 @@
               <div class="data">{{ getOrderDetail.note }}</div>
             </div>          
           </div>
-          <hr/>
           <div class="user-info">
             <h3>Thông tin khách hàng</h3>
             <div class="order-detail-item">
@@ -279,14 +278,24 @@ export default {
 </script>
 
 <style scoped lang="scss">
+h1{
+  text-align: center;
+  margin-bottom: 30px;
+}
 .order-detail {
   display: flex;
-  justify-content: space-between;
-
+  flex-direction: column;
   .info-detail {
-    width: 35%;
     padding: 20px;
     line-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    .order-info{
+      flex: 1;
+    }
+    .user-info{
+      flex: 1;
+    }
     .order-info,
     .user-info {
       display: flex;
@@ -298,11 +307,11 @@ export default {
         display: flex;
         justify-content: space-between;
         .order-detail-item-title {
-          width: max-content;
+          flex: 1;
           color: gray;
         }
         .data {
-          width: 60%;
+          flex: 1;
           font-weight: bold;
         }
         .status{
@@ -313,13 +322,13 @@ export default {
     }
   }
   .product {
-    width: 65%;
     .total-price{
       font-weight: bold;
       font-size: 30px;
     }
     .button {
       color: #fff;
+      margin: 30px 0;
     }
   }
 }
