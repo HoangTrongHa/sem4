@@ -13,6 +13,7 @@ import WaitForConfirmation from "@/page/Order/page/WaitForConfirmation.vue"
 import OrderBuy from "@/page/Order/page/OrderBuy.vue"
 import OrderThue from "@/page/Order/page/OrderBuy.vue"
 import getOrderRequestReturn from "@/page/Order/page/OrderRequestReturn.vue"
+import BeingTransported from "@/page/Order/page/BeingTransported.vue"
 Vue.use(Router)
 
 
@@ -79,6 +80,11 @@ export default new Router({
                     path: "/order-getOrderRequestReturn",
                     name: "getOrderRequestReturn",
                     component: getOrderRequestReturn
+                },
+                {
+                    path: "/order-getBeingTransported",
+                    name: "getBeingTransported",
+                    component: BeingTransported
                 },
             ]
         },

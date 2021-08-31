@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="status">
+    <div class="status"
+      v-show="countLenghtBuy > 0"
+    >
       <v-select
         :items="items"
         label="Chuyển Trạng Thái"
@@ -18,6 +20,7 @@
           <th scope="col" class="text-right">Giá Cọc</th>
           <th scope="col" class="text-right">Ngày Thuê</th>
           <th scope="col" class="text-right endDay">Ngày Trả</th>
+          <th scope="col" class="text-right endDay">Số Ngày Thuê</th>
         </tr>
       </thead>
       <tbody>
@@ -43,17 +46,18 @@
           <td class="text-right">
             {{ item.deposit_price }}
           </td>
-          <td class="text-right">
+          <td class="text-right" >
             {{ item.startDay }}
           </td>
           <td class="text-right">
             <DataPicker
-              
               @date-end="dataEnd"
-              :label="labelStart"
               :value="item.endDay"
-              outlined
+              :id="item.id"
             />
+          </td>
+          <td class="text-center">
+            {{ Math.floor(( new Date(item.endDay) - new Date(item.startDay)) / (1000 * 60 * 60 * 24)) }}
           </td>
         </tr>
       </tbody>
@@ -83,7 +87,7 @@ export default {
     dataStatus: String,
     calcThue: Number,
     calcCoc: Number,
-    
+    countLenghtBuy: Number
   },
   data() {
     return {
@@ -107,20 +111,31 @@ export default {
           text: "Đơn Hàng Lỗi",
         }
       ],
+      getId: null
     };
   },
   methods: {
-    dataEnd(e) {
+    dataEnd(e, id) {
       this.changeDate = e;
+      this.getId = id;
     },
+    getIdFun(id) {
+      console.log(id);
+    },
+    // calcDate(endDay, startDay) {
+    //   var date = new Date(startDay);
+    //   var dateEnd = new Date(endDay);
+    //   var currentDay = Math.round((dateEnd-date)/(1000*60*60*24));
+    //   return currentDay
+    // }
   },
-  computed: {},
   watch: {
     status(newValue) {
       this.$emit("update-status", newValue);
     },
     changeDate(newValue) {
-      this.$emit("update-date-time", newValue);
+      console.log(newValue);
+      this.$emit("update-date-time", this.changeDate, this.getId);
     },
   },
   created() {

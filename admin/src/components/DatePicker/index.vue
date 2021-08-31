@@ -20,6 +20,7 @@
             readonly
             v-bind="attrs"
             v-on="on"
+            outlined
           ></v-text-field>
         </template>
         <v-date-picker
@@ -62,12 +63,13 @@
     }),
     props: {
         label: String,
-        value: String
+        value: String,
+        id: Number
     },
     methods: {
         save() {
             this.$refs.menu.save(this.date)
-            this.$emit('date-end', this.date)
+            this.$emit('date-end', this.date, this.id)
         }
     },
     created() {
@@ -79,6 +81,6 @@
 <style lang="scss" scoped>
   .wrap-row {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
   }
 </style>

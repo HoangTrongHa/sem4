@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="status">      
+    <div class="status"
+      v-show="countLenghtBuy > 0"
+    >      
       <v-select
         :items="items"
         label="Chuyển Trạng Thái"
@@ -57,7 +59,7 @@ export default {
     },
     dataStatus:String,
     calcBuy: Number,
-
+    countLenghtBuy: Number
   },
   data() {
     return {

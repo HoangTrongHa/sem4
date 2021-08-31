@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid px-4">
-    <h1 class="mt-4">Chi Tiết Đơn Hàng</h1>
+    <h1 class="mt-4">Chi Tiết Đơn Hàng </h1>
     <v-row>
       <div class="order-detail">
         <div class="info-detail">
@@ -65,29 +65,28 @@
           </div>
         </div>
         <div class="product">
-          <div class="wrapByItem">
+          <div class="wrapByItem" v-show="countLenghtBuy > 0">
             <div class="title">Danh sách Đơn Hàng Mua</div>
-            <div class="wrapItemGroup" v-if="countLenghtBuy === 0">
-              Khong co don hang
-            </div>
-            <div v-else class="wrapItemGroup">
-              <BuyComponents 
-              :dataBy="this.getProductItem.buy"
-              :dataStatus="getOrderDetail.statusBuy" 
-              @update-status="updateStatusBy"
-              :calcBuy="calcBuy"
+            <div
+              class="wrapItemGroup">
+                <BuyComponents 
+                :countLenghtBuy="countLenghtBuy"
+                :dataBy="this.getProductItem.buy"
+                :dataStatus="getOrderDetail.statusBuy" 
+                @update-status="updateStatusBy"
+                :calcBuy="calcBuy"
               />
             </div>
           </div>
           <hr>
-          <div class="wrapThueItem">
+          <div class="wrapThueItem"                 
+            v-show="countLenghtThue > 0"
+          >
             <div class="title">Danh sách Đơn Hàng Thuê</div>
-            <div class="wrapItemGroup" v-if="countLenghtThue === 0">
-              Khong co don hang
-            </div>
-            <div v-else class="wrapItemGroup">
+            <div class="wrapItemGroup">
               <ThueComponents
                 :dataBy="this.getProductItem.thue"
+                :countLenghtBuy="countLenghtBuy"
                 :calcThue="calcThue"
                 :calcCoc="calcCoc"
                 :dataStatus="getOrderDetail.statusRent" 
@@ -96,7 +95,9 @@
               />
             </div>
           </div>
-          <div class="total-price">Tổng giá trị đơn hàng: {{ calcTotal }} VNĐ</div>
+          <div class="total-price">Tổng Số Tiền Phải Thanh Toán: {{ calcTotal }} VNĐ</div>
+          <div class="total-price" v-if="countLenghtThue > 0 && this.calcCoc > this.calcThue"> Số Tiền Phải Trả Lại Khách: {{ calcAfterThue }} VNĐ</div>
+          <div class="total-price" v-if="countLenghtThue > 0 && this.calcCoc < this.calcThue"> Số Tiền Khách Phải Trả Thêm: {{ calcAfterThue }} VNĐ</div>
 
           <div class="updateButton">
             <v-btn
@@ -193,6 +194,16 @@ export default {
         (item) => item.id === this.$route.params.params
       );
     },
+    calcAfterThue() {
+      var total = 0
+      if(this.calcCoc > this.calcThue) {
+        total =  this.calcCoc - this.calcThue
+      }
+      if(this.calcCoc < this.calcThue) {
+        total = this.calcThue - this.calcCoc
+      }
+      return total
+    },
     getProductItem() {
       return JSON.parse(this.getOrderDetail.item_cart);
     },
@@ -205,7 +216,7 @@ export default {
     calcThue() {
       let total = 0;
       this.getProductItem.thue.forEach((item) => {
-        total += item.price * item.qtyCus;
+        total += (item.price * item.qtyCus) * Math.floor(( new Date(item.endDay) - new Date(item.startDay)) / (1000 * 60 * 60 * 24));
       });
       return total;
     },
@@ -232,6 +243,7 @@ export default {
   methods: {
     updateCart() {
       var data = this.getOrderDetail;
+      data.item_cart = JSON.stringify(this.getProductItem)
       data.status = this.status;
       data.statusBuy = this.statusBuy;
       data.statusRent = this.statusRent;
@@ -241,6 +253,7 @@ export default {
         console.log(response.data);
         this.loading = false;
       });
+      this.$toast.success(`Cập Nhật Thành Công`);
     },
     updateStatusBy(e) {
       this.statusBuy = e;
@@ -250,8 +263,9 @@ export default {
       this.statusRent = e;
       this.disable = false
     },
-    updateDateTime(e) {
-      console.log(`asdsad${e}`);
+    updateDateTime(e,id) {
+      this.getProductItem.thue.find(items => items.id === id).endDay = e
+      console.log(this.getProductItem.thue);
       this.disable = false;
     }
   },

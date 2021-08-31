@@ -79,6 +79,13 @@ export default {
                             name: "getOrderRequestReturn"
                         }
                     },
+                    {
+                        id: 9,
+                        name: "Đang vận chuyển",
+                        route: {
+                            name: "getBeingTransported"
+                        }
+                    },
                 ]
             }
     }

@@ -1,14 +1,14 @@
 import axios from "axios"
 
 export const getMenu = ({ commit }) => {
-    axios.get('http://localhost:15000/menu')
+    axios.get('https://bigboss-api-sem4.herokuapp.com/api/v1/menu')
     .then(response => {
         commit('SET_MENU', response.data);
     })
 }
 
 export const getBanner = ({ commit }) => {
-    axios.get('http://localhost:15000/banner')
+    axios.get('https://bigboss-api-sem4.herokuapp.com/api/v1/banner/')
     .then(response => {
         commit('SET_BANNER', response.data);
     })
@@ -22,14 +22,14 @@ export const getCategories = ({ commit }) => {
 }
 
 export const getInforCompany = ({ commit }) => {
-    axios.get('http://localhost:15000/inforcompany')
+    axios.get('https://bigboss-api-sem4.herokuapp.com/api/v1/infor-company/')
     .then(res => {
         commit('SET_INFOR_COMPANY',res.data)
     })
 }
 
 export const getMaterial = ({ commit }) => {
-    axios.get('http://localhost:15000/material')
+    axios.get('https://bigboss-api-sem4.herokuapp.com/api/v1/material')
     .then(res => {
         commit('SET_MATERIAL',res.data)
     })
@@ -43,14 +43,14 @@ export const getAllProduct = ({ commit }) => {
 }
 
 export const getOverview = ({ commit }) => {
-    axios.get('http://localhost:15000/overview')
+    axios.get('https://bigboss-api-sem4.herokuapp.com/api/v1/overview')
     .then(res => {
         commit('SET_OVERVIEW_INFOR',res.data)
     })
 }
 
 export const getNews = ({ commit }) => {
-    axios.get('http://localhost:15000/news')
+    axios.get('https://bigboss-api-sem4.herokuapp.com/api/v1/news')
     .then(res => {
         // console.log(res.data);
         commit('SET_NEWS',res.data)
@@ -59,49 +59,49 @@ export const getNews = ({ commit }) => {
 
 
 export const getBannerProduct = ({ commit }) => {
-    axios.get('http://localhost:15000/shop-banner')
+    axios.get('https://bigboss-api-sem4.herokuapp.com/api/v1/shop-banner/')
     .then(res => {
         commit('SET_BANNER_PRODUCT',res.data)
     })
 }
 
 export const getStoreSystem = ({ commit }) => {
-    axios.get('http://localhost:15000/store_system')
+    axios.get('https://bigboss-api-sem4.herokuapp.com/api/v1/store-system')
     .then(res => {
         commit('SET_STORE_SYSTEM',res.data)
     })
 }
 
 export const getStoreContact = ({ commit }) => {
-    axios.get('http://localhost:15000/store_contact')
+    axios.get('https://bigboss-api-sem4.herokuapp.com/api/v1/store-contact')
     .then(res => {
         commit('SET_STORE_CONTACT',res.data)
     })
 }
 
 export const getCity = ({ commit }) => {
-    axios.get('http://localhost:15000/city')
+    axios.get('https://bigboss-api-sem4.herokuapp.com/api/v1/city')
     .then(res => {
         commit('SET_CITY', res.data)
     })
 }
 
 export const getDistrict = ({ commit }) => {
-    axios.get('http://localhost:15000/district')
+    axios.get('https://bigboss-api-sem4.herokuapp.com/api/v1/district')
     .then(res => {
         commit('SET_DISTRICT', res.data)
     })
 }
 
 export const getWard = ({ commit }) => {
-    axios.get('http://localhost:15000/ward')
+    axios.get('https://bigboss-api-sem4.herokuapp.com/api/v1/ward')
     .then(res => {
         commit('SET_WARD', res.data)
     })
 }
 
 export const getGallery = ({ commit }) => {
-    axios.get('http://localhost:15000/gallery-lookbook')
+    axios.get('https://bigboss-api-sem4.herokuapp.com/api/v1/gallery-lookbook')
     .then(res => {
         commit('SET_GALLARY', res.data)
     })

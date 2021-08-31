@@ -133,6 +133,22 @@
           </v-card-text>
         </v-card>
       </div>
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6 item-box">
+        <v-card class="mx-auto" color="red" dark height="150">
+          <v-card-text
+            class="text-h5 font-weight-bold"
+            @click="$router.push({ name: `getBeingTransported` })"
+          >
+            <div>
+              Đang Vận Chuyển
+            </div>
+            <div class="data">
+              {{ BeingTransported }}
+              <i class="fas fa-envelope"></i>
+            </div>
+          </v-card-text>
+        </v-card>
+      </div>
     </div>
   </div>
 </template>
@@ -184,6 +200,11 @@ export default {
     getOrderReturn() {
       return this.$store.state.order.filter(
         (items) => items.status === "YÊU CẦU TRẢ HÀNG"
+      ).length;
+    },
+    BeingTransported() {
+      return this.$store.state.order.filter(
+        (items) => items.status === "Đang vận chuyển"
       ).length;
     },
   },
