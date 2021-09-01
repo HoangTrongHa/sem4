@@ -66,7 +66,7 @@
         </div>
         <div class="product">
           <div class="wrapByItem" v-show="countLenghtBuy > 0">
-            <div class="title">Danh sách Đơn Hàng Mua</div>
+            <div class="title-order">Danh sách Đơn Hàng Mua</div>
             <div
               class="wrapItemGroup">
                 <BuyComponents 
@@ -78,11 +78,11 @@
               />
             </div>
           </div>
-          <hr>
+          <hr >
           <div class="wrapThueItem"                 
             v-show="countLenghtThue > 0"
           >
-            <div class="title">Danh sách Đơn Hàng Thuê</div>
+            <div class="title-order">Danh sách Đơn Hàng Thuê</div>
             <div class="wrapItemGroup">
               <ThueComponents
                 :dataBy="this.getProductItem.thue"
@@ -95,9 +95,9 @@
               />
             </div>
           </div>
-          <div class="total-price">Tổng Số Tiền Phải Thanh Toán: {{ calcTotal }} VNĐ</div>
-          <div class="total-price" v-if="countLenghtThue > 0 && this.calcCoc > this.calcThue"> Số Tiền Phải Trả Lại Khách: {{ calcAfterThue }} VNĐ</div>
-          <div class="total-price" v-if="countLenghtThue > 0 && this.calcCoc < this.calcThue"> Số Tiền Khách Phải Trả Thêm: {{ calcAfterThue }} VNĐ</div>
+          <div class="total-price"><span>Tổng Số Tiền Phải Thanh Toán: </span>{{ calcTotal }} VNĐ</div>
+          <div class="total-price" v-if="countLenghtThue > 0 && this.calcCoc > this.calcThue"><span>Số Tiền Phải Trả Lại Khách: </span> {{ calcAfterThue }} VNĐ</div>
+          <div class="total-price" v-if="countLenghtThue > 0 && this.calcCoc < this.calcThue"><span>Số Tiền Khách Phải Trả Thêm: </span> {{ calcAfterThue }} VNĐ</div>
 
           <div class="updateButton">
             <v-btn
@@ -336,13 +336,28 @@ h1{
     }
   }
   .product {
+    display: flex;
+    flex-direction: column;
+    .title-order{
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
     .total-price{
       font-weight: bold;
       font-size: 30px;
+      text-align:end;
+    }
+    .total-price span{
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+    .updateButton{
+text-align: end;
     }
     .button {
       color: #fff;
       margin: 30px 0;
+      
     }
   }
 }

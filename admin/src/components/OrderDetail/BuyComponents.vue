@@ -43,7 +43,7 @@
       </tbody>
     </table>
     <div class="wrapTotalBy">
-      <div class="title">Tổng Tiền:</div>
+      <div class="title">Tổng Tiền Mua:</div>
       <div class="value">{{ calcBuy }} VNĐ</div>
     </div>
   </div>

@@ -53,6 +53,22 @@
         </v-card>
       </div>
       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6 item-box">
+        <v-card class="mx-auto" color="#20c997" dark height="150">
+          <v-card-text
+            class="text-h5 font-weight-bold"
+            @click="$router.push({ name: `getBeingTransported` })"
+          >
+            <div>
+              Đang Vận Chuyển
+            </div>
+            <div class="data">
+              {{ BeingTransported }}
+              <i class="fas fa-shipping-fast"></i>
+            </div>
+          </v-card-text>
+        </v-card>
+      </div>
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6 item-box">
         <v-card class="mx-auto" color="#26c6da" dark height="150">
           <v-card-text
             class="text-h5 font-weight-bold"
@@ -133,22 +149,7 @@
           </v-card-text>
         </v-card>
       </div>
-      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6 item-box">
-        <v-card class="mx-auto" color="red" dark height="150">
-          <v-card-text
-            class="text-h5 font-weight-bold"
-            @click="$router.push({ name: `getBeingTransported` })"
-          >
-            <div>
-              Đang Vận Chuyển
-            </div>
-            <div class="data">
-              {{ BeingTransported }}
-              <i class="fas fa-envelope"></i>
-            </div>
-          </v-card-text>
-        </v-card>
-      </div>
+      
     </div>
   </div>
 </template>
