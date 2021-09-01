@@ -1,6 +1,9 @@
 @import "base";
 
-
+.container{
+    @media (min-width: 1904px) {
+        max-width: 1200px;
+      }  
 .wrapHeader {
     display: flex;
     justify-content: space-between;
@@ -25,7 +28,7 @@
             list-style: none;
             li {
                 padding: 0;
-                font-family: "Times New Roman";
+                font-family: 'Roboto',sans-serif;
                 color: #000573;
                 font-size: 14px;
                 font-weight: 700;
@@ -53,6 +56,11 @@
                 }
                 .wrap-item {
                     position: relative;
+                    .text-menu{
+                        text-transform: capitalize;
+                        font-size: 14px;
+                        font-family: 'Roboto',sans-serif;
+                    }
                     .wrap-item-category {
                         display: none;
                         position: absolute;
@@ -61,12 +69,14 @@
                         border: 1px solid #bbbb;
                         background-color: #ffff;
                         padding: 5px 10px;
+                        
                         ul {
                             width: 100%;
                             list-style: none;
                             cursor: pointer;
                             padding: 0;
                             li {
+                                text-transform: capitalize;
                                 margin: 10px 0;
                                 &:hover {
                                     border-bottom: 1px solid #bbbb;
@@ -74,6 +84,7 @@
                             }
                         }
                     }
+                   
                 }
             }
            
@@ -97,10 +108,12 @@
                 border: 1px solid #bbbb;
                 background-color: #ffff;
                 padding: 5px 10px;
+                font-family: 'Roboto',sans-serif;
                 ul {
                     padding: 0;
                     li {
                         padding: 10px 0;
+                        text-transform: capitalize;
                         .wrap-title {
                             display: flex;
                             align-items: center;
@@ -192,4 +205,6 @@
             display: block;
         }
     }
+}
+
 }

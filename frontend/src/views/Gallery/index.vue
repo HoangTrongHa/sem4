@@ -6,9 +6,7 @@
             </template>
         </BaseBanner>
         <v-container class="gallery">
-            <div class="gallery__section-title">
-                Gallery & lookbook
-            </div>
+           
             <div class="gallery__category">
                <CustomProgressPagerContainer :tabs="stepsConfig">
                   <router-view />

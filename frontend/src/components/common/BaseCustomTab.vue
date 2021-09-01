@@ -47,6 +47,9 @@ export default {
 .custom-active-class {
   color: black;
   border-bottom: 1px solid black;
+  a{
+    text-transform:capitalize;
+  }
   &::after {
     display: block;
   }

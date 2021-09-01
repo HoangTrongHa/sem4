@@ -32,6 +32,7 @@ export default {
   border-bottom: none;
   margin: 0 auto;
   justify-content: center !important;
+
   &::after {
     position: absolute;
     content: "";
@@ -47,6 +48,9 @@ export default {
 .custom-active-class {
   color: black;
   border-bottom: 1px solid black;
+  a{
+    text-transform:capitalize;
+  }
   &::after {
     display: block;
   }

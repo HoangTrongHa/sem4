@@ -1,11 +1,33 @@
 <template>
     <v-container>
-        <div class="title">
-            Thông Tin tài Khoản
-        </div>
+        
 
         <div class="wrap-form">
+        
             <div class="wrap-nav-bar">
+             <div class="wrap-avatar">
+                <div class="avatar">
+                    <img 
+                        v-if="this.img == '' || this.img == undefined || this.img == null" 
+                        src="../../assets/avatar.jpg" 
+                        @click="changeImg"
+                    >
+                    <img 
+                        v-else 
+                        :src="this.img" 
+                        alt="" 
+                        @click="changeImg"
+                    >
+                    <input
+                        ref="uploader"
+                        class="input"
+                        type="file"
+                        accept="image/*"
+                        @change="onFileChange"
+                    />
+                </div>
+             </div>
+               <div class="aside-info" style="with:100%;">
                 <ul>
                     <li
                     :class="'UserInfor' === $route.name ? 'active' :''"
@@ -37,16 +59,19 @@
                             </div>
                         </div>
                     </li>
-                </ul>
+                </ul></div>
             </div>
             <div class="infor-user">
+                      <div class="title-info" >
+                          Thông Tin tài Khoản
+                      </div>
                 <div class="wrap-input">
                 <v-text-field
                     label="Họ Tên"
                     outlined
                     v-model="username"
                 ></v-text-field>
-            </div>
+             </div>
             <div class="wrap-input">
                 <v-text-field
                     label="Email"
@@ -135,31 +160,7 @@
                     </div>
                 </div>
             </div>
-            </div>
-            <div class="wrap-avatar">
-                <div class="avatar">
-                    <img 
-                        v-if="this.img == '' || this.img == undefined || this.img == null" 
-                        src="../../assets/avatar.jpg" 
-                        @click="changeImg"
-                    >
-                    <img 
-                        v-else 
-                        :src="this.img" 
-                        alt="" 
-                        @click="changeImg"
-                    >
-                    <input
-                        ref="uploader"
-                        class="input"
-                        type="file"
-                        accept="image/*"
-                        @change="onFileChange"
-                    />
-                </div>
-            </div>
-        </div>
-        <div class="wrap-button">
+             <div class="wrap-button">
                 <v-btn
                     tile
                     class="button-to-store"
@@ -170,6 +171,11 @@
                         Cập Nhật Thông Tin
                 </v-btn>
             </div>
+            </div>
+            
+           
+        </div>
+       
     </v-container>
 </template>
 

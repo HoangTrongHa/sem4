@@ -7,7 +7,7 @@
     </BaseBanner>
     <div class="wrap-infor-company">
             <h1 class="title">
-                GIỚI THIỆU VỀ CÔNG TY CỔ PHẦN ỐI ZỜI ƠI
+                GIỚI THIỆU VỀ Ỷ VÂN THIÊN 
             </h1>
             <v-container>
                 <div class="about-content"
@@ -230,7 +230,7 @@ export default {
 }
 .title {   
     color: #000573;
-    font-family: "Times New Roman";
+    font-family: 'Roboto',sans-serif;
     text-transform: uppercase;
     font-size: 36px !important;
     font-weight: 500;
@@ -261,7 +261,7 @@ export default {
             color: #cb9965;
             font-size: 75px;
             font-weight: 700;
-            font-family: "Times New Roman";
+            font-family: 'Roboto',sans-serif;
             text-transform: uppercase;
             z-index: 2;
             position: absolute;
@@ -350,7 +350,7 @@ export default {
         padding: 70px 0 60px; 
         .vision-title {
             color: #cf9d49;
-            font-family: "Times New Roman";
+            font-family: 'Roboto',sans-serif;
             text-transform: uppercase;
             font-size: 26px;
             font-weight: 500;
@@ -374,7 +374,7 @@ export default {
     }
     .founder-name {
         color: #cf9d49;
-        font-family: "Times New Roman";
+        font-family: 'Roboto',sans-serif;
         text-transform: uppercase;
         font-size: 24px;
         font-weight: 500;
@@ -407,7 +407,7 @@ export default {
     .about-section-title {
         margin: 100px 0;
         color: #c1a167;
-        font-family: "Times New Roman";
+        font-family: 'Roboto',sans-serif;
         text-transform: uppercase;
         font-size: 36px;
         font-weight: 500;
@@ -450,7 +450,7 @@ export default {
     padding-bottom: 120px;
     .about-section-title {
         color: #000573;
-        font-family: "Times New Roman";
+        font-family: 'Roboto',sans-serif;
         text-transform: uppercase;
         font-size: 36px;
         font-weight: 500;
@@ -483,7 +483,8 @@ export default {
     display: flex;
     justify-content: flex-end;
     .slider {
-        width: 75%;
+        width: 60%;
+        margin:auto;
     }
 }
 </style>

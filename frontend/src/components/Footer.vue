@@ -11,9 +11,7 @@
                         hưng, trở lại với đời sống văn hóa hiện đại, đồng thời góp phần
                         quảng bá giới thiệu văn hóa Việt ra thế giới.
                     </div>
-                    <div class="about-social">
-                        <icon id="facebook" name="facebook-f" size="35px" />
-                    </div>
+                  
                 </div>
                 <div class="footerContact">
                     <div class="about-title">LIÊN HỆ</div>

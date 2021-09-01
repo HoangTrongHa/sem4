@@ -26,9 +26,7 @@
         </div>  
       </div>
       <br>
-      <div class="social-media">
-        <h4>Social media: </h4> <icon id="facebook" name="facebook-f" size="15px"/>
-      </div>
+      
     </div>
 </template>
 

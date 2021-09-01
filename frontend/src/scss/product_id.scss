@@ -17,7 +17,7 @@
 }
     .sidebar {
     .widget-title {
-        font-family: "Times New Roman";
+        font-family: 'Roboto',sans-serif;
         text-transform: uppercase;
         color: #003;
         font-size: 27px;
@@ -30,6 +30,7 @@
         height: 3px;
         width: 30px;
         margin: 15px 0;
+        text-transform: capitalize;
         }   
     }
     .sidebar-padder {
@@ -37,7 +38,7 @@
             color: #212121;
             font-size: 14px;
             font-weight: 700;
-            text-transform: uppercase;
+            text-transform: capitalize;
             border-bottom: 1px solid #ccc;
             display: block;
             padding-bottom: 10px;

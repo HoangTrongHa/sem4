@@ -23,7 +23,7 @@ export default {
 <style lang="scss" scoped>
     .title {   
     color: #000573;
-    font-family: "Times New Roman";
+    font-family: 'Roboto',sans-serif;
     text-transform: uppercase;
     font-size: 36px !important;
     font-weight: 500;
@@ -54,7 +54,7 @@ export default {
             color: #cb9965;
             font-size: 75px;
             font-weight: 700;
-            font-family: "Times New Roman";
+            font-family: 'Roboto',sans-serif;
             text-transform: uppercase;
             z-index: 2;
             position: absolute;

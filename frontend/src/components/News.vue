@@ -93,7 +93,7 @@ export default Vue.extend({
 
       a {
         text-decoration: none;
-        color: black;
+        color: #000573;
       }
     }
 

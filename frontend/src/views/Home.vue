@@ -51,11 +51,11 @@
           >
             <p>
               <em>
-              <span style="color: #000573; font-size: 25px;">Video giới thiệu Ỷ Vân Hiên trên sóng truyền hình VTV năm 2021
+              <span style="color: #000573; font-size: 25px;  font-family: 'Roboto',sans-serif;">Video giới thiệu Ỷ Vân Hiên trên sóng truyền hình VTV năm 2021
               </span>
               </em>
             </p>
-            <p>
+            <p style=" font-family: 'Roboto',sans-serif;">
               Trong những nỗ lực khôi phục lại những nét văn hóa cổ truyền đã bị mai một của nước nhà, Công ty cổ phần Ỷ Vân Hiên đã ra đời. Nền văn hóa cổ truyền Việt Nam bao gồm những tinh hoa cô đúc nghìn năm là điều đáng trân quý. Chúng tôi tin rằng hiểu được quá khứ mới hiểu được hiện tại và xa hơn là sẽ tìm thấy hướng đi ở tương lai.
             </p>
           </v-col>
@@ -182,6 +182,7 @@
 <style lang="scss" scoped>
   .site-inner {
     .wrap-content {
+      
       @media (min-width: 1904px) {
           max-width: 1300px;
       }
@@ -204,6 +205,7 @@
             margin: 0 0 20px;
             font-style: italic;
             font-weight: 500;
+            font-family: 'Roboto',sans-serif;
           }
           .about-content {
             color: #777;
@@ -212,6 +214,7 @@
             font-weight: 500;
             text-align: justify;
             margin-bottom: 60px;
+            font-family: 'Roboto',sans-serif;
           }
         }
         .video-description {
@@ -251,10 +254,11 @@
         font-weight: 400; 
         text-transform: uppercase;
         letter-spacing: 2px;
+         font-family: 'Roboto',sans-serif;
       }
       .product-section-title {
         color: #000572;
-        font-family: "Times New Roman";
+         font-family: 'serif';
         font-size: 38px;
         margin-bottom: 80px;
         text-align: center;
@@ -273,14 +277,15 @@
         font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 2px;
+         font-family: 'Roboto',sans-serif;
       }
       .product-section-title {
         color: #000572;
-        font-family: "Times New Roman";
         font-size: 38px;
         margin-bottom: 80px;
         text-align: center;
         text-transform: uppercase;
+         font-family: 'Roboto',sans-serif;
       }
       .sticky-products {
         width: 100%;
@@ -298,6 +303,9 @@
           justify-content: center;
           padding: 30px 0;
           border: 10px solid transparent;
+          img{
+            width:100%;
+          }
         }
         .wrap-title {
           width: 100%;
@@ -307,7 +315,7 @@
             text-transform: uppercase;
             font-weight: 700;
             color: #000573;
-            font-family: "Times New Roman";
+            font-family: 'Roboto',sans-serif;
             font-size: 14px;
           }
         }
@@ -317,8 +325,16 @@
         }
     }
     }
+    
     .news-wrapper {
-      text-align: center;
+       @media (min-width: 1904px) {
+          max-width: 1300px;
+      }
+      .wrapper{
+        text-align:center;
+      
+      }
+      margin:auto;
       margin-top: 3%;
     }
     .black-logo {
@@ -329,9 +345,16 @@
       }
     }
     .store-sys-contact{
+        @media (min-width: 1904px) {
+          max-width: 1300px;
+      }
+      .wrapper{
+        text-align:center;
+        
+      }
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      margin:auto;
 
     }
   }

@@ -15,7 +15,7 @@
                             <div
                                 :class="(item.location == '#') || (item.location == 'ToRent')  ? 'wrap-item drop-down' : 'wrap-item'"
                             >
-                                {{ item.name }}
+                                <span class ="text-menu" >{{ item.name }}</span>
                                 <span class="caret"></span>
                                 <div class="wrap-item-category">
                                     <ul>

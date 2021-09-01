@@ -33,6 +33,7 @@
 
 <style lang="scss" scoped>
 .banner {
+    width: 100%;
     position: relative;
     .wrap-slider{
         .v-window__container {

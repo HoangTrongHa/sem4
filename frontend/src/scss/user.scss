@@ -13,30 +13,36 @@
     display: flex;
     .wrap-nav-bar {
       width: 25%;
-      display: flex;
-      ul {
-        li {
-          background-color: #f8f8f8;
-          cursor: pointer;
-          .title {
-            margin: 0;
-            display: flex;
-            padding: 30px 20px;
-            align-items: center;
-            font-size: 15px;
-            div {
-              margin: 0 0 0 5px;
+      display: flex; 
+      flex-wrap: wrap;
+      .aside-info{
+        width: 100%;
+        ul {
+          li {
+            background-color: #f8f8f8;
+            cursor: pointer;
+            .title {
+              margin: 0;
+              display: flex;
+              padding: 30px 20px;
+              align-items: center;
+              font-size: 15px;
+              div {
+                margin: 0 0 0 5px;
+              }
             }
           }
-        }
-        .active {
-          background-color: #f0f0f0 !important;
-          color: #ef6c00;
+          .active {
+            background-color: #f0f0f0 !important;
+            color: #ef6c00;
+          }
         }
       }
+     
     }
     .infor-user {
-      width: 50%;
+      width: 70%;
+      margin-left: 20px;
       .wrap-input {
         width: 100%;
         .option {
@@ -59,14 +65,20 @@
           }
         }
       }
+      .title-info{
+        text-align: center;
+        font-size: 30px;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #000573;
+      }
     }
     .wrap-avatar {
-      width: 25%;
-      display: flex;
-      justify-content: center;
+      width: 100%;
+      height: auto  ;
       .avatar {
-        width: 200px;
-        height: 200px;
+        width: 100%;
         cursor: pointer;
         position: relative;
         .input {
