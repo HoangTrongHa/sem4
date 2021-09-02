@@ -163,7 +163,7 @@
 
                 .button {
                     color: #fff;
-                    background: #fa6400;
+                    background: #cf9d49;
                 }
             }
 
@@ -176,7 +176,7 @@
                 .register-link {
                     cursor: pointer;
                     margin: 0 0 0 10px;
-                    color: #fa6400;
+                    color: #cf9d49;
                 }
             }
         }

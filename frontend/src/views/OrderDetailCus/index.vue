@@ -32,7 +32,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="order-info">
                                 <h3>Thông Tin Đơn Hàng</h3>
                                 <div class="order-detail-item">
@@ -53,14 +53,14 @@
                                 </div>
                             </div>
 
-                           
+
                         </div>
-                         <hr/>
+                        <hr/>
                         <div class="product">
                             <div class="wrapByItem">
                                 <div class="title">Danh sách Đơn Hàng Mua</div>
                                 <div class="wrapItemGroup" v-if="dataItemCart.buy.length == 0">
-                                    Khong co don hang
+                                    Không có đơn hàng 
                                 </div>
                                 <div class="wrapItemGroup" v-else>
                                     <div>
@@ -72,7 +72,7 @@
                                                :key="index">
                                             <thead>
                                             <tr class="text-muted">
-                                            <th scope="col"></th>
+                                                <th scope="col"></th>
                                                 <th scope="col">Tên Sản Phẩm</th>
                                                 <th scope="col">Kích cỡ</th>
                                                 <th scope="col" class="text-right">Số Lượng</th>
@@ -81,21 +81,21 @@
                                             </thead>
                                             <tbody>
                                             <tr>
-                                            <td>
-                                            <div class="active-project d-flex align-items-center mt-0 ">
-                                                            
-                                                <div class="h-avatar is-medium">
-                                                                <img
+                                                <td>
+                                                    <div class="active-project d-flex align-items-center mt-0 ">
+
+                                                        <div class="h-avatar is-medium">
+                                                            <img
                                                                     class="avatar rounded"
                                                                     :src="items.img"
                                                             />
                                                         </div>
-                                                 </div>
-                                            </td>
+                                                    </div>
+                                                </td>
                                                 <td>
                                                     <span class="font-weight-bold" style="margin-left:auto;">{{ items.name }}</span>
-                                                         
-                                                      
+
+
                                                 </td>
                                                 <td class="text-right">
                                                     {{ items.size }}
@@ -110,7 +110,7 @@
                                             </tbody>
                                         </table>
                                         <div class="wrapTotalBy">
-                                            <div class="title">Tổng Tiền:</div>
+                                            <div class="title">Tổng tiền đơn mua:</div>
                                             <div class="value">{{ calcBuy }} VNĐ</div>
                                         </div>
                                     </div>
@@ -120,15 +120,15 @@
                             <div class="wrapThueItem">
                                 <div class="title">Danh sách Đơn Hàng Thuê</div>
                                 <div class="wrapItemGroup">
-                                    Khong co don hang
+                                    Không có đơn hàng
                                 </div>
 
-                                <div >
+                                <div>
                                     <div class="status">
                                         Đã hoàn thành
                                     </div>
-                                     <div class="status">
-                                      <button type="submit" value="submit"> Yêu cầu trả hàng</button>
+                                    <div class="status">
+                                        <button type="submit" value="submit"> Yêu cầu trả hàng</button>
                                     </div>
                                     <table class="table mb-0">
                                         <thead>
@@ -146,22 +146,22 @@
                                         <tbody>
                                         <tr>
                                             <td>
-                                            <div
+                                                <div
                                                         class="active-project d-flex align-items-center mt-0 "
                                                 >
                                                     <div class="h-avatar is-medium">
                                                         <img class="avatar rounded"
                                                              src="http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_0860-o4wa4vb9jhsv3ofcvqrpqe50uf8p7w8398gkqhv7rs.jpg"/>
                                                     </div>
-                                                   
+
                                                 </div>
                                             </td>
                                             <td>
-                                              
+
                                                 <span class="font-weight-bold">Áo ngũ thân nữ lụa loan thọ Vạn Phúc</span>
-                                                       
+
                                             </td>
-                                             <td class="text-right">
+                                            <td class="text-right">
                                                 sx
                                             </td>
                                             <td class="text-right">
@@ -183,11 +183,11 @@
                                         </tbody>
                                     </table>
                                     <div class="wrapTotalBy">
-                                        <div class="title">Tổng Tiền Cọc:</div>
+                                        <div class="title">Tổng tiền cọc:</div>
                                         <div class="value">568000 VNĐ</div>
                                     </div>
                                     <div class="wrapTotalBy">
-                                        <div class="title">Tổng Tiền Thuê:</div>
+                                        <div class="title">Tổng tiền đơn thuê:</div>
                                         <div class="value">1062000 VNĐ</div>
                                     </div>
                                 </div>
@@ -248,13 +248,13 @@
 <style lang="scss" scoped>
     .body-container {
         width: 100%;
-        padding-bottom:50px;
+        padding-bottom: 50px;
         background: #f8f8f8;
 
         .container {
             box-shadow: 0 3px 2px rgb(0 0 0 / 10%);
             background: #fefefe;
-            padding-bottom:40px;
+            padding-bottom: 40px;
             @media (min-width: 1904px) {
                 max-width: 1200px;
             }
@@ -333,7 +333,7 @@
                         background: #ddd;
                         text-align: center;
                         border-radius: 10px;
-                       margin-left:10px;
+                        margin-left: 10px;
                     }
 
                     .table {
@@ -350,7 +350,7 @@
                         tbody {
                             tr {
                                 td {
-                                     
+
                                     .active-project {
                                         .h-avatar {
                                             margin: 0 10px 0 0;
@@ -361,7 +361,7 @@
                                             }
                                         }
                                     }
-                                   
+
                                 }
                             }
                         }
@@ -377,6 +377,7 @@
                             font-size: 32px;
                             font-weight: bolder;
                             margin: 0 0 0 20px;
+                            color: #d0221d;
                         }
                     }
 

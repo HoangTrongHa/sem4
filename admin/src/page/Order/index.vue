@@ -1,27 +1,27 @@
 <template>
     <div class="container-fluid px-4">
-    <h1 class="mt-4">Danh Sách Đơn Hàng</h1>
-    <ol class="breadcrumb mb-4">
-    </ol>
-    <div class="card mb-4">
-      <div class="card-header">
-        <CustomProgressPagerContainer :tabs="stepsConfig">
-          <router-view />
-        </CustomProgressPagerContainer>
-      </div>
+        <h1 class="mt-4">Danh Sách Đơn Hàng</h1>
+        <ol class="breadcrumb mb-4">
+        </ol>
+        <div class="card mb-4">
+            <div class="card-header">
+                <CustomProgressPagerContainer :tabs="stepsConfig">
+                    <router-view/>
+                </CustomProgressPagerContainer>
+            </div>
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
-import CustomProgressPagerContainer from '@/components/CustomProgressPagerContainer/index.vue'
+    import CustomProgressPagerContainer from '@/components/CustomProgressPagerContainer/index.vue'
 
-export default {
-    components: {
-        CustomProgressPagerContainer
-    },
-    computed: {
-        stepsConfig() {
+    export default {
+        components: {
+            CustomProgressPagerContainer
+        },
+        computed: {
+            stepsConfig() {
                 return [
                     {
                         id: 1,
@@ -88,8 +88,8 @@ export default {
                     },
                 ]
             }
+        }
     }
-}
 </script>
 
 <style scoped lang="scss">
