@@ -1,34 +1,38 @@
 @import "base";
 
 .gallery {
-    @media (min-width: 1904px){
-        max-width: 1200px;
-    }   
-    &__section-title {
-        color: #cf9d49;
-        font-family: "Roboto";
-        text-transform: uppercase;
-        font-size: 24px;
-        font-weight: 500;
-        text-align: center;
-        margin: 70px 0 30px;
-    }
-    &__category {
-        .list {
-            padding: 0;
-            list-style: none;
-            margin: 0;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            .item {
-                margin: 0 20px;
-                height: 40px;
-                cursor: pointer;
-                &::hover {
-                    border-bottom: 3px solid #323d5f;
-                }
-            }
+  @media (min-width: 1904px) {
+    max-width: 1200px;
+  }
+
+  &__section-title {
+    color: #cf9d49;
+    font-family: "Roboto";
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin: 70px 0 30px;
+  }
+
+  &__category {
+    .list {
+      padding: 0;
+      list-style: none;
+      margin: 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+
+      .item {
+        margin: 0 20px;
+        height: 40px;
+        cursor: pointer;
+
+        &::hover {
+          border-bottom: 3px solid #323d5f;
         }
+      }
     }
+  }
 }

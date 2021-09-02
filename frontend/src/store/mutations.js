@@ -6,7 +6,7 @@ export const SET_BANNER = (state, item) => {
     state.banner = item;
 }
 
-export const SET_HOT_PRODUCT = (state,item) => {
+export const SET_HOT_PRODUCT = (state, item) => {
     state.product_hot = item
 }
 
@@ -42,15 +42,15 @@ export const SET_BANNER_PRODUCT = (state, item) => {
 }
 
 export const ADD_TO_CART = (state, item) => {
-    state.cart.push({ item })
+    state.cart.push({item})
 }
 
-export const SET_STORE_SYSTEM = (state,  item) => {
+export const SET_STORE_SYSTEM = (state, item) => {
     state.store_system = item
 }
 
 
-export const SET_STORE_CONTACT = (state,  item) => {
+export const SET_STORE_CONTACT = (state, item) => {
     state.store_contact = item
 }
 

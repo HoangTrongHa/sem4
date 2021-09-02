@@ -1,6 +1,6 @@
 <template>
-  <div class="full">
-    <v-container>
+    <div class="full">
+        <v-container>
             <div class="wrapFooter">
                 <div class="footerAbout">
                     <div class="about-title">CỔ PHỤC VIỆT NAM</div>
@@ -11,12 +11,12 @@
                         hưng, trở lại với đời sống văn hóa hiện đại, đồng thời góp phần
                         quảng bá giới thiệu văn hóa Việt ra thế giới.
                     </div>
-                  
+
                 </div>
                 <div class="footerContact">
                     <div class="about-title">LIÊN HỆ</div>
                     <div class="about-desc">
-                        Phone: 082.9093.933<br/> 
+                        Phone: 082.9093.933<br/>
                         Address: Office: số nhà 05 ngách 293/4 Tam
                         Trinh, Hoàng Mai, Hà Nội.<br/>
                         Email: cophucvietnam@gmail.com
@@ -33,8 +33,8 @@
                     </div>
                 </div>
             </div>
-    </v-container>
-  </div>
+        </v-container>
+    </div>
 </template>
 
 <style lang="scss" scoped>

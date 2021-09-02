@@ -1,31 +1,31 @@
 <template>
     <div>
         <v-container>
-            <div class="wrapHeader"> 
+            <div class="wrapHeader">
                 <div class="wrapImg">
                     <img src="../assets/logo.png" alt="">
                 </div>
                 <div class="wrapNav">
                     <ul class="wrapUrl">
                         <li
-                            :class="item.location === $route.name ? 'wrapUrl wrapUrlActive' : 'wrapUrl'"
-                            v-for="item of menuList" :key="item.id"
-                            @click="item.name == `Sản Phẩm` ? `#` : $router.push({ name: item.location })"
+                                :class="item.location === $route.name ? 'wrapUrl wrapUrlActive' : 'wrapUrl'"
+                                v-for="item of menuList" :key="item.id"
+                                @click="item.name == `Sản Phẩm` ? `#` : $router.push({ name: item.location })"
                         >
                             <div
-                                :class="(item.location == '#') || (item.location == 'ToRent')  ? 'wrap-item drop-down' : 'wrap-item'"
+                                    :class="(item.location == '#') || (item.location == 'ToRent')  ? 'wrap-item drop-down' : 'wrap-item'"
                             >
-                                <span class ="text-menu" >{{ item.name }}</span>
+                                <span class="text-menu">{{ item.name }}</span>
                                 <span class="caret"></span>
                                 <div class="wrap-item-category">
                                     <ul>
                                         <li
-                                        @click="$router.push({ 
+                                                @click="$router.push({
                                             name: `ProductByCateId`,
                                             params: { name: itemCat.name, items:itemCat}
                                         })"
-                                        v-for="itemCat of categoriesList" :key="itemCat.id"
-                                        :getCategories="categoriesList.categoriesList"
+                                                v-for="itemCat of categoriesList" :key="itemCat.id"
+                                                :getCategories="categoriesList.categoriesList"
                                         >
                                             {{ itemCat.name }}
                                         </li>
@@ -49,25 +49,25 @@
                                     <li>
                                         <div class="wrap-title">
                                             <icon class="map-user-tie" name="user-tie" size="20px"/>
-                                             <div @click="$router.push({
+                                            <div @click="$router.push({
                                                  name:`UserInfor`
                                              })">
                                                 Thông Tin Cá Nhân
 
-                                             </div>
+                                            </div>
                                         </div>
-                                       
+
                                     </li>
                                     <li>
                                         <div class="wrap-title">
                                             <icon class="map-list-alt" name="list-alt" size="20px"/>
                                             <div @click="$router.push({
                                                  name:`OrderInfor`
-                                             })">                                           
+                                             })">
                                                 Danh Sách Đơn Hàng
                                             </div>
                                         </div>
-                                        
+
                                     </li>
                                     <li @click="logout">
                                         <div class="wrap-title">
@@ -76,67 +76,67 @@
                                             <div>
                                                 Thoát
                                             </div>
-                                           
+
                                         </div>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li 
-                            class="shoppingCat" 
-                            @click="$router.push({name: `Cart`})"
-                            v-if="countCart > 0"
+                        <li
+                                class="shoppingCat"
+                                @click="$router.push({name: `Cart`})"
+                                v-if="countCart > 0"
                         >
                             <v-badge
-                                :content="countCart"
-                                color="error"
+                                    :content="countCart"
+                                    color="error"
                             >
-                            <icon class="map-shopping-cart" name="shopping-cart" size="20px" 
-                                
-                            />
+                                <icon class="map-shopping-cart" name="shopping-cart" size="20px"
+
+                                />
                             </v-badge>
                             <div class="wrap-hover-cart">
-                             
-                            <v-card
-                                class="mx-auto"
-                                max-width="400"
-                            >
-                                <div class="title-cart"
+
+                                <v-card
+                                        class="mx-auto"
+                                        max-width="400"
                                 >
-                                    <div class="title">
-                                        {{ countCart }} Sản Phẩm
-                                    </div>
-                                    <div class="checkOut" 
-                                    @click="$router.push({name: `Cart`})"
+                                    <div class="title-cart"
                                     >
-                                        Xem Tất Cả
-                                    </div>
-                                </div>
-                                <div 
-                                class="wrapItem" 
-                                v-for="items of cart" :key="items.id">
-                                    <div class="wrapImg">
-                                        <img :src="items.img" >
-                                    </div>
-                                    <div class="wrapContent">
-                                        <div class="name">
-                                            {{ items.name }}
+                                        <div class="title">
+                                            {{ countCart }} Sản Phẩm
                                         </div>
-                                         <div class="price">
-                                            {{ items.price }}đ
-                                        </div>
-                                        <div class="size"
-                                        
+                                        <div class="checkOut"
+                                             @click="$router.push({name: `Cart`})"
                                         >
-                                           Kích Thước: {{ items.size.size }}
-                                        </div>
-                                        <div class="size">
-                                           Số Lượng: {{ items.qtyCus }}
+                                            Xem Tất Cả
                                         </div>
                                     </div>
-                                </div>
-                            </v-card>
-                        </div>
+                                    <div
+                                            class="wrapItem"
+                                            v-for="items of cart" :key="items.id">
+                                        <div class="wrapImg">
+                                            <img :src="items.img">
+                                        </div>
+                                        <div class="wrapContent">
+                                            <div class="name">
+                                                {{ items.name }}
+                                            </div>
+                                            <div class="price">
+                                                {{ items.price }}đ
+                                            </div>
+                                            <div class="size"
+
+                                            >
+                                                Kích Thước: {{ items.size.size }}
+                                            </div>
+                                            <div class="size">
+                                                Số Lượng: {{ items.qtyCus }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </v-card>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -147,12 +147,12 @@
 
 <script>
     export default {
-        data () {
-        return {
-          isShow: false,
-          token: ''
-        }
-      },
+        data() {
+            return {
+                isShow: false,
+                token: ''
+            }
+        },
         computed: {
             menuList() {
                 return this.$store.state.menu
@@ -164,10 +164,10 @@
                 return JSON.parse(localStorage.getItem('Cart')) || [];
             },
             countBuy() {
-                return this.$store.state.cart.length 
+                return this.$store.state.cart.length
             },
             countThue() {
-                return this.$store.state.thue.length 
+                return this.$store.state.thue.length
             },
             countCart() {
                 return this.countBuy + this.countThue

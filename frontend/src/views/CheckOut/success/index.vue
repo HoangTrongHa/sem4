@@ -5,18 +5,18 @@
 </template>
 
 <script>
-import ProductItemSuccess from '@/components/ProductItemSuccess.vue'
+    import ProductItemSuccess from '@/components/ProductItemSuccess.vue'
 
-export default {
-    components: {
-        ProductItemSuccess
-    },
-    data () {
-        return {
-            dataOrder:[]
-        }
-    },
-}
+    export default {
+        components: {
+            ProductItemSuccess
+        },
+        data() {
+            return {
+                dataOrder: []
+            }
+        },
+    }
 </script>
 
 

@@ -28,135 +28,135 @@ import OrderDeitalCustomer from '../views/OrderDetailCus/index.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/gioi-thieu/',
-    name: 'Infor',
-    component: Infor
-  },
-  {
-    path: '/danh-muc/:name',
-    name: 'ProductByCateId',
-    component: ProductByCateId
-  },
-  {
-    path: '/san-pham/:params',
-    name: 'ProductDetail',
-    component: ProductDetail
-  },
-  {
-    path: '/check-out/',
-    name: 'CheckOut',
-    component: CheckOut
-  },
-  {
-    path: '/order-list/',
-    name: 'Cart',
-    component: Cart
-  },
-  {
-    path: '/account/login',
-    name: 'Login',
-    component: Login
-  },
-  {
-    path: '/account/register',
-    name: 'Register',
-    component: Register
-  },
-  {
-    path: '/gallery-lookbook/',
-    name: 'GALLERY&LOOKBOOK',
-    component: Gallery,
-    redirect: { name: "All" },
-    children: [
-      {
-        path: "/gallery-lookbook/all",
-        name: "All",
-        component: GalleryAll
-      },
-      {
-        path: "/gallery-lookbook/ao-dai",
-        name: "Dress",
-        component: Dress
-      },
-      {
-        path: "/gallery-lookbook/goi-xep-co",
-        name: "NeckPillow",
-        component: NeckPillow
-      },
-      {
-        path: "/gallery-lookbook/nhat-dung",
-        name: "Japan",
-        component: Japan
-      },
-      {
-        path: "/gallery-lookbook/phu-kien",
-        name: "Accessory",
-        component: Accessory
-      },
-      {
-        path: "/gallery-lookbook/su-kien",
-        name: "Event",
-        component: Event
-      },
-      {
-        path: "/gallery-lookbook/trang-phuc-co",
-        name: "AntiqueCostume",
-        component: AntiqueCostume
-      },
-      {
-        path: "/gallery-lookbook/trien-lam",
-        name: "Exhibition",
-        component: Exhibition
-      }
-    ]
-  },
-  {
-    path: '/lien-he',
-    name: 'Contact',
-    component: Contact
-  },
-  {
-    path: '/huong-dan',
-    name: 'Tutorial',
-    component: Tutorial
-  },
-  {
-    path: '/checkout/success/:code_order',
-    name: 'Success_COD',
-    component: Success_COD
-  },
-  {
-    path: '/account/infor',
-    name: 'UserInfor',
-    component: UserInfor
-  },
-  {
-    path: '/account/order',
-    name: 'OrderInfor',
-    component: OrderInfor
-  },
-  {
-    path: '/product/to-rent/:name',
-    name: 'ToRent',
-    component: ToRent
-  },
-  {
-    path: '/order-detail-customer/:code_order',
-    name: 'order-detail-customer',
-    component: OrderDeitalCustomer
-  }
+    {
+        path: '/',
+        name: 'Home',
+        component: Home
+    },
+    {
+        path: '/gioi-thieu/',
+        name: 'Infor',
+        component: Infor
+    },
+    {
+        path: '/danh-muc/:name',
+        name: 'ProductByCateId',
+        component: ProductByCateId
+    },
+    {
+        path: '/san-pham/:params',
+        name: 'ProductDetail',
+        component: ProductDetail
+    },
+    {
+        path: '/check-out/',
+        name: 'CheckOut',
+        component: CheckOut
+    },
+    {
+        path: '/order-list/',
+        name: 'Cart',
+        component: Cart
+    },
+    {
+        path: '/account/login',
+        name: 'Login',
+        component: Login
+    },
+    {
+        path: '/account/register',
+        name: 'Register',
+        component: Register
+    },
+    {
+        path: '/gallery-lookbook/',
+        name: 'GALLERY&LOOKBOOK',
+        component: Gallery,
+        redirect: {name: "All"},
+        children: [
+            {
+                path: "/gallery-lookbook/all",
+                name: "All",
+                component: GalleryAll
+            },
+            {
+                path: "/gallery-lookbook/ao-dai",
+                name: "Dress",
+                component: Dress
+            },
+            {
+                path: "/gallery-lookbook/goi-xep-co",
+                name: "NeckPillow",
+                component: NeckPillow
+            },
+            {
+                path: "/gallery-lookbook/nhat-dung",
+                name: "Japan",
+                component: Japan
+            },
+            {
+                path: "/gallery-lookbook/phu-kien",
+                name: "Accessory",
+                component: Accessory
+            },
+            {
+                path: "/gallery-lookbook/su-kien",
+                name: "Event",
+                component: Event
+            },
+            {
+                path: "/gallery-lookbook/trang-phuc-co",
+                name: "AntiqueCostume",
+                component: AntiqueCostume
+            },
+            {
+                path: "/gallery-lookbook/trien-lam",
+                name: "Exhibition",
+                component: Exhibition
+            }
+        ]
+    },
+    {
+        path: '/lien-he',
+        name: 'Contact',
+        component: Contact
+    },
+    {
+        path: '/huong-dan',
+        name: 'Tutorial',
+        component: Tutorial
+    },
+    {
+        path: '/checkout/success/:code_order',
+        name: 'Success_COD',
+        component: Success_COD
+    },
+    {
+        path: '/account/infor',
+        name: 'UserInfor',
+        component: UserInfor
+    },
+    {
+        path: '/account/order',
+        name: 'OrderInfor',
+        component: OrderInfor
+    },
+    {
+        path: '/product/to-rent/:name',
+        name: 'ToRent',
+        component: ToRent
+    },
+    {
+        path: '/order-detail-customer/:code_order',
+        name: 'order-detail-customer',
+        component: OrderDeitalCustomer
+    }
 ]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes
 })
 
 export default router

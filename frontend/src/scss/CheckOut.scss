@@ -1,131 +1,154 @@
 @import "base";
+
 .check-out {
-    .wrap-check-out {
+  .wrap-check-out {
+    width: 100%;
+    display: flex;
+    background: #f8f8f8;
+    padding: 50px 0 50px 50px;
+
+    .checkout__main {
+      width: 60%;
+      padding: 60px;
+      background: #fff;
+
+      .title {
+        margin: 0;
+        font-size: 30px;
+        line-height: 1.4;
+        margin-bottom: 22px;
+      }
+
+      .form-group {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .wrap-input {
+          width: 49%;
+        }
+      }
+
+      .form-field {
         width: 100%;
         display: flex;
-        background: #f8f8f8;
-        padding: 50px 0 50px 50px;
-        .checkout__main {
-            width: 60%;
-            padding: 60px;
-            background: #fff;
-            .title {
-                margin: 0;
-                font-size: 30px;
-                line-height: 1.4;
-                margin-bottom: 22px;
-            }
-            .form-group {
-                display: flex;
-                width: 100%;
-                justify-content: space-between;
-                .wrap-input {
-                    width: 49%;
-                }
-            }
-            .form-field {
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                .wrap-item {
-                    width: 32%;
-                }
-            }
-            .full-width {
-                .wrap-item-select {
-                    width: 100%;
-                    background: #f8f8f8;
-                    display: flex;
-                    align-content: center;
-                    align-items: center;
-                    padding: 20px;
-                    .payment-method__icon {
-                        padding: 0px 24px;  
-                    }
-                }
-            }
-        }
-        .checkout__sidebar {
-            width: 40%;
-            background: #f8f8f8;
-            .checkout__cart {
-                background: #fff;
-                padding: 46px 30px;
-                border-radius: 5px;
-                text-align: center;
-                font-size: 35px;
-                margin: 0 auto;
-                width: 80%;
-                .wrap-cart {
-                    max-height: 550px;
-                    overflow-y: auto; 
-                     .wrapItem {
-                    width: 100%;
-                    padding: 20px 0;
-                    display: flex;
-                    border-bottom: 1px solid #aaaaaa;
-                    .wrapImg{
-                        width: 35%;
-                        img {
-                            width: 50%;
-                        }
-                    }
-                    .wrapContent {
-                        width: 70%;
-                        text-align: left;
-                        .name {
-                            color: #231f20;
-                            font-size: 15px !important;
-                            cursor: pointer;
-                            padding: 10px 0;
-                            
-                        }
-                        .price {
-                            color: black;
-                            font-size: 23px !important;
-                            cursor: pointer;
-                            font-weight: bolder;
-                            padding: 10px 0;
+        justify-content: space-between;
 
-                        }
-                        .size {
-                            color: black;
-                            font-size: 15px !important;
-                            cursor: pointer;
-                            font-weight: bolder;
-                            
-                        }
-                    }
-                }
-                }
-            }
-            .total-price {
-                margin: 50px auto;
-                .full-width {
-                    .wrap-infor-total {
-                        width: 100%;
-                        display: flex;
-                        justify-content: space-between;
-                        font-size: 16px;
-                        background: #f8f8f8;
-                        color: #757575;
-                        padding: 10px 20px;
-                        .total-price-bank {
-                            color: #fa6400;
-                            font-weight: bold;
-                            font-size: 20px;
-                        }
-                    }
-                }
-            }
+        .wrap-item {
+          width: 32%;
         }
+      }
+
+      .full-width {
+        .wrap-item-select {
+          width: 100%;
+          background: #f8f8f8;
+          display: flex;
+          align-content: center;
+          align-items: center;
+          padding: 20px;
+
+          .payment-method__icon {
+            padding: 0px 24px;
+          }
+        }
+      }
     }
+
+    .checkout__sidebar {
+      width: 40%;
+      background: #f8f8f8;
+
+      .checkout__cart {
+        background: #fff;
+        padding: 46px 30px;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 35px;
+        margin: 0 auto;
+        width: 80%;
+
+        .wrap-cart {
+          max-height: 550px;
+          overflow-y: auto;
+
+          .wrapItem {
+            width: 100%;
+            padding: 20px 0;
+            display: flex;
+            border-bottom: 1px solid #aaaaaa;
+
+            .wrapImg {
+              width: 35%;
+
+              img {
+                width: 50%;
+              }
+            }
+
+            .wrapContent {
+              width: 70%;
+              text-align: left;
+
+              .name {
+                color: #231f20;
+                font-size: 15px !important;
+                cursor: pointer;
+                padding: 10px 0;
+
+              }
+
+              .price {
+                color: black;
+                font-size: 23px !important;
+                cursor: pointer;
+                font-weight: bolder;
+                padding: 10px 0;
+
+              }
+
+              .size {
+                color: black;
+                font-size: 15px !important;
+                cursor: pointer;
+                font-weight: bolder;
+
+              }
+            }
+          }
+        }
+      }
+
+      .total-price {
+        margin: 50px auto;
+
+        .full-width {
+          .wrap-infor-total {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+            background: #f8f8f8;
+            color: #757575;
+            padding: 10px 20px;
+
+            .total-price-bank {
+              color: #fa6400;
+              font-weight: bold;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
+
 ::v-deep {
-    .button-submit {
-        width: 100%;
-        display: block;
-        background-color: #fa6400 !important;
-        color: #fff;
-    }
+  .button-submit {
+    width: 100%;
+    display: block;
+    background-color: #fa6400 !important;
+    color: #fff;
+  }
 }
