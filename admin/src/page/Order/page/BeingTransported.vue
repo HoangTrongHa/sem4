@@ -17,7 +17,7 @@
 
             },
             getOrder() {
-                return this.$store.state.order.filter(items => items.status === "Đang vận chuyển")
+                return this.$store.state.order.filter(items => items.status === "Đang Vận Chuyển")
             }
         }
     }
