@@ -46,8 +46,7 @@
             <div class="title">Tổng tiền đơn mua :</div>
             <div class="value">{{ calcBuy }} VNĐ</div>
         </div>
-    </div>
-    <table class="table mb-0">
+         <table class="table mb-0">
       <thead>
         <tr class="text-muted">
           <th scope="col">Tên Sản Phẩm</th>

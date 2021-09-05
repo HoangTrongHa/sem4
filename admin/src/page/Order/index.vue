@@ -86,6 +86,20 @@
                             name: "getBeingTransported"
                         }
                     },
+                    {
+                        id: 10,
+                        name: "Không Nhận Hàng",
+                        route: {
+                            name: "noDeliveryPages"
+                        }
+                    },
+                    {
+                        id: 11,
+                        name: "Đơn Hàng Bị Hủy",
+                        route: {
+                            name: "CanceledOrderPage"
+                        }
+                    },
                 ]
             }
         }

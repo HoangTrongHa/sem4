@@ -58,6 +58,7 @@
                   label="Chuyển Trạng Thái"
                   outlined
                   v-model="status"
+                  :disabled="disableOptionStatus"
                 >
                 </v-select>
               </div>
@@ -102,11 +103,11 @@
           <div class="updateButton">
             <v-btn
               tile
-              :disabled="disable"
               color="success"
               class="button"
               @click="updateCart"
               :loading="loading"
+              :disabled="disableOptionStatus"
             >
               <v-icon left>
                 mdi-pencil
@@ -203,6 +204,13 @@ export default {
         total = this.calcThue - this.calcCoc
       }
       return total
+    },
+    disableOptionStatus() {
+        if (this.status === "Hoàn Thành" || this.status === "Đơn Hàng Bị Hủy") {
+            return true
+        } else {
+            return false
+        }
     },
     getProductItem() {
       return JSON.parse(this.getOrderDetail.item_cart);

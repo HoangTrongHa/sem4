@@ -149,7 +149,22 @@
           </v-card-text>
         </v-card>
       </div>
-      
+       <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6 item-box">
+        <v-card class="mx-auto" color="red" dark height="150">
+          <v-card-text
+            class="text-h5 font-weight-bold"
+            @click="$router.push({ name: `CanceledOrderPage` })"
+          >
+            <div>
+              Số Lượng Đơn Bị Hủy
+            </div>
+            <div class="data">
+              {{ Cancel }}
+              <i class="fas fa-envelope"></i>
+            </div>
+          </v-card-text>
+        </v-card>
+      </div>
     </div>
   </div>
 </template>
@@ -206,6 +221,11 @@ export default {
     BeingTransported() {
       return this.$store.state.order.filter(
         (items) => items.status === "Đang vận chuyển"
+      ).length;
+    },
+    Cancel() {
+      return this.$store.state.order.filter(
+        (items) => items.status === "Đơn Hàng Bị Hủy"
       ).length;
     },
   },

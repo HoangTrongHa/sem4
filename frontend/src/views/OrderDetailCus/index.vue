@@ -52,8 +52,6 @@
                                     <div class="data">{{ dataOrder.note }}</div>
                                 </div>
                             </div>
-
-
                         </div>
                         <hr/>
                         <div class="product">
@@ -64,10 +62,6 @@
                                 </div>
                                 <div class="wrapItemGroup" v-else>
                                     <div>
-                                        {{ dataItemCart.buy }}
-                                        <div class="status">
-                                            Đang vận chuyển
-                                        </div>
                                         <table class="table mb-0" v-for="(items,index) of dataItemCart.buy"
                                                :key="index">
                                             <thead>
@@ -94,8 +88,6 @@
                                                 </td>
                                                 <td>
                                                     <span class="font-weight-bold" style="margin-left:auto;">{{ items.name }}</span>
-
-
                                                 </td>
                                                 <td class="text-right">
                                                     {{ items.size }}
@@ -117,78 +109,56 @@
                                 </div>
                             </div>
                             <hr/>
-                            <div class="wrapThueItem">
-                                <div class="title">Danh sách Đơn Hàng Thuê</div>
-                                <div class="wrapItemGroup">
-                                    Không có đơn hàng
+                           <div class="wrapThueItem">
+                                <div class="title">Danh sách Đơn Hàng Thue</div>
+                                <div class="wrapItemGroup" v-if="dataItemCart.thue.length == 0">
+                                    Không có đơn hàng 
                                 </div>
+                                <div class="wrapItemGroup" v-else>
+                                    <div>
+                                        <table class="table mb-0" v-for="(items,index) of dataItemCart.thue"
+                                               :key="index">
+                                            <thead>
+                                            <tr class="text-muted">
+                                                <th scope="col"></th>
+                                                <th scope="col">Tên Sản Phẩm</th>
+                                                <th scope="col">Kích cỡ</th>
+                                                <th scope="col" class="text-right">Số Lượng</th>
+                                                <th scope="col" class="text-right">Giá Tiền</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="active-project d-flex align-items-center mt-0 ">
 
-                                <div>
-                                    <div class="status">
-                                        Đã hoàn thành
-                                    </div>
-                                    <div class="status">
-                                        <button type="submit" value="submit"> Yêu cầu trả hàng</button>
-                                    </div>
-                                    <table class="table mb-0">
-                                        <thead>
-                                        <tr class="text-muted">
-                                            <th scope="col"></th>
-                                            <th scope="col">Tên Sản Phẩm</th>
-                                            <th scope="col">Kích cỡ</th>
-                                            <th scope="col" class="text-right">Số Lượng</th>
-                                            <th scope="col" class="text-right">Giá Thuê</th>
-                                            <th scope="col" class="text-right">Giá Cọc</th>
-                                            <th scope="col" class="text-right">Ngày Thuê</th>
-                                            <th scope="col" class="text-right endDay">Ngày Trả</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                                <div
-                                                        class="active-project d-flex align-items-center mt-0 "
-                                                >
-                                                    <div class="h-avatar is-medium">
-                                                        <img class="avatar rounded"
-                                                             src="http://yvanhien.com/wp-content/uploads/bfi_thumb/IMG_0860-o4wa4vb9jhsv3ofcvqrpqe50uf8p7w8398gkqhv7rs.jpg"/>
+                                                        <div class="h-avatar is-medium">
+                                                            <img
+                                                                    class="avatar rounded"
+                                                                    :src="items.img"
+                                                            />
+                                                        </div>
                                                     </div>
-
-                                                </div>
-                                            </td>
-                                            <td>
-
-                                                <span class="font-weight-bold">Áo ngũ thân nữ lụa loan thọ Vạn Phúc</span>
-
-                                            </td>
-                                            <td class="text-right">
-                                                sx
-                                            </td>
-                                            <td class="text-right">
-                                                1
-                                            </td>
-                                            <td class="text-right">
-                                                100000
-                                            </td>
-                                            <td class="text-right">
-                                                499.00
-                                            </td>
-                                            <td class="text-right">
-                                                2021-08-13
-                                            </td>
-                                            <td class="text-right">
-                                                2021-08-16
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="wrapTotalBy">
-                                        <div class="title">Tổng tiền cọc:</div>
-                                        <div class="value">568000 VNĐ</div>
-                                    </div>
-                                    <div class="wrapTotalBy">
-                                        <div class="title">Tổng tiền đơn thuê:</div>
-                                        <div class="value">1062000 VNĐ</div>
+                                                </td>
+                                                <td>
+                                                    <span class="font-weight-bold" style="margin-left:auto;">{{ items.name }}</span>
+                                                </td>
+                                                <td class="text-right">
+                                                    {{ items.size }}
+                                                </td>
+                                                <td class="text-right">
+                                                    {{ items.qtyCus }}
+                                                </td>
+                                                <td class="text-right">
+                                                    {{ items.price }}
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="wrapTotalBy">
+                                            <div class="title">Tổng tiền đơn mua:</div>
+                                            <div class="value">{{ calcBuy }} VNĐ</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -14,6 +14,8 @@ import OrderBuy from "@/page/Order/page/OrderBuy.vue"
 import OrderThue from "@/page/Order/page/OrderBuy.vue"
 import getOrderRequestReturn from "@/page/Order/page/OrderRequestReturn.vue"
 import BeingTransported from "@/page/Order/page/BeingTransported.vue"
+import noDeliveryPages from "@/page/Order/page/NoDeliveryPages.vue"
+import CanceledOrderPage from "@/page/Order/page/CanceledOrderPage.vue"
 
 Vue.use(Router)
 
@@ -87,6 +89,17 @@ export default new Router({
                     name: "getBeingTransported",
                     component: BeingTransported
                 },
+                {
+                    path: "/noDeliveryPages",
+                    name: "noDeliveryPages",
+                    component: noDeliveryPages
+                },
+                {
+                    path: "/CanceledOrderPage",
+                    name: "CanceledOrderPage",
+                    component: CanceledOrderPage
+                },
+                
             ]
         },
         {

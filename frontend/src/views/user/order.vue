@@ -49,11 +49,12 @@
                 </div>
                 <div class="wrap-order"
                      v-for="(items,index) of getOrder" :key="index"
-                     @click="$router.push({ name: `order-detail-customer`, params:{code_order: items.code_order}})"
                 >
                     <div class="wrap-title">
                         <div class="wrap-left">
-                            <div class="title-code">
+                            <div class="title-code"
+                                @click="$router.push({ name: `order-detail-customer`, params:{code_order: items.code_order}})"
+                            >
                                 Mã đơn hàng:
                                 #{{ items.code_order }}
                             </div>
@@ -80,9 +81,6 @@
                             <div v-if="items.status == `Không Nhận Hàng`" class="status error">
                                 {{ items.status }}
                             </div>
-                            <div v-if="items.status == `Không Nhận Hàng`" class="status error">
-                                {{ items.status }}
-                            </div>
                             <div v-if="items.status == `YÊU CẦU TRẢ HÀNG`" class="status return">
                                 Yêu Cầu Trả Hàng Thành Công
                             </div>
@@ -92,18 +90,18 @@
                             <div v-if="items.status == `Đã Tới Điểm Giao`" class="status button">
                                 <div class="wrap-button-user-option">
                                     <v-btn
-                                            :loading="loading"
-                                            color="success"
-                                            @click="updateStatusOrder(items.id)">
+                                        :loading="loading"
+                                        color="success"
+                                        @click="updateStatusOrder(items.id)">
                                         Xác Nhận Đơn Hàng
                                     </v-btn>
                                 </div>
                                 <div class="wrap-button-user-option">
                                     <v-btn
-                                            :loading="loading"
-                                            color="error"
-                                            @click="updateStatusOrderNot(items)">
-                                        Không Nhận Hàng
+                                        :loading="loading"
+                                        color="error"
+                                        @click="updateStatusOrderNot(items)">
+                                        Không Nhận Đơn Hàng
                                     </v-btn>
                                 </div>
                             </div>
