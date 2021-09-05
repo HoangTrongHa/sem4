@@ -6,13 +6,11 @@
             </template>
         </BaseBanner>
         <v-container class="gallery">
-            <div class="gallery__section-title">
-                Gallery & lookbook
-            </div>
+
             <div class="gallery__category">
-               <CustomProgressPagerContainer :tabs="stepsConfig">
-                  <router-view />
-               </CustomProgressPagerContainer>
+                <CustomProgressPagerContainer :tabs="stepsConfig">
+                    <router-view/>
+                </CustomProgressPagerContainer>
             </div>
         </v-container>
     </div>
@@ -21,11 +19,10 @@
 <script>
     import BaseBanner from '@/components/base/Banner.vue'
     import CustomProgressPagerContainer from '@/components/base/CustomProgressPagerContainer.vue'
+
     export default {
-        data () {
-            return{
-              
-            }
+        data() {
+            return {}
         },
         components: {
             BaseBanner,
@@ -58,7 +55,7 @@
                             name: "NeckPillow"
                         }
                     },
-                    
+
                     {
                         id: 4,
                         name: "Nhật Dụng",
@@ -79,14 +76,14 @@
                         route: {
                             name: "Event"
                         }
-                    }, 
+                    },
                     {
                         id: 6,
                         name: "Trang Phụ Cổ",
                         route: {
                             name: "AntiqueCostume"
                         }
-                    }, 
+                    },
                     {
                         id: 7,
                         name: "Triển Lãm",
@@ -104,5 +101,5 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "@/scss/gallery.scss";
+    @import "@/scss/gallery.scss";
 </style>

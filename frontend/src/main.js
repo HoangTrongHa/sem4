@@ -13,8 +13,8 @@ Vue.config.productionTip = false
 Vue.component("icon", icons);
 
 new Vue({
-  router,
-  store,
-  vuetify,
-  render: h => h(App)
+    router,
+    store,
+    vuetify,
+    render: h => h(App)
 }).$mount('#app')

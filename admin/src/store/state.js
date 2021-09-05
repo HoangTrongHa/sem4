@@ -1,4 +1,4 @@
 export default {
     order: [],
-    categories:[]
+    categories: []
 }

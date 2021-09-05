@@ -1,88 +1,105 @@
 @import "base";
-.full{
-    background-color: #09021d;
-    color: #fff;
-    .wrapFooter {
-        display: grid;
-        grid-template-columns: 2fr 2fr 2fr;
-        .footerAbout{
-            width: 100%;
-            padding-left: 7%;
-            .about-title{
-                width: 100%;
-                font-size: 25px;
-                font-weight: 20px;
-                padding-bottom: 10px;
-            }
-            .about-desc{
-                line-height: 20px;
-                font-size: 13px;
-                color: grey;
-            }
-            .about-social{
-                padding-top: 20px;
-                #facebook{
-                    border-radius: 50%;
-                    border: 1px solid white;
-                    
-                }
-                #facebook:hover{
-                    background-color: rgb(197, 194, 194);
-                    transition: .7s;
-                    color: #09021d;
-                }
-            }
-            
+
+.full {
+  background-color: #09021d;
+  color: #fff;
+
+  .wrapFooter {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+
+    .footerAbout {
+      width: 100%;
+      padding-left: 7%;
+
+      .about-title {
+        width: 100%;
+        font-size: 25px;
+        font-weight: 20px;
+        padding-bottom: 10px;
+      }
+
+      .about-desc {
+        line-height: 20px;
+        font-size: 13px;
+        color: grey;
+      }
+
+      .about-social {
+        padding-top: 20px;
+
+        #facebook {
+          border-radius: 50%;
+          border: 1px solid white;
+
         }
-        .footerContact{
-            width: 100%;
-            padding-left: 7%;
-            .about-title{
-                width: 100%;
-                font-size: 25px;
-                font-weight: 20px;
-                padding-bottom: 10px;
-            }
-            .about-desc{
-                line-height: 30px;
-                font-size: 13px;
-                color: grey;
-            }
+
+        #facebook:hover {
+          background-color: rgb(197, 194, 194);
+          transition: .7s;
+          color: #09021d;
         }
-        .footerSubmit{
-            width: 100%;
-            padding-left: 7%;
-            .about-title{
-                width: 100%;
-                font-size: 25px;
-                font-weight: 20px;
-                padding-bottom: 10px;
-            }
-            .about-form{
-                font-size: 13px;
-                color: grey;
-                .title-form{
-                    width: 100%;
-                    
-                }
-                input{
-                    border-radius: 2px;
-                    background-color: #292929;
-                    border: 1px solid #4e4e4e;
-                    width: 263px;
-                    padding: 10px 15px;
-                    color: rgba(255,255,255,.8);
-                }
-                button{
-                    position: relative;
-                    color: #191919;
-                    font-weight: 700;
-                    padding: 10px 15px;
-                    border-radius: 0 2px 2px 0;
-                    background-color: white;
-                }
-        }
-    }
+      }
 
     }
+
+    .footerContact {
+      width: 100%;
+      padding-left: 7%;
+
+      .about-title {
+        width: 100%;
+        font-size: 25px;
+        font-weight: 20px;
+        padding-bottom: 10px;
+      }
+
+      .about-desc {
+        line-height: 30px;
+        font-size: 13px;
+        color: grey;
+      }
+    }
+
+    .footerSubmit {
+      width: 100%;
+      padding-left: 7%;
+
+      .about-title {
+        width: 100%;
+        font-size: 25px;
+        font-weight: 20px;
+        padding-bottom: 10px;
+      }
+
+      .about-form {
+        font-size: 13px;
+        color: grey;
+
+        .title-form {
+          width: 100%;
+
+        }
+
+        input {
+          border-radius: 2px;
+          background-color: #292929;
+          border: 1px solid #4e4e4e;
+          width: 263px;
+          padding: 10px 15px;
+          color: rgba(255, 255, 255, .8);
+        }
+
+        button {
+          position: relative;
+          color: #191919;
+          font-weight: 700;
+          padding: 10px 15px;
+          border-radius: 0 2px 2px 0;
+          background-color: white;
+        }
+      }
+    }
+
+  }
 }

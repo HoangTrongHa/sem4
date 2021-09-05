@@ -14,32 +14,33 @@ import OrderBuy from "@/page/Order/page/OrderBuy.vue"
 import OrderThue from "@/page/Order/page/OrderBuy.vue"
 import getOrderRequestReturn from "@/page/Order/page/OrderRequestReturn.vue"
 import BeingTransported from "@/page/Order/page/BeingTransported.vue"
+
 Vue.use(Router)
 
 
 export default new Router({
-    mode : 'history',
-    routes : [
+    mode: 'history',
+    routes: [
         {
-            path : "/",
-            name : 'dashboard',
-            component : Dashboard,
+            path: "/",
+            name: 'dashboard',
+            component: Dashboard,
         },
         {
-            path : "/category",
-            name : "category",
-            component : Category,
+            path: "/category",
+            name: "category",
+            component: Category,
         },
         {
-            path : "/product",
-            name : "product",
-            component : Product,
+            path: "/product",
+            name: "product",
+            component: Product,
         },
         {
-            path : "/admin/order",
-            name : "Order",
-            component : Order,
-            redirect: { name: "AllOrder" },
+            path: "/admin/order",
+            name: "Order",
+            component: Order,
+            redirect: {name: "AllOrder"},
             children: [
                 {
                     path: "/all-order",
@@ -89,9 +90,9 @@ export default new Router({
             ]
         },
         {
-            path : "/order-detail/:params",
-            name : "OrderDetail",
-            component : OrderDetail,
+            path: "/order-detail/:params",
+            name: "OrderDetail",
+            component: OrderDetail,
         },
     ]
 })
