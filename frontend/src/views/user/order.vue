@@ -63,8 +63,16 @@
                             </div>
                         </div>
                         <div class="wrap-right">
-                            <div v-if="items.status == `Chờ Xác Nhận`" class="status warning">
-                                {{ items.status }}
+                            <div class="d-flex" v-if="items.status == `Chờ Xác Nhận`">
+                                <div class="status warning">{{ items.status }}</div>
+                                <div class="wrap-button-user-option">
+                                    <v-btn
+                                        :loading="loading"
+                                        color="error"
+                                        @click="updateStatusOrderNot(items)">
+                                        Hủy Đơn Hàng
+                                    </v-btn>
+                                </div>
                             </div>
                             <div v-if="items.status == `Hoàn Thành`" class="status success">
                                 {{ items.status }}
@@ -72,8 +80,17 @@
                             <div v-if="items.status == `Đơn Hàng Bị Hủy`" class="status error">
                                 {{ items.status }}
                             </div>
-                            <div v-if="items.status == `Chờ Vận Chuyển`" class="status success">
-                                {{ items.status }}
+                
+                            <div class="d-flex" v-if="items.status == `Chờ Vận Chuyển`">
+                                <div class="status success">{{ items.status }}</div>
+                                <div class="wrap-button-user-option">
+                                    <v-btn
+                                        :loading="loading"
+                                        color="error"
+                                        @click="updateStatusOrderNot(items)">
+                                        Hủy Đơn Hàng
+                                    </v-btn>
+                                </div>
                             </div>
                             <div v-if="items.status == `Đang Vận Chuyển`" class="status success">
                                 {{ items.status }}

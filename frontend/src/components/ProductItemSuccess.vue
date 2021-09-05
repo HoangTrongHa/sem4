@@ -5,28 +5,25 @@
                 <h3>Đặt Hàng Thành Công!</h3>
                 <span class="detail"
                 >Đơn hàng của bạn đã được gửi tới hệ thống, nhân viên chúng tôi đang
-          xử lí đơn hàng này</span
+                xử lí đơn hàng này</span
                 >
             </div>
             <hr/>
             <div class="info-user">
                 <div class="name">
-                    Tên người nhận:<span class="info-content">{{
-            getDataOrder.userName
-          }}</span>
+                    Tên người nhận:
+                    <span class="info-content">
+                        {{  getDataOrder.userName}}
+                    </span>
                 </div>
                 <div class="name">
                     Email:<span class="info-content">{{ getDataOrder.email }}</span>
                 </div>
                 <div class="name">
-                    Địa chỉ nhận hàng:<span class="info-content"
-                >{{ getDataOrder.address }}/{{ getDataOrder.ward }}/{{ getDataOrder.district }}/{{ getDataOrder.city }}</span
-                >
+                    Địa chỉ nhận hàng:
+                    <span class="info-content">{{ getDataOrder.address }}/{{ getDataOrder.ward }}/{{ getDataOrder.district }}/{{ getDataOrder.city }}</span>
                 </div>
-                <div class="name">
-                    Phương thức thanh toán:<span class="info-content">{{
-            getDataOrder.option
-          }}</span>
+                <div class="name"> Phương thức thanh toán:<span class="info-content">{{ getDataOrder.option }}</span>
                 </div>
             </div>
             <hr/>
@@ -34,8 +31,8 @@
             <div v-for="(items, index) of getDataCart.buy" :key="index">
                 <div class="product">
                     <img
-                            :src="items.img"
-                            alt=""
+                        :src="items.img"
+                        alt=""
                     />
                     <div class="name">{{ items.name }}</div>
                     <div class="qty">
@@ -44,22 +41,25 @@
                     </div>
                 </div>
                 <hr/>
-                <span class="nameOrder">Đơn Thuê</span>
-                <div v-for="(items, index) of getDataCart.thue" :key="index">
-                    <div class="product">
-                        <img
-                                :src="items.img"
-                                alt=""
-                        />
-                        <div class="name">{{ items.name }}</div>
-                        <div class="qty">
-                            Số lượng:
-                            <span class="qty-number">{{ items.qtyCus }}</span>
-                        </div>
+            </div>
+            <hr>
+            <span class="nameOrder">Đơn Thuê</span>
+            <div v-for="(items, index) of getDataCart.thue" :key="index">
+                <div class="product">
+                    <img
+                        :src="items.img"
+                        alt=""
+                    />
+                    <div class="name">{{ items.name }}</div>
+                    <div class="qty">
+                        Số lượng:
+                        <span class="qty-number">{{ items.qtyCus }}</span>
                     </div>
-                    <hr/>
                 </div>
-                <div class="price">
+                <hr/>
+            </div>
+            <hr/>
+            <div class="price">
                     <div class="price-content">
                         <div class="subtotal">
                             Tổng thanh toán
@@ -69,9 +69,6 @@
                         <div class="discount">Giảm giá: 0</div>
                     </div>
                 </div>
-                <hr/>
-            </div>
-            <hr/>
             <div class="thank">
                 <div class="thank-title">
                     <i

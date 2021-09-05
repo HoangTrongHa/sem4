@@ -122,13 +122,7 @@
             },
             getIdFun(id) {
                 console.log(id);
-            },
-            // calcDate(endDay, startDay) {
-            //   var date = new Date(startDay);
-            //   var dateEnd = new Date(endDay);
-            //   var currentDay = Math.round((dateEnd-date)/(1000*60*60*24));
-            //   return currentDay
-            // }
+            }
         },
         watch: {
             status(newValue) {

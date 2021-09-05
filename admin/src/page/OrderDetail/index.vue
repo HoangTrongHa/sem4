@@ -130,6 +130,7 @@ export default {
   data() {
     return {
       status: "",
+      getStatusOrder: "",
       items: [
         {
           id: 1,
@@ -206,7 +207,7 @@ export default {
       return total
     },
     disableOptionStatus() {
-        if (this.status === "Hoàn Thành" || this.status === "Đơn Hàng Bị Hủy") {
+        if (this.getStatusOrder === "Hoàn Thành" || this.getStatusOrder === "Đơn Hàng Bị Hủy") {
             return true
         } else {
             return false
@@ -279,6 +280,9 @@ export default {
   },
   created() {
     this.status = this.$store.state.order.find(
+      (item) => item.id === this.$route.params.params
+    ).status;
+    this.getStatusOrder = this.$store.state.order.find(
       (item) => item.id === this.$route.params.params
     ).status;
     this.disable = true;

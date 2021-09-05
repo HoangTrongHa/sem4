@@ -134,8 +134,8 @@
 
                                                         <div class="h-avatar is-medium">
                                                             <img
-                                                                    class="avatar rounded"
-                                                                    :src="items.img"
+                                                            class="avatar rounded"
+                                                            :src="items.img"
                                                             />
                                                         </div>
                                                     </div>
@@ -144,7 +144,7 @@
                                                     <span class="font-weight-bold" style="margin-left:auto;">{{ items.name }}</span>
                                                 </td>
                                                 <td class="text-right">
-                                                    {{ items.size }}
+                                                    {{ items.size.size }}
                                                 </td>
                                                 <td class="text-right">
                                                     {{ items.qtyCus }}
@@ -157,7 +157,7 @@
                                         </table>
                                         <div class="wrapTotalBy">
                                             <div class="title">Tổng tiền đơn mua:</div>
-                                            <div class="value">{{ calcBuy }} VNĐ</div>
+                                            <div class="value">{{ calcThue }} VNĐ</div>
                                         </div>
                                     </div>
                                 </div>
@@ -196,6 +196,13 @@
                 let total = 0;
                 this.dataItemCart.buy.forEach((item) => {
                     total += item.price * item.qtyCus;
+                });
+                return total;
+            },
+            calcThue() {
+                let total = 0;
+                this.dataItemCart.thue.forEach((item) => {
+                    total += (item.price * item.qtyCus) * Math.floor(( new Date(item.endDay) - new Date(item.startDay)) / (1000 * 60 * 60 * 24));
                 });
                 return total;
             },
