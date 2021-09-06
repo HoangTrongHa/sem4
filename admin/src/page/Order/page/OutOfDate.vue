@@ -17,7 +17,7 @@
 
             },
             getOrder() {
-                return this.$store.state.order.filter(items => items.status === "Hết Hạn Thuê")
+                return this.$store.state.order.filter(items => items.status === "Quá Hạn Thuê")
             }
         }
     }
