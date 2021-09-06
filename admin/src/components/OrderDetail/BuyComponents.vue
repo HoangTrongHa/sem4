@@ -46,41 +46,6 @@
             <div class="title">Tổng tiền đơn mua :</div>
             <div class="value">{{ calcBuy }} VNĐ</div>
         </div>
-         <table class="table mb-0">
-      <thead>
-        <tr class="text-muted">
-          <th scope="col">Tên Sản Phẩm</th>
-          <th scope="col" class="text-right">Số Lượng</th>
-          <th scope="col" class="text-right">Giá Tiền</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(item, key) of dataBy" :key="key">
-          <td>
-            <div class="active-project d-flex align-items-center mt-0 ">
-              <div class="h-avatar is-medium">
-                <img class="avatar rounded" :src="item.img" />
-              </div>
-              <div class="data-content">
-                <div>
-                  <span class="font-weight-bold">{{ item.name }}</span>
-                </div>
-              </div>
-            </div>
-          </td>
-          <td class="text-right">
-            {{ item.qtyCus }}
-          </td>
-          <td class="text-right">
-            {{ item.price }}
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="wrapTotalBy">
-      <div class="title">Tổng Tiền Mua:</div>
-      <div class="value">{{ calcBuy }} VNĐ</div>
-    </div>
   </div>
 </template>
 
