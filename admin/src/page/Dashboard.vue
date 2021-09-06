@@ -9,7 +9,7 @@
         <v-card class="mx-auto" color="#e1ba4b" dark height="150">
           <v-card-text class="text-h5 font-weight-bold">
             <div>
-              Số Lượng Đơn Hàng Hiện Có
+              Số lượng đơn hàng hiện có
               
             </div>
             <div class="data">
@@ -26,7 +26,7 @@
         <v-card class="mx-auto" color="#198753" dark height="150">
           <v-card-text class="text-h5 font-weight-bold">
             <div>
-              Số Lượng Đơn Hàng Đã Hoàn Thành
+              Số lượng đơn hàng đã hoàn thành
               
             </div>
             <div class="data">
@@ -43,7 +43,7 @@
         <v-card class="mx-auto" color="#ffc10b" dark height="150">
           <v-card-text class="text-h5 font-weight-bold">
             <div>
-              Số Lượng Đơn Hàng Mới
+              Số lượng đơn hàng mới
             </div>
             <div class="data">
               {{ getOrderNew }}
@@ -59,7 +59,7 @@
             @click="$router.push({ name: `getBeingTransported` })"
           >
             <div>
-              Đang Vận Chuyển
+              Số lượng đơn đang vận chuyển
             </div>
             <div class="data">
               {{ BeingTransported }}
@@ -75,7 +75,7 @@
             @click="$router.push({ name: `InTheImplementationProcess` })"
           >
             <div>
-              Số Lượng Đơn Đang Trong Quá Trình Thuê
+              Số lượng đơn đang trong quá trình thuê
             </div>
             <div class="data">
               {{ getOrderInThue }}
@@ -91,7 +91,7 @@
         <v-card class="mx-auto" color="#6b84a3" dark height="150">
           <v-card-text class="text-h5 font-weight-bold">
             <div>
-              Số Lượng Đơn Hàng Mua
+              Số lượng đơn mua
             </div>
             <div class="data">
               {{ getOrderBuy }}
@@ -107,7 +107,7 @@
         <v-card class="mx-auto" color="#6b84a3" dark height="150">
           <v-card-text class="text-h5 font-weight-bold">
             <div>
-              Số Lượng Đơn Hàng Thuê
+              Số lượng đơn thuê
             </div>
             <div class="data">
               {{ getOrderThue }}
@@ -124,7 +124,7 @@
         <v-card class="mx-auto" color="#db3544" dark height="150">
           <v-card-text class="text-h5 font-weight-bold">
             <div>
-              Số Lượng Đơn Hàng Hết Hạn Thuê Chưa TRả
+              Số lượng đơn quá hạn thuê
             </div>
             <div class="data">
               {{ getOrderEndThue }}
@@ -140,7 +140,7 @@
             @click="$router.push({ name: `getOrderRequestReturn` })"
           >
             <div>
-              Số Lượng Đơn Yêu Cầu Trả Hàng
+              Số lượng đơn yêu cầu trả hàng
             </div>
             <div class="data">
               {{ getOrderReturn }}
@@ -156,7 +156,7 @@
             @click="$router.push({ name: `CanceledOrderPage` })"
           >
             <div>
-              Số Lượng Đơn Bị Hủy
+              Số lượng đơn bị hủy
             </div>
             <div class="data">
               {{ Cancel }}
