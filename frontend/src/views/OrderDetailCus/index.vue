@@ -90,7 +90,7 @@
                                                     <span class="font-weight-bold" style="margin-left:auto;">{{ items.name }}</span>
                                                 </td>
                                                 <td class="text-right">
-                                                    {{ items.size }}
+                                                    {{ JSON.parse(items.size) }}
                                                 </td>
                                                 <td class="text-right">
                                                     {{ items.qtyCus }}

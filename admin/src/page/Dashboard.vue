@@ -220,7 +220,7 @@ export default {
     },
     BeingTransported() {
       return this.$store.state.order.filter(
-        (items) => items.status === "Đang vận chuyển"
+        (items) => items.status === "Đang Vận Chuyển"
       ).length;
     },
     Cancel() {

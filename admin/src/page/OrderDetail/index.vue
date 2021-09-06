@@ -154,24 +154,24 @@ export default {
         },
         {
           id: 6,
-          text: "Hết Hạn Thuê",
-        },
-        {
-          id: 7,
-          text: "Hoàn Thành",
-        },
-        {
-          id: 8,
           text: "Đang Trong Quá Trình Thuê",
         },
         {
-          id: 9,
+          id: 7,
+          text: "Hết Hạn Thuê",
+        },
+        {
+          id: 8,
           text: "Quá Hạn Thuê",
         },
         {
-          id: 10,
+          id: 9,
           text: "Xác Nhận Trả Hàng",
         },
+        {
+          id: 10,
+          text: "Hoàn Thành",
+        }
       ],
       disable: Boolean,
       getStatus: "",
