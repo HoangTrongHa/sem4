@@ -110,7 +110,7 @@
                             </div>
                             <hr/>
                            <div class="wrapThueItem">
-                                <div class="title">Danh sách Đơn Hàng Thue</div>
+                                <div class="title">Danh sách Đơn Hàng Thuê</div>
                                 <div class="wrapItemGroup" v-if="dataItemCart.thue.length == 0">
                                     Không có đơn hàng 
                                 </div>
