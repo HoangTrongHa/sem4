@@ -1,3 +1,9 @@
+-- website
+    - user:  https://cophucvietnam.netlify.app/
+    -admin:  https://cophucvietnam-admin.netlify.app/
+
+
+To run the project on localhost
 Prerequisites
  
 Before you continue, ensure you meet the following requirements:
