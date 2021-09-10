@@ -1,5 +1,7 @@
 -- website
     - user:  https://cophucvietnam.netlify.app/
+        username: nghiatran@gmail.com
+        password: 123456
     -admin:  https://cophucvietnam-admin.netlify.app/
 
 
